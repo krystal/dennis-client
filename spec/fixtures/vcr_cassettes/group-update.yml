@@ -27,23 +27,23 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       Content-Length:
-      - '319'
+      - '320'
       Content-Type:
       - application/json
       Etag:
-      - W/"2360d697bd62da46da88dce5525e5aec"
+      - W/"ee83fc17b2300c1f4cee1cd945cb8af9"
       Server:
       - Caddy
       X-Request-Id:
-      - b1e9aa62-d3f0-4da3-95fc-da73bac04ffc
+      - 4cb6f910-a611-413e-92f4-06b3957e5443
       X-Runtime:
-      - '0.013752'
+      - '0.011244'
       Date:
-      - Fri, 05 Mar 2021 16:56:42 GMT
+      - Mon, 08 Mar 2021 11:14:47 GMT
     body:
       encoding: UTF-8
-      string: '{"group":{"id":1,"name":"Example Group","external_reference":null,"created_at":1614963388,"updated_at":1614963388,"nameservers":[{"id":4,"name":"ruth.example.com","server":2,"created_at":1614963388,"updated_at":1614963388},{"id":3,"name":"dave.example.com","server":1,"created_at":1614963388,"updated_at":1614963388}]}}'
-  recorded_at: Fri, 05 Mar 2021 16:56:42 GMT
+      string: '{"group":{"id":1,"name":"Example Group","external_reference":null,"created_at":1615201537,"updated_at":1615201537,"nameservers":[{"id":2,"name":"alex.example.com","server":1,"created_at":1615201537,"updated_at":1615201537},{"id":6,"name":"kelly.example.com","server":2,"created_at":1615201537,"updated_at":1615201537}]}}'
+  recorded_at: Mon, 08 Mar 2021 11:14:47 GMT
 - request:
     method: patch
     uri: https://dennis.dev.adam.ac/api/v1/groups/:group
@@ -73,21 +73,21 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       Content-Length:
-      - '325'
+      - '326'
       Content-Type:
       - application/json
       Etag:
-      - W/"2385c48f25fc4d3d3757b2255a6df28a"
+      - W/"ea4bfee52a9e46e83beba91600e8f7d5"
       Server:
       - Caddy
       X-Request-Id:
-      - d01e5858-ad0d-4222-b942-d573243798ce
+      - 440a4417-26b1-4816-9ec7-138db7d9b64a
       X-Runtime:
-      - '0.020679'
+      - '0.015877'
       Date:
-      - Fri, 05 Mar 2021 16:56:42 GMT
+      - Mon, 08 Mar 2021 11:14:47 GMT
     body:
       encoding: UTF-8
-      string: '{"group":{"id":1,"name":"Renamed Group","external_reference":"with-ref","created_at":1614963388,"updated_at":1614963402,"nameservers":[{"id":4,"name":"ruth.example.com","server":2,"created_at":1614963388,"updated_at":1614963388},{"id":3,"name":"dave.example.com","server":1,"created_at":1614963388,"updated_at":1614963388}]}}'
-  recorded_at: Fri, 05 Mar 2021 16:56:42 GMT
+      string: '{"group":{"id":1,"name":"Renamed Group","external_reference":"with-ref","created_at":1615201537,"updated_at":1615202087,"nameservers":[{"id":2,"name":"alex.example.com","server":1,"created_at":1615201537,"updated_at":1615201537},{"id":6,"name":"kelly.example.com","server":2,"created_at":1615201537,"updated_at":1615201537}]}}'
+  recorded_at: Mon, 08 Mar 2021 11:14:47 GMT
 recorded_with: VCR 6.0.0

@@ -27,22 +27,24 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       Content-Length:
-      - '638'
+      - '1260'
       Content-Type:
       - application/json
       Etag:
-      - W/"813ac5d0957ed07eef928e4e051a575b"
+      - W/"19cf53cdc6e9db4acf4fa0e3d40a238b"
       Server:
       - Caddy
       X-Request-Id:
-      - aa0c7008-6533-4d07-bca5-7f297f93aac7
+      - 1022438b-4768-4bc4-8c75-e4a5982cb584
       X-Runtime:
-      - '0.010425'
+      - '0.019045'
       Date:
-      - Fri, 05 Mar 2021 16:56:42 GMT
+      - Mon, 08 Mar 2021 11:14:46 GMT
     body:
       encoding: UTF-8
-      string: '{"groups":[{"id":2,"name":"Another Group","external_reference":"another","created_at":1614963389,"updated_at":1614963389,"nameservers":[{"id":1,"name":"simon.example.com","server":1,"created_at":1614963388,"updated_at":1614963388},{"id":4,"name":"ruth.example.com","server":2,"created_at":1614963388,"updated_at":1614963388}]},{"id":1,"name":"Example
-        Group","external_reference":null,"created_at":1614963388,"updated_at":1614963388,"nameservers":[{"id":4,"name":"ruth.example.com","server":2,"created_at":1614963388,"updated_at":1614963388},{"id":3,"name":"dave.example.com","server":1,"created_at":1614963388,"updated_at":1614963388}]}]}'
-  recorded_at: Fri, 05 Mar 2021 16:56:42 GMT
+      string: '{"groups":[{"id":2,"name":"Another Group","external_reference":"another","created_at":1615201537,"updated_at":1615201537,"nameservers":[{"id":2,"name":"alex.example.com","server":1,"created_at":1615201537,"updated_at":1615201537},{"id":4,"name":"ruth.example.com","server":2,"created_at":1615201537,"updated_at":1615201537}]},{"id":1,"name":"Example
+        Group","external_reference":null,"created_at":1615201537,"updated_at":1615201537,"nameservers":[{"id":2,"name":"alex.example.com","server":1,"created_at":1615201537,"updated_at":1615201537},{"id":6,"name":"kelly.example.com","server":2,"created_at":1615201537,"updated_at":1615201537}]},{"id":3,"name":"Pear
+        Group","external_reference":null,"created_at":1615201537,"updated_at":1615201537,"nameservers":[{"id":2,"name":"alex.example.com","server":1,"created_at":1615201537,"updated_at":1615201537},{"id":4,"name":"ruth.example.com","server":2,"created_at":1615201537,"updated_at":1615201537}]},{"id":4,"name":"Strawberries
+        Group","external_reference":null,"created_at":1615201537,"updated_at":1615201537,"nameservers":[{"id":4,"name":"ruth.example.com","server":2,"created_at":1615201537,"updated_at":1615201537},{"id":3,"name":"dave.example.com","server":1,"created_at":1615201537,"updated_at":1615201537}]}]}'
+  recorded_at: Mon, 08 Mar 2021 11:14:46 GMT
 recorded_with: VCR 6.0.0

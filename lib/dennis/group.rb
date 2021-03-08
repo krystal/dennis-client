@@ -56,6 +56,10 @@ module Dennis
       end
     end
 
+    def create_zone(**options)
+      Zone.create(@client, group: { id: id }, **options)
+    end
+
     def update(properties)
       req = @client.api.create_request(:patch, 'groups/:group')
       req.arguments['group'] = { id: id }

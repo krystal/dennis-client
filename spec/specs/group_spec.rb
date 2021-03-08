@@ -115,13 +115,27 @@ module Dennis
     describe '#delete' do
       it 'deletes the group' do
         VCR.use_cassette('group-delete') do
-          group = described_class.find_by(@client, :id, 1)
+          group = described_class.find_by(@client, :id, 3)
           group.delete
         end
 
         VCR.use_cassette('group-delete-verify') do
-          group = described_class.find_by(@client, :id, 1)
+          group = described_class.find_by(@client, :id, 3)
           expect(group).to be nil
+        end
+      end
+    end
+
+    describe '#create_zone' do
+      it 'creates a zone' do
+        VCR.use_cassette('group-find-by-id') do
+          group = described_class.find_by(@client, :id, 2)
+          expect(Zone).to receive(:create) do |_, options|
+            expect(options[:group]).to eq({ id: 2 })
+            expect(options[:name]).to eq 'example.com'
+            expect(options[:external_reference]).to eq 'blah'
+          end
+          group.create_zone(name: 'example.com', external_reference: 'blah')
         end
       end
     end

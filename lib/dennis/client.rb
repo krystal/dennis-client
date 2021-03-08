@@ -2,6 +2,7 @@
 
 require 'rapid_api'
 require 'dennis/group'
+require 'dennis/zone'
 
 module Dennis
   class Client
@@ -28,6 +29,14 @@ module Dennis
 
     def create_group(**opts)
       Group.create(self, **opts)
+    end
+
+    def zones
+      Zone.all(self)
+    end
+
+    def zone(id, field: :id)
+      Zone.find_by(self, field, id)
     end
 
   end
