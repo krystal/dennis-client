@@ -1,0 +1,49 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://dennis.dev.adam.ac/api/v1/groups
+    body:
+      encoding: UTF-8
+      string: '{"properties":{"name":"Apple Group","external_reference":"apples"}}'
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Authorization:
+      - Bearer test
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Access-Control-Allow-Methods:
+      - "*"
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Length:
+      - '323'
+      Content-Type:
+      - application/json
+      Etag:
+      - W/"71abccc4093e619a019de3f83de90068"
+      Server:
+      - Caddy
+      X-Request-Id:
+      - 6ded92ad-e199-40ba-8762-5d197f0d9983
+      X-Runtime:
+      - '0.023317'
+      Date:
+      - Fri, 05 Mar 2021 16:56:42 GMT
+    body:
+      encoding: UTF-8
+      string: '{"group":{"id":3,"name":"Apple Group","external_reference":"apples","created_at":1614963402,"updated_at":1614963402,"nameservers":[{"id":6,"name":"kelly.example.com","server":2,"created_at":1614963388,"updated_at":1614963388},{"id":1,"name":"simon.example.com","server":1,"created_at":1614963388,"updated_at":1614963388}]}}'
+  recorded_at: Fri, 05 Mar 2021 16:56:42 GMT
+recorded_with: VCR 6.0.0

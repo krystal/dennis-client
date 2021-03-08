@@ -1,0 +1,51 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://dennis.dev.adam.ac/api/v1/groups
+    body:
+      encoding: UTF-8
+      string: '{"properties":{"name":"","external_reference":null}}'
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Authorization:
+      - Bearer test
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 422
+      message: Unprocessable Entity
+    headers:
+      Access-Control-Allow-Methods:
+      - "*"
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache
+      Content-Length:
+      - '194'
+      Content-Type:
+      - application/json
+      Server:
+      - Caddy
+      X-Api-Schema:
+      - json-error
+      X-Request-Id:
+      - c3c82c5d-bce9-4d48-ae0e-8c56bfa1c962
+      X-Runtime:
+      - '0.008554'
+      Date:
+      - Fri, 05 Mar 2021 16:56:42 GMT
+    body:
+      encoding: UTF-8
+      string: '{"error":{"code":"validation_error","description":"A validation error
+        occurred when saving the object","detail":{"errors":[{"attribute":"name","type":"blank","message":"Name
+        can''t be blank"}]}}}'
+  recorded_at: Fri, 05 Mar 2021 16:56:42 GMT
+recorded_with: VCR 6.0.0

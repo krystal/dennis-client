@@ -1,0 +1,47 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://dennis.dev.adam.ac/api/v1/groups/:group?_arguments=%7B%22group%22:%7B%22external_reference%22:%22another%22%7D%7D
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Authorization:
+      - Bearer test
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Methods:
+      - "*"
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Length:
+      - '325'
+      Content-Type:
+      - application/json
+      Etag:
+      - W/"b64f03c49ef6b0d8ebd75eb5bb9b80e8"
+      Server:
+      - Caddy
+      X-Request-Id:
+      - 217eb428-48cf-40ef-a5ab-130f0f42e390
+      X-Runtime:
+      - '0.009313'
+      Date:
+      - Fri, 05 Mar 2021 16:56:42 GMT
+    body:
+      encoding: UTF-8
+      string: '{"group":{"id":2,"name":"Another Group","external_reference":"another","created_at":1614963389,"updated_at":1614963389,"nameservers":[{"id":1,"name":"simon.example.com","server":1,"created_at":1614963388,"updated_at":1614963388},{"id":4,"name":"ruth.example.com","server":2,"created_at":1614963388,"updated_at":1614963388}]}}'
+  recorded_at: Fri, 05 Mar 2021 16:56:42 GMT
+recorded_with: VCR 6.0.0

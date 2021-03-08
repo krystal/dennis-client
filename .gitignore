@@ -1,0 +1,4 @@
+.rubocop-*
+Gemfile.lock
+.envrc
+

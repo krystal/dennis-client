@@ -1,0 +1,93 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://dennis.dev.adam.ac/api/v1/groups/:group?_arguments=%7B%22group%22:%7B%22id%22:1%7D%7D
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Authorization:
+      - Bearer test
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Methods:
+      - "*"
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Length:
+      - '319'
+      Content-Type:
+      - application/json
+      Etag:
+      - W/"2360d697bd62da46da88dce5525e5aec"
+      Server:
+      - Caddy
+      X-Request-Id:
+      - b1e9aa62-d3f0-4da3-95fc-da73bac04ffc
+      X-Runtime:
+      - '0.013752'
+      Date:
+      - Fri, 05 Mar 2021 16:56:42 GMT
+    body:
+      encoding: UTF-8
+      string: '{"group":{"id":1,"name":"Example Group","external_reference":null,"created_at":1614963388,"updated_at":1614963388,"nameservers":[{"id":4,"name":"ruth.example.com","server":2,"created_at":1614963388,"updated_at":1614963388},{"id":3,"name":"dave.example.com","server":1,"created_at":1614963388,"updated_at":1614963388}]}}'
+  recorded_at: Fri, 05 Mar 2021 16:56:42 GMT
+- request:
+    method: patch
+    uri: https://dennis.dev.adam.ac/api/v1/groups/:group
+    body:
+      encoding: UTF-8
+      string: '{"group":{"id":1},"properties":{"name":"Renamed Group","external_reference":"with-ref"}}'
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Authorization:
+      - Bearer test
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Methods:
+      - "*"
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Length:
+      - '325'
+      Content-Type:
+      - application/json
+      Etag:
+      - W/"2385c48f25fc4d3d3757b2255a6df28a"
+      Server:
+      - Caddy
+      X-Request-Id:
+      - d01e5858-ad0d-4222-b942-d573243798ce
+      X-Runtime:
+      - '0.020679'
+      Date:
+      - Fri, 05 Mar 2021 16:56:42 GMT
+    body:
+      encoding: UTF-8
+      string: '{"group":{"id":1,"name":"Renamed Group","external_reference":"with-ref","created_at":1614963388,"updated_at":1614963402,"nameservers":[{"id":4,"name":"ruth.example.com","server":2,"created_at":1614963388,"updated_at":1614963388},{"id":3,"name":"dave.example.com","server":1,"created_at":1614963388,"updated_at":1614963388}]}}'
+  recorded_at: Fri, 05 Mar 2021 16:56:42 GMT
+recorded_with: VCR 6.0.0

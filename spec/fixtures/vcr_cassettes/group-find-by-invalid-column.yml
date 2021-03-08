@@ -1,0 +1,50 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://dennis.dev.adam.ac/api/v1/groups/:group?_arguments=%7B%22group%22:%7B%22invalid%22:%22%22%7D%7D
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Authorization:
+      - Bearer test
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Access-Control-Allow-Methods:
+      - "*"
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache
+      Content-Length:
+      - '417'
+      Content-Type:
+      - application/json
+      Server:
+      - Caddy
+      X-Api-Schema:
+      - json-error
+      X-Request-Id:
+      - 47d966e5-b8f6-4c09-891c-c22bcf13de09
+      X-Runtime:
+      - '0.004583'
+      Date:
+      - Fri, 05 Mar 2021 16:56:42 GMT
+    body:
+      encoding: UTF-8
+      string: '{"error":{"code":"invalid_argument","description":"The ''group'' argument
+        is invalid","detail":{"path":["group"],"index":null,"issue":"missing_lookup_value","issue_description":"A
+        value for a lookup argument set has not been provided but at least one value
+        is required.","errors":[],"argument":{"id":"CoreAPI/Controllers/GroupsController/InfoEndpoint/BaseArgumentSet/GroupArgument","name":"group","description":null}}}}'
+  recorded_at: Fri, 05 Mar 2021 16:56:42 GMT
+recorded_with: VCR 6.0.0

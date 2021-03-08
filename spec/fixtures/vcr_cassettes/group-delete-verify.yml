@@ -1,0 +1,48 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://dennis.dev.adam.ac/api/v1/groups/:group?_arguments=%7B%22group%22:%7B%22id%22:1%7D%7D
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Authorization:
+      - Bearer test
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Access-Control-Allow-Methods:
+      - "*"
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache
+      Content-Length:
+      - '114'
+      Content-Type:
+      - application/json
+      Server:
+      - Caddy
+      X-Api-Schema:
+      - json-error
+      X-Request-Id:
+      - d7e035fc-f936-4795-8ff0-7d057d7d10a2
+      X-Runtime:
+      - '0.007703'
+      Date:
+      - Fri, 05 Mar 2021 17:40:46 GMT
+    body:
+      encoding: UTF-8
+      string: '{"error":{"code":"group_not_found","description":"No group could be
+        found using the given arguments","detail":{}}}'
+  recorded_at: Fri, 05 Mar 2021 17:40:46 GMT
+recorded_with: VCR 6.0.0
