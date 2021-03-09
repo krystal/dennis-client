@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://dennis.dev.adam.ac/api/v1/groups/:group?_arguments=%7B%22group%22:%7B%22id%22:3%7D%7D
+    uri: https://dennis.dev.adam.ac/api/v1/records/:record?_arguments=%7B%22record%22:%7B%22id%22:11%7D%7D
     body:
       encoding: US-ASCII
       string: ''
@@ -27,29 +27,31 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       Content-Length:
-      - '317'
+      - '407'
       Content-Type:
       - application/json
       Etag:
-      - W/"a8d9690639625e39db7b73657082fd0b"
+      - W/"3f827503a861616bb1402eec98b7c727"
       Server:
       - Caddy
       X-Request-Id:
-      - fd69b1a5-056a-4672-a6c6-b7ca25ae4e9a
+      - c60e3521-98e0-4f75-b6ea-a8aadb38a717
       X-Runtime:
-      - '0.008120'
+      - '0.005951'
       Date:
-      - Tue, 09 Mar 2021 10:08:15 GMT
+      - Tue, 09 Mar 2021 10:08:16 GMT
     body:
       encoding: UTF-8
-      string: '{"group":{"id":3,"name":"Pear Group","external_reference":null,"created_at":1615284491,"updated_at":1615284491,"nameservers":[{"id":3,"name":"dave.example.com","server":1,"created_at":1615284490,"updated_at":1615284490},{"id":6,"name":"kelly.example.com","server":2,"created_at":1615284490,"updated_at":1615284490}]}}'
-  recorded_at: Tue, 09 Mar 2021 10:08:15 GMT
+      string: '{"record":{"id":11,"name":"cm._domainkey","external_reference":null,"type":"TXT","full_name":"cm._domainkey.example.com","ttl":null,"priority":null,"content":{"TXT":{"content":"k=rsa;
+        p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCsJyYnv48KsqIS/yLiU1YGjpo+KPTkKAtJEq7RW7dMEM8IzOx96Qa3S0NYDMPr9QJOJoAomLl51YFe5Xu3WlR5f8uNjH/7UujGL9RpT+Gaa23W85qhrWuQpZnBqFczLdxf3R/OP4Sm5KisVvCP+gain4h0yxFFM4UZT4893bl6QwIDAQAB"}}}}'
+  recorded_at: Tue, 09 Mar 2021 10:08:16 GMT
 - request:
-    method: delete
-    uri: https://dennis.dev.adam.ac/api/v1/groups/:group
+    method: patch
+    uri: https://dennis.dev.adam.ac/api/v1/records/:record
     body:
       encoding: UTF-8
-      string: '{"group":{"id":3}}'
+      string: '{"record":{"id":11},"properties":{"name":"cm._domainkey.renamed","content":{"TXT":{"content":"new
+        txt value"}}}}'
     headers:
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
@@ -73,21 +75,22 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       Content-Length:
-      - '129'
+      - '211'
       Content-Type:
       - application/json
       Etag:
-      - W/"4d4feafb45685ad671a817697bb605bf"
+      - W/"1d63762b914b0a5b98ca1cf0b5fe91df"
       Server:
       - Caddy
       X-Request-Id:
-      - 54c817a2-9f4e-47f1-b356-6b3ffd84c52f
+      - ba641108-6c0d-433d-9b3e-f68fb85d1870
       X-Runtime:
-      - '0.024793'
+      - '0.020276'
       Date:
-      - Tue, 09 Mar 2021 10:08:15 GMT
+      - Tue, 09 Mar 2021 10:08:16 GMT
     body:
       encoding: UTF-8
-      string: '{"group":{"id":3,"name":"Pear Group","external_reference":null,"created_at":1615284491,"updated_at":1615284491,"nameservers":[]}}'
-  recorded_at: Tue, 09 Mar 2021 10:08:15 GMT
+      string: '{"record":{"id":11,"name":"cm._domainkey.renamed","external_reference":null,"type":"TXT","full_name":"cm._domainkey.renamed.example.com","ttl":null,"priority":null,"content":{"TXT":{"content":"new
+        txt value"}}}}'
+  recorded_at: Tue, 09 Mar 2021 10:08:16 GMT
 recorded_with: VCR 6.0.0

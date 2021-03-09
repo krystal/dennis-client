@@ -1,11 +1,11 @@
 ---
 http_interactions:
 - request:
-    method: post
-    uri: https://dennis.dev.adam.ac/api/v1/groups
+    method: get
+    uri: https://dennis.dev.adam.ac/api/v1/records/:record?_arguments=%7B%22record%22:%7B%22id%22:6%7D%7D
     body:
-      encoding: UTF-8
-      string: '{"properties":{"name":"Apple Group","external_reference":"apples"}}'
+      encoding: US-ASCII
+      string: ''
     headers:
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
@@ -15,12 +15,10 @@ http_interactions:
       - Ruby
       Authorization:
       - Bearer test
-      Content-Type:
-      - application/json
   response:
     status:
-      code: 201
-      message: Created
+      code: 200
+      message: OK
     headers:
       Access-Control-Allow-Methods:
       - "*"
@@ -29,21 +27,21 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       Content-Length:
-      - '322'
+      - '168'
       Content-Type:
       - application/json
       Etag:
-      - W/"d11a4b7799980e6d6b498473f8dc311d"
+      - W/"4686159b5908c13d6d6544925ce35db4"
       Server:
       - Caddy
       X-Request-Id:
-      - 1b289b0d-b019-45f1-96e9-bde0ffc2e1f7
+      - 7ba97904-24b8-47b6-a599-ec234597f627
       X-Runtime:
-      - '0.031350'
+      - '0.006254'
       Date:
       - Tue, 09 Mar 2021 10:08:15 GMT
     body:
       encoding: UTF-8
-      string: '{"group":{"id":5,"name":"Apple Group","external_reference":"apples","created_at":1615284495,"updated_at":1615284495,"nameservers":[{"id":5,"name":"laura.example.com","server":2,"created_at":1615284490,"updated_at":1615284490},{"id":3,"name":"dave.example.com","server":1,"created_at":1615284490,"updated_at":1615284490}]}}'
+      string: '{"record":{"id":6,"name":null,"external_reference":null,"type":"A","full_name":"example.com","ttl":null,"priority":null,"content":{"A":{"ip_address":"185.22.211.61"}}}}'
   recorded_at: Tue, 09 Mar 2021 10:08:15 GMT
 recorded_with: VCR 6.0.0

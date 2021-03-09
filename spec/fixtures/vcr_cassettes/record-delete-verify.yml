@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://dennis.dev.adam.ac/api/v1/groups/:group?_arguments=%7B%22group%22:%7B%22id%22:3%7D%7D
+    uri: https://dennis.dev.adam.ac/api/v1/records/:record?_arguments=%7B%22record%22:%7B%22id%22:12%7D%7D
     body:
       encoding: US-ASCII
       string: ''
@@ -27,7 +27,7 @@ http_interactions:
       Cache-Control:
       - no-cache
       Content-Length:
-      - '114'
+      - '116'
       Content-Type:
       - application/json
       Server:
@@ -35,14 +35,14 @@ http_interactions:
       X-Api-Schema:
       - json-error
       X-Request-Id:
-      - 4066f4e9-228b-47c1-b0bf-11a5145fa718
+      - f9cc664a-4cdd-46b4-876a-c4e57258cbd2
       X-Runtime:
-      - '0.005666'
+      - '0.010711'
       Date:
-      - Tue, 09 Mar 2021 10:08:15 GMT
+      - Tue, 09 Mar 2021 10:08:16 GMT
     body:
       encoding: UTF-8
-      string: '{"error":{"code":"group_not_found","description":"No group could be
-        found using the given arguments","detail":{}}}'
-  recorded_at: Tue, 09 Mar 2021 10:08:15 GMT
+      string: '{"error":{"code":"record_not_found","description":"No record could
+        be found using the given arguments","detail":{}}}'
+  recorded_at: Tue, 09 Mar 2021 10:08:16 GMT
 recorded_with: VCR 6.0.0

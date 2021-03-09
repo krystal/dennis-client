@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://dennis.dev.adam.ac/api/v1/groups/:group?_arguments=%7B%22group%22:%7B%22id%22:3%7D%7D
+    uri: https://dennis.dev.adam.ac/api/v1/records/:record?_arguments=%7B%22record%22:%7B%22id%22:11%7D%7D
     body:
       encoding: US-ASCII
       string: ''
@@ -27,29 +27,30 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       Content-Length:
-      - '317'
+      - '211'
       Content-Type:
       - application/json
       Etag:
-      - W/"a8d9690639625e39db7b73657082fd0b"
+      - W/"1d63762b914b0a5b98ca1cf0b5fe91df"
       Server:
       - Caddy
       X-Request-Id:
-      - fd69b1a5-056a-4672-a6c6-b7ca25ae4e9a
+      - a9457fe2-9d5c-4893-a651-bc4f6bbb476a
       X-Runtime:
-      - '0.008120'
+      - '0.007522'
       Date:
-      - Tue, 09 Mar 2021 10:08:15 GMT
+      - Tue, 09 Mar 2021 10:08:16 GMT
     body:
       encoding: UTF-8
-      string: '{"group":{"id":3,"name":"Pear Group","external_reference":null,"created_at":1615284491,"updated_at":1615284491,"nameservers":[{"id":3,"name":"dave.example.com","server":1,"created_at":1615284490,"updated_at":1615284490},{"id":6,"name":"kelly.example.com","server":2,"created_at":1615284490,"updated_at":1615284490}]}}'
-  recorded_at: Tue, 09 Mar 2021 10:08:15 GMT
+      string: '{"record":{"id":11,"name":"cm._domainkey.renamed","external_reference":null,"type":"TXT","full_name":"cm._domainkey.renamed.example.com","ttl":null,"priority":null,"content":{"TXT":{"content":"new
+        txt value"}}}}'
+  recorded_at: Tue, 09 Mar 2021 10:08:16 GMT
 - request:
-    method: delete
-    uri: https://dennis.dev.adam.ac/api/v1/groups/:group
+    method: patch
+    uri: https://dennis.dev.adam.ac/api/v1/records/:record
     body:
       encoding: UTF-8
-      string: '{"group":{"id":3}}'
+      string: '{"record":{"id":11},"properties":{"type":"A","content":{"A":{"ip_address":"invalid"}}}}'
     headers:
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
@@ -63,31 +64,33 @@ http_interactions:
       - application/json
   response:
     status:
-      code: 200
-      message: OK
+      code: 422
+      message: Unprocessable Entity
     headers:
       Access-Control-Allow-Methods:
       - "*"
       Access-Control-Allow-Origin:
       - "*"
       Cache-Control:
-      - max-age=0, private, must-revalidate
+      - no-cache
       Content-Length:
-      - '129'
+      - '247'
       Content-Type:
       - application/json
-      Etag:
-      - W/"4d4feafb45685ad671a817697bb605bf"
       Server:
       - Caddy
+      X-Api-Schema:
+      - json-error
       X-Request-Id:
-      - 54c817a2-9f4e-47f1-b356-6b3ffd84c52f
+      - c5c1bf65-229e-4f43-b2c3-0faa8930e4b0
       X-Runtime:
-      - '0.024793'
+      - '0.010466'
       Date:
-      - Tue, 09 Mar 2021 10:08:15 GMT
+      - Tue, 09 Mar 2021 10:08:16 GMT
     body:
       encoding: UTF-8
-      string: '{"group":{"id":3,"name":"Pear Group","external_reference":null,"created_at":1615284491,"updated_at":1615284491,"nameservers":[]}}'
-  recorded_at: Tue, 09 Mar 2021 10:08:15 GMT
+      string: '{"error":{"code":"validation_error","description":"A validation error
+        occurred when saving the object","detail":{"errors":[{"attribute":"content.ip_address","type":"invalid_ipv4_address","message":"A:
+        IPv4 address is not a valid IPv4 address"}]}}}'
+  recorded_at: Tue, 09 Mar 2021 10:08:16 GMT
 recorded_with: VCR 6.0.0

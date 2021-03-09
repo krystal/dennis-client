@@ -2,6 +2,7 @@
 
 require 'dennis/validation_error'
 require 'dennis/group_not_found_error'
+require 'dennis/record'
 
 module Dennis
   class Zone
@@ -10,6 +11,12 @@ module Dennis
 
       def all(client)
         groups = client.api.perform(:get, 'zones')
+        groups.hash['zones'].map { |hash| new(client, hash) }
+      end
+
+      def all_for_group(client, group)
+        request = client.api.perform(:get, 'groups/:group/zones')
+        request.arguments[:group] = group
         groups.hash['zones'].map { |hash| new(client, hash) }
       end
 
@@ -52,6 +59,30 @@ module Dennis
       @hash['external_reference']
     end
 
+    def nameservers_verified_at
+      parse_time(@hash['nameservers_verified_at'])
+    end
+
+    def nameservers_checked_at
+      parse_time(@hash['nameservers_checked_at'])
+    end
+
+    def nameservers_verified?
+      !nameservers_verified_at.nil?
+    end
+
+    def default_ttl
+      @hash['default_ttl']
+    end
+
+    def create_record(**properties)
+      Record.create(@client, zone: { id: id }, **properties)
+    end
+
+    def records
+      Record.all(@client, { id: id })
+    end
+
     def update(properties)
       req = @client.api.create_request(:patch, 'zones/:zone')
       req.arguments['zone'] = { id: id }
@@ -69,6 +100,15 @@ module Dennis
       req.arguments['zone'] = { id: id }
       req.perform
       true
+    end
+
+    private
+
+    def parse_time(time)
+      return nil if time.nil?
+      return time if time.is_a?(Time)
+
+      Time.at(time.to_i)
     end
 
   end

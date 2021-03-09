@@ -139,6 +139,18 @@ module Dennis
         end
       end
     end
+
+    describe '#zones' do
+      it 'returns an array of all zones for a group' do
+        VCR.use_cassette('group-find-by-id') do
+          group = described_class.find_by(@client, :id, 2)
+          expect(Zone).to receive(:all_for_group) do |_, group|
+            expect(group).to eq({ id: 2 })
+          end
+          group.zones
+        end
+      end
+    end
   end
 
 end

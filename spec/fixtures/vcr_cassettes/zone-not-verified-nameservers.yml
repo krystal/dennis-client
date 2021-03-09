@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://dennis.dev.adam.ac/api/v1/zones/:zone?_arguments=%7B%22zone%22:%7B%22external_reference%22:%22bananas%22%7D%7D
+    uri: https://dennis.dev.adam.ac/api/v1/zones/:zone?_arguments=%7B%22zone%22:%7B%22id%22:2%7D%7D
     body:
       encoding: US-ASCII
       string: ''
@@ -35,14 +35,14 @@ http_interactions:
       Server:
       - Caddy
       X-Request-Id:
-      - 4c4fcaac-3895-4c0b-9d06-337da315cc61
+      - 44b48a26-aed8-48eb-b990-a72cdbb35907
       X-Runtime:
-      - '0.010819'
+      - '0.009830'
       Date:
-      - Tue, 09 Mar 2021 10:08:17 GMT
+      - Tue, 09 Mar 2021 10:08:18 GMT
     body:
       encoding: UTF-8
       string: '{"zone":{"id":2,"name":"bananas.com","group":{"id":1,"name":"Renamed
         Group","external_reference":"with-ref","created_at":1615284490,"updated_at":1615284495,"nameservers":[{"id":6,"name":"kelly.example.com","server":2,"created_at":1615284490,"updated_at":1615284490},{"id":2,"name":"alex.example.com","server":1,"created_at":1615284490,"updated_at":1615284490}]},"created_at":1615284491,"updated_at":1615284491,"serial":1615284491,"default_ttl":3600,"external_reference":"bananas","nameservers_verified_at":null,"nameservers_checked_at":null}}'
-  recorded_at: Tue, 09 Mar 2021 10:08:17 GMT
+  recorded_at: Tue, 09 Mar 2021 10:08:18 GMT
 recorded_with: VCR 6.0.0

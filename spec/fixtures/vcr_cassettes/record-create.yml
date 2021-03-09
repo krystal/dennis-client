@@ -2,10 +2,10 @@
 http_interactions:
 - request:
     method: post
-    uri: https://dennis.dev.adam.ac/api/v1/groups
+    uri: https://dennis.dev.adam.ac/api/v1/records
     body:
       encoding: UTF-8
-      string: '{"properties":{"name":"Apple Group","external_reference":"apples"}}'
+      string: '{"zone":{"id":1},"properties":{"name":"test1234","type":"A","content":{"A":{"ip_address":"10.5.5.5"}}}}'
     headers:
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
@@ -29,21 +29,21 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       Content-Length:
-      - '322'
+      - '179'
       Content-Type:
       - application/json
       Etag:
-      - W/"d11a4b7799980e6d6b498473f8dc311d"
+      - W/"1612b02a2baa7c1226537ca614c3a2b3"
       Server:
       - Caddy
       X-Request-Id:
-      - 1b289b0d-b019-45f1-96e9-bde0ffc2e1f7
+      - 2c7375d5-48e5-49a2-9590-cca3900a7318
       X-Runtime:
-      - '0.031350'
+      - '0.023153'
       Date:
-      - Tue, 09 Mar 2021 10:08:15 GMT
+      - Tue, 09 Mar 2021 10:08:16 GMT
     body:
       encoding: UTF-8
-      string: '{"group":{"id":5,"name":"Apple Group","external_reference":"apples","created_at":1615284495,"updated_at":1615284495,"nameservers":[{"id":5,"name":"laura.example.com","server":2,"created_at":1615284490,"updated_at":1615284490},{"id":3,"name":"dave.example.com","server":1,"created_at":1615284490,"updated_at":1615284490}]}}'
-  recorded_at: Tue, 09 Mar 2021 10:08:15 GMT
+      string: '{"record":{"id":42,"name":"test1234","external_reference":null,"type":"A","full_name":"test1234.example.com","ttl":null,"priority":null,"content":{"A":{"ip_address":"10.5.5.5"}}}}'
+  recorded_at: Tue, 09 Mar 2021 10:08:16 GMT
 recorded_with: VCR 6.0.0

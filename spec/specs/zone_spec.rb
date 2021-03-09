@@ -122,6 +122,49 @@ module Dennis
         end
       end
     end
+
+    describe '#create_record' do
+      it 'creates a zone' do
+        VCR.use_cassette('zone-find-by-id') do
+          group = described_class.find_by(@client, :id, 1)
+          expect(Record).to receive(:create) do |_, options|
+            expect(options[:zone]).to eq({ id: 1 })
+            expect(options[:name]).to eq ''
+            expect(options[:type]).to eq 'CNAME'
+            expect(options[:content]).to eq({ hostname: 'example.com' })
+          end
+          group.create_record(name: '', type: 'CNAME', content: { hostname: 'example.com' })
+        end
+      end
+    end
+
+    describe '#records' do
+      it 'returns an array of all records for a zone' do
+        VCR.use_cassette('zone-find-by-id') do
+          zone = described_class.find_by(@client, :id, 1)
+          expect(Record).to receive(:all) do |_, zone|
+            expect(zone).to eq({ id: 1 })
+          end
+          zone.records
+        end
+      end
+    end
+
+    describe '#nameservers_verified_at?' do
+      it 'is true when the nameservers are verified' do
+        VCR.use_cassette('zone-verified-nameservers') do
+          zone = described_class.find_by(@client, :id, 1)
+          expect(zone.nameservers_verified?).to be true
+        end
+      end
+
+      it 'is false when the nameservers are verified' do
+        VCR.use_cassette('zone-not-verified-nameservers') do
+          zone = described_class.find_by(@client, :id, 2)
+          expect(zone.nameservers_verified?).to be false
+        end
+      end
+    end
   end
 
 end

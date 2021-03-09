@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://dennis.dev.adam.ac/api/v1/groups/:group?_arguments=%7B%22group%22:%7B%22invalid%22:%22%22%7D%7D
+    uri: https://dennis.dev.adam.ac/api/v1/records/:record?_arguments=%7B%22record%22:%7B%22invalid%22:%22%22%7D%7D
     body:
       encoding: US-ASCII
       string: ''
@@ -27,7 +27,7 @@ http_interactions:
       Cache-Control:
       - no-cache
       Content-Length:
-      - '417'
+      - '422'
       Content-Type:
       - application/json
       Server:
@@ -35,16 +35,16 @@ http_interactions:
       X-Api-Schema:
       - json-error
       X-Request-Id:
-      - 194d38ec-39bd-4bad-b235-d92a28b029a4
+      - 4601bb38-55d7-4e83-8d39-8f2fdc4facfe
       X-Runtime:
-      - '0.006684'
+      - '0.005168'
       Date:
-      - Tue, 09 Mar 2021 10:08:15 GMT
+      - Tue, 09 Mar 2021 10:08:16 GMT
     body:
       encoding: UTF-8
-      string: '{"error":{"code":"invalid_argument","description":"The ''group'' argument
-        is invalid","detail":{"path":["group"],"index":null,"issue":"missing_lookup_value","issue_description":"A
+      string: '{"error":{"code":"invalid_argument","description":"The ''record'' argument
+        is invalid","detail":{"path":["record"],"index":null,"issue":"missing_lookup_value","issue_description":"A
         value for a lookup argument set has not been provided but at least one value
-        is required.","errors":[],"argument":{"id":"CoreAPI/Controllers/GroupsController/InfoEndpoint/BaseArgumentSet/GroupArgument","name":"group","description":null}}}}'
-  recorded_at: Tue, 09 Mar 2021 10:08:15 GMT
+        is required.","errors":[],"argument":{"id":"CoreAPI/Controllers/RecordsController/InfoEndpoint/BaseArgumentSet/RecordArgument","name":"record","description":null}}}}'
+  recorded_at: Tue, 09 Mar 2021 10:08:16 GMT
 recorded_with: VCR 6.0.0

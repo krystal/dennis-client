@@ -56,8 +56,12 @@ module Dennis
       end
     end
 
-    def create_zone(**options)
-      Zone.create(@client, group: { id: id }, **options)
+    def create_zone(**properties)
+      Zone.create(@client, group: { id: id }, **properties)
+    end
+
+    def zones
+      Zone.all_for_group(@client, { id: id })
     end
 
     def update(properties)

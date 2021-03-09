@@ -1,0 +1,50 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://dennis.dev.adam.ac/api/v1/zones/:zone/records?_arguments=%7B%22zone%22:%7B%22id%22:1%7D%7D
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Authorization:
+      - Bearer test
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Methods:
+      - "*"
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Length:
+      - '3321'
+      Content-Type:
+      - application/json
+      Etag:
+      - W/"eb4e4d6818cce9d3107a111fe10fb840"
+      Server:
+      - Caddy
+      X-Request-Id:
+      - 31cc6c78-ecdf-4488-9cb6-bc7511950069
+      X-Runtime:
+      - '0.011518'
+      Date:
+      - Tue, 09 Mar 2021 10:08:15 GMT
+    body:
+      encoding: UTF-8
+      string: '{"records":[{"id":6,"name":null,"external_reference":null,"type":"A","full_name":"example.com","ttl":null,"priority":null,"content":{"A":{"ip_address":"185.22.211.61"}}},{"id":7,"name":null,"external_reference":null,"type":"AAAA","full_name":"example.com","ttl":null,"priority":null,"content":{"AAAA":{"ip_address":"2a00:67a0:a:1::1"}}},{"id":14,"name":null,"external_reference":null,"type":"CAA","full_name":"example.com","ttl":null,"priority":null,"content":{"CAA":{"flag":"0","tag":"issue","value":"letsencrypt.com"}}},{"id":10,"name":null,"external_reference":null,"type":"MX","full_name":"example.com","ttl":null,"priority":10,"content":{"MX":{"hostname":"post.atech.io"}}},{"id":2,"name":null,"external_reference":null,"type":"NS","full_name":"example.com","ttl":null,"priority":null,"content":{"NS":{"hostname":"alex.example.com"}}},{"id":1,"name":null,"external_reference":null,"type":"NS","full_name":"example.com","ttl":null,"priority":null,"content":{"NS":{"hostname":"kelly.example.com"}}},{"id":3,"name":null,"external_reference":null,"type":"SOA","full_name":"example.com","ttl":null,"priority":null,"content":{"SOA":{}}},{"id":16,"name":null,"external_reference":null,"type":"SSHFP","full_name":"example.com","ttl":null,"priority":null,"content":{"SSHFP":{"algorithm":"1","fingerprint_type":"2","fingerprint":"a098b812c2423e663f946e981aaacc0e66520a38"}}},{"id":4,"name":"_1c102aaebd0fad7b110d902d2f3682d4","external_reference":null,"type":"CNAME","full_name":"_1c102aaebd0fad7b110d902d2f3682d4.example.com","ttl":null,"priority":null,"content":{"CNAME":{"hostname":"9DEF881C1969EA572754FAD3258B9C57.B44F379D67E6BBC684DD3A22CCEA1E11.tf3Uy5q5AZ5AFz595yD5.comodoca.com"}}},{"id":5,"name":"_dmarc","external_reference":null,"type":"TXT","full_name":"_dmarc.example.com","ttl":null,"priority":null,"content":{"TXT":{"content":"v=DMARC1;
+        p=none; pct=100; rua=mailto:re+yf0qih6zxzd@dmarc.postmarkapp.com; sp=none;
+        aspf=r;"}}},{"id":15,"name":"_sip._udp","external_reference":null,"type":"SRV","full_name":"_sip._udp.example.com","ttl":null,"priority":10,"content":{"SRV":{"weight":"10","port":"5060","target":"sip.example.com"}}},{"id":11,"name":"cm._domainkey","external_reference":null,"type":"TXT","full_name":"cm._domainkey.example.com","ttl":null,"priority":null,"content":{"TXT":{"content":"k=rsa;
+        p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCsJyYnv48KsqIS/yLiU1YGjpo+KPTkKAtJEq7RW7dMEM8IzOx96Qa3S0NYDMPr9QJOJoAomLl51YFe5Xu3WlR5f8uNjH/7UujGL9RpT+Gaa23W85qhrWuQpZnBqFczLdxf3R/OP4Sm5KisVvCP+gain4h0yxFFM4UZT4893bl6QwIDAQAB"}}},{"id":9,"name":"helpdesk","external_reference":null,"type":"ALIAS","full_name":"helpdesk.example.com","ttl":null,"priority":null,"content":{"ALIAS":{"hostname":"sirportly.com"}}},{"id":12,"name":"staging","external_reference":null,"type":"CNAME","full_name":"staging.example.com","ttl":null,"priority":null,"content":{"CNAME":{"hostname":"codebase-staging.infra.atech.io"}}},{"id":13,"name":"support","external_reference":null,"type":"TXT","full_name":"support.example.com","ttl":null,"priority":null,"content":{"TXT":{"content":"google-site-verification=aH5JAy0bfGYlRJ-wqWOCoMQccdExg5cv614AZm6GrAo"}}},{"id":8,"name":"www","external_reference":"www-cname-example","type":"CNAME","full_name":"www.example.com","ttl":null,"priority":null,"content":{"CNAME":{"hostname":"example.com"}}}]}'
+  recorded_at: Tue, 09 Mar 2021 10:08:15 GMT
+recorded_with: VCR 6.0.0
