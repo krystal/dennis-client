@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://dennis.dev.adam.ac/api/v1/records/:record?_arguments=%7B%22record%22:%7B%22id%22:11%7D%7D
+    uri: https://dennis.dev.adam.ac/api/v1/nameservers/:nameserver?_arguments=%7B%22nameserver%22:%7B%22id%22:1%7D%7D
     body:
       encoding: US-ASCII
       string: ''
@@ -27,31 +27,29 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       Content-Length:
-      - '407'
+      - '108'
       Content-Type:
       - application/json
       Etag:
-      - W/"3f827503a861616bb1402eec98b7c727"
+      - W/"e1c60f48c85405791532c40d1a239807"
       Server:
       - Caddy
       X-Request-Id:
-      - 027b55d0-fa1b-4a86-9ccb-e6066e73fa20
+      - 17362082-33a4-4a31-9a8e-159e89ee3f97
       X-Runtime:
-      - '0.005201'
+      - '0.005320'
       Date:
-      - Mon, 29 Mar 2021 16:51:53 GMT
+      - Mon, 29 Mar 2021 16:58:15 GMT
     body:
       encoding: UTF-8
-      string: '{"record":{"id":11,"name":"cm._domainkey","external_reference":null,"type":"TXT","full_name":"cm._domainkey.example.com","ttl":null,"priority":null,"content":{"TXT":{"content":"k=rsa;
-        p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCsJyYnv48KsqIS/yLiU1YGjpo+KPTkKAtJEq7RW7dMEM8IzOx96Qa3S0NYDMPr9QJOJoAomLl51YFe5Xu3WlR5f8uNjH/7UujGL9RpT+Gaa23W85qhrWuQpZnBqFczLdxf3R/OP4Sm5KisVvCP+gain4h0yxFFM4UZT4893bl6QwIDAQAB"}}}}'
-  recorded_at: Mon, 29 Mar 2021 16:51:53 GMT
+      string: '{"nameserver":{"id":1,"name":"phil.example.com","server":2,"created_at":1617036705,"updated_at":1617036712}}'
+  recorded_at: Mon, 29 Mar 2021 16:58:15 GMT
 - request:
     method: patch
-    uri: https://dennis.dev.adam.ac/api/v1/records/:record
+    uri: https://dennis.dev.adam.ac/api/v1/nameservers/:nameserver
     body:
       encoding: UTF-8
-      string: '{"record":{"id":11},"properties":{"name":"cm._domainkey.renamed","content":{"TXT":{"content":"new
-        txt value"}}}}'
+      string: '{"nameserver":{"id":1},"properties":{"name":"phil.example.com","server":2}}'
     headers:
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
@@ -75,22 +73,21 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       Content-Length:
-      - '211'
+      - '108'
       Content-Type:
       - application/json
       Etag:
-      - W/"1d63762b914b0a5b98ca1cf0b5fe91df"
+      - W/"e1c60f48c85405791532c40d1a239807"
       Server:
       - Caddy
       X-Request-Id:
-      - 505a7ab4-ccc6-42d6-98e4-85e7379b3b64
+      - 12a88ea5-8c95-4dd2-bc47-a9db88d66979
       X-Runtime:
-      - '0.017294'
+      - '0.005875'
       Date:
-      - Mon, 29 Mar 2021 16:51:53 GMT
+      - Mon, 29 Mar 2021 16:58:15 GMT
     body:
       encoding: UTF-8
-      string: '{"record":{"id":11,"name":"cm._domainkey.renamed","external_reference":null,"type":"TXT","full_name":"cm._domainkey.renamed.example.com","ttl":null,"priority":null,"content":{"TXT":{"content":"new
-        txt value"}}}}'
-  recorded_at: Mon, 29 Mar 2021 16:51:53 GMT
+      string: '{"nameserver":{"id":1,"name":"phil.example.com","server":2,"created_at":1617036705,"updated_at":1617036712}}'
+  recorded_at: Mon, 29 Mar 2021 16:58:15 GMT
 recorded_with: VCR 6.0.0

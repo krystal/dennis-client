@@ -35,15 +35,15 @@ http_interactions:
       Server:
       - Caddy
       X-Request-Id:
-      - d6ba4ef2-de46-457b-9302-4f3aba01689f
+      - 8757db03-cb67-4d82-86de-2642e581d3b9
       X-Runtime:
-      - '0.006297'
+      - '0.005791'
       Date:
-      - Tue, 09 Mar 2021 10:08:16 GMT
+      - Mon, 29 Mar 2021 16:51:53 GMT
     body:
       encoding: UTF-8
       string: '{"record":{"id":16,"name":null,"external_reference":null,"type":"SSHFP","full_name":"example.com","ttl":null,"priority":null,"content":{"SSHFP":{"algorithm":"1","fingerprint_type":"2","fingerprint":"a098b812c2423e663f946e981aaacc0e66520a38"}}}}'
-  recorded_at: Tue, 09 Mar 2021 10:08:16 GMT
+  recorded_at: Mon, 29 Mar 2021 16:51:53 GMT
 - request:
     method: patch
     uri: https://dennis.dev.adam.ac/api/v1/records/:record
@@ -81,13 +81,13 @@ http_interactions:
       Server:
       - Caddy
       X-Request-Id:
-      - 6c44292f-1dca-4c6b-9f8d-33e21fc66159
+      - 68b84018-7441-4f6c-807a-7d2e83115fc3
       X-Runtime:
-      - '0.020392'
+      - '0.020687'
       Date:
-      - Tue, 09 Mar 2021 10:08:16 GMT
+      - Mon, 29 Mar 2021 16:51:53 GMT
     body:
       encoding: UTF-8
       string: '{"record":{"id":16,"name":null,"external_reference":null,"type":"SSHFP","full_name":"example.com","ttl":null,"priority":null,"content":{"SSHFP":{"algorithm":"1","fingerprint_type":"2","fingerprint":"abcdef1234"}}}}'
-  recorded_at: Tue, 09 Mar 2021 10:08:16 GMT
+  recorded_at: Mon, 29 Mar 2021 16:51:53 GMT
 recorded_with: VCR 6.0.0

@@ -1,0 +1,47 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://dennis.dev.adam.ac/api/v1/nameservers?_arguments=%7B%7D
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Authorization:
+      - Bearer test
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Methods:
+      - "*"
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Length:
+      - '676'
+      Content-Type:
+      - application/json
+      Etag:
+      - W/"099d84ca3b30f01456d221e58d02fe04"
+      Server:
+      - Caddy
+      X-Request-Id:
+      - fd96261c-63cd-426b-b846-ea61f8105e90
+      X-Runtime:
+      - '0.007599'
+      Date:
+      - Mon, 29 Mar 2021 16:58:15 GMT
+    body:
+      encoding: UTF-8
+      string: '{"nameservers":[{"id":2,"name":"alex.example.com","server":1,"created_at":1617036705,"updated_at":1617036705},{"id":3,"name":"dave.example.com","server":1,"created_at":1617036705,"updated_at":1617036705},{"id":7,"name":"jim.example.com","server":1,"created_at":1617036712,"updated_at":1617036712},{"id":6,"name":"kelly.example.com","server":2,"created_at":1617036705,"updated_at":1617036705},{"id":5,"name":"laura.example.com","server":2,"created_at":1617036705,"updated_at":1617036705},{"id":1,"name":"phil.example.com","server":2,"created_at":1617036705,"updated_at":1617036712},{"id":4,"name":"ruth.example.com","server":2,"created_at":1617036705,"updated_at":1617036705}]}'
+  recorded_at: Mon, 29 Mar 2021 16:58:15 GMT
+recorded_with: VCR 6.0.0

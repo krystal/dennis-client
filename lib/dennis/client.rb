@@ -3,6 +3,7 @@
 require 'rapid_api'
 require 'dennis/group'
 require 'dennis/zone'
+require 'dennis/nameserver'
 
 module Dennis
   class Client
@@ -37,6 +38,18 @@ module Dennis
 
     def zone(id, field: :id)
       Zone.find_by(self, field, id)
+    end
+
+    def nameservers
+      Nameserver.all(self)
+    end
+
+    def nameserver(id, field: :id)
+      Nameserver.find_by(self, field, id)
+    end
+
+    def create_nameserver(**opts)
+      Nameserver.create(self, **opts)
     end
 
   end

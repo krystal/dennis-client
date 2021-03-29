@@ -35,16 +35,16 @@ http_interactions:
       Server:
       - Caddy
       X-Request-Id:
-      - a9457fe2-9d5c-4893-a651-bc4f6bbb476a
+      - 4e82b941-6990-47ba-b2c2-e99be92f12c7
       X-Runtime:
-      - '0.007522'
+      - '0.005910'
       Date:
-      - Tue, 09 Mar 2021 10:08:16 GMT
+      - Mon, 29 Mar 2021 16:51:53 GMT
     body:
       encoding: UTF-8
       string: '{"record":{"id":11,"name":"cm._domainkey.renamed","external_reference":null,"type":"TXT","full_name":"cm._domainkey.renamed.example.com","ttl":null,"priority":null,"content":{"TXT":{"content":"new
         txt value"}}}}'
-  recorded_at: Tue, 09 Mar 2021 10:08:16 GMT
+  recorded_at: Mon, 29 Mar 2021 16:51:53 GMT
 - request:
     method: patch
     uri: https://dennis.dev.adam.ac/api/v1/records/:record
@@ -82,15 +82,15 @@ http_interactions:
       X-Api-Schema:
       - json-error
       X-Request-Id:
-      - c5c1bf65-229e-4f43-b2c3-0faa8930e4b0
+      - e736b858-168d-41af-9d92-d6638eae473a
       X-Runtime:
-      - '0.010466'
+      - '0.011131'
       Date:
-      - Tue, 09 Mar 2021 10:08:16 GMT
+      - Mon, 29 Mar 2021 16:51:53 GMT
     body:
       encoding: UTF-8
       string: '{"error":{"code":"validation_error","description":"A validation error
         occurred when saving the object","detail":{"errors":[{"attribute":"content.ip_address","type":"invalid_ipv4_address","message":"A:
         IPv4 address is not a valid IPv4 address"}]}}}'
-  recorded_at: Tue, 09 Mar 2021 10:08:16 GMT
+  recorded_at: Mon, 29 Mar 2021 16:51:53 GMT
 recorded_with: VCR 6.0.0

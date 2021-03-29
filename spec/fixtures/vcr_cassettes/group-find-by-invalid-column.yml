@@ -27,7 +27,7 @@ http_interactions:
       Cache-Control:
       - no-cache
       Content-Length:
-      - '417'
+      - '405'
       Content-Type:
       - application/json
       Server:
@@ -35,16 +35,16 @@ http_interactions:
       X-Api-Schema:
       - json-error
       X-Request-Id:
-      - 194d38ec-39bd-4bad-b235-d92a28b029a4
+      - ec02e106-63d4-45e4-bb15-8c3addcb681d
       X-Runtime:
-      - '0.006684'
+      - '0.003640'
       Date:
-      - Tue, 09 Mar 2021 10:08:15 GMT
+      - Mon, 29 Mar 2021 16:51:52 GMT
     body:
       encoding: UTF-8
       string: '{"error":{"code":"invalid_argument","description":"The ''group'' argument
         is invalid","detail":{"path":["group"],"index":null,"issue":"missing_lookup_value","issue_description":"A
         value for a lookup argument set has not been provided but at least one value
-        is required.","errors":[],"argument":{"id":"CoreAPI/Controllers/GroupsController/InfoEndpoint/BaseArgumentSet/GroupArgument","name":"group","description":null}}}}'
-  recorded_at: Tue, 09 Mar 2021 10:08:15 GMT
+        is required.","errors":[],"argument":{"id":"CoreAPI/Endpoints/Groups/InfoEndpoint/BaseArgumentSet/GroupArgument","name":"group","description":null}}}}'
+  recorded_at: Mon, 29 Mar 2021 16:51:52 GMT
 recorded_with: VCR 6.0.0

@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://dennis.dev.adam.ac/api/v1/records/:record?_arguments=%7B%22record%22:%7B%22id%22:12%7D%7D
+    uri: https://dennis.dev.adam.ac/api/v1/nameservers/:nameserver?_arguments=%7B%22nameserver%22:%7B%22id%22:1%7D%7D
     body:
       encoding: US-ASCII
       string: ''
@@ -27,29 +27,29 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       Content-Length:
-      - '206'
+      - '108'
       Content-Type:
       - application/json
       Etag:
-      - W/"624197b3a941135332d153c1a48d0777"
+      - W/"e1c60f48c85405791532c40d1a239807"
       Server:
       - Caddy
       X-Request-Id:
-      - f665726e-4b77-4f92-9e5c-1aa123b5074f
+      - c9b991e4-086e-4945-b984-9abcf6fea0f5
       X-Runtime:
-      - '0.006616'
+      - '0.004605'
       Date:
-      - Mon, 29 Mar 2021 16:51:53 GMT
+      - Mon, 29 Mar 2021 16:58:15 GMT
     body:
       encoding: UTF-8
-      string: '{"record":{"id":12,"name":"staging","external_reference":null,"type":"CNAME","full_name":"staging.example.com","ttl":null,"priority":null,"content":{"CNAME":{"hostname":"codebase-staging.infra.atech.io"}}}}'
-  recorded_at: Mon, 29 Mar 2021 16:51:53 GMT
+      string: '{"nameserver":{"id":1,"name":"phil.example.com","server":2,"created_at":1617036705,"updated_at":1617036712}}'
+  recorded_at: Mon, 29 Mar 2021 16:58:15 GMT
 - request:
-    method: delete
-    uri: https://dennis.dev.adam.ac/api/v1/records/:record
+    method: patch
+    uri: https://dennis.dev.adam.ac/api/v1/nameservers/:nameserver
     body:
       encoding: UTF-8
-      string: '{"record":{"id":12}}'
+      string: '{"nameserver":{"id":1},"properties":{"name":""}}'
     headers:
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
@@ -63,31 +63,33 @@ http_interactions:
       - application/json
   response:
     status:
-      code: 200
-      message: OK
+      code: 422
+      message: Unprocessable Entity
     headers:
       Access-Control-Allow-Methods:
       - "*"
       Access-Control-Allow-Origin:
       - "*"
       Cache-Control:
-      - max-age=0, private, must-revalidate
+      - no-cache
       Content-Length:
-      - '206'
+      - '194'
       Content-Type:
       - application/json
-      Etag:
-      - W/"624197b3a941135332d153c1a48d0777"
       Server:
       - Caddy
+      X-Api-Schema:
+      - json-error
       X-Request-Id:
-      - 246d80cf-d673-4d77-b72e-03829acf0921
+      - 78836bb1-6929-4010-a31b-f4b2b873c580
       X-Runtime:
-      - '0.016128'
+      - '0.014198'
       Date:
-      - Mon, 29 Mar 2021 16:51:53 GMT
+      - Mon, 29 Mar 2021 16:58:15 GMT
     body:
       encoding: UTF-8
-      string: '{"record":{"id":12,"name":"staging","external_reference":null,"type":"CNAME","full_name":"staging.example.com","ttl":null,"priority":null,"content":{"CNAME":{"hostname":"codebase-staging.infra.atech.io"}}}}'
-  recorded_at: Mon, 29 Mar 2021 16:51:53 GMT
+      string: '{"error":{"code":"validation_error","description":"A validation error
+        occurred when saving the object","detail":{"errors":[{"attribute":"name","type":"blank","message":"Name
+        can''t be blank"}]}}}'
+  recorded_at: Mon, 29 Mar 2021 16:58:15 GMT
 recorded_with: VCR 6.0.0
