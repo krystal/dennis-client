@@ -142,8 +142,8 @@ module Dennis
       it 'returns an array of all records for a zone' do
         VCR.use_cassette('zone-find-by-id') do
           zone = described_class.find_by(@client, :id, 1)
-          expect(Record).to receive(:all) do |_, zone|
-            expect(zone).to eq({ id: 1 })
+          expect(Record).to receive(:all) do |_, z|
+            expect(z).to eq({ id: 1 })
           end
           zone.records
         end
