@@ -2,6 +2,12 @@
 
 This file contains all the latest changes and updates to this application.
 
+## 1.0.2
+
+### Features
+
+- support for managing nameservers ([43e908](https://github.com/krystal/dennis-client/commit/43e908545a5f67768c14c16a0cdfa154b6cfd64a))
+
 ## 1.0.1
 
 ## 1.0.0
