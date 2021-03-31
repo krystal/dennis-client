@@ -2,6 +2,12 @@
 
 This file contains all the latest changes and updates to this application.
 
+## 1.0.3
+
+### Bug Fixes
+
+- pass through options to the rapid API ([11fc19](https://github.com/krystal/dennis-client/commit/11fc190cdec2ffb5e3a0a3b67eb14d6fca36d30b))
+
 ## 1.0.2
 
 ### Features
