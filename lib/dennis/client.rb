@@ -12,11 +12,11 @@ module Dennis
     attr_reader :api_key
     attr_reader :api
 
-    def initialize(hostname, api_key)
+    def initialize(hostname, api_key, **options)
       @hostname = hostname
       @api_key = api_key
 
-      @api = RapidAPI.load(hostname, namespace: 'api/v1')
+      @api = RapidAPI.load(hostname, namespace: 'api/v1', **options)
       @api.headers['Authorization'] = "Bearer #{api_key}"
     end
 
