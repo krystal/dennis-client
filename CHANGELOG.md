@@ -2,6 +2,12 @@
 
 This file contains all the latest changes and updates to this application.
 
+## 1.0.5
+
+### Bug Fixes
+
+- support for other properties on zone ([c8ad49](https://github.com/krystal/dennis-client/commit/c8ad4958c6bfff44c0a1adc5cfe591b921177f17))
+
 ## 1.0.4
 
 ### Bug Fixes
