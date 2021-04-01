@@ -2,6 +2,12 @@
 
 This file contains all the latest changes and updates to this application.
 
+## 1.0.4
+
+### Bug Fixes
+
+- fixes Zone.all_for_group ([165edd](https://github.com/krystal/dennis-client/commit/165eddaf8b77e19f9f38b71446445c75056af972))
+
 ## 1.0.3
 
 ### Bug Fixes
