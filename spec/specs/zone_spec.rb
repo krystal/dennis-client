@@ -14,6 +14,15 @@ module Dennis
           expect(zones).to be_a Array
         end
       end
+
+      it 'returns an array of groups matching a query' do
+        VCR.use_cassette('zone-all-with-query') do
+          zones = described_class.all(@client, query: 'pears')
+          expect(zones).to be_a Array
+          expect(zones.size).to eq 1
+          expect(zones[0].name).to eq 'pears.com'
+        end
+      end
     end
 
     describe '.find_by' do
@@ -169,8 +178,17 @@ module Dennis
     describe '.all_for_group' do
       it 'returns an array of zones for the given group' do
         VCR.use_cassette('zone-all-for-group') do
-          zones = Zone.all_for_group(@client, { id: 1 })
+          zones = described_class.all_for_group(@client, { id: 1 })
           expect(zones).to be_a Array
+        end
+      end
+
+      it 'returns an array of zones for a given group and query' do
+        VCR.use_cassette('zone-all-for-group-with-query') do
+          zones = described_class.all_for_group(@client, { id: 2 }, query: 'berri')
+          expect(zones).to be_a Array
+          expect(zones.size).to eq 1
+          expect(zones[0].name).to eq 'strawberries.com'
         end
       end
     end

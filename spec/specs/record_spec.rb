@@ -14,6 +14,51 @@ module Dennis
           expect(records).to be_a Array
         end
       end
+
+      it 'returns an array of all records of a specific type' do
+        VCR.use_cassette('record-all-with-type') do
+          records = described_class.all(@client, { id: 1 }, type: 'CNAME')
+          expect(records).to be_a Array
+          expect(records.size).to eq 3
+          expect(records.map(&:type)).to all eq 'CNAME'
+        end
+      end
+
+      it 'returns an array of all records of a specific name' do
+        VCR.use_cassette('record-all-with-name') do
+          records = described_class.all(@client, { id: 1 }, name: 'helpdesk')
+          expect(records).to be_a Array
+          expect(records.size).to eq 1
+          expect(records[0].content[:hostname]).to eq 'sirportly.com'
+        end
+      end
+
+      it 'returns an array of all records of a specific type and name' do
+        VCR.use_cassette('record-all-with-name-and-type') do
+          records = described_class.all(@client, { id: 1 }, type: 'TXT', name: 'cm._domainkey')
+          expect(records).to be_a Array
+          expect(records.size).to eq 1
+          expect(records[0].content[:content]).to eq 'k=rsa; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCsJyYnv48KsqIS/yLiU1YGjpo+KPTkKAtJEq7RW7dMEM8IzOx96Qa3S0NYDMPr9QJOJoAomLl51YFe5Xu3WlR5f8uNjH/7UujGL9RpT+Gaa23W85qhrWuQpZnBqFczLdxf3R/OP4Sm5KisVvCP+gain4h0yxFFM4UZT4893bl6QwIDAQAB'
+        end
+      end
+
+      it 'returns an array of all records with a query' do
+        VCR.use_cassette('record-all-with-query') do
+          records = described_class.all(@client, { id: 1 }, query: '_domainkey')
+          expect(records).to be_a Array
+          expect(records.size).to eq 1
+          expect(records[0].content[:content]).to eq 'k=rsa; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCsJyYnv48KsqIS/yLiU1YGjpo+KPTkKAtJEq7RW7dMEM8IzOx96Qa3S0NYDMPr9QJOJoAomLl51YFe5Xu3WlR5f8uNjH/7UujGL9RpT+Gaa23W85qhrWuQpZnBqFczLdxf3R/OP4Sm5KisVvCP+gain4h0yxFFM4UZT4893bl6QwIDAQAB'
+        end
+      end
+
+      it 'returns an array of all records with a root query' do
+        VCR.use_cassette('record-all-with-query') do
+          records = described_class.all(@client, { id: 1 }, query: '_domainkey')
+          expect(records).to be_a Array
+          expect(records.size).to eq 1
+          expect(records[0].content[:content]).to eq 'k=rsa; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCsJyYnv48KsqIS/yLiU1YGjpo+KPTkKAtJEq7RW7dMEM8IzOx96Qa3S0NYDMPr9QJOJoAomLl51YFe5Xu3WlR5f8uNjH/7UujGL9RpT+Gaa23W85qhrWuQpZnBqFczLdxf3R/OP4Sm5KisVvCP+gain4h0yxFFM4UZT4893bl6QwIDAQAB'
+        end
+      end
     end
 
     describe '.find_by' do

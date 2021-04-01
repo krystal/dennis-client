@@ -9,14 +9,16 @@ module Dennis
 
     class << self
 
-      def all(client)
-        groups = client.api.perform(:get, 'zones')
-        groups.hash['zones'].map { |hash| new(client, hash) }
+      def all(client, query: nil)
+        request = client.api.create_request(:get, 'zones')
+        request.arguments[:query] = query if query
+        request.perform.hash['zones'].map { |hash| new(client, hash) }
       end
 
-      def all_for_group(client, group)
+      def all_for_group(client, group, query: nil)
         request = client.api.create_request(:get, 'groups/:group/zones')
         request.arguments[:group] = group
+        request.arguments[:query] = query if query
         request.perform.hash['zones'].map { |hash| new(client, hash) }
       end
 

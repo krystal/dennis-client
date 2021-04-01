@@ -8,9 +8,12 @@ module Dennis
 
     class << self
 
-      def all(client, zone)
+      def all(client, zone, type: nil, name: nil, query: nil)
         request = client.api.create_request(:get, 'zones/:zone/records')
         request.arguments[:zone] = zone
+        request.arguments[:name] = name if name
+        request.arguments[:type] = type if type
+        request.arguments[:query] = query if query
         request.perform.hash['records'].map { |hash| new(client, hash) }
       end
 

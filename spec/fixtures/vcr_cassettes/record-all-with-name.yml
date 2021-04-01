@@ -1,0 +1,47 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://dennis.dev.adam.ac/api/v1/zones/:zone/records?_arguments=%7B%22zone%22:%7B%22id%22:1%7D,%22name%22:%22helpdesk%22%7D
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Authorization:
+      - Bearer test
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Methods:
+      - "*"
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Length:
+      - '256'
+      Content-Type:
+      - application/json
+      Etag:
+      - W/"cdc7c5418a77226e056b2359d85e7e83"
+      Server:
+      - Caddy
+      X-Request-Id:
+      - 597b50ba-5fc1-4872-8ab7-d8ff4cbe477d
+      X-Runtime:
+      - '0.008485'
+      Date:
+      - Thu, 01 Apr 2021 20:21:24 GMT
+    body:
+      encoding: UTF-8
+      string: '{"records":[{"id":9,"name":"helpdesk","external_reference":null,"type":"ALIAS","full_name":"helpdesk.example.com","ttl":null,"priority":null,"managed":false,"created_at":1617287953,"updated_at":1617287953,"content":{"ALIAS":{"hostname":"sirportly.com"}}}]}'
+  recorded_at: Thu, 01 Apr 2021 20:21:24 GMT
+recorded_with: VCR 6.0.0

@@ -1,0 +1,48 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://dennis.dev.adam.ac/api/v1/zones?_arguments=%7B%22query%22:%22pears%22%7D
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Authorization:
+      - Bearer test
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Methods:
+      - "*"
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Length:
+      - '311'
+      Content-Type:
+      - application/json
+      Etag:
+      - W/"b971f76e718b8f10fde9db009ac9399b"
+      Server:
+      - Caddy
+      X-Request-Id:
+      - f09846f9-d0de-41a2-b1cb-bcc0a586c70a
+      X-Runtime:
+      - '0.058211'
+      Date:
+      - Thu, 01 Apr 2021 19:07:24 GMT
+    body:
+      encoding: UTF-8
+      string: '{"zones":[{"id":4,"name":"pears.com","group":{"id":2,"name":"Another
+        Group"},"created_at":1617287953,"updated_at":1617287953,"serial":1617287953,"default_ttl":3600,"external_reference":null,"nameservers_verified_at":1617287953,"nameservers_checked_at":null,"always_verified":false,"nameservers_verified":true}]}'
+  recorded_at: Thu, 01 Apr 2021 19:07:24 GMT
+recorded_with: VCR 6.0.0

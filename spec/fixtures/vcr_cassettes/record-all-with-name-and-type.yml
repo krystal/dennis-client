@@ -1,0 +1,48 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://dennis.dev.adam.ac/api/v1/zones/:zone/records?_arguments=%7B%22zone%22:%7B%22id%22:1%7D,%22name%22:%22cm._domainkey%22,%22type%22:%22TXT%22%7D
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Authorization:
+      - Bearer test
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Methods:
+      - "*"
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Length:
+      - '474'
+      Content-Type:
+      - application/json
+      Etag:
+      - W/"4497bbbdeb6fee5d1c2cf08c4223311d"
+      Server:
+      - Caddy
+      X-Request-Id:
+      - 5b92d23d-f8a5-4e96-8882-76c97c3e053b
+      X-Runtime:
+      - '0.007972'
+      Date:
+      - Thu, 01 Apr 2021 20:22:34 GMT
+    body:
+      encoding: UTF-8
+      string: '{"records":[{"id":11,"name":"cm._domainkey","external_reference":null,"type":"TXT","full_name":"cm._domainkey.example.com","ttl":null,"priority":null,"managed":false,"created_at":1617287953,"updated_at":1617287953,"content":{"TXT":{"content":"k=rsa;
+        p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCsJyYnv48KsqIS/yLiU1YGjpo+KPTkKAtJEq7RW7dMEM8IzOx96Qa3S0NYDMPr9QJOJoAomLl51YFe5Xu3WlR5f8uNjH/7UujGL9RpT+Gaa23W85qhrWuQpZnBqFczLdxf3R/OP4Sm5KisVvCP+gain4h0yxFFM4UZT4893bl6QwIDAQAB"}}}]}'
+  recorded_at: Thu, 01 Apr 2021 20:22:34 GMT
+recorded_with: VCR 6.0.0

@@ -1,0 +1,47 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://dennis.dev.adam.ac/api/v1/groups/:group/zones?_arguments=%7B%22group%22:%7B%22id%22:2%7D,%22query%22:%22berri%22%7D
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Authorization:
+      - Bearer test
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Methods:
+      - "*"
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Length:
+      - '278'
+      Content-Type:
+      - application/json
+      Etag:
+      - W/"c25eb37fe1c1ab988281d2a18613b6f8"
+      Server:
+      - Caddy
+      X-Request-Id:
+      - d0c73325-87cd-4d6b-9436-97866b51f382
+      X-Runtime:
+      - '0.009743'
+      Date:
+      - Thu, 01 Apr 2021 19:08:53 GMT
+    body:
+      encoding: UTF-8
+      string: '{"zones":[{"id":5,"name":"strawberries.com","created_at":1617287953,"updated_at":1617287953,"serial":1617287953,"default_ttl":3600,"external_reference":null,"nameservers_verified_at":1617287953,"nameservers_checked_at":null,"always_verified":false,"nameservers_verified":true}]}'
+  recorded_at: Thu, 01 Apr 2021 19:08:53 GMT
+recorded_with: VCR 6.0.0
