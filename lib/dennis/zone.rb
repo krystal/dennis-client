@@ -15,9 +15,9 @@ module Dennis
       end
 
       def all_for_group(client, group)
-        request = client.api.perform(:get, 'groups/:group/zones')
+        request = client.api.create_request(:get, 'groups/:group/zones')
         request.arguments[:group] = group
-        groups.hash['zones'].map { |hash| new(client, hash) }
+        request.perform.hash['zones'].map { |hash| new(client, hash) }
       end
 
       def find_by(client, field, value)

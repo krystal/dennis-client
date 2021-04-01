@@ -165,6 +165,15 @@ module Dennis
         end
       end
     end
+
+    describe '.all_for_group' do
+      it 'returns an array of zones for the given group' do
+        VCR.use_cassette('zone-all-for-group') do
+          zones = Zone.all_for_group(@client, { id: 1 })
+          expect(zones).to be_a Array
+        end
+      end
+    end
   end
 
 end
