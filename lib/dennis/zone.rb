@@ -28,10 +28,16 @@ module Dennis
         e.code == 'zone_not_found' ? nil : raise
       end
 
-      def create(client, group:, name:, external_reference: nil)
+      def create(client,
+                 group:,
+                 allow_sub_domains_of_zones_in_other_groups: nil,
+                 **properties)
         request = client.api.create_request(:post, 'zones')
         request.arguments[:group] = group
-        request.arguments[:properties] = { name: name, external_reference: external_reference }
+        request.arguments[:properties] = properties
+        unless allow_sub_domains_of_zones_in_other_groups.nil?
+          request.arguments[:allow_sub_domains_of_zones_in_other_groups] = allow_sub_domains_of_zones_in_other_groups
+        end
         new(client, request.perform.hash['zone'])
       rescue RapidAPI::RequestError => e
         raise GroupNotFoundError if e.code == 'group_not_found'
