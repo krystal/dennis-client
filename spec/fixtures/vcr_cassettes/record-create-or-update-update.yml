@@ -1,0 +1,137 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://dennis.dev.adam.ac/api/v1/records/:record?_arguments=%7B%22record%22:%7B%22external_reference%22:%22cou-1%22%7D%7D
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Authorization:
+      - Bearer test
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Methods:
+      - "*"
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Length:
+      - '239'
+      Content-Type:
+      - application/json
+      Etag:
+      - W/"f6a95f3f99009f0fed13804acf44cecc"
+      Server:
+      - Caddy
+      X-Request-Id:
+      - 8ad4a010-5197-472e-b8c8-86fdb7305f5d
+      X-Runtime:
+      - '0.007161'
+      Date:
+      - Fri, 02 Apr 2021 10:12:40 GMT
+    body:
+      encoding: UTF-8
+      string: '{"record":{"id":43,"name":"cou-1","external_reference":"cou-1","type":"A","full_name":"cou-1.example.com","ttl":null,"priority":null,"managed":false,"created_at":1617358360,"updated_at":1617358360,"content":{"A":{"ip_address":"1.1.1.1"}}}}'
+  recorded_at: Fri, 02 Apr 2021 10:12:40 GMT
+- request:
+    method: get
+    uri: https://dennis.dev.adam.ac/api/v1/records/:record?_arguments=%7B%22record%22:%7B%22external_reference%22:%22cou-1%22%7D%7D
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Authorization:
+      - Bearer test
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Methods:
+      - "*"
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Length:
+      - '239'
+      Content-Type:
+      - application/json
+      Etag:
+      - W/"f6a95f3f99009f0fed13804acf44cecc"
+      Server:
+      - Caddy
+      X-Request-Id:
+      - ea2cf65b-0a7b-4fe0-bb70-3a9b4586d6ef
+      X-Runtime:
+      - '0.007501'
+      Date:
+      - Fri, 02 Apr 2021 10:12:40 GMT
+    body:
+      encoding: UTF-8
+      string: '{"record":{"id":43,"name":"cou-1","external_reference":"cou-1","type":"A","full_name":"cou-1.example.com","ttl":null,"priority":null,"managed":false,"created_at":1617358360,"updated_at":1617358360,"content":{"A":{"ip_address":"1.1.1.1"}}}}'
+  recorded_at: Fri, 02 Apr 2021 10:12:40 GMT
+- request:
+    method: patch
+    uri: https://dennis.dev.adam.ac/api/v1/records/:record
+    body:
+      encoding: UTF-8
+      string: '{"record":{"id":43},"properties":{"name":"cou-1","type":"A","external_reference":"cou-1","content":{"A":{"ip_address":"2.2.2.2"}}}}'
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Authorization:
+      - Bearer test
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Methods:
+      - "*"
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Length:
+      - '239'
+      Content-Type:
+      - application/json
+      Etag:
+      - W/"81ced27e6ad3e6348430957e9cd1db62"
+      Server:
+      - Caddy
+      X-Request-Id:
+      - f1ee9f4c-0d6f-40e4-a2e2-ca86c597a161
+      X-Runtime:
+      - '0.022565'
+      Date:
+      - Fri, 02 Apr 2021 10:12:40 GMT
+    body:
+      encoding: UTF-8
+      string: '{"record":{"id":43,"name":"cou-1","external_reference":"cou-1","type":"A","full_name":"cou-1.example.com","ttl":null,"priority":null,"managed":false,"created_at":1617358360,"updated_at":1617358360,"content":{"A":{"ip_address":"2.2.2.2"}}}}'
+  recorded_at: Fri, 02 Apr 2021 10:12:40 GMT
+recorded_with: VCR 6.0.0

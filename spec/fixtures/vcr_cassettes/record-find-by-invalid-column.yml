@@ -35,16 +35,16 @@ http_interactions:
       X-Api-Schema:
       - json-error
       X-Request-Id:
-      - b14f417d-fda8-452b-bd38-e0f7bf56cf0f
+      - 57a0ab37-0a78-4bc6-9290-e024cd4d0eea
       X-Runtime:
-      - '0.004810'
+      - '0.007518'
       Date:
-      - Mon, 29 Mar 2021 16:51:52 GMT
+      - Fri, 02 Apr 2021 10:12:40 GMT
     body:
       encoding: UTF-8
       string: '{"error":{"code":"invalid_argument","description":"The ''record'' argument
         is invalid","detail":{"path":["record"],"index":null,"issue":"missing_lookup_value","issue_description":"A
         value for a lookup argument set has not been provided but at least one value
         is required.","errors":[],"argument":{"id":"CoreAPI/Endpoints/Records/InfoEndpoint/BaseArgumentSet/RecordArgument","name":"record","description":null}}}}'
-  recorded_at: Mon, 29 Mar 2021 16:51:52 GMT
+  recorded_at: Fri, 02 Apr 2021 10:12:40 GMT
 recorded_with: VCR 6.0.0

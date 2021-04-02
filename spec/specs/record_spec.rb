@@ -138,6 +138,47 @@ module Dennis
       end
     end
 
+    describe '.create_or_update' do
+      it 'raises an error if no external reference is provided' do
+        expect do
+          described_class.create_or_update(@client, 1, { name: 'A' })
+        end.to raise_error Dennis::ExternalReferenceRequiredError
+      end
+
+      it 'creates a new record if none exists' do
+        VCR.use_cassette('record-create-or-update-create') do
+          existing = described_class.find_by(@client, :external_reference, 'cou-1')
+          expect(existing).to be nil
+
+          result = described_class.create_or_update(@client, 1,
+                                                    { name: 'cou-1', type: 'A', external_reference: 'cou-1', content: { ip_address: '1.1.1.1' } })
+          expect(result).to be_a Dennis::Record
+        end
+
+        VCR.use_cassette('record-create-or-update-create-verify') do
+          existing = described_class.find_by(@client, :external_reference, 'cou-1')
+          expect(existing).to be_a Dennis::Record
+        end
+      end
+
+      it 'updates an existing record if there is one' do
+        VCR.use_cassette('record-create-or-update-update') do
+          existing = described_class.find_by(@client, :external_reference, 'cou-1')
+          expect(existing).to be_a Dennis::Record
+
+          result = described_class.create_or_update(@client, 1,
+                                                    { name: 'cou-1', type: 'A', external_reference: 'cou-1', content: { ip_address: '2.2.2.2' } })
+          expect(result).to be_a Dennis::Record
+        end
+
+        VCR.use_cassette('record-create-or-update-update-verify') do
+          existing = described_class.find_by(@client, :external_reference, 'cou-1')
+          expect(existing).to be_a Dennis::Record
+          expect(existing.content[:ip_address]).to eq '2.2.2.2'
+        end
+      end
+    end
+
     describe '#update' do
       it 'updates the record' do
         VCR.use_cassette('record-update') do

@@ -27,22 +27,22 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       Content-Length:
-      - '311'
+      - '374'
       Content-Type:
       - application/json
       Etag:
-      - W/"b971f76e718b8f10fde9db009ac9399b"
+      - W/"e50f809a7974f08db7aac0709bd7fb2e"
       Server:
       - Caddy
       X-Request-Id:
-      - f09846f9-d0de-41a2-b1cb-bcc0a586c70a
+      - 8232c726-922f-44d8-8ca1-56694f69fedc
       X-Runtime:
-      - '0.058211'
+      - '0.009238'
       Date:
-      - Thu, 01 Apr 2021 19:07:24 GMT
+      - Fri, 02 Apr 2021 10:12:40 GMT
     body:
       encoding: UTF-8
       string: '{"zones":[{"id":4,"name":"pears.com","group":{"id":2,"name":"Another
-        Group"},"created_at":1617287953,"updated_at":1617287953,"serial":1617287953,"default_ttl":3600,"external_reference":null,"nameservers_verified_at":1617287953,"nameservers_checked_at":null,"always_verified":false,"nameservers_verified":true}]}'
-  recorded_at: Thu, 01 Apr 2021 19:07:24 GMT
+        Group"},"created_at":1617358344,"updated_at":1617358344,"serial":1617358344,"default_ttl":3600,"external_reference":null,"verified":true,"nameservers_verified_at":1617358344,"nameservers_checked_at":null,"always_verified":false,"nameservers_verified":true,"reverse_dns":false,"stale_verification":false}]}'
+  recorded_at: Fri, 02 Apr 2021 10:12:40 GMT
 recorded_with: VCR 6.0.0

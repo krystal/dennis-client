@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://dennis.dev.adam.ac/api/v1/groups/:group?_arguments=%7B%22group%22:%7B%22id%22:2%7D%7D
+    uri: https://dennis.dev.adam.ac/api/v1/records/:record?_arguments=%7B%22record%22:%7B%22external_reference%22:%22cou-1%22%7D%7D
     body:
       encoding: US-ASCII
       string: ''
@@ -27,21 +27,21 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       Content-Length:
-      - '324'
+      - '239'
       Content-Type:
       - application/json
       Etag:
-      - W/"80713631aa07eac6cf21cf3e866400a4"
+      - W/"81ced27e6ad3e6348430957e9cd1db62"
       Server:
       - Caddy
       X-Request-Id:
-      - d4cc2480-29e9-456b-a64f-8a20ee396e92
+      - ad2f2526-d34e-46ce-94f5-61178221a779
       X-Runtime:
-      - '0.015019'
+      - '0.007194'
       Date:
-      - Fri, 02 Apr 2021 10:12:39 GMT
+      - Fri, 02 Apr 2021 10:12:40 GMT
     body:
       encoding: UTF-8
-      string: '{"group":{"id":2,"name":"Another Group","external_reference":"another","created_at":1617358344,"updated_at":1617358344,"nameservers":[{"id":3,"name":"dave.example.com","server":1,"created_at":1617358343,"updated_at":1617358343},{"id":4,"name":"ruth.example.com","server":2,"created_at":1617358343,"updated_at":1617358343}]}}'
-  recorded_at: Fri, 02 Apr 2021 10:12:39 GMT
+      string: '{"record":{"id":43,"name":"cou-1","external_reference":"cou-1","type":"A","full_name":"cou-1.example.com","ttl":null,"priority":null,"managed":false,"created_at":1617358360,"updated_at":1617358360,"content":{"A":{"ip_address":"2.2.2.2"}}}}'
+  recorded_at: Fri, 02 Apr 2021 10:12:40 GMT
 recorded_with: VCR 6.0.0

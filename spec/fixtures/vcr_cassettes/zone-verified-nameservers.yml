@@ -27,22 +27,22 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       Content-Length:
-      - '543'
+      - '658'
       Content-Type:
       - application/json
       Etag:
-      - W/"2e287a63378117f38a8d423e215d9484"
+      - W/"035cbb5b8384a4fd884259afac9a2463"
       Server:
       - Caddy
       X-Request-Id:
-      - a035be50-0cad-4275-942b-5e0eab8ead9b
+      - bd06b31e-9a7c-42de-8e4b-e8b1f8413407
       X-Runtime:
-      - '0.008263'
+      - '0.010192'
       Date:
-      - Mon, 29 Mar 2021 16:51:53 GMT
+      - Fri, 02 Apr 2021 10:12:41 GMT
     body:
       encoding: UTF-8
       string: '{"zone":{"id":1,"name":"example.com","group":{"id":1,"name":"Renamed
-        Group","external_reference":"with-ref","created_at":1617036705,"updated_at":1617036712,"nameservers":[{"id":5,"name":"laura.example.com","server":2,"created_at":1617036705,"updated_at":1617036705},{"id":2,"name":"alex.example.com","server":1,"created_at":1617036705,"updated_at":1617036705}]},"created_at":1617036705,"updated_at":1617036713,"serial":1617036713,"default_ttl":3600,"external_reference":null,"nameservers_verified_at":1617036705,"nameservers_checked_at":null}}'
-  recorded_at: Mon, 29 Mar 2021 16:51:53 GMT
+        Group","external_reference":"with-ref","created_at":1617358343,"updated_at":1617358359,"nameservers":[{"id":5,"name":"laura.example.com","server":2,"created_at":1617358343,"updated_at":1617358343},{"id":3,"name":"dave.example.com","server":1,"created_at":1617358343,"updated_at":1617358343}]},"created_at":1617358343,"updated_at":1617358360,"serial":1617358360,"default_ttl":3600,"external_reference":null,"verified":true,"nameservers_verified_at":1617358343,"nameservers_checked_at":null,"always_verified":false,"nameservers_verified":true,"reverse_dns":false,"stale_verification":false}}'
+  recorded_at: Fri, 02 Apr 2021 10:12:41 GMT
 recorded_with: VCR 6.0.0

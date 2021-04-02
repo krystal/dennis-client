@@ -27,21 +27,21 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       Content-Length:
-      - '192'
+      - '256'
       Content-Type:
       - application/json
       Etag:
-      - W/"05e32db412120824f864d5b2a5e83de5"
+      - W/"c07536477128c31558033edbc2fab3ef"
       Server:
       - Caddy
       X-Request-Id:
-      - 6c6fb3f1-cbb5-403b-a3d8-5d63494d0fb0
+      - ae230fdc-6c7d-48b4-94fa-dcfa5d7b999b
       X-Runtime:
-      - '0.006090'
+      - '0.020978'
       Date:
-      - Mon, 29 Mar 2021 16:51:52 GMT
+      - Fri, 02 Apr 2021 10:12:40 GMT
     body:
       encoding: UTF-8
-      string: '{"record":{"id":8,"name":"www","external_reference":"www-cname-example","type":"CNAME","full_name":"www.example.com","ttl":null,"priority":null,"content":{"CNAME":{"hostname":"example.com"}}}}'
-  recorded_at: Mon, 29 Mar 2021 16:51:52 GMT
+      string: '{"record":{"id":8,"name":"www","external_reference":"www-cname-example","type":"CNAME","full_name":"www.example.com","ttl":null,"priority":null,"managed":false,"created_at":1617358343,"updated_at":1617358343,"content":{"CNAME":{"hostname":"example.com"}}}}'
+  recorded_at: Fri, 02 Apr 2021 10:12:40 GMT
 recorded_with: VCR 6.0.0

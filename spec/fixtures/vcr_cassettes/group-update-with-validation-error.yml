@@ -31,19 +31,19 @@ http_interactions:
       Content-Type:
       - application/json
       Etag:
-      - W/"f1fd1bbf505afd7f99781351a8fe58c6"
+      - W/"d733fff950b3f2fb9fd8776ece2ca18c"
       Server:
       - Caddy
       X-Request-Id:
-      - 892ad0b6-3767-46f5-a64a-9717f071ecb0
+      - 18b68e60-0062-48e4-ad5c-e43f84dc276d
       X-Runtime:
-      - '0.006995'
+      - '0.008976'
       Date:
-      - Mon, 29 Mar 2021 16:51:52 GMT
+      - Fri, 02 Apr 2021 10:12:39 GMT
     body:
       encoding: UTF-8
-      string: '{"group":{"id":1,"name":"Renamed Group","external_reference":"with-ref","created_at":1617036705,"updated_at":1617036712,"nameservers":[{"id":5,"name":"laura.example.com","server":2,"created_at":1617036705,"updated_at":1617036705},{"id":2,"name":"alex.example.com","server":1,"created_at":1617036705,"updated_at":1617036705}]}}'
-  recorded_at: Mon, 29 Mar 2021 16:51:52 GMT
+      string: '{"group":{"id":1,"name":"Renamed Group","external_reference":"with-ref","created_at":1617358343,"updated_at":1617358359,"nameservers":[{"id":5,"name":"laura.example.com","server":2,"created_at":1617358343,"updated_at":1617358343},{"id":3,"name":"dave.example.com","server":1,"created_at":1617358343,"updated_at":1617358343}]}}'
+  recorded_at: Fri, 02 Apr 2021 10:12:39 GMT
 - request:
     method: patch
     uri: https://dennis.dev.adam.ac/api/v1/groups/:group
@@ -81,15 +81,15 @@ http_interactions:
       X-Api-Schema:
       - json-error
       X-Request-Id:
-      - f78dc717-d47c-443d-bd83-81c40e523e40
+      - 6c53ea06-c0c1-4b84-a10c-659aea5944db
       X-Runtime:
-      - '0.009863'
+      - '0.011918'
       Date:
-      - Mon, 29 Mar 2021 16:51:52 GMT
+      - Fri, 02 Apr 2021 10:12:39 GMT
     body:
       encoding: UTF-8
       string: '{"error":{"code":"validation_error","description":"A validation error
         occurred when saving the object","detail":{"errors":[{"attribute":"name","type":"blank","message":"Name
         can''t be blank"}]}}}'
-  recorded_at: Mon, 29 Mar 2021 16:51:52 GMT
+  recorded_at: Fri, 02 Apr 2021 10:12:39 GMT
 recorded_with: VCR 6.0.0

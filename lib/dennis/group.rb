@@ -60,6 +60,10 @@ module Dennis
       Zone.create(@client, group: { id: id }, **properties)
     end
 
+    def create_or_update_zone(**properties)
+      Zone.create_or_update(@client, group: { id: id }, **properties)
+    end
+
     def zones
       Zone.all_for_group(@client, { id: id })
     end

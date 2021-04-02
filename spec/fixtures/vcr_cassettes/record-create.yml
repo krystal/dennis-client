@@ -29,21 +29,21 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       Content-Length:
-      - '179'
+      - '243'
       Content-Type:
       - application/json
       Etag:
-      - W/"1612b02a2baa7c1226537ca614c3a2b3"
+      - W/"c4237d5f99ba1dc91d1b95622dbb1c3e"
       Server:
       - Caddy
       X-Request-Id:
-      - 4119d031-5c96-41b8-b0cf-5053fccd2165
+      - 1e9d3961-8e86-4a5d-9ad5-b9bc6a3f4b17
       X-Runtime:
-      - '0.017738'
+      - '0.027906'
       Date:
-      - Mon, 29 Mar 2021 16:51:52 GMT
+      - Fri, 02 Apr 2021 10:12:40 GMT
     body:
       encoding: UTF-8
-      string: '{"record":{"id":42,"name":"test1234","external_reference":null,"type":"A","full_name":"test1234.example.com","ttl":null,"priority":null,"content":{"A":{"ip_address":"10.5.5.5"}}}}'
-  recorded_at: Mon, 29 Mar 2021 16:51:52 GMT
+      string: '{"record":{"id":42,"name":"test1234","external_reference":null,"type":"A","full_name":"test1234.example.com","ttl":null,"priority":null,"managed":false,"created_at":1617358360,"updated_at":1617358360,"content":{"A":{"ip_address":"10.5.5.5"}}}}'
+  recorded_at: Fri, 02 Apr 2021 10:12:40 GMT
 recorded_with: VCR 6.0.0

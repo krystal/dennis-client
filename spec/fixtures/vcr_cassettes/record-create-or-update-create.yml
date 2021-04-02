@@ -1,0 +1,139 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://dennis.dev.adam.ac/api/v1/records/:record?_arguments=%7B%22record%22:%7B%22external_reference%22:%22cou-1%22%7D%7D
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Authorization:
+      - Bearer test
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Access-Control-Allow-Methods:
+      - "*"
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache
+      Content-Length:
+      - '116'
+      Content-Type:
+      - application/json
+      Server:
+      - Caddy
+      X-Api-Schema:
+      - json-error
+      X-Request-Id:
+      - 3c73bcf1-9fb0-4e13-b754-9243e10fc155
+      X-Runtime:
+      - '0.008332'
+      Date:
+      - Fri, 02 Apr 2021 10:12:40 GMT
+    body:
+      encoding: UTF-8
+      string: '{"error":{"code":"record_not_found","description":"No record could
+        be found using the given arguments","detail":{}}}'
+  recorded_at: Fri, 02 Apr 2021 10:12:40 GMT
+- request:
+    method: get
+    uri: https://dennis.dev.adam.ac/api/v1/records/:record?_arguments=%7B%22record%22:%7B%22external_reference%22:%22cou-1%22%7D%7D
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Authorization:
+      - Bearer test
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Access-Control-Allow-Methods:
+      - "*"
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache
+      Content-Length:
+      - '116'
+      Content-Type:
+      - application/json
+      Server:
+      - Caddy
+      X-Api-Schema:
+      - json-error
+      X-Request-Id:
+      - e8ae7eee-3875-44cf-8681-7dc12c2bf710
+      X-Runtime:
+      - '0.008079'
+      Date:
+      - Fri, 02 Apr 2021 10:12:40 GMT
+    body:
+      encoding: UTF-8
+      string: '{"error":{"code":"record_not_found","description":"No record could
+        be found using the given arguments","detail":{}}}'
+  recorded_at: Fri, 02 Apr 2021 10:12:40 GMT
+- request:
+    method: post
+    uri: https://dennis.dev.adam.ac/api/v1/records
+    body:
+      encoding: UTF-8
+      string: '{"zone":{"id":1},"properties":{"name":"cou-1","type":"A","external_reference":"cou-1","content":{"A":{"ip_address":"1.1.1.1"}}}}'
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Authorization:
+      - Bearer test
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Access-Control-Allow-Methods:
+      - "*"
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Length:
+      - '239'
+      Content-Type:
+      - application/json
+      Etag:
+      - W/"f6a95f3f99009f0fed13804acf44cecc"
+      Server:
+      - Caddy
+      X-Request-Id:
+      - 0cb7462e-125b-4bb1-84e6-9ad393bb51e3
+      X-Runtime:
+      - '0.023232'
+      Date:
+      - Fri, 02 Apr 2021 10:12:40 GMT
+    body:
+      encoding: UTF-8
+      string: '{"record":{"id":43,"name":"cou-1","external_reference":"cou-1","type":"A","full_name":"cou-1.example.com","ttl":null,"priority":null,"managed":false,"created_at":1617358360,"updated_at":1617358360,"content":{"A":{"ip_address":"1.1.1.1"}}}}'
+  recorded_at: Fri, 02 Apr 2021 10:12:40 GMT
+recorded_with: VCR 6.0.0

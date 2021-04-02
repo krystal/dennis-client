@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require 'dennis/error'
 require 'dennis/validation_error'
 require 'dennis/zone_not_found_error'
 
@@ -35,6 +36,20 @@ module Dennis
         raise ValidationError, e.detail['errors'] if e.code == 'validation_error'
 
         raise
+      end
+
+      def create_or_update(client, zone_id, **properties)
+        if properties[:external_reference].nil?
+          raise Dennis::ExternalReferenceRequiredError, 'An external_reference must be provided to use create_or_update'
+        end
+
+        record = find_by(client, :external_reference, properties[:external_reference])
+        if record.nil?
+          create(client, zone: { id: zone_id }, **properties)
+        else
+          record.update(properties)
+          record
+        end
       end
 
       def properties_to_argument(hash, type: nil)

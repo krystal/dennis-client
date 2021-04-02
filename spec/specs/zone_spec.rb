@@ -185,10 +185,55 @@ module Dennis
 
       it 'returns an array of zones for a given group and query' do
         VCR.use_cassette('zone-all-for-group-with-query') do
-          zones = described_class.all_for_group(@client, { id: 2 }, query: 'berri')
+          zones = described_class.all_for_group(@client, { id: 1 }, query: 'ample')
           expect(zones).to be_a Array
           expect(zones.size).to eq 1
-          expect(zones[0].name).to eq 'strawberries.com'
+          expect(zones[0].name).to eq 'example.com'
+        end
+      end
+    end
+
+    describe '.create_or_update' do
+      it 'raises an error if no external reference is provided' do
+        expect do
+          described_class.create_or_update(@client, group: { id: 1 }, name: 'example.com')
+        end.to raise_error Dennis::ExternalReferenceRequiredError
+      end
+
+      it 'creates a new record if none exists' do
+        VCR.use_cassette('zone-create-or-update-create') do
+          existing = described_class.find_by(@client, :external_reference, 'cou-zone-1')
+          expect(existing).to be nil
+
+          result = described_class.create_or_update(@client, group: { id: 1 },
+                                                             name: 'cou1.com',
+                                                             external_reference: 'cou-zone-1')
+          expect(result).to be_a Dennis::Zone
+        end
+
+        VCR.use_cassette('zone-create-or-update-create-verify') do
+          existing = described_class.find_by(@client, :external_reference, 'cou-zone-1')
+          expect(existing).to be_a Dennis::Zone
+          expect(existing.name).to eq 'cou1.com'
+        end
+      end
+
+      it 'updates an existing zone if there is one' do
+        VCR.use_cassette('zone-create-or-update-update') do
+          existing = described_class.find_by(@client, :external_reference, 'cou-zone-1')
+          expect(existing).to be_a Dennis::Zone
+          expect(existing.name).to eq 'cou1.com'
+
+          result = described_class.create_or_update(@client, group: { id: 1 },
+                                                             name: 'cou2.com',
+                                                             external_reference: 'cou-zone-1')
+          expect(result).to be_a Dennis::Zone
+        end
+
+        VCR.use_cassette('zone-create-or-update-update-verify') do
+          existing = described_class.find_by(@client, :external_reference, 'cou-zone-1')
+          expect(existing).to be_a Dennis::Zone
+          expect(existing.name).to eq 'cou2.com'
         end
       end
     end

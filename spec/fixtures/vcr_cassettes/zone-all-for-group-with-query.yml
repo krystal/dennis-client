@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://dennis.dev.adam.ac/api/v1/groups/:group/zones?_arguments=%7B%22group%22:%7B%22id%22:2%7D,%22query%22:%22berri%22%7D
+    uri: https://dennis.dev.adam.ac/api/v1/groups/:group/zones?_arguments=%7B%22group%22:%7B%22id%22:1%7D,%22query%22:%22ample%22%7D
     body:
       encoding: US-ASCII
       string: ''
@@ -27,21 +27,21 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       Content-Length:
-      - '278'
+      - '336'
       Content-Type:
       - application/json
       Etag:
-      - W/"c25eb37fe1c1ab988281d2a18613b6f8"
+      - W/"e55e28cc9c6b21ea91177d015c26d5d6"
       Server:
       - Caddy
       X-Request-Id:
-      - d0c73325-87cd-4d6b-9436-97866b51f382
+      - 074576fa-1cdb-4ca2-8ecc-9d335cf16fd5
       X-Runtime:
-      - '0.009743'
+      - '0.008258'
       Date:
-      - Thu, 01 Apr 2021 19:08:53 GMT
+      - Fri, 02 Apr 2021 10:12:41 GMT
     body:
       encoding: UTF-8
-      string: '{"zones":[{"id":5,"name":"strawberries.com","created_at":1617287953,"updated_at":1617287953,"serial":1617287953,"default_ttl":3600,"external_reference":null,"nameservers_verified_at":1617287953,"nameservers_checked_at":null,"always_verified":false,"nameservers_verified":true}]}'
-  recorded_at: Thu, 01 Apr 2021 19:08:53 GMT
+      string: '{"zones":[{"id":1,"name":"example.com","created_at":1617358343,"updated_at":1617358360,"serial":1617358360,"default_ttl":3600,"external_reference":null,"verified":true,"nameservers_verified_at":1617358343,"nameservers_checked_at":null,"always_verified":false,"nameservers_verified":true,"reverse_dns":false,"stale_verification":false}]}'
+  recorded_at: Fri, 02 Apr 2021 10:12:41 GMT
 recorded_with: VCR 6.0.0

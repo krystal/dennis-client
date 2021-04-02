@@ -31,17 +31,17 @@ http_interactions:
       Content-Type:
       - application/json
       Etag:
-      - W/"cdc7c5418a77226e056b2359d85e7e83"
+      - W/"2b59c6e5f8bb827581c65fc68f3ed2dd"
       Server:
       - Caddy
       X-Request-Id:
-      - 597b50ba-5fc1-4872-8ab7-d8ff4cbe477d
+      - 4c3168d9-dff5-4288-beaa-a48ea1de93c0
       X-Runtime:
-      - '0.008485'
+      - '0.009297'
       Date:
-      - Thu, 01 Apr 2021 20:21:24 GMT
+      - Fri, 02 Apr 2021 10:12:40 GMT
     body:
       encoding: UTF-8
-      string: '{"records":[{"id":9,"name":"helpdesk","external_reference":null,"type":"ALIAS","full_name":"helpdesk.example.com","ttl":null,"priority":null,"managed":false,"created_at":1617287953,"updated_at":1617287953,"content":{"ALIAS":{"hostname":"sirportly.com"}}}]}'
-  recorded_at: Thu, 01 Apr 2021 20:21:24 GMT
+      string: '{"records":[{"id":9,"name":"helpdesk","external_reference":null,"type":"ALIAS","full_name":"helpdesk.example.com","ttl":null,"priority":null,"managed":false,"created_at":1617358343,"updated_at":1617358343,"content":{"ALIAS":{"hostname":"sirportly.com"}}}]}'
+  recorded_at: Fri, 02 Apr 2021 10:12:40 GMT
 recorded_with: VCR 6.0.0

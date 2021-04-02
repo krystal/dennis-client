@@ -1,0 +1,137 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://dennis.dev.adam.ac/api/v1/zones/:zone?_arguments=%7B%22zone%22:%7B%22external_reference%22:%22cou-zone-1%22%7D%7D
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Authorization:
+      - Bearer test
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Methods:
+      - "*"
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Length:
+      - '659'
+      Content-Type:
+      - application/json
+      Etag:
+      - W/"aaf6ffaa4fce463c2e37bc15bf439051"
+      Server:
+      - Caddy
+      X-Request-Id:
+      - 943e5538-8c99-4654-a8a1-a264ce5c0dde
+      X-Runtime:
+      - '0.009684'
+      Date:
+      - Fri, 02 Apr 2021 10:12:41 GMT
+    body:
+      encoding: UTF-8
+      string: '{"zone":{"id":8,"name":"cou1.com","group":{"id":1,"name":"Renamed Group","external_reference":"with-ref","created_at":1617358343,"updated_at":1617358359,"nameservers":[{"id":5,"name":"laura.example.com","server":2,"created_at":1617358343,"updated_at":1617358343},{"id":3,"name":"dave.example.com","server":1,"created_at":1617358343,"updated_at":1617358343}]},"created_at":1617358361,"updated_at":1617358361,"serial":1617358361,"default_ttl":3600,"external_reference":"cou-zone-1","verified":false,"nameservers_verified_at":null,"nameservers_checked_at":null,"always_verified":false,"nameservers_verified":false,"reverse_dns":false,"stale_verification":false}}'
+  recorded_at: Fri, 02 Apr 2021 10:12:41 GMT
+- request:
+    method: get
+    uri: https://dennis.dev.adam.ac/api/v1/zones/:zone?_arguments=%7B%22zone%22:%7B%22external_reference%22:%22cou-zone-1%22%7D%7D
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Authorization:
+      - Bearer test
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Methods:
+      - "*"
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Length:
+      - '659'
+      Content-Type:
+      - application/json
+      Etag:
+      - W/"aaf6ffaa4fce463c2e37bc15bf439051"
+      Server:
+      - Caddy
+      X-Request-Id:
+      - de4fce23-8ada-4271-a616-dd4835a41e8b
+      X-Runtime:
+      - '0.008679'
+      Date:
+      - Fri, 02 Apr 2021 10:12:41 GMT
+    body:
+      encoding: UTF-8
+      string: '{"zone":{"id":8,"name":"cou1.com","group":{"id":1,"name":"Renamed Group","external_reference":"with-ref","created_at":1617358343,"updated_at":1617358359,"nameservers":[{"id":5,"name":"laura.example.com","server":2,"created_at":1617358343,"updated_at":1617358343},{"id":3,"name":"dave.example.com","server":1,"created_at":1617358343,"updated_at":1617358343}]},"created_at":1617358361,"updated_at":1617358361,"serial":1617358361,"default_ttl":3600,"external_reference":"cou-zone-1","verified":false,"nameservers_verified_at":null,"nameservers_checked_at":null,"always_verified":false,"nameservers_verified":false,"reverse_dns":false,"stale_verification":false}}'
+  recorded_at: Fri, 02 Apr 2021 10:12:41 GMT
+- request:
+    method: patch
+    uri: https://dennis.dev.adam.ac/api/v1/zones/:zone
+    body:
+      encoding: UTF-8
+      string: '{"zone":{"id":8},"properties":{"name":"cou2.com","external_reference":"cou-zone-1"}}'
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Authorization:
+      - Bearer test
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Methods:
+      - "*"
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Length:
+      - '659'
+      Content-Type:
+      - application/json
+      Etag:
+      - W/"253710c35f6880c36856f088342ccc1e"
+      Server:
+      - Caddy
+      X-Request-Id:
+      - 97452971-b42d-4a92-97c4-9d9d5785af25
+      X-Runtime:
+      - '0.035862'
+      Date:
+      - Fri, 02 Apr 2021 10:12:41 GMT
+    body:
+      encoding: UTF-8
+      string: '{"zone":{"id":8,"name":"cou2.com","group":{"id":1,"name":"Renamed Group","external_reference":"with-ref","created_at":1617358343,"updated_at":1617358359,"nameservers":[{"id":5,"name":"laura.example.com","server":2,"created_at":1617358343,"updated_at":1617358343},{"id":3,"name":"dave.example.com","server":1,"created_at":1617358343,"updated_at":1617358343}]},"created_at":1617358361,"updated_at":1617358361,"serial":1617358361,"default_ttl":3600,"external_reference":"cou-zone-1","verified":false,"nameservers_verified_at":null,"nameservers_checked_at":null,"always_verified":false,"nameservers_verified":false,"reverse_dns":false,"stale_verification":false}}'
+  recorded_at: Fri, 02 Apr 2021 10:12:41 GMT
+recorded_with: VCR 6.0.0

@@ -37,15 +37,15 @@ http_interactions:
       X-Api-Schema:
       - json-error
       X-Request-Id:
-      - 73ecd500-f1b1-41b8-a638-5b04428a57e0
+      - aa672c78-ccd6-41b0-95ca-60d21fdfec1b
       X-Runtime:
-      - '0.008018'
+      - '0.012077'
       Date:
-      - Mon, 29 Mar 2021 16:51:53 GMT
+      - Fri, 02 Apr 2021 10:12:40 GMT
     body:
       encoding: UTF-8
       string: '{"error":{"code":"validation_error","description":"A validation error
         occurred when saving the object","detail":{"errors":[{"attribute":"type","type":"blank","message":"Type
         can''t be blank"}]}}}'
-  recorded_at: Mon, 29 Mar 2021 16:51:53 GMT
+  recorded_at: Fri, 02 Apr 2021 10:12:40 GMT
 recorded_with: VCR 6.0.0

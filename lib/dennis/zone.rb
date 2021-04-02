@@ -9,16 +9,18 @@ module Dennis
 
     class << self
 
-      def all(client, query: nil)
+      def all(client, query: nil, view: nil)
         request = client.api.create_request(:get, 'zones')
         request.arguments[:query] = query if query
+        request.arguments[:view] = view if view
         request.perform.hash['zones'].map { |hash| new(client, hash) }
       end
 
-      def all_for_group(client, group, query: nil)
+      def all_for_group(client, group, query: nil, view: nil)
         request = client.api.create_request(:get, 'groups/:group/zones')
         request.arguments[:group] = group
         request.arguments[:query] = query if query
+        request.arguments[:view] = view if view
         request.perform.hash['zones'].map { |hash| new(client, hash) }
       end
 
@@ -46,6 +48,20 @@ module Dennis
         raise ValidationError, e.detail['errors'] if e.code == 'validation_error'
 
         raise
+      end
+
+      def create_or_update(client, group:, **properties)
+        if properties[:external_reference].nil?
+          raise Dennis::ExternalReferenceRequiredError, 'An external_reference must be provided to use create_or_update'
+        end
+
+        zone = find_by(client, :external_reference, properties[:external_reference])
+        if zone.nil?
+          create(client, group: group, **properties)
+        else
+          zone.update(properties)
+          zone
+        end
       end
 
     end
@@ -76,7 +92,23 @@ module Dennis
     end
 
     def nameservers_verified?
-      !nameservers_verified_at.nil?
+      @hash['nameservers_verified']
+    end
+
+    def verified?
+      @hash['verified']
+    end
+
+    def always_verified?
+      @hash['always_verified']
+    end
+
+    def reverse_dns?
+      @hash['reverse_dns']
+    end
+
+    def stale_verification?
+      @hash['stale_verification']
     end
 
     def default_ttl
@@ -85,6 +117,10 @@ module Dennis
 
     def create_record(**properties)
       Record.create(@client, zone: { id: id }, **properties)
+    end
+
+    def create_or_update_record(**properties)
+      Record.create_or_update(@client, id, **properties)
     end
 
     def records

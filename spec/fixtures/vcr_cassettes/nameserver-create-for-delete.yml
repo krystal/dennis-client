@@ -33,17 +33,17 @@ http_interactions:
       Content-Type:
       - application/json
       Etag:
-      - W/"b29e90c7c73e7f68eb82e97cce17a756"
+      - W/"44fcf0aa235b58022b1e4b153ae51880"
       Server:
       - Caddy
       X-Request-Id:
-      - 186c40b4-299e-4f44-8e3e-3940ae765f50
+      - 7e8ddf79-1cd4-440f-87e8-b887de191f32
       X-Runtime:
-      - '0.013747'
+      - '0.009532'
       Date:
-      - Mon, 29 Mar 2021 16:58:15 GMT
+      - Fri, 02 Apr 2021 10:12:40 GMT
     body:
       encoding: UTF-8
-      string: '{"nameserver":{"id":9,"name":"delete-me.example.com","server":2,"created_at":1617037095,"updated_at":1617037095}}'
-  recorded_at: Mon, 29 Mar 2021 16:58:15 GMT
+      string: '{"nameserver":{"id":8,"name":"delete-me.example.com","server":2,"created_at":1617358360,"updated_at":1617358360}}'
+  recorded_at: Fri, 02 Apr 2021 10:12:40 GMT
 recorded_with: VCR 6.0.0
