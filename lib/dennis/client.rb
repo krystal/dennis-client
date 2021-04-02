@@ -4,6 +4,7 @@ require 'rapid_api'
 require 'dennis/group'
 require 'dennis/zone'
 require 'dennis/nameserver'
+require 'dennis/record'
 
 module Dennis
   class Client
@@ -38,6 +39,10 @@ module Dennis
 
     def zone(id, field: :id)
       Zone.find_by(self, field, id)
+    end
+
+    def record(id, field: :id)
+      Record.find_by(self, field, id)
     end
 
     def nameservers
