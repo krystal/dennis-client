@@ -32,7 +32,7 @@ module Dennis
           expect(records[0].content[:hostname]).to eq 'sirportly.com'
         end
       end
-
+      # rubocop:disable Layout/LineLength
       it 'returns an array of all records of a specific type and name' do
         VCR.use_cassette('record-all-with-name-and-type') do
           records = described_class.all(@client, { id: 1 }, type: 'TXT', name: 'cm._domainkey')
@@ -59,6 +59,7 @@ module Dennis
           expect(records[0].content[:content]).to eq 'k=rsa; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCsJyYnv48KsqIS/yLiU1YGjpo+KPTkKAtJEq7RW7dMEM8IzOx96Qa3S0NYDMPr9QJOJoAomLl51YFe5Xu3WlR5f8uNjH/7UujGL9RpT+Gaa23W85qhrWuQpZnBqFczLdxf3R/OP4Sm5KisVvCP+gain4h0yxFFM4UZT4893bl6QwIDAQAB'
         end
       end
+      # rubocop:enable Layout/LineLength
     end
 
     describe '.find_by' do
@@ -151,7 +152,8 @@ module Dennis
           expect(existing).to be nil
 
           result = described_class.create_or_update(@client, 1,
-                                                    { name: 'cou-1', type: 'A', external_reference: 'cou-1', content: { ip_address: '1.1.1.1' } })
+                                                    { name: 'cou-1', type: 'A', external_reference: 'cou-1',
+                                                      content: { ip_address: '1.1.1.1' } })
           expect(result).to be_a Dennis::Record
         end
 
@@ -167,7 +169,8 @@ module Dennis
           expect(existing).to be_a Dennis::Record
 
           result = described_class.create_or_update(@client, 1,
-                                                    { name: 'cou-1', type: 'A', external_reference: 'cou-1', content: { ip_address: '2.2.2.2' } })
+                                                    { name: 'cou-1', type: 'A', external_reference: 'cou-1',
+                                                      content: { ip_address: '2.2.2.2' } })
           expect(result).to be_a Dennis::Record
         end
 
