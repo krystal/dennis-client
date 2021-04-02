@@ -2,6 +2,12 @@
 
 This file contains all the latest changes and updates to this application.
 
+## 1.0.7
+
+### Bug Fixes
+
+- add #record method to client ([d15fd7](https://github.com/krystal/dennis-client/commit/d15fd7b6fae8a1cd74023b01969358ebe053ab15))
+
 ## 1.0.6
 
 ### Features
