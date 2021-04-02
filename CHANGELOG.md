@@ -2,6 +2,13 @@
 
 This file contains all the latest changes and updates to this application.
 
+## 1.0.6
+
+### Features
+
+- some new view options for records & zones ([467371](https://github.com/krystal/dennis-client/commit/46737144591b18dba82d6054041324c3818c8372))
+- various improvements to bring inline with new API ([a04bac](https://github.com/krystal/dennis-client/commit/a04bac1c9ad1ce2f04b38102693d5befc0c2b69b))
+
 ## 1.0.5
 
 ### Bug Fixes
