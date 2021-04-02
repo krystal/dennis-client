@@ -142,7 +142,7 @@ module Dennis
     describe '.create_or_update' do
       it 'raises an error if no external reference is provided' do
         expect do
-          described_class.create_or_update(@client, 1, { name: 'A' })
+          described_class.create_or_update(@client, 1, name: 'A')
         end.to raise_error Dennis::ExternalReferenceRequiredError
       end
 
@@ -152,8 +152,8 @@ module Dennis
           expect(existing).to be nil
 
           result = described_class.create_or_update(@client, 1,
-                                                    { name: 'cou-1', type: 'A', external_reference: 'cou-1',
-                                                      content: { ip_address: '1.1.1.1' } })
+                                                    name: 'cou-1', type: 'A', external_reference: 'cou-1',
+                                                    content: { ip_address: '1.1.1.1' })
           expect(result).to be_a Dennis::Record
         end
 
@@ -169,8 +169,8 @@ module Dennis
           expect(existing).to be_a Dennis::Record
 
           result = described_class.create_or_update(@client, 1,
-                                                    { name: 'cou-1', type: 'A', external_reference: 'cou-1',
-                                                      content: { ip_address: '2.2.2.2' } })
+                                                    name: 'cou-1', type: 'A', external_reference: 'cou-1',
+                                                    content: { ip_address: '2.2.2.2' })
           expect(result).to be_a Dennis::Record
         end
 
