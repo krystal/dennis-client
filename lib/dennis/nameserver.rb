@@ -47,6 +47,20 @@ module Dennis
       @hash['server']
     end
 
+    def created_at
+      return nil if @hash['created_at'].nil?
+      return @hash['created_at'] if @hash['created_at'].is_a?(Time)
+
+      Time.at(@hash['created_at'])
+    end
+
+    def updated_at
+      return nil if @hash['updated_at'].nil?
+      return @hash['updated_at'] if @hash['updated_at'].is_a?(Time)
+
+      Time.at(@hash['updated_at'])
+    end
+
     def update(properties)
       req = @client.api.create_request(:patch, 'nameservers/:nameserver')
       req.arguments['nameserver'] = { id: id }

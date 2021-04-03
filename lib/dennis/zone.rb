@@ -115,6 +115,20 @@ module Dennis
       @hash['default_ttl']
     end
 
+    def created_at
+      return nil if @hash['created_at'].nil?
+      return @hash['created_at'] if @hash['created_at'].is_a?(Time)
+
+      Time.at(@hash['created_at'])
+    end
+
+    def updated_at
+      return nil if @hash['updated_at'].nil?
+      return @hash['updated_at'] if @hash['updated_at'].is_a?(Time)
+
+      Time.at(@hash['updated_at'])
+    end
+
     def create_record(**properties)
       Record.create(@client, zone: { id: id }, **properties)
     end
