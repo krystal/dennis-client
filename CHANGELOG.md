@@ -2,6 +2,12 @@
 
 This file contains all the latest changes and updates to this application.
 
+## 1.0.8
+
+### Bug Fixes
+
+- expose Record#managed? and timestamps for other objects ([9d0a08](https://github.com/krystal/dennis-client/commit/9d0a08ed9eabcd5360657b59507d0336a712ae93))
+
 ## 1.0.7
 
 ### Bug Fixes
