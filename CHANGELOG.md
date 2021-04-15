@@ -2,6 +2,12 @@
 
 This file contains all the latest changes and updates to this application.
 
+## 1.0.11
+
+### Bug Fixes
+
+- support for tags ([1c72c0](https://github.com/krystal/dennis-client/commit/1c72c01e5a952905ab51b1f68efa9b6c8a2df6fc))
+
 ## 1.0.10
 
 ### Features
