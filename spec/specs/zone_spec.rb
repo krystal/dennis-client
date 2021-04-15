@@ -23,6 +23,33 @@ module Dennis
           expect(zones[0].name).to eq 'pears.com'
         end
       end
+
+      it 'returns a pagination information' do
+        VCR.use_cassette('zone-all') do
+          zones = described_class.all(@client)
+          expect(zones.pagination.current_page).to eq 1
+          expect(zones.pagination.per_page).to eq 30
+          expect(zones.pagination.total_pages).to eq 1
+        end
+      end
+
+      it 'returns can control the number of items per page' do
+        VCR.use_cassette('zone-all-per-page') do
+          zones = described_class.all(@client, per_page: 2)
+          expect(zones.pagination.current_page).to eq 1
+          expect(zones.pagination.per_page).to eq 2
+          expect(zones.pagination.total_pages).to be > 1
+        end
+      end
+
+      it 'returns can control which page is returned' do
+        VCR.use_cassette('zone-all-page') do
+          zones = described_class.all(@client, per_page: 2, page: 2)
+          expect(zones.pagination.current_page).to eq 2
+          expect(zones.pagination.per_page).to eq 2
+          expect(zones.pagination.total_pages).to be > 1
+        end
+      end
     end
 
     describe '.find_by' do
@@ -189,6 +216,33 @@ module Dennis
           expect(zones).to be_a Array
           expect(zones.size).to eq 1
           expect(zones[0].name).to eq 'example.com'
+        end
+      end
+
+      it 'returns a pagination information' do
+        VCR.use_cassette('zone-all-for-group') do
+          zones = described_class.all_for_group(@client, { id: 1 })
+          expect(zones.pagination.current_page).to eq 1
+          expect(zones.pagination.per_page).to eq 30
+          expect(zones.pagination.total_pages).to eq 1
+        end
+      end
+
+      it 'returns can control the number of items per page' do
+        VCR.use_cassette('zone-all-for-group-per-page') do
+          zones = described_class.all_for_group(@client, { id: 1 }, per_page: 2)
+          expect(zones.pagination.current_page).to eq 1
+          expect(zones.pagination.per_page).to eq 2
+          expect(zones.pagination.total_pages).to be > 1
+        end
+      end
+
+      it 'returns can control which page is returned' do
+        VCR.use_cassette('zone-all-for-group-page') do
+          zones = described_class.all_for_group(@client, { id: 1 }, per_page: 2, page: 2)
+          expect(zones.pagination.current_page).to eq 2
+          expect(zones.pagination.per_page).to eq 2
+          expect(zones.pagination.total_pages).to be > 1
         end
       end
     end

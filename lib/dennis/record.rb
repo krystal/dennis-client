@@ -9,14 +9,18 @@ module Dennis
 
     class << self
 
-      def all(client, zone, type: nil, name: nil, query: nil, tags: nil)
+      def all(client, zone, type: nil, name: nil, query: nil, tags: nil, page: nil, per_page: nil)
         request = client.api.create_request(:get, 'zones/:zone/records')
         request.arguments[:zone] = zone
         request.arguments[:name] = name if name
         request.arguments[:type] = type if type
         request.arguments[:query] = query if query
         request.arguments[:tags] = tags if tags
-        request.perform.hash['records'].map { |hash| new(client, hash) }
+        request.arguments[:page] = page if page
+        request.arguments[:per_page] = per_page if per_page
+        PaginatedArray.create(request.perform.hash, 'records') do |hash|
+          new(client, hash)
+        end
       end
 
       def all_by_tag(client, tags, group: nil)

@@ -1,0 +1,49 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://dennis.dev.adam.ac/api/v1/zones?_arguments=%7B%22page%22:2,%22per_page%22:2%7D
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Authorization:
+      - Bearer test
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Methods:
+      - "*"
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Length:
+      - '843'
+      Content-Type:
+      - application/json
+      Etag:
+      - W/"741bd48fec03a1af16893683ed8eb8a2"
+      Server:
+      - Caddy
+      X-Request-Id:
+      - 76f0e0b1-0c4b-4e78-860a-5d74c0e9edc0
+      X-Runtime:
+      - '0.010174'
+      Date:
+      - Thu, 15 Apr 2021 10:02:30 GMT
+    body:
+      encoding: UTF-8
+      string: '{"pagination":{"current_page":2,"total_pages":4,"total":7,"per_page":2,"large_set":false},"zones":[{"id":8,"name":"cou2.com","group":{"id":1,"name":"Renamed
+        Group"},"created_at":1618480647,"updated_at":1618480950,"serial":1618480950,"default_ttl":3600,"external_reference":"cou-zone-1","verified":false,"nameservers_verified_at":null,"nameservers_checked_at":1618480950,"always_verified":false,"nameservers_verified":false,"reverse_dns":false,"stale_verification":false},{"id":1,"name":"example.com","group":{"id":1,"name":"Renamed
+        Group"},"created_at":1618480640,"updated_at":1618480650,"serial":1618480650,"default_ttl":3600,"external_reference":null,"verified":true,"nameservers_verified_at":1618480640,"nameservers_checked_at":1618480650,"always_verified":false,"nameservers_verified":true,"reverse_dns":false,"stale_verification":false}]}'
+  recorded_at: Thu, 15 Apr 2021 10:02:30 GMT
+recorded_with: VCR 6.0.0

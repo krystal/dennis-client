@@ -27,22 +27,23 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       Content-Length:
-      - '275'
+      - '976'
       Content-Type:
       - application/json
       Etag:
-      - W/"93993b747de414bf357f5b494cad1573"
+      - W/"b883123251fa60cb93958df39d86a24f"
       Server:
       - Caddy
       X-Request-Id:
-      - f4479112-6f14-4493-8db1-66130f91f1fc
+      - a2a4f22b-94a6-4db5-98f6-3be2ad551b75
       X-Runtime:
-      - '0.010101'
+      - '0.014208'
       Date:
-      - Fri, 02 Apr 2021 10:12:40 GMT
+      - Thu, 15 Apr 2021 09:57:27 GMT
     body:
       encoding: UTF-8
-      string: '{"record":{"id":11,"name":"cm._domainkey.renamed","external_reference":null,"type":"TXT","full_name":"cm._domainkey.renamed.example.com","ttl":null,"priority":null,"managed":false,"created_at":1617358343,"updated_at":1617358360,"content":{"TXT":{"content":"new
-        txt value"}}}}'
-  recorded_at: Fri, 02 Apr 2021 10:12:40 GMT
+      string: '{"record":{"id":11,"name":"cm._domainkey.renamed","external_reference":null,"type":"TXT","full_name":"cm._domainkey.renamed.example.com","ttl":null,"priority":null,"managed":false,"created_at":1618480640,"updated_at":1618480647,"tags":[],"content":{"TXT":{"content":"new
+        txt value"}},"zone":{"id":1,"name":"example.com","group":{"id":1,"name":"Renamed
+        Group","external_reference":"with-ref","created_at":1618480640,"updated_at":1618480646,"nameservers":[{"id":6,"name":"kelly.example.com","server":2,"available":true,"created_at":1618480640,"updated_at":1618480640},{"id":1,"name":"phil.example.com","server":2,"available":true,"created_at":1618480640,"updated_at":1618480646}]},"created_at":1618480640,"updated_at":1618480647,"serial":1618480647,"default_ttl":3600,"external_reference":null,"verified":true,"nameservers_verified_at":1618480640,"nameservers_checked_at":null,"always_verified":false,"nameservers_verified":true,"reverse_dns":false,"stale_verification":false}}}'
+  recorded_at: Thu, 15 Apr 2021 09:57:27 GMT
 recorded_with: VCR 6.0.0

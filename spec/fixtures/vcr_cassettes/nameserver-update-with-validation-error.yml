@@ -27,23 +27,23 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       Content-Length:
-      - '108'
+      - '125'
       Content-Type:
       - application/json
       Etag:
-      - W/"2a3a939ad5933d7e3cf0e25059912c0d"
+      - W/"2216d3a21691a284e24d2647d7c6dfa2"
       Server:
       - Caddy
       X-Request-Id:
-      - 7584a92b-46f6-4488-9465-851375423d23
+      - 5e053428-7040-47ee-914d-b7b0dfc57ec3
       X-Runtime:
-      - '0.009972'
+      - '0.006450'
       Date:
-      - Fri, 02 Apr 2021 10:12:39 GMT
+      - Thu, 15 Apr 2021 09:57:26 GMT
     body:
       encoding: UTF-8
-      string: '{"nameserver":{"id":1,"name":"phil.example.com","server":2,"created_at":1617358343,"updated_at":1617358359}}'
-  recorded_at: Fri, 02 Apr 2021 10:12:39 GMT
+      string: '{"nameserver":{"id":1,"name":"phil.example.com","server":2,"available":true,"created_at":1618480640,"updated_at":1618480646}}'
+  recorded_at: Thu, 15 Apr 2021 09:57:26 GMT
 - request:
     method: patch
     uri: https://dennis.dev.adam.ac/api/v1/nameservers/:nameserver
@@ -81,15 +81,15 @@ http_interactions:
       X-Api-Schema:
       - json-error
       X-Request-Id:
-      - e0b257c2-ba4e-44da-a87e-92a8456a63c7
+      - 982ee9d9-1f1a-4fa6-ae5a-cfdea3d1397f
       X-Runtime:
-      - '0.011853'
+      - '0.006982'
       Date:
-      - Fri, 02 Apr 2021 10:12:40 GMT
+      - Thu, 15 Apr 2021 09:57:26 GMT
     body:
       encoding: UTF-8
       string: '{"error":{"code":"validation_error","description":"A validation error
         occurred when saving the object","detail":{"errors":[{"attribute":"name","type":"blank","message":"Name
         can''t be blank"}]}}}'
-  recorded_at: Fri, 02 Apr 2021 10:12:40 GMT
+  recorded_at: Thu, 15 Apr 2021 09:57:26 GMT
 recorded_with: VCR 6.0.0

@@ -35,14 +35,14 @@ http_interactions:
       X-Api-Schema:
       - json-error
       X-Request-Id:
-      - 0fd0cb24-66d7-45f0-9f27-a38381d92320
+      - 7015de6e-90c3-4125-878f-16f8394698be
       X-Runtime:
-      - '0.006730'
+      - '0.005858'
       Date:
-      - Fri, 02 Apr 2021 10:12:41 GMT
+      - Thu, 15 Apr 2021 09:57:27 GMT
     body:
       encoding: UTF-8
       string: '{"error":{"code":"zone_not_found","description":"No zone could be found
         using the given arguments","detail":{}}}'
-  recorded_at: Fri, 02 Apr 2021 10:12:41 GMT
+  recorded_at: Thu, 15 Apr 2021 09:57:27 GMT
 recorded_with: VCR 6.0.0

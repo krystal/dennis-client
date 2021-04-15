@@ -35,16 +35,16 @@ http_interactions:
       X-Api-Schema:
       - json-error
       X-Request-Id:
-      - 18127fef-2dda-4b6a-9427-bb500a973150
+      - 4f66ada5-eb1f-41b4-95f8-ab54ddd729ee
       X-Runtime:
-      - '0.006752'
+      - '0.005425'
       Date:
-      - Fri, 02 Apr 2021 10:12:41 GMT
+      - Thu, 15 Apr 2021 09:57:27 GMT
     body:
       encoding: UTF-8
       string: '{"error":{"code":"zone_not_found","description":"No zone could be found
         using the given arguments","detail":{}}}'
-  recorded_at: Fri, 02 Apr 2021 10:12:41 GMT
+  recorded_at: Thu, 15 Apr 2021 09:57:27 GMT
 - request:
     method: get
     uri: https://dennis.dev.adam.ac/api/v1/zones/:zone?_arguments=%7B%22zone%22:%7B%22external_reference%22:%22cou-zone-1%22%7D%7D
@@ -80,16 +80,16 @@ http_interactions:
       X-Api-Schema:
       - json-error
       X-Request-Id:
-      - e95b70aa-01cb-4f63-bec0-3fb4e6b96b88
+      - 29b05477-6339-4ed7-beaf-e73e783615d0
       X-Runtime:
-      - '0.008055'
+      - '0.004856'
       Date:
-      - Fri, 02 Apr 2021 10:12:41 GMT
+      - Thu, 15 Apr 2021 09:57:27 GMT
     body:
       encoding: UTF-8
       string: '{"error":{"code":"zone_not_found","description":"No zone could be found
         using the given arguments","detail":{}}}'
-  recorded_at: Fri, 02 Apr 2021 10:12:41 GMT
+  recorded_at: Thu, 15 Apr 2021 09:57:27 GMT
 - request:
     method: post
     uri: https://dennis.dev.adam.ac/api/v1/zones
@@ -119,21 +119,21 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       Content-Length:
-      - '659'
+      - '693'
       Content-Type:
       - application/json
       Etag:
-      - W/"aaf6ffaa4fce463c2e37bc15bf439051"
+      - W/"689bf5c79ef2f09b63d0ed78d3f498e8"
       Server:
       - Caddy
       X-Request-Id:
-      - 3319ecdb-4cf3-4d00-8327-a4b72c531836
+      - 8cb98b05-9886-4b7b-a517-38c938fe3627
       X-Runtime:
-      - '0.040473'
+      - '0.041320'
       Date:
-      - Fri, 02 Apr 2021 10:12:41 GMT
+      - Thu, 15 Apr 2021 09:57:27 GMT
     body:
       encoding: UTF-8
-      string: '{"zone":{"id":8,"name":"cou1.com","group":{"id":1,"name":"Renamed Group","external_reference":"with-ref","created_at":1617358343,"updated_at":1617358359,"nameservers":[{"id":5,"name":"laura.example.com","server":2,"created_at":1617358343,"updated_at":1617358343},{"id":3,"name":"dave.example.com","server":1,"created_at":1617358343,"updated_at":1617358343}]},"created_at":1617358361,"updated_at":1617358361,"serial":1617358361,"default_ttl":3600,"external_reference":"cou-zone-1","verified":false,"nameservers_verified_at":null,"nameservers_checked_at":null,"always_verified":false,"nameservers_verified":false,"reverse_dns":false,"stale_verification":false}}'
-  recorded_at: Fri, 02 Apr 2021 10:12:41 GMT
+      string: '{"zone":{"id":8,"name":"cou1.com","group":{"id":1,"name":"Renamed Group","external_reference":"with-ref","created_at":1618480640,"updated_at":1618480646,"nameservers":[{"id":6,"name":"kelly.example.com","server":2,"available":true,"created_at":1618480640,"updated_at":1618480640},{"id":1,"name":"phil.example.com","server":2,"available":true,"created_at":1618480640,"updated_at":1618480646}]},"created_at":1618480647,"updated_at":1618480647,"serial":1618480647,"default_ttl":3600,"external_reference":"cou-zone-1","verified":false,"nameservers_verified_at":null,"nameservers_checked_at":null,"always_verified":false,"nameservers_verified":false,"reverse_dns":false,"stale_verification":false}}'
+  recorded_at: Thu, 15 Apr 2021 09:57:27 GMT
 recorded_with: VCR 6.0.0

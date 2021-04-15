@@ -27,22 +27,22 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       Content-Length:
-      - '474'
+      - '564'
       Content-Type:
       - application/json
       Etag:
-      - W/"5b9fa208e32d55ed03867571e8d4e8cf"
+      - W/"51354492ab60b54b523362e6ad4c6a56"
       Server:
       - Caddy
       X-Request-Id:
-      - 8d5bf5ef-b693-43d8-a4cf-5753b1a3b85b
+      - c7bf1593-21ca-4880-a1d6-c4b8f315227d
       X-Runtime:
-      - '0.009053'
+      - '0.008078'
       Date:
-      - Fri, 02 Apr 2021 10:12:40 GMT
+      - Thu, 15 Apr 2021 09:57:26 GMT
     body:
       encoding: UTF-8
-      string: '{"records":[{"id":11,"name":"cm._domainkey","external_reference":null,"type":"TXT","full_name":"cm._domainkey.example.com","ttl":null,"priority":null,"managed":false,"created_at":1617358343,"updated_at":1617358343,"content":{"TXT":{"content":"k=rsa;
+      string: '{"pagination":{"current_page":1,"total_pages":1,"total":1,"per_page":30,"large_set":false},"records":[{"id":11,"name":"cm._domainkey","external_reference":null,"type":"TXT","full_name":"cm._domainkey.example.com","ttl":null,"priority":null,"managed":false,"created_at":1618480640,"updated_at":1618480640,"content":{"TXT":{"content":"k=rsa;
         p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCsJyYnv48KsqIS/yLiU1YGjpo+KPTkKAtJEq7RW7dMEM8IzOx96Qa3S0NYDMPr9QJOJoAomLl51YFe5Xu3WlR5f8uNjH/7UujGL9RpT+Gaa23W85qhrWuQpZnBqFczLdxf3R/OP4Sm5KisVvCP+gain4h0yxFFM4UZT4893bl6QwIDAQAB"}}}]}'
-  recorded_at: Fri, 02 Apr 2021 10:12:40 GMT
+  recorded_at: Thu, 15 Apr 2021 09:57:26 GMT
 recorded_with: VCR 6.0.0

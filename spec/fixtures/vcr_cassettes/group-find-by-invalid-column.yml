@@ -35,16 +35,16 @@ http_interactions:
       X-Api-Schema:
       - json-error
       X-Request-Id:
-      - 0b92a981-a458-4bf3-b473-985bb001a610
+      - 8e7b1135-0a29-44be-8e61-13d03b9797cb
       X-Runtime:
-      - '0.005246'
+      - '0.004807'
       Date:
-      - Fri, 02 Apr 2021 10:12:39 GMT
+      - Thu, 15 Apr 2021 09:57:25 GMT
     body:
       encoding: UTF-8
       string: '{"error":{"code":"invalid_argument","description":"The ''group'' argument
         is invalid","detail":{"path":["group"],"index":null,"issue":"missing_lookup_value","issue_description":"A
         value for a lookup argument set has not been provided but at least one value
         is required.","errors":[],"argument":{"id":"CoreAPI/Endpoints/Groups/InfoEndpoint/BaseArgumentSet/GroupArgument","name":"group","description":null}}}}'
-  recorded_at: Fri, 02 Apr 2021 10:12:39 GMT
+  recorded_at: Thu, 15 Apr 2021 09:57:25 GMT
 recorded_with: VCR 6.0.0

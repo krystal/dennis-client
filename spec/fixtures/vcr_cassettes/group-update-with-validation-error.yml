@@ -27,23 +27,23 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       Content-Length:
-      - '326'
+      - '361'
       Content-Type:
       - application/json
       Etag:
-      - W/"d733fff950b3f2fb9fd8776ece2ca18c"
+      - W/"e390458bedaa2faf6bda04042d67dcac"
       Server:
       - Caddy
       X-Request-Id:
-      - 18b68e60-0062-48e4-ad5c-e43f84dc276d
+      - 00f13b83-221c-4c42-acf2-af2f73063078
       X-Runtime:
-      - '0.008976'
+      - '0.009429'
       Date:
-      - Fri, 02 Apr 2021 10:12:39 GMT
+      - Thu, 15 Apr 2021 09:57:26 GMT
     body:
       encoding: UTF-8
-      string: '{"group":{"id":1,"name":"Renamed Group","external_reference":"with-ref","created_at":1617358343,"updated_at":1617358359,"nameservers":[{"id":5,"name":"laura.example.com","server":2,"created_at":1617358343,"updated_at":1617358343},{"id":3,"name":"dave.example.com","server":1,"created_at":1617358343,"updated_at":1617358343}]}}'
-  recorded_at: Fri, 02 Apr 2021 10:12:39 GMT
+      string: '{"group":{"id":1,"name":"Renamed Group","external_reference":"with-ref","created_at":1618480640,"updated_at":1618480646,"nameservers":[{"id":6,"name":"kelly.example.com","server":2,"available":true,"created_at":1618480640,"updated_at":1618480640},{"id":1,"name":"simon.example.com","server":1,"available":true,"created_at":1618480640,"updated_at":1618480640}]}}'
+  recorded_at: Thu, 15 Apr 2021 09:57:26 GMT
 - request:
     method: patch
     uri: https://dennis.dev.adam.ac/api/v1/groups/:group
@@ -81,15 +81,15 @@ http_interactions:
       X-Api-Schema:
       - json-error
       X-Request-Id:
-      - 6c53ea06-c0c1-4b84-a10c-659aea5944db
+      - b1919232-ce91-41f9-a93f-9b2d5387bf32
       X-Runtime:
-      - '0.011918'
+      - '0.009965'
       Date:
-      - Fri, 02 Apr 2021 10:12:39 GMT
+      - Thu, 15 Apr 2021 09:57:26 GMT
     body:
       encoding: UTF-8
       string: '{"error":{"code":"validation_error","description":"A validation error
         occurred when saving the object","detail":{"errors":[{"attribute":"name","type":"blank","message":"Name
         can''t be blank"}]}}}'
-  recorded_at: Fri, 02 Apr 2021 10:12:39 GMT
+  recorded_at: Thu, 15 Apr 2021 09:57:26 GMT
 recorded_with: VCR 6.0.0

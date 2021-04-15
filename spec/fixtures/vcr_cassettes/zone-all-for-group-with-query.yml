@@ -27,21 +27,21 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       Content-Length:
-      - '336'
+      - '426'
       Content-Type:
       - application/json
       Etag:
-      - W/"e55e28cc9c6b21ea91177d015c26d5d6"
+      - W/"fd51a750aa15a3bdc29ee5e6d40a0144"
       Server:
       - Caddy
       X-Request-Id:
-      - 074576fa-1cdb-4ca2-8ecc-9d335cf16fd5
+      - d8067f86-d7e1-4247-b14d-5d617a84818d
       X-Runtime:
-      - '0.008258'
+      - '0.007608'
       Date:
-      - Fri, 02 Apr 2021 10:12:41 GMT
+      - Thu, 15 Apr 2021 09:57:27 GMT
     body:
       encoding: UTF-8
-      string: '{"zones":[{"id":1,"name":"example.com","created_at":1617358343,"updated_at":1617358360,"serial":1617358360,"default_ttl":3600,"external_reference":null,"verified":true,"nameservers_verified_at":1617358343,"nameservers_checked_at":null,"always_verified":false,"nameservers_verified":true,"reverse_dns":false,"stale_verification":false}]}'
-  recorded_at: Fri, 02 Apr 2021 10:12:41 GMT
+      string: '{"pagination":{"current_page":1,"total_pages":1,"total":1,"per_page":30,"large_set":false},"zones":[{"id":1,"name":"example.com","created_at":1618480640,"updated_at":1618480647,"serial":1618480647,"default_ttl":3600,"external_reference":null,"verified":true,"nameservers_verified_at":1618480640,"nameservers_checked_at":null,"always_verified":false,"nameservers_verified":true,"reverse_dns":false,"stale_verification":false}]}'
+  recorded_at: Thu, 15 Apr 2021 09:57:27 GMT
 recorded_with: VCR 6.0.0

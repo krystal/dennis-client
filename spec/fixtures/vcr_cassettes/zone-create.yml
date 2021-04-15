@@ -29,22 +29,22 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       Content-Length:
-      - '654'
+      - '688'
       Content-Type:
       - application/json
       Etag:
-      - W/"97fa822e9f43f23c68a60287ec4ec19c"
+      - W/"ddccf82a773952a62636e35e3f0759b8"
       Server:
       - Caddy
       X-Request-Id:
-      - a55035a3-3db1-4c47-97de-18afa06af3dc
+      - bdda611e-290a-4e94-b9b9-f825b20fb6f4
       X-Runtime:
-      - '0.051106'
+      - '0.044662'
       Date:
-      - Fri, 02 Apr 2021 10:12:40 GMT
+      - Thu, 15 Apr 2021 09:57:27 GMT
     body:
       encoding: UTF-8
       string: '{"zone":{"id":7,"name":"potatos.com","group":{"id":1,"name":"Renamed
-        Group","external_reference":"with-ref","created_at":1617358343,"updated_at":1617358359,"nameservers":[{"id":5,"name":"laura.example.com","server":2,"created_at":1617358343,"updated_at":1617358343},{"id":3,"name":"dave.example.com","server":1,"created_at":1617358343,"updated_at":1617358343}]},"created_at":1617358360,"updated_at":1617358360,"serial":1617358360,"default_ttl":3600,"external_reference":null,"verified":false,"nameservers_verified_at":null,"nameservers_checked_at":null,"always_verified":false,"nameservers_verified":false,"reverse_dns":false,"stale_verification":false}}'
-  recorded_at: Fri, 02 Apr 2021 10:12:40 GMT
+        Group","external_reference":"with-ref","created_at":1618480640,"updated_at":1618480646,"nameservers":[{"id":6,"name":"kelly.example.com","server":2,"available":true,"created_at":1618480640,"updated_at":1618480640},{"id":1,"name":"phil.example.com","server":2,"available":true,"created_at":1618480640,"updated_at":1618480646}]},"created_at":1618480647,"updated_at":1618480647,"serial":1618480647,"default_ttl":3600,"external_reference":null,"verified":false,"nameservers_verified_at":null,"nameservers_checked_at":null,"always_verified":false,"nameservers_verified":false,"reverse_dns":false,"stale_verification":false}}'
+  recorded_at: Thu, 15 Apr 2021 09:57:27 GMT
 recorded_with: VCR 6.0.0

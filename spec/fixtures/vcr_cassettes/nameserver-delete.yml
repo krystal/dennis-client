@@ -27,23 +27,23 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       Content-Length:
-      - '113'
+      - '130'
       Content-Type:
       - application/json
       Etag:
-      - W/"44fcf0aa235b58022b1e4b153ae51880"
+      - W/"263f9787ad64c153e5cc09ff2e050276"
       Server:
       - Caddy
       X-Request-Id:
-      - 15de6201-180c-4f72-9352-e294494f54f1
+      - 81dff407-8c58-4588-958f-239b637d46f9
       X-Runtime:
-      - '0.010215'
+      - '0.005685'
       Date:
-      - Fri, 02 Apr 2021 10:12:40 GMT
+      - Thu, 15 Apr 2021 09:57:26 GMT
     body:
       encoding: UTF-8
-      string: '{"nameserver":{"id":8,"name":"delete-me.example.com","server":2,"created_at":1617358360,"updated_at":1617358360}}'
-  recorded_at: Fri, 02 Apr 2021 10:12:40 GMT
+      string: '{"nameserver":{"id":8,"name":"delete-me.example.com","server":2,"available":true,"created_at":1618480646,"updated_at":1618480646}}'
+  recorded_at: Thu, 15 Apr 2021 09:57:26 GMT
 - request:
     method: delete
     uri: https://dennis.dev.adam.ac/api/v1/nameservers/:nameserver
@@ -73,21 +73,21 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       Content-Length:
-      - '113'
+      - '130'
       Content-Type:
       - application/json
       Etag:
-      - W/"44fcf0aa235b58022b1e4b153ae51880"
+      - W/"263f9787ad64c153e5cc09ff2e050276"
       Server:
       - Caddy
       X-Request-Id:
-      - 21b2f45e-be03-4b88-8d84-5d9beb49d973
+      - b179b448-0241-482e-8efd-a76af36f123b
       X-Runtime:
-      - '0.011112'
+      - '0.010237'
       Date:
-      - Fri, 02 Apr 2021 10:12:40 GMT
+      - Thu, 15 Apr 2021 09:57:26 GMT
     body:
       encoding: UTF-8
-      string: '{"nameserver":{"id":8,"name":"delete-me.example.com","server":2,"created_at":1617358360,"updated_at":1617358360}}'
-  recorded_at: Fri, 02 Apr 2021 10:12:40 GMT
+      string: '{"nameserver":{"id":8,"name":"delete-me.example.com","server":2,"available":true,"created_at":1618480646,"updated_at":1618480646}}'
+  recorded_at: Thu, 15 Apr 2021 09:57:26 GMT
 recorded_with: VCR 6.0.0

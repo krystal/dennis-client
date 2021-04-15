@@ -3,25 +3,34 @@
 require 'dennis/validation_error'
 require 'dennis/group_not_found_error'
 require 'dennis/record'
+require 'dennis/paginated_array'
 
 module Dennis
   class Zone
 
     class << self
 
-      def all(client, query: nil, view: nil)
+      def all(client, query: nil, view: nil, page: nil, per_page: nil)
         request = client.api.create_request(:get, 'zones')
         request.arguments[:query] = query if query
         request.arguments[:view] = view if view
-        request.perform.hash['zones'].map { |hash| new(client, hash) }
+        request.arguments[:page] = page if page
+        request.arguments[:per_page] = per_page if per_page
+        PaginatedArray.create(request.perform.hash, 'zones') do |hash|
+          new(client, hash)
+        end
       end
 
-      def all_for_group(client, group, query: nil, view: nil)
+      def all_for_group(client, group, query: nil, view: nil, page: nil, per_page: nil)
         request = client.api.create_request(:get, 'groups/:group/zones')
         request.arguments[:group] = group
         request.arguments[:query] = query if query
         request.arguments[:view] = view if view
-        request.perform.hash['zones'].map { |hash| new(client, hash) }
+        request.arguments[:page] = page if page
+        request.arguments[:per_page] = per_page if per_page
+        PaginatedArray.create(request.perform.hash, 'zones') do |hash|
+          new(client, hash)
+        end
       end
 
       def find_by(client, field, value)

@@ -27,22 +27,22 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       Content-Length:
-      - '659'
+      - '693'
       Content-Type:
       - application/json
       Etag:
-      - W/"5838b1b13e77d2b25399b0b4e4e3cd20"
+      - W/"b0d4ed5e6bc8999f2a1d1811bd4ac67f"
       Server:
       - Caddy
       X-Request-Id:
-      - 8b82d699-773d-4d54-85aa-2cf9d1fabdbb
+      - 92875e8c-05b3-4aec-87aa-6d0be0b77eec
       X-Runtime:
-      - '0.010845'
+      - '0.011430'
       Date:
-      - Fri, 02 Apr 2021 10:12:40 GMT
+      - Thu, 15 Apr 2021 09:57:27 GMT
     body:
       encoding: UTF-8
       string: '{"zone":{"id":2,"name":"bananas.com","group":{"id":1,"name":"Renamed
-        Group","external_reference":"with-ref","created_at":1617358343,"updated_at":1617358359,"nameservers":[{"id":5,"name":"laura.example.com","server":2,"created_at":1617358343,"updated_at":1617358343},{"id":3,"name":"dave.example.com","server":1,"created_at":1617358343,"updated_at":1617358343}]},"created_at":1617358344,"updated_at":1617358344,"serial":1617358344,"default_ttl":3600,"external_reference":"bananas","verified":false,"nameservers_verified_at":null,"nameservers_checked_at":null,"always_verified":false,"nameservers_verified":false,"reverse_dns":false,"stale_verification":false}}'
-  recorded_at: Fri, 02 Apr 2021 10:12:40 GMT
+        Group","external_reference":"with-ref","created_at":1618480640,"updated_at":1618480646,"nameservers":[{"id":6,"name":"kelly.example.com","server":2,"available":true,"created_at":1618480640,"updated_at":1618480640},{"id":1,"name":"phil.example.com","server":2,"available":true,"created_at":1618480640,"updated_at":1618480646}]},"created_at":1618480640,"updated_at":1618480640,"serial":1618480640,"default_ttl":3600,"external_reference":"bananas","verified":false,"nameservers_verified_at":null,"nameservers_checked_at":null,"always_verified":false,"nameservers_verified":false,"reverse_dns":false,"stale_verification":false}}'
+  recorded_at: Thu, 15 Apr 2021 09:57:27 GMT
 recorded_with: VCR 6.0.0

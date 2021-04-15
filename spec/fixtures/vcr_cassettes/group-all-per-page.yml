@@ -1,0 +1,49 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://dennis.dev.adam.ac/api/v1/groups?_arguments=%7B%22per_page%22:2%7D
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Authorization:
+      - Bearer test
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Methods:
+      - "*"
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Length:
+      - '798'
+      Content-Type:
+      - application/json
+      Etag:
+      - W/"650ceba5b290b65ccfcc7dc90e2efbe2"
+      Server:
+      - Caddy
+      X-Request-Id:
+      - e592653d-3b02-4476-88ef-0006d6444fd9
+      X-Runtime:
+      - '0.011614'
+      Date:
+      - Thu, 15 Apr 2021 10:02:56 GMT
+    body:
+      encoding: UTF-8
+      string: '{"pagination":{"current_page":1,"total_pages":2,"total":4,"per_page":2,"large_set":false},"groups":[{"id":2,"name":"Another
+        Group","external_reference":"another","created_at":1618480640,"updated_at":1618480640,"nameservers":[{"id":1,"name":"phil.example.com","server":2,"available":true,"created_at":1618480640,"updated_at":1618480646},{"id":6,"name":"kelly.example.com","server":2,"available":true,"created_at":1618480640,"updated_at":1618480640}]},{"id":5,"name":"Apple
+        Group","external_reference":"apples","created_at":1618480646,"updated_at":1618480646,"nameservers":[{"id":5,"name":"laura.example.com","server":2,"available":true,"created_at":1618480640,"updated_at":1618480640},{"id":1,"name":"phil.example.com","server":2,"available":true,"created_at":1618480640,"updated_at":1618480646}]}]}'
+  recorded_at: Thu, 15 Apr 2021 10:02:56 GMT
+recorded_with: VCR 6.0.0

@@ -45,6 +45,10 @@ module Dennis
       Record.find_by(self, field, id)
     end
 
+    def tagged_records(tags, group: nil)
+      Record.all_by_tag(self, tags, group: group)
+    end
+
     def nameservers
       Nameserver.all(self)
     end

@@ -27,21 +27,22 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       Content-Length:
-      - '232'
+      - '946'
       Content-Type:
       - application/json
       Etag:
-      - W/"b3f28f9f2ef8f14a460af9235a6add6e"
+      - W/"28ab10479fbe4c5d846af83ee6c4851b"
       Server:
       - Caddy
       X-Request-Id:
-      - ba339884-9e86-430d-91f3-ac46278d6601
+      - 69f6bf16-f848-4648-b8b3-f6bb0dbecb66
       X-Runtime:
-      - '0.010787'
+      - '0.014769'
       Date:
-      - Fri, 02 Apr 2021 10:12:40 GMT
+      - Thu, 15 Apr 2021 09:57:26 GMT
     body:
       encoding: UTF-8
-      string: '{"record":{"id":6,"name":null,"external_reference":null,"type":"A","full_name":"example.com","ttl":null,"priority":null,"managed":false,"created_at":1617358343,"updated_at":1617358343,"content":{"A":{"ip_address":"185.22.211.61"}}}}'
-  recorded_at: Fri, 02 Apr 2021 10:12:40 GMT
+      string: '{"record":{"id":6,"name":null,"external_reference":null,"type":"A","full_name":"example.com","ttl":null,"priority":null,"managed":false,"created_at":1618480640,"updated_at":1618480640,"tags":["tag1","tag2"],"content":{"A":{"ip_address":"185.22.211.61"}},"zone":{"id":1,"name":"example.com","group":{"id":1,"name":"Renamed
+        Group","external_reference":"with-ref","created_at":1618480640,"updated_at":1618480646,"nameservers":[{"id":6,"name":"kelly.example.com","server":2,"available":true,"created_at":1618480640,"updated_at":1618480640},{"id":1,"name":"phil.example.com","server":2,"available":true,"created_at":1618480640,"updated_at":1618480646}]},"created_at":1618480640,"updated_at":1618480640,"serial":1618480640,"default_ttl":3600,"external_reference":null,"verified":true,"nameservers_verified_at":1618480640,"nameservers_checked_at":null,"always_verified":false,"nameservers_verified":true,"reverse_dns":false,"stale_verification":false}}}'
+  recorded_at: Thu, 15 Apr 2021 09:57:26 GMT
 recorded_with: VCR 6.0.0

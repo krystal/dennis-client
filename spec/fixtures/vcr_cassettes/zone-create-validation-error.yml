@@ -29,7 +29,7 @@ http_interactions:
       Cache-Control:
       - no-cache
       Content-Length:
-      - '194'
+      - '290'
       Content-Type:
       - application/json
       Server:
@@ -37,15 +37,16 @@ http_interactions:
       X-Api-Schema:
       - json-error
       X-Request-Id:
-      - c0273e03-6eb9-487a-a21a-a86968163e94
+      - 2fcfc8bb-78bb-4416-9843-bc92ae177036
       X-Runtime:
-      - '0.012602'
+      - '0.011672'
       Date:
-      - Fri, 02 Apr 2021 10:12:41 GMT
+      - Thu, 15 Apr 2021 09:57:27 GMT
     body:
       encoding: UTF-8
       string: '{"error":{"code":"validation_error","description":"A validation error
         occurred when saving the object","detail":{"errors":[{"attribute":"name","type":"blank","message":"Name
-        can''t be blank"}]}}}'
-  recorded_at: Fri, 02 Apr 2021 10:12:41 GMT
+        can''t be blank"},{"attribute":"name","type":"too_short","message":"Name is
+        too short (minimum is 4 characters)"}]}}}'
+  recorded_at: Thu, 15 Apr 2021 09:57:27 GMT
 recorded_with: VCR 6.0.0

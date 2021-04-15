@@ -1,0 +1,49 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://dennis.dev.adam.ac/api/v1/zones?_arguments=%7B%22per_page%22:2%7D
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Authorization:
+      - Bearer test
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Methods:
+      - "*"
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Length:
+      - '843'
+      Content-Type:
+      - application/json
+      Etag:
+      - W/"ee10db66f565e0f6b4573b7d3c4223d9"
+      Server:
+      - Caddy
+      X-Request-Id:
+      - 343f6961-ea93-498d-94c6-46456d70897a
+      X-Runtime:
+      - '0.023815'
+      Date:
+      - Thu, 15 Apr 2021 10:02:06 GMT
+    body:
+      encoding: UTF-8
+      string: '{"pagination":{"current_page":1,"total_pages":4,"total":7,"per_page":2,"large_set":false},"zones":[{"id":3,"name":"another.com","group":{"id":2,"name":"Another
+        Group"},"created_at":1618480640,"updated_at":1618480650,"serial":1618480650,"default_ttl":3600,"external_reference":null,"verified":true,"nameservers_verified_at":1618480640,"nameservers_checked_at":1618480650,"always_verified":false,"nameservers_verified":true,"reverse_dns":false,"stale_verification":false},{"id":2,"name":"bananas.com","group":{"id":1,"name":"Renamed
+        Group"},"created_at":1618480640,"updated_at":1618480650,"serial":1618480650,"default_ttl":3600,"external_reference":"bananas","verified":false,"nameservers_verified_at":null,"nameservers_checked_at":1618480650,"always_verified":false,"nameservers_verified":false,"reverse_dns":false,"stale_verification":false}]}'
+  recorded_at: Thu, 15 Apr 2021 10:02:06 GMT
+recorded_with: VCR 6.0.0

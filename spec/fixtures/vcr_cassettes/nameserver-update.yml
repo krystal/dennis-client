@@ -27,23 +27,23 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       Content-Length:
-      - '109'
+      - '126'
       Content-Type:
       - application/json
       Etag:
-      - W/"334b861eb1c1b396338885cf10a060b2"
+      - W/"49ac8bde29f855192f063e752eb8af69"
       Server:
       - Caddy
       X-Request-Id:
-      - bb6a89d3-c378-4814-9dc8-e4936f05c6b0
+      - de0a6351-8c0b-428a-abf7-a443ca4b79d1
       X-Runtime:
-      - '0.007007'
+      - '0.005818'
       Date:
-      - Fri, 02 Apr 2021 10:12:39 GMT
+      - Thu, 15 Apr 2021 09:57:26 GMT
     body:
       encoding: UTF-8
-      string: '{"nameserver":{"id":1,"name":"simon.example.com","server":1,"created_at":1617358343,"updated_at":1617358343}}'
-  recorded_at: Fri, 02 Apr 2021 10:12:39 GMT
+      string: '{"nameserver":{"id":1,"name":"simon.example.com","server":1,"available":true,"created_at":1618480640,"updated_at":1618480640}}'
+  recorded_at: Thu, 15 Apr 2021 09:57:26 GMT
 - request:
     method: patch
     uri: https://dennis.dev.adam.ac/api/v1/nameservers/:nameserver
@@ -73,21 +73,21 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       Content-Length:
-      - '108'
+      - '125'
       Content-Type:
       - application/json
       Etag:
-      - W/"2a3a939ad5933d7e3cf0e25059912c0d"
+      - W/"2216d3a21691a284e24d2647d7c6dfa2"
       Server:
       - Caddy
       X-Request-Id:
-      - 0da0a281-8ffc-4358-9117-9af97e7fe830
+      - 77b717f3-bf65-466c-b111-6a3dcb356644
       X-Runtime:
-      - '0.009537'
+      - '0.009589'
       Date:
-      - Fri, 02 Apr 2021 10:12:39 GMT
+      - Thu, 15 Apr 2021 09:57:26 GMT
     body:
       encoding: UTF-8
-      string: '{"nameserver":{"id":1,"name":"phil.example.com","server":2,"created_at":1617358343,"updated_at":1617358359}}'
-  recorded_at: Fri, 02 Apr 2021 10:12:39 GMT
+      string: '{"nameserver":{"id":1,"name":"phil.example.com","server":2,"available":true,"created_at":1618480640,"updated_at":1618480646}}'
+  recorded_at: Thu, 15 Apr 2021 09:57:26 GMT
 recorded_with: VCR 6.0.0

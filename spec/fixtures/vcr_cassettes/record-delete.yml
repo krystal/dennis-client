@@ -27,23 +27,24 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       Content-Length:
-      - '270'
+      - '971'
       Content-Type:
       - application/json
       Etag:
-      - W/"2b5938024d42c2c3da0e938f58cd37c6"
+      - W/"5f36bfc718d31e929b39c545428804f7"
       Server:
       - Caddy
       X-Request-Id:
-      - ec7161a4-9f6b-4308-8e9f-f9d8d128ec40
+      - d3e89c44-573b-4d20-9bb1-54f4522fd209
       X-Runtime:
-      - '0.008629'
+      - '0.014570'
       Date:
-      - Fri, 02 Apr 2021 10:12:40 GMT
+      - Thu, 15 Apr 2021 09:57:27 GMT
     body:
       encoding: UTF-8
-      string: '{"record":{"id":12,"name":"staging","external_reference":null,"type":"CNAME","full_name":"staging.example.com","ttl":null,"priority":null,"managed":false,"created_at":1617358343,"updated_at":1617358343,"content":{"CNAME":{"hostname":"codebase-staging.infra.atech.io"}}}}'
-  recorded_at: Fri, 02 Apr 2021 10:12:40 GMT
+      string: '{"record":{"id":12,"name":"staging","external_reference":null,"type":"CNAME","full_name":"staging.example.com","ttl":null,"priority":null,"managed":false,"created_at":1618480640,"updated_at":1618480640,"tags":[],"content":{"CNAME":{"hostname":"codebase-staging.infra.atech.io"}},"zone":{"id":1,"name":"example.com","group":{"id":1,"name":"Renamed
+        Group","external_reference":"with-ref","created_at":1618480640,"updated_at":1618480646,"nameservers":[{"id":6,"name":"kelly.example.com","server":2,"available":true,"created_at":1618480640,"updated_at":1618480640},{"id":1,"name":"phil.example.com","server":2,"available":true,"created_at":1618480640,"updated_at":1618480646}]},"created_at":1618480640,"updated_at":1618480647,"serial":1618480647,"default_ttl":3600,"external_reference":null,"verified":true,"nameservers_verified_at":1618480640,"nameservers_checked_at":null,"always_verified":false,"nameservers_verified":true,"reverse_dns":false,"stale_verification":false}}}'
+  recorded_at: Thu, 15 Apr 2021 09:57:27 GMT
 - request:
     method: delete
     uri: https://dennis.dev.adam.ac/api/v1/records/:record
@@ -73,21 +74,22 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       Content-Length:
-      - '270'
+      - '971'
       Content-Type:
       - application/json
       Etag:
-      - W/"2b5938024d42c2c3da0e938f58cd37c6"
+      - W/"5f36bfc718d31e929b39c545428804f7"
       Server:
       - Caddy
       X-Request-Id:
-      - dd419b59-6f0b-488c-841c-7f9d2295e1f8
+      - 91898b5d-d828-415f-b844-5097a4be5b6e
       X-Runtime:
-      - '0.023742'
+      - '0.026122'
       Date:
-      - Fri, 02 Apr 2021 10:12:40 GMT
+      - Thu, 15 Apr 2021 09:57:27 GMT
     body:
       encoding: UTF-8
-      string: '{"record":{"id":12,"name":"staging","external_reference":null,"type":"CNAME","full_name":"staging.example.com","ttl":null,"priority":null,"managed":false,"created_at":1617358343,"updated_at":1617358343,"content":{"CNAME":{"hostname":"codebase-staging.infra.atech.io"}}}}'
-  recorded_at: Fri, 02 Apr 2021 10:12:40 GMT
+      string: '{"record":{"id":12,"name":"staging","external_reference":null,"type":"CNAME","full_name":"staging.example.com","ttl":null,"priority":null,"managed":false,"created_at":1618480640,"updated_at":1618480640,"tags":[],"content":{"CNAME":{"hostname":"codebase-staging.infra.atech.io"}},"zone":{"id":1,"name":"example.com","group":{"id":1,"name":"Renamed
+        Group","external_reference":"with-ref","created_at":1618480640,"updated_at":1618480646,"nameservers":[{"id":6,"name":"kelly.example.com","server":2,"available":true,"created_at":1618480640,"updated_at":1618480640},{"id":1,"name":"phil.example.com","server":2,"available":true,"created_at":1618480640,"updated_at":1618480646}]},"created_at":1618480640,"updated_at":1618480647,"serial":1618480647,"default_ttl":3600,"external_reference":null,"verified":true,"nameservers_verified_at":1618480640,"nameservers_checked_at":null,"always_verified":false,"nameservers_verified":true,"reverse_dns":false,"stale_verification":false}}}'
+  recorded_at: Thu, 15 Apr 2021 09:57:27 GMT
 recorded_with: VCR 6.0.0

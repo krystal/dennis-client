@@ -27,23 +27,23 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       Content-Length:
-      - '318'
+      - '351'
       Content-Type:
       - application/json
       Etag:
-      - W/"ba0ee9934c61506aee3e8280eb7680e4"
+      - W/"76f870fc4f1cea2318c3fe59ab507319"
       Server:
       - Caddy
       X-Request-Id:
-      - 11b14879-ac12-4043-98a9-291ac83abe4d
+      - 40f2ad1d-73af-4b91-aa30-1673c5a57b7d
       X-Runtime:
-      - '0.008317'
+      - '0.007341'
       Date:
-      - Fri, 02 Apr 2021 10:12:39 GMT
+      - Thu, 15 Apr 2021 09:57:26 GMT
     body:
       encoding: UTF-8
-      string: '{"group":{"id":3,"name":"Pear Group","external_reference":null,"created_at":1617358344,"updated_at":1617358344,"nameservers":[{"id":6,"name":"kelly.example.com","server":2,"created_at":1617358343,"updated_at":1617358343},{"id":1,"name":"simon.example.com","server":1,"created_at":1617358343,"updated_at":1617358343}]}}'
-  recorded_at: Fri, 02 Apr 2021 10:12:39 GMT
+      string: '{"group":{"id":3,"name":"Pear Group","external_reference":null,"created_at":1618480640,"updated_at":1618480640,"nameservers":[{"id":3,"name":"dave.example.com","server":1,"available":true,"created_at":1618480640,"updated_at":1618480640},{"id":5,"name":"laura.example.com","server":2,"available":true,"created_at":1618480640,"updated_at":1618480640}]}}'
+  recorded_at: Thu, 15 Apr 2021 09:57:26 GMT
 - request:
     method: delete
     uri: https://dennis.dev.adam.ac/api/v1/groups/:group
@@ -77,17 +77,17 @@ http_interactions:
       Content-Type:
       - application/json
       Etag:
-      - W/"f8d5f7c96eb0e8b7dd9352442b371beb"
+      - W/"6e24683fa33c3695dc1f838bfe3b4355"
       Server:
       - Caddy
       X-Request-Id:
-      - f962b2a4-f87d-414e-82b5-43f65fbfd76d
+      - b67326c1-147d-4d05-ab6e-b63169a1d923
       X-Runtime:
-      - '0.017455'
+      - '0.015953'
       Date:
-      - Fri, 02 Apr 2021 10:12:39 GMT
+      - Thu, 15 Apr 2021 09:57:26 GMT
     body:
       encoding: UTF-8
-      string: '{"group":{"id":3,"name":"Pear Group","external_reference":null,"created_at":1617358344,"updated_at":1617358344,"nameservers":[]}}'
-  recorded_at: Fri, 02 Apr 2021 10:12:39 GMT
+      string: '{"group":{"id":3,"name":"Pear Group","external_reference":null,"created_at":1618480640,"updated_at":1618480640,"nameservers":[]}}'
+  recorded_at: Thu, 15 Apr 2021 09:57:26 GMT
 recorded_with: VCR 6.0.0

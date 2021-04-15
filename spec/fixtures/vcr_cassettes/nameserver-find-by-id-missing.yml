@@ -35,14 +35,14 @@ http_interactions:
       X-Api-Schema:
       - json-error
       X-Request-Id:
-      - 76043132-fdc2-444e-aa6b-9b091532e485
+      - 1fffffae-ae97-4962-8125-58f607d6f58a
       X-Runtime:
-      - '0.006132'
+      - '0.005964'
       Date:
-      - Fri, 02 Apr 2021 10:12:39 GMT
+      - Thu, 15 Apr 2021 09:57:26 GMT
     body:
       encoding: UTF-8
       string: '{"error":{"code":"nameserver_not_found","description":"No nameserver
         could be found using the given arguments","detail":{}}}'
-  recorded_at: Fri, 02 Apr 2021 10:12:39 GMT
+  recorded_at: Thu, 15 Apr 2021 09:57:26 GMT
 recorded_with: VCR 6.0.0

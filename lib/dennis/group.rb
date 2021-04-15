@@ -8,9 +8,13 @@ module Dennis
 
     class << self
 
-      def all(client)
-        groups = client.api.perform(:get, 'groups')
-        groups.hash['groups'].map { |hash| new(client, hash) }
+      def all(client, page: nil, per_page: nil)
+        request = client.api.create_request(:get, 'groups')
+        request.arguments[:page] = page if page
+        request.arguments[:per_page] = per_page if per_page
+        PaginatedArray.create(request.perform.hash, 'groups') do |hash|
+          new(client, hash)
+        end
       end
 
       def find_by(client, field, value)
@@ -80,6 +84,10 @@ module Dennis
 
     def zones
       Zone.all_for_group(@client, { id: id })
+    end
+
+    def tagged_records(tags)
+      Record.all_by_tag(@client, tags, group: { id: id })
     end
 
     def update(properties)
