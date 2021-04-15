@@ -2,6 +2,12 @@
 
 This file contains all the latest changes and updates to this application.
 
+## 1.0.10
+
+### Features
+
+- add record types ([e6e805](https://github.com/krystal/dennis-client/commit/e6e805c9fb2d9d73a40fd388d5d172cf51ef1e22))
+
 ## 1.0.9
 
 ### Features
