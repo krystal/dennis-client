@@ -2,6 +2,13 @@
 
 This file contains all the latest changes and updates to this application.
 
+## 1.0.9
+
+### Features
+
+- support for pagination ([975a39](https://github.com/krystal/dennis-client/commit/975a39ae60cb922cb629a00237a2f8020bfad449))
+- support for tagged records ([fe8e46](https://github.com/krystal/dennis-client/commit/fe8e464696fa140bbdba33674c75186ad9c38836))
+
 ## 1.0.8
 
 ### Bug Fixes
