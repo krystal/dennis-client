@@ -27,6 +27,18 @@ zone = client.zone('some-ref', field: :external_reference)
 # Get all the records for a zone
 zone.records
 
+# Get specific type of records for a zone
+zone.records(type: 'A')
+
+# Get all records matching a given name
+zone.records(name: 'www')
+
+# Get all records matching a given query (for any content in name or content)
+zone.records(query: 'v=spf')
+
+# Get all records with ANY of the given tags
+zone.records(tags: ['tag1'])
+
 # Create a new group
 group = client.create_group(name: 'My example group', external_reference: 'some-ref')
 

@@ -9,12 +9,20 @@ module Dennis
 
     class << self
 
-      def all(client, zone, type: nil, name: nil, query: nil)
+      def all(client, zone, type: nil, name: nil, query: nil, tags: nil)
         request = client.api.create_request(:get, 'zones/:zone/records')
         request.arguments[:zone] = zone
         request.arguments[:name] = name if name
         request.arguments[:type] = type if type
         request.arguments[:query] = query if query
+        request.arguments[:tags] = tags if tags
+        request.perform.hash['records'].map { |hash| new(client, hash) }
+      end
+
+      def all_by_tag(client, tags, group: nil)
+        request = client.api.create_request(:get, 'records/tagged')
+        request.arguments[:tags] = tags
+        request.arguments[:group] = group if group
         request.perform.hash['records'].map { |hash| new(client, hash) }
       end
 
@@ -121,6 +129,13 @@ module Dennis
       return @hash['updated_at'] if @hash['updated_at'].is_a?(Time)
 
       Time.at(@hash['updated_at'])
+    end
+
+    def zone
+      return @zone if @zone
+      return nil unless @hash['zone']
+
+      @zone = Zone.new(@client, @hash['zone'])
     end
 
     def content

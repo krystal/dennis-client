@@ -60,6 +60,33 @@ module Dennis
         end
       end
       # rubocop:enable Layout/LineLength
+
+      it 'returns an array of all records with any of the given tags' do
+        VCR.use_cassette('record-all-with-tags') do
+          records = described_class.all(@client, { id: 1 }, tags: ['tag2'])
+          expect(records).to be_a Array
+          expect(records.size).to eq 2
+          expect(records).to match array_including(
+            have_attributes(content: { ip_address: '185.22.211.61' }),
+            have_attributes(content: { ip_address: '2a00:67a0:a:1::1' })
+          )
+        end
+      end
+    end
+
+    describe '.all_by_tag' do
+      it 'returns an array of all records with any of the given tags in any zone' do
+        VCR.use_cassette('record-all-by-tag') do
+          records = described_class.all_by_tag(@client, ['tag2'])
+          expect(records).to be_a Array
+          expect(records.size).to eq 3
+          expect(records).to match array_including(
+            have_attributes(content: { ip_address: '185.22.211.61' }, zone: have_attributes(name: 'example.com')),
+            have_attributes(content: { ip_address: '2a00:67a0:a:1::1' }, zone: have_attributes(name: 'example.com')),
+            have_attributes(content: { ip_address: '185.22.211.55' }, zone: have_attributes(name: 'bananas.com'))
+          )
+        end
+      end
     end
 
     describe '.find_by' do

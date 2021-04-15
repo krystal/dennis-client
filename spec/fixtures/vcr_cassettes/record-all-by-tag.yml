@@ -1,0 +1,47 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://dennis.dev.adam.ac/api/v1/records/tagged?_arguments=%7B%22tags%22:%5B%22tag2%22%5D%7D
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Authorization:
+      - Bearer test
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Methods:
+      - "*"
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Length:
+      - '904'
+      Content-Type:
+      - application/json
+      Etag:
+      - W/"21ede170a308d9a8bad0ea2e9f019bb2"
+      Server:
+      - Caddy
+      X-Request-Id:
+      - 79e13ded-a211-4a40-b546-89be004f0522
+      X-Runtime:
+      - '0.030853'
+      Date:
+      - Thu, 15 Apr 2021 09:42:30 GMT
+    body:
+      encoding: UTF-8
+      string: '{"records":[{"id":20,"name":null,"external_reference":null,"type":"A","full_name":"bananas.com","ttl":null,"priority":null,"managed":false,"created_at":1618479738,"updated_at":1618479738,"tags":["tag2"],"content":{"A":{"ip_address":"185.22.211.55"}},"zone":{"id":2,"name":"bananas.com","verified":false}},{"id":6,"name":null,"external_reference":null,"type":"A","full_name":"example.com","ttl":null,"priority":null,"managed":false,"created_at":1618479738,"updated_at":1618479738,"tags":["tag1","tag2"],"content":{"A":{"ip_address":"185.22.211.61"}},"zone":{"id":1,"name":"example.com","verified":true}},{"id":7,"name":null,"external_reference":null,"type":"AAAA","full_name":"example.com","ttl":null,"priority":null,"managed":false,"created_at":1618479738,"updated_at":1618479738,"tags":["tag2"],"content":{"AAAA":{"ip_address":"2a00:67a0:a:1::1"}},"zone":{"id":1,"name":"example.com","verified":true}}]}'
+  recorded_at: Thu, 15 Apr 2021 09:42:30 GMT
+recorded_with: VCR 6.0.0
