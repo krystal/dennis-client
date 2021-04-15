@@ -1,0 +1,50 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://dennis.dev.adam.ac/api/v1/record_types?_arguments=%7B%7D
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Authorization:
+      - Bearer test
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Methods:
+      - "*"
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Length:
+      - '2579'
+      Content-Type:
+      - application/json
+      Etag:
+      - W/"8693566aaf06a84c77a2f3d60425203b"
+      Server:
+      - Caddy
+      X-Request-Id:
+      - 42ff7fa1-fd45-45c5-89c5-a335c2d026ca
+      X-Runtime:
+      - '0.008390'
+      Date:
+      - Thu, 15 Apr 2021 10:51:35 GMT
+    body:
+      encoding: UTF-8
+      string: '{"record_types":[{"name":"A","requires_priority":false,"managed_only":false,"content_attributes":[{"name":"ip_address","label":"IPv4
+        address","type":"text","options":null}]},{"name":"AAAA","requires_priority":false,"managed_only":false,"content_attributes":[{"name":"ip_address","label":"IPv6
+        address","type":"text","options":null}]},{"name":"ALIAS","requires_priority":false,"managed_only":false,"content_attributes":[{"name":"hostname","label":"Hostname","type":"text","options":null}]},{"name":"CAA","requires_priority":false,"managed_only":false,"content_attributes":[{"name":"flag","label":"Flag","type":"text","options":null},{"name":"tag","label":"Tag","type":"options","options":[{"label":"issue","value":"issue"},{"label":"issuewild","value":"issuewild"},{"label":"iodef","value":"iodef"},{"label":"contactemail","value":"contactemail"},{"label":"contactphone","value":"contactphone"}]},{"name":"value","label":"Value","type":"text","options":null}]},{"name":"CNAME","requires_priority":false,"managed_only":false,"content_attributes":[{"name":"hostname","label":"Hostname","type":"text","options":null}]},{"name":"MX","requires_priority":true,"managed_only":false,"content_attributes":[{"name":"hostname","label":"Hostname","type":"text","options":null}]},{"name":"NS","requires_priority":false,"managed_only":false,"content_attributes":[{"name":"hostname","label":"Hostname","type":"text","options":null}]},{"name":"PTR","requires_priority":false,"managed_only":false,"content_attributes":[{"name":"hostname","label":"Hostname","type":"text","options":null}]},{"name":"SOA","requires_priority":false,"managed_only":true,"content_attributes":[]},{"name":"SRV","requires_priority":true,"managed_only":false,"content_attributes":[{"name":"weight","label":"Weight","type":"text","options":null},{"name":"port","label":"Port","type":"text","options":null},{"name":"target","label":"Target","type":"text","options":null}]},{"name":"SSHFP","requires_priority":false,"managed_only":false,"content_attributes":[{"name":"algorithm","label":"Algorithm","type":"options","options":[{"label":"RSA","value":"1"},{"label":"DSA","value":"2"},{"label":"ECDSA","value":"3"},{"label":"Ed25519","value":"4"}]},{"name":"fingerprint_type","label":"Fingerprint
+        type","type":"options","options":[{"label":"SHA1","value":"1"},{"label":"SHA-256","value":"2"}]},{"name":"fingerprint","label":"Fingerprint","type":"text","options":null}]},{"name":"TXT","requires_priority":false,"managed_only":false,"content_attributes":[{"name":"content","label":"Content","type":"long_text","options":null}]}]}'
+  recorded_at: Thu, 15 Apr 2021 10:51:35 GMT
+recorded_with: VCR 6.0.0

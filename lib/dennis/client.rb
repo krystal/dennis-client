@@ -5,6 +5,7 @@ require 'dennis/group'
 require 'dennis/zone'
 require 'dennis/nameserver'
 require 'dennis/record'
+require 'dennis/record_type'
 
 module Dennis
   class Client
@@ -19,6 +20,10 @@ module Dennis
 
       @api = RapidAPI.load(hostname, namespace: 'api/v1', **options)
       @api.headers['Authorization'] = "Bearer #{api_key}"
+    end
+
+    def record_types
+      RecordType.all(self)
     end
 
     def groups

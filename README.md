@@ -70,4 +70,9 @@ record.update(content: { ip_address: '185.22.208.5'} )
 
 # Get all records with any of the given tags
 client.tagged_records(['tag1'])
+
+# Get a list of all the types of records that are supported and the attributes
+# needed for them. This will return a hash keyed with the name of the type.
+client.record_types
+client.record_types['A']
 ```
