@@ -66,7 +66,7 @@ module Dennis
 
       def properties_to_argument(hash, type: nil)
         arguments = {}
-        [:name, :type, :ttl, :priority, :external_reference].each do |field_name|
+        [:name, :type, :ttl, :priority, :external_reference, :tags].each do |field_name|
           arguments[field_name] = hash[field_name] if hash.key?(field_name)
 
           type = hash[field_name] if field_name == :type && hash.key?(field_name)
@@ -119,6 +119,10 @@ module Dennis
 
     def managed?
       @hash['managed']
+    end
+
+    def tags
+      @hash['tags']
     end
 
     def created_at
