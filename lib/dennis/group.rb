@@ -82,8 +82,16 @@ module Dennis
       Zone.create_or_update(@client, group: { id: id }, **properties)
     end
 
-    def zones
-      Zone.all_for_group(@client, { id: id })
+    def zones(**options)
+      Zone.all_for_group(@client, { id: id }, **options)
+    end
+
+    def zone(id, field: :id)
+      zone = Zone.find_by(@client, field, id)
+      return nil if zone.nil?
+      return nil if zone.group.id != self.id
+
+      zone
     end
 
     def tagged_records(tags)

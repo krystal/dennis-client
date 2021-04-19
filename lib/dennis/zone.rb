@@ -124,6 +124,13 @@ module Dennis
       @hash['default_ttl']
     end
 
+    def group
+      return @group if @group
+      return nil unless @hash['group']
+
+      @group = Group.new(@client, @hash['group'])
+    end
+
     def created_at
       return nil if @hash['created_at'].nil?
       return @hash['created_at'] if @hash['created_at'].is_a?(Time)
@@ -146,8 +153,8 @@ module Dennis
       Record.create_or_update(@client, id, **properties)
     end
 
-    def records
-      Record.all(@client, { id: id })
+    def records(**options)
+      Record.all(@client, { id: id }, **options)
     end
 
     def update(properties)

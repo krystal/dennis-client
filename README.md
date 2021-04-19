@@ -56,6 +56,10 @@ group.nameservers
 # Get all tagged records for a group
 group.tagged_records(['tag1'])
 
+# Lookup a zone within a group
+group.zone(1)
+group.zone('test.com', field: :name)
+
 # Create a new zone
 zone = group.create_zone('example.com')
 
