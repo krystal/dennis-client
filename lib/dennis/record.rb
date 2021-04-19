@@ -141,6 +141,10 @@ module Dennis
       @zone = Zone.new(@client, @hash['zone'])
     end
 
+    def raw_content
+      @hash['raw_content']
+    end
+
     def content
       return nil if type.nil?
 
