@@ -2,6 +2,12 @@
 
 This file contains all the latest changes and updates to this application.
 
+## 1.0.12
+
+### Features
+
+- add a few extra helper methods ([dac9cc](https://github.com/krystal/dennis-client/commit/dac9ccb7043c0998c4fe922d4cb83f96206cff45))
+
 ## 1.0.11
 
 ### Bug Fixes
