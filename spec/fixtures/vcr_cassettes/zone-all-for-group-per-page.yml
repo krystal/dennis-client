@@ -27,21 +27,21 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       Content-Length:
-      - '764'
+      - '751'
       Content-Type:
       - application/json
       Etag:
-      - W/"dc970cf899f92d9a21dbb442564aca7f"
+      - W/"b16c370ce3088e780d2c9bd4bee417d2"
       Server:
       - Caddy
       X-Request-Id:
-      - aa65f945-aefe-4490-8c5e-506343dd5b9c
+      - 8192f571-59ab-42d4-af80-1e4f83023f6e
       X-Runtime:
-      - '0.016550'
+      - '0.010457'
       Date:
-      - Thu, 15 Apr 2021 10:07:07 GMT
+      - Mon, 19 Apr 2021 20:42:24 GMT
     body:
       encoding: UTF-8
-      string: '{"pagination":{"current_page":1,"total_pages":2,"total":4,"per_page":2,"large_set":false},"zones":[{"id":2,"name":"bananas.com","created_at":1618480640,"updated_at":1618480950,"serial":1618480950,"default_ttl":3600,"external_reference":"bananas","verified":false,"nameservers_verified_at":null,"nameservers_checked_at":1618480950,"always_verified":false,"nameservers_verified":false,"reverse_dns":false,"stale_verification":false},{"id":8,"name":"cou2.com","created_at":1618480647,"updated_at":1618480950,"serial":1618480950,"default_ttl":3600,"external_reference":"cou-zone-1","verified":false,"nameservers_verified_at":null,"nameservers_checked_at":1618480950,"always_verified":false,"nameservers_verified":false,"reverse_dns":false,"stale_verification":false}]}'
-  recorded_at: Thu, 15 Apr 2021 10:07:07 GMT
+      string: '{"pagination":{"current_page":1,"total_pages":2,"total":3,"per_page":2,"large_set":false},"zones":[{"id":2,"name":"bananas.com","created_at":1618864931,"updated_at":1618864931,"serial":1618864931,"default_ttl":3600,"external_reference":"bananas","verified":false,"nameservers_verified_at":null,"nameservers_checked_at":null,"always_verified":false,"nameservers_verified":false,"reverse_dns":false,"stale_verification":false},{"id":1,"name":"example.com","created_at":1618864930,"updated_at":1618864944,"serial":1618864944,"default_ttl":3600,"external_reference":null,"verified":true,"nameservers_verified_at":1618864930,"nameservers_checked_at":null,"always_verified":false,"nameservers_verified":true,"reverse_dns":false,"stale_verification":false}]}'
+  recorded_at: Mon, 19 Apr 2021 20:42:24 GMT
 recorded_with: VCR 6.0.0

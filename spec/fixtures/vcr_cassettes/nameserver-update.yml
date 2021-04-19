@@ -31,19 +31,19 @@ http_interactions:
       Content-Type:
       - application/json
       Etag:
-      - W/"49ac8bde29f855192f063e752eb8af69"
+      - W/"f008efd2e7c68a4211a8042306f99d79"
       Server:
       - Caddy
       X-Request-Id:
-      - de0a6351-8c0b-428a-abf7-a443ca4b79d1
+      - bf9c0e4e-d8e1-4d7a-bca6-a0fc88b19c26
       X-Runtime:
-      - '0.005818'
+      - '0.021267'
       Date:
-      - Thu, 15 Apr 2021 09:57:26 GMT
+      - Mon, 19 Apr 2021 20:42:22 GMT
     body:
       encoding: UTF-8
-      string: '{"nameserver":{"id":1,"name":"simon.example.com","server":1,"available":true,"created_at":1618480640,"updated_at":1618480640}}'
-  recorded_at: Thu, 15 Apr 2021 09:57:26 GMT
+      string: '{"nameserver":{"id":1,"name":"simon.example.com","server":1,"available":true,"created_at":1618864930,"updated_at":1618864930}}'
+  recorded_at: Mon, 19 Apr 2021 20:42:22 GMT
 - request:
     method: patch
     uri: https://dennis.dev.adam.ac/api/v1/nameservers/:nameserver
@@ -77,17 +77,17 @@ http_interactions:
       Content-Type:
       - application/json
       Etag:
-      - W/"2216d3a21691a284e24d2647d7c6dfa2"
+      - W/"8b955f26f3b9aee7afba868e623316d6"
       Server:
       - Caddy
       X-Request-Id:
-      - 77b717f3-bf65-466c-b111-6a3dcb356644
+      - 3b394e4e-127a-45e6-b9fa-0a999227b226
       X-Runtime:
-      - '0.009589'
+      - '0.013987'
       Date:
-      - Thu, 15 Apr 2021 09:57:26 GMT
+      - Mon, 19 Apr 2021 20:42:22 GMT
     body:
       encoding: UTF-8
-      string: '{"nameserver":{"id":1,"name":"phil.example.com","server":2,"available":true,"created_at":1618480640,"updated_at":1618480646}}'
-  recorded_at: Thu, 15 Apr 2021 09:57:26 GMT
+      string: '{"nameserver":{"id":1,"name":"phil.example.com","server":2,"available":true,"created_at":1618864930,"updated_at":1618864942}}'
+  recorded_at: Mon, 19 Apr 2021 20:42:22 GMT
 recorded_with: VCR 6.0.0

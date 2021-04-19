@@ -31,19 +31,19 @@ http_interactions:
       Content-Type:
       - application/json
       Etag:
-      - W/"689bf5c79ef2f09b63d0ed78d3f498e8"
+      - W/"05dd0fca4327ada0f787782572f2b7ed"
       Server:
       - Caddy
       X-Request-Id:
-      - 7fc01aa7-835b-4ce7-91ec-d0dc4735cbc8
+      - bc901ed4-e7c5-43bc-93c2-aa2b558517d1
       X-Runtime:
-      - '0.014679'
+      - '0.010367'
       Date:
-      - Thu, 15 Apr 2021 09:57:27 GMT
+      - Mon, 19 Apr 2021 20:42:24 GMT
     body:
       encoding: UTF-8
-      string: '{"zone":{"id":8,"name":"cou1.com","group":{"id":1,"name":"Renamed Group","external_reference":"with-ref","created_at":1618480640,"updated_at":1618480646,"nameservers":[{"id":6,"name":"kelly.example.com","server":2,"available":true,"created_at":1618480640,"updated_at":1618480640},{"id":1,"name":"phil.example.com","server":2,"available":true,"created_at":1618480640,"updated_at":1618480646}]},"created_at":1618480647,"updated_at":1618480647,"serial":1618480647,"default_ttl":3600,"external_reference":"cou-zone-1","verified":false,"nameservers_verified_at":null,"nameservers_checked_at":null,"always_verified":false,"nameservers_verified":false,"reverse_dns":false,"stale_verification":false}}'
-  recorded_at: Thu, 15 Apr 2021 09:57:27 GMT
+      string: '{"zone":{"id":8,"name":"cou1.com","group":{"id":1,"name":"Renamed Group","external_reference":"with-ref","created_at":1618864930,"updated_at":1618864942,"nameservers":[{"id":5,"name":"laura.example.com","server":2,"available":true,"created_at":1618864930,"updated_at":1618864930},{"id":3,"name":"dave.example.com","server":1,"available":true,"created_at":1618864930,"updated_at":1618864930}]},"created_at":1618864944,"updated_at":1618864944,"serial":1618864944,"default_ttl":3600,"external_reference":"cou-zone-1","verified":false,"nameservers_verified_at":null,"nameservers_checked_at":null,"always_verified":false,"nameservers_verified":false,"reverse_dns":false,"stale_verification":false}}'
+  recorded_at: Mon, 19 Apr 2021 20:42:24 GMT
 - request:
     method: get
     uri: https://dennis.dev.adam.ac/api/v1/zones/:zone?_arguments=%7B%22zone%22:%7B%22external_reference%22:%22cou-zone-1%22%7D%7D
@@ -75,19 +75,19 @@ http_interactions:
       Content-Type:
       - application/json
       Etag:
-      - W/"689bf5c79ef2f09b63d0ed78d3f498e8"
+      - W/"05dd0fca4327ada0f787782572f2b7ed"
       Server:
       - Caddy
       X-Request-Id:
-      - 15292dae-3fca-4e31-8371-da6890394472
+      - 6f9d9941-809f-4dc1-8b36-b9515ede2680
       X-Runtime:
-      - '0.009797'
+      - '0.009657'
       Date:
-      - Thu, 15 Apr 2021 09:57:27 GMT
+      - Mon, 19 Apr 2021 20:42:24 GMT
     body:
       encoding: UTF-8
-      string: '{"zone":{"id":8,"name":"cou1.com","group":{"id":1,"name":"Renamed Group","external_reference":"with-ref","created_at":1618480640,"updated_at":1618480646,"nameservers":[{"id":6,"name":"kelly.example.com","server":2,"available":true,"created_at":1618480640,"updated_at":1618480640},{"id":1,"name":"phil.example.com","server":2,"available":true,"created_at":1618480640,"updated_at":1618480646}]},"created_at":1618480647,"updated_at":1618480647,"serial":1618480647,"default_ttl":3600,"external_reference":"cou-zone-1","verified":false,"nameservers_verified_at":null,"nameservers_checked_at":null,"always_verified":false,"nameservers_verified":false,"reverse_dns":false,"stale_verification":false}}'
-  recorded_at: Thu, 15 Apr 2021 09:57:27 GMT
+      string: '{"zone":{"id":8,"name":"cou1.com","group":{"id":1,"name":"Renamed Group","external_reference":"with-ref","created_at":1618864930,"updated_at":1618864942,"nameservers":[{"id":5,"name":"laura.example.com","server":2,"available":true,"created_at":1618864930,"updated_at":1618864930},{"id":3,"name":"dave.example.com","server":1,"available":true,"created_at":1618864930,"updated_at":1618864930}]},"created_at":1618864944,"updated_at":1618864944,"serial":1618864944,"default_ttl":3600,"external_reference":"cou-zone-1","verified":false,"nameservers_verified_at":null,"nameservers_checked_at":null,"always_verified":false,"nameservers_verified":false,"reverse_dns":false,"stale_verification":false}}'
+  recorded_at: Mon, 19 Apr 2021 20:42:24 GMT
 - request:
     method: patch
     uri: https://dennis.dev.adam.ac/api/v1/zones/:zone
@@ -121,17 +121,17 @@ http_interactions:
       Content-Type:
       - application/json
       Etag:
-      - W/"5951cb97f5f21a1eb7d7ea19664b4616"
+      - W/"ad2ca3c5e162e21823c74ceabcc76c68"
       Server:
       - Caddy
       X-Request-Id:
-      - 6b48bb5f-27b0-47a3-81f7-7f38a6f8db9f
+      - 7d0775bc-ce6d-45e1-9e56-6fe04c99b593
       X-Runtime:
-      - '0.037532'
+      - '0.038394'
       Date:
-      - Thu, 15 Apr 2021 09:57:27 GMT
+      - Mon, 19 Apr 2021 20:42:25 GMT
     body:
       encoding: UTF-8
-      string: '{"zone":{"id":8,"name":"cou2.com","group":{"id":1,"name":"Renamed Group","external_reference":"with-ref","created_at":1618480640,"updated_at":1618480646,"nameservers":[{"id":6,"name":"kelly.example.com","server":2,"available":true,"created_at":1618480640,"updated_at":1618480640},{"id":1,"name":"phil.example.com","server":2,"available":true,"created_at":1618480640,"updated_at":1618480646}]},"created_at":1618480647,"updated_at":1618480647,"serial":1618480647,"default_ttl":3600,"external_reference":"cou-zone-1","verified":false,"nameservers_verified_at":null,"nameservers_checked_at":null,"always_verified":false,"nameservers_verified":false,"reverse_dns":false,"stale_verification":false}}'
-  recorded_at: Thu, 15 Apr 2021 09:57:27 GMT
+      string: '{"zone":{"id":8,"name":"cou2.com","group":{"id":1,"name":"Renamed Group","external_reference":"with-ref","created_at":1618864930,"updated_at":1618864942,"nameservers":[{"id":5,"name":"laura.example.com","server":2,"available":true,"created_at":1618864930,"updated_at":1618864930},{"id":3,"name":"dave.example.com","server":1,"available":true,"created_at":1618864930,"updated_at":1618864930}]},"created_at":1618864944,"updated_at":1618864945,"serial":1618864945,"default_ttl":3600,"external_reference":"cou-zone-1","verified":false,"nameservers_verified_at":null,"nameservers_checked_at":null,"always_verified":false,"nameservers_verified":false,"reverse_dns":false,"stale_verification":false}}'
+  recorded_at: Mon, 19 Apr 2021 20:42:25 GMT
 recorded_with: VCR 6.0.0

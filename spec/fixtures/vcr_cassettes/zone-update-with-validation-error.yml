@@ -27,24 +27,24 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       Content-Length:
-      - '698'
+      - '697'
       Content-Type:
       - application/json
       Etag:
-      - W/"d948f0fa2c98a5839fdf37d9ecae8df4"
+      - W/"3c69ae6dcffab9befbd771fc89752ddf"
       Server:
       - Caddy
       X-Request-Id:
-      - 0f57d57b-58ac-43a0-9eb9-51e603582fca
+      - 6e9f1a9d-085b-457e-b046-83cba5159d94
       X-Runtime:
-      - '0.009307'
+      - '0.010301'
       Date:
-      - Thu, 15 Apr 2021 09:57:27 GMT
+      - Mon, 19 Apr 2021 20:42:24 GMT
     body:
       encoding: UTF-8
       string: '{"zone":{"id":5,"name":"raspberries.com","group":{"id":2,"name":"Another
-        Group","external_reference":"another","created_at":1618480640,"updated_at":1618480640,"nameservers":[{"id":1,"name":"phil.example.com","server":2,"available":true,"created_at":1618480640,"updated_at":1618480646},{"id":6,"name":"kelly.example.com","server":2,"available":true,"created_at":1618480640,"updated_at":1618480640}]},"created_at":1618480640,"updated_at":1618480647,"serial":1618480647,"default_ttl":3600,"external_reference":"rasps","verified":true,"nameservers_verified_at":1618480640,"nameservers_checked_at":null,"always_verified":false,"nameservers_verified":true,"reverse_dns":false,"stale_verification":false}}'
-  recorded_at: Thu, 15 Apr 2021 09:57:27 GMT
+        Group","external_reference":"another","created_at":1618864931,"updated_at":1618864931,"nameservers":[{"id":3,"name":"dave.example.com","server":1,"available":true,"created_at":1618864930,"updated_at":1618864930},{"id":4,"name":"ruth.example.com","server":2,"available":true,"created_at":1618864930,"updated_at":1618864930}]},"created_at":1618864931,"updated_at":1618864944,"serial":1618864944,"default_ttl":3600,"external_reference":"rasps","verified":true,"nameservers_verified_at":1618864931,"nameservers_checked_at":null,"always_verified":false,"nameservers_verified":true,"reverse_dns":false,"stale_verification":false}}'
+  recorded_at: Mon, 19 Apr 2021 20:42:24 GMT
 - request:
     method: patch
     uri: https://dennis.dev.adam.ac/api/v1/zones/:zone
@@ -82,16 +82,16 @@ http_interactions:
       X-Api-Schema:
       - json-error
       X-Request-Id:
-      - 3fc27900-1579-4ad5-861b-ad888a8e15d2
+      - 17b3928f-de0a-4bac-a648-cd2c1fffe1ed
       X-Runtime:
-      - '0.018574'
+      - '0.017223'
       Date:
-      - Thu, 15 Apr 2021 09:57:27 GMT
+      - Mon, 19 Apr 2021 20:42:24 GMT
     body:
       encoding: UTF-8
       string: '{"error":{"code":"validation_error","description":"A validation error
         occurred when saving the object","detail":{"errors":[{"attribute":"name","type":"blank","message":"Name
         can''t be blank"},{"attribute":"name","type":"too_short","message":"Name is
         too short (minimum is 4 characters)"}]}}}'
-  recorded_at: Thu, 15 Apr 2021 09:57:27 GMT
+  recorded_at: Mon, 19 Apr 2021 20:42:24 GMT
 recorded_with: VCR 6.0.0

@@ -31,18 +31,18 @@ http_interactions:
       Content-Type:
       - application/json
       Etag:
-      - W/"81a57758daa1e0f624f99cf4ef36c49f"
+      - W/"e13252d8298a04b62975ac3bd7013f25"
       Server:
       - Caddy
       X-Request-Id:
-      - 9aa328e0-6d9c-4715-a07c-37cad39f851f
+      - 07f724fb-3865-4ffd-a1f2-43879d0cfbb0
       X-Runtime:
-      - '0.010469'
+      - '0.010662'
       Date:
-      - Thu, 15 Apr 2021 09:57:27 GMT
+      - Mon, 19 Apr 2021 20:42:24 GMT
     body:
       encoding: UTF-8
       string: '{"zone":{"id":1,"name":"example.com","group":{"id":1,"name":"Renamed
-        Group","external_reference":"with-ref","created_at":1618480640,"updated_at":1618480646,"nameservers":[{"id":6,"name":"kelly.example.com","server":2,"available":true,"created_at":1618480640,"updated_at":1618480640},{"id":1,"name":"phil.example.com","server":2,"available":true,"created_at":1618480640,"updated_at":1618480646}]},"created_at":1618480640,"updated_at":1618480647,"serial":1618480647,"default_ttl":3600,"external_reference":null,"verified":true,"nameservers_verified_at":1618480640,"nameservers_checked_at":null,"always_verified":false,"nameservers_verified":true,"reverse_dns":false,"stale_verification":false}}'
-  recorded_at: Thu, 15 Apr 2021 09:57:27 GMT
+        Group","external_reference":"with-ref","created_at":1618864930,"updated_at":1618864942,"nameservers":[{"id":5,"name":"laura.example.com","server":2,"available":true,"created_at":1618864930,"updated_at":1618864930},{"id":3,"name":"dave.example.com","server":1,"available":true,"created_at":1618864930,"updated_at":1618864930}]},"created_at":1618864930,"updated_at":1618864944,"serial":1618864944,"default_ttl":3600,"external_reference":null,"verified":true,"nameservers_verified_at":1618864930,"nameservers_checked_at":null,"always_verified":false,"nameservers_verified":true,"reverse_dns":false,"stale_verification":false}}'
+  recorded_at: Mon, 19 Apr 2021 20:42:24 GMT
 recorded_with: VCR 6.0.0

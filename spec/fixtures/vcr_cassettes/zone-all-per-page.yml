@@ -27,23 +27,23 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       Content-Length:
-      - '843'
+      - '831'
       Content-Type:
       - application/json
       Etag:
-      - W/"ee10db66f565e0f6b4573b7d3c4223d9"
+      - W/"c48bafcbf3eab2e1092c4cede72a687a"
       Server:
       - Caddy
       X-Request-Id:
-      - 343f6961-ea93-498d-94c6-46456d70897a
+      - 26d1de84-3da7-48a4-b2c0-c7fb292d1881
       X-Runtime:
-      - '0.023815'
+      - '0.010458'
       Date:
-      - Thu, 15 Apr 2021 10:02:06 GMT
+      - Mon, 19 Apr 2021 20:42:24 GMT
     body:
       encoding: UTF-8
-      string: '{"pagination":{"current_page":1,"total_pages":4,"total":7,"per_page":2,"large_set":false},"zones":[{"id":3,"name":"another.com","group":{"id":2,"name":"Another
-        Group"},"created_at":1618480640,"updated_at":1618480650,"serial":1618480650,"default_ttl":3600,"external_reference":null,"verified":true,"nameservers_verified_at":1618480640,"nameservers_checked_at":1618480650,"always_verified":false,"nameservers_verified":true,"reverse_dns":false,"stale_verification":false},{"id":2,"name":"bananas.com","group":{"id":1,"name":"Renamed
-        Group"},"created_at":1618480640,"updated_at":1618480650,"serial":1618480650,"default_ttl":3600,"external_reference":"bananas","verified":false,"nameservers_verified_at":null,"nameservers_checked_at":1618480650,"always_verified":false,"nameservers_verified":false,"reverse_dns":false,"stale_verification":false}]}'
-  recorded_at: Thu, 15 Apr 2021 10:02:06 GMT
+      string: '{"pagination":{"current_page":1,"total_pages":3,"total":6,"per_page":2,"large_set":false},"zones":[{"id":3,"name":"another.com","group":{"id":2,"name":"Another
+        Group"},"created_at":1618864931,"updated_at":1618864931,"serial":1618864931,"default_ttl":3600,"external_reference":null,"verified":true,"nameservers_verified_at":1618864931,"nameservers_checked_at":null,"always_verified":false,"nameservers_verified":true,"reverse_dns":false,"stale_verification":false},{"id":2,"name":"bananas.com","group":{"id":1,"name":"Renamed
+        Group"},"created_at":1618864931,"updated_at":1618864931,"serial":1618864931,"default_ttl":3600,"external_reference":"bananas","verified":false,"nameservers_verified_at":null,"nameservers_checked_at":null,"always_verified":false,"nameservers_verified":false,"reverse_dns":false,"stale_verification":false}]}'
+  recorded_at: Mon, 19 Apr 2021 20:42:24 GMT
 recorded_with: VCR 6.0.0

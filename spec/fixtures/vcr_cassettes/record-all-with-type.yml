@@ -27,21 +27,21 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       Content-Length:
-      - '988'
+      - '1090'
       Content-Type:
       - application/json
       Etag:
-      - W/"de13b08cf89a047d503c8f73e38c1be2"
+      - W/"f0faf8d8fd33560b7807e7c015f73b0a"
       Server:
       - Caddy
       X-Request-Id:
-      - a53ba221-cd21-411d-9673-ac514561bd5a
+      - 19e898eb-41df-4aa6-8dec-1000efe76d7e
       X-Runtime:
-      - '0.008232'
+      - '0.010561'
       Date:
-      - Thu, 15 Apr 2021 09:57:26 GMT
+      - Mon, 19 Apr 2021 20:42:23 GMT
     body:
       encoding: UTF-8
-      string: '{"pagination":{"current_page":1,"total_pages":1,"total":3,"per_page":30,"large_set":false},"records":[{"id":4,"name":"_1c102aaebd0fad7b110d902d2f3682d4","external_reference":null,"type":"CNAME","full_name":"_1c102aaebd0fad7b110d902d2f3682d4.example.com","ttl":null,"priority":null,"managed":false,"created_at":1618480640,"updated_at":1618480640,"content":{"CNAME":{"hostname":"9DEF881C1969EA572754FAD3258B9C57.B44F379D67E6BBC684DD3A22CCEA1E11.tf3Uy5q5AZ5AFz595yD5.comodoca.com"}}},{"id":12,"name":"staging","external_reference":null,"type":"CNAME","full_name":"staging.example.com","ttl":null,"priority":null,"managed":false,"created_at":1618480640,"updated_at":1618480640,"content":{"CNAME":{"hostname":"codebase-staging.infra.atech.io"}}},{"id":8,"name":"www","external_reference":"www-cname-example","type":"CNAME","full_name":"www.example.com","ttl":null,"priority":null,"managed":false,"created_at":1618480640,"updated_at":1618480640,"content":{"CNAME":{"hostname":"example.com"}}}]}'
-  recorded_at: Thu, 15 Apr 2021 09:57:26 GMT
+      string: '{"records":[{"id":4,"name":"_1c102aaebd0fad7b110d902d2f3682d4","external_reference":null,"type":"CNAME","full_name":"_1c102aaebd0fad7b110d902d2f3682d4.example.com","ttl":null,"priority":null,"managed":false,"created_at":1618864930,"updated_at":1618864930,"raw_content":"9DEF881C1969EA572754FAD3258B9C57.B44F379D67E6BBC684DD3A22CCEA1E11.tf3Uy5q5AZ5AFz595yD5.comodoca.com","content":{"CNAME":{"hostname":"9DEF881C1969EA572754FAD3258B9C57.B44F379D67E6BBC684DD3A22CCEA1E11.tf3Uy5q5AZ5AFz595yD5.comodoca.com"}}},{"id":12,"name":"staging","external_reference":null,"type":"CNAME","full_name":"staging.example.com","ttl":null,"priority":null,"managed":false,"created_at":1618864930,"updated_at":1618864930,"raw_content":"codebase-staging.infra.atech.io","content":{"CNAME":{"hostname":"codebase-staging.infra.atech.io"}}},{"id":8,"name":"www","external_reference":"www-cname-example","type":"CNAME","full_name":"www.example.com","ttl":null,"priority":null,"managed":false,"created_at":1618864930,"updated_at":1618864930,"raw_content":"example.com","content":{"CNAME":{"hostname":"example.com"}}}]}'
+  recorded_at: Mon, 19 Apr 2021 20:42:23 GMT
 recorded_with: VCR 6.0.0

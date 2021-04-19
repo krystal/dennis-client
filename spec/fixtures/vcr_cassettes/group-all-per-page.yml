@@ -27,23 +27,23 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       Content-Length:
-      - '798'
+      - '795'
       Content-Type:
       - application/json
       Etag:
-      - W/"650ceba5b290b65ccfcc7dc90e2efbe2"
+      - W/"53fc45e57c54d241d3acec8431ce3580"
       Server:
       - Caddy
       X-Request-Id:
-      - e592653d-3b02-4476-88ef-0006d6444fd9
+      - c81cc993-6ac9-4d02-9cc8-271035d252df
       X-Runtime:
-      - '0.011614'
+      - '0.015086'
       Date:
-      - Thu, 15 Apr 2021 10:02:56 GMT
+      - Mon, 19 Apr 2021 20:42:22 GMT
     body:
       encoding: UTF-8
       string: '{"pagination":{"current_page":1,"total_pages":2,"total":4,"per_page":2,"large_set":false},"groups":[{"id":2,"name":"Another
-        Group","external_reference":"another","created_at":1618480640,"updated_at":1618480640,"nameservers":[{"id":1,"name":"phil.example.com","server":2,"available":true,"created_at":1618480640,"updated_at":1618480646},{"id":6,"name":"kelly.example.com","server":2,"available":true,"created_at":1618480640,"updated_at":1618480640}]},{"id":5,"name":"Apple
-        Group","external_reference":"apples","created_at":1618480646,"updated_at":1618480646,"nameservers":[{"id":5,"name":"laura.example.com","server":2,"available":true,"created_at":1618480640,"updated_at":1618480640},{"id":1,"name":"phil.example.com","server":2,"available":true,"created_at":1618480640,"updated_at":1618480646}]}]}'
-  recorded_at: Thu, 15 Apr 2021 10:02:56 GMT
+        Group","external_reference":"another","created_at":1618864931,"updated_at":1618864931,"nameservers":[{"id":3,"name":"dave.example.com","server":1,"available":true,"created_at":1618864930,"updated_at":1618864930},{"id":4,"name":"ruth.example.com","server":2,"available":true,"created_at":1618864930,"updated_at":1618864930}]},{"id":1,"name":"Example
+        Group","external_reference":null,"created_at":1618864930,"updated_at":1618864930,"nameservers":[{"id":5,"name":"laura.example.com","server":2,"available":true,"created_at":1618864930,"updated_at":1618864930},{"id":3,"name":"dave.example.com","server":1,"available":true,"created_at":1618864930,"updated_at":1618864930}]}]}'
+  recorded_at: Mon, 19 Apr 2021 20:42:22 GMT
 recorded_with: VCR 6.0.0

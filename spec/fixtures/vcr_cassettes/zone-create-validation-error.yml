@@ -37,16 +37,16 @@ http_interactions:
       X-Api-Schema:
       - json-error
       X-Request-Id:
-      - 2fcfc8bb-78bb-4416-9843-bc92ae177036
+      - 050a7927-0e56-40c9-af82-dfa6b2410e23
       X-Runtime:
-      - '0.011672'
+      - '0.014248'
       Date:
-      - Thu, 15 Apr 2021 09:57:27 GMT
+      - Mon, 19 Apr 2021 20:42:24 GMT
     body:
       encoding: UTF-8
       string: '{"error":{"code":"validation_error","description":"A validation error
         occurred when saving the object","detail":{"errors":[{"attribute":"name","type":"blank","message":"Name
         can''t be blank"},{"attribute":"name","type":"too_short","message":"Name is
         too short (minimum is 4 characters)"}]}}}'
-  recorded_at: Thu, 15 Apr 2021 09:57:27 GMT
+  recorded_at: Mon, 19 Apr 2021 20:42:24 GMT
 recorded_with: VCR 6.0.0

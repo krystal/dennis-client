@@ -35,16 +35,16 @@ http_interactions:
       X-Api-Schema:
       - json-error
       X-Request-Id:
-      - 4f66ada5-eb1f-41b4-95f8-ab54ddd729ee
+      - b8d5501d-d7b4-4e6e-af86-40a10c48f702
       X-Runtime:
-      - '0.005425'
+      - '0.006560'
       Date:
-      - Thu, 15 Apr 2021 09:57:27 GMT
+      - Mon, 19 Apr 2021 20:42:24 GMT
     body:
       encoding: UTF-8
       string: '{"error":{"code":"zone_not_found","description":"No zone could be found
         using the given arguments","detail":{}}}'
-  recorded_at: Thu, 15 Apr 2021 09:57:27 GMT
+  recorded_at: Mon, 19 Apr 2021 20:42:24 GMT
 - request:
     method: get
     uri: https://dennis.dev.adam.ac/api/v1/zones/:zone?_arguments=%7B%22zone%22:%7B%22external_reference%22:%22cou-zone-1%22%7D%7D
@@ -80,16 +80,16 @@ http_interactions:
       X-Api-Schema:
       - json-error
       X-Request-Id:
-      - 29b05477-6339-4ed7-beaf-e73e783615d0
+      - 14a61538-120b-49bd-952e-0e5116df9e29
       X-Runtime:
-      - '0.004856'
+      - '0.008024'
       Date:
-      - Thu, 15 Apr 2021 09:57:27 GMT
+      - Mon, 19 Apr 2021 20:42:24 GMT
     body:
       encoding: UTF-8
       string: '{"error":{"code":"zone_not_found","description":"No zone could be found
         using the given arguments","detail":{}}}'
-  recorded_at: Thu, 15 Apr 2021 09:57:27 GMT
+  recorded_at: Mon, 19 Apr 2021 20:42:24 GMT
 - request:
     method: post
     uri: https://dennis.dev.adam.ac/api/v1/zones
@@ -123,17 +123,17 @@ http_interactions:
       Content-Type:
       - application/json
       Etag:
-      - W/"689bf5c79ef2f09b63d0ed78d3f498e8"
+      - W/"05dd0fca4327ada0f787782572f2b7ed"
       Server:
       - Caddy
       X-Request-Id:
-      - 8cb98b05-9886-4b7b-a517-38c938fe3627
+      - 545e0e05-5eda-4669-8e5a-32896c15d874
       X-Runtime:
-      - '0.041320'
+      - '0.052803'
       Date:
-      - Thu, 15 Apr 2021 09:57:27 GMT
+      - Mon, 19 Apr 2021 20:42:24 GMT
     body:
       encoding: UTF-8
-      string: '{"zone":{"id":8,"name":"cou1.com","group":{"id":1,"name":"Renamed Group","external_reference":"with-ref","created_at":1618480640,"updated_at":1618480646,"nameservers":[{"id":6,"name":"kelly.example.com","server":2,"available":true,"created_at":1618480640,"updated_at":1618480640},{"id":1,"name":"phil.example.com","server":2,"available":true,"created_at":1618480640,"updated_at":1618480646}]},"created_at":1618480647,"updated_at":1618480647,"serial":1618480647,"default_ttl":3600,"external_reference":"cou-zone-1","verified":false,"nameservers_verified_at":null,"nameservers_checked_at":null,"always_verified":false,"nameservers_verified":false,"reverse_dns":false,"stale_verification":false}}'
-  recorded_at: Thu, 15 Apr 2021 09:57:27 GMT
+      string: '{"zone":{"id":8,"name":"cou1.com","group":{"id":1,"name":"Renamed Group","external_reference":"with-ref","created_at":1618864930,"updated_at":1618864942,"nameservers":[{"id":5,"name":"laura.example.com","server":2,"available":true,"created_at":1618864930,"updated_at":1618864930},{"id":3,"name":"dave.example.com","server":1,"available":true,"created_at":1618864930,"updated_at":1618864930}]},"created_at":1618864944,"updated_at":1618864944,"serial":1618864944,"default_ttl":3600,"external_reference":"cou-zone-1","verified":false,"nameservers_verified_at":null,"nameservers_checked_at":null,"always_verified":false,"nameservers_verified":false,"reverse_dns":false,"stale_verification":false}}'
+  recorded_at: Mon, 19 Apr 2021 20:42:24 GMT
 recorded_with: VCR 6.0.0

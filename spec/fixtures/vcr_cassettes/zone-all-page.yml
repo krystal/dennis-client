@@ -27,23 +27,23 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       Content-Length:
-      - '843'
+      - '828'
       Content-Type:
       - application/json
       Etag:
-      - W/"741bd48fec03a1af16893683ed8eb8a2"
+      - W/"4bc531570f513378669e3f1bd3df8716"
       Server:
       - Caddy
       X-Request-Id:
-      - 76f0e0b1-0c4b-4e78-860a-5d74c0e9edc0
+      - ecf4eb92-7e8e-4551-afe6-b643da9e009f
       X-Runtime:
-      - '0.010174'
+      - '0.011640'
       Date:
-      - Thu, 15 Apr 2021 10:02:30 GMT
+      - Mon, 19 Apr 2021 20:42:24 GMT
     body:
       encoding: UTF-8
-      string: '{"pagination":{"current_page":2,"total_pages":4,"total":7,"per_page":2,"large_set":false},"zones":[{"id":8,"name":"cou2.com","group":{"id":1,"name":"Renamed
-        Group"},"created_at":1618480647,"updated_at":1618480950,"serial":1618480950,"default_ttl":3600,"external_reference":"cou-zone-1","verified":false,"nameservers_verified_at":null,"nameservers_checked_at":1618480950,"always_verified":false,"nameservers_verified":false,"reverse_dns":false,"stale_verification":false},{"id":1,"name":"example.com","group":{"id":1,"name":"Renamed
-        Group"},"created_at":1618480640,"updated_at":1618480650,"serial":1618480650,"default_ttl":3600,"external_reference":null,"verified":true,"nameservers_verified_at":1618480640,"nameservers_checked_at":1618480650,"always_verified":false,"nameservers_verified":true,"reverse_dns":false,"stale_verification":false}]}'
-  recorded_at: Thu, 15 Apr 2021 10:02:30 GMT
+      string: '{"pagination":{"current_page":2,"total_pages":3,"total":6,"per_page":2,"large_set":false},"zones":[{"id":1,"name":"example.com","group":{"id":1,"name":"Renamed
+        Group"},"created_at":1618864930,"updated_at":1618864944,"serial":1618864944,"default_ttl":3600,"external_reference":null,"verified":true,"nameservers_verified_at":1618864930,"nameservers_checked_at":null,"always_verified":false,"nameservers_verified":true,"reverse_dns":false,"stale_verification":false},{"id":4,"name":"pears.com","group":{"id":2,"name":"Another
+        Group"},"created_at":1618864931,"updated_at":1618864931,"serial":1618864931,"default_ttl":3600,"external_reference":null,"verified":true,"nameservers_verified_at":1618864931,"nameservers_checked_at":null,"always_verified":false,"nameservers_verified":true,"reverse_dns":false,"stale_verification":false}]}'
+  recorded_at: Mon, 19 Apr 2021 20:42:24 GMT
 recorded_with: VCR 6.0.0

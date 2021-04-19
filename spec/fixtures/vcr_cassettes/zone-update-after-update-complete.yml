@@ -27,22 +27,22 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       Content-Length:
-      - '698'
+      - '697'
       Content-Type:
       - application/json
       Etag:
-      - W/"d948f0fa2c98a5839fdf37d9ecae8df4"
+      - W/"3c69ae6dcffab9befbd771fc89752ddf"
       Server:
       - Caddy
       X-Request-Id:
-      - f667134e-8fc4-40e6-9146-6383d2a6f0d8
+      - 54e143af-705a-4227-a8cf-61623037d7a7
       X-Runtime:
-      - '0.009336'
+      - '0.011437'
       Date:
-      - Thu, 15 Apr 2021 09:57:27 GMT
+      - Mon, 19 Apr 2021 20:42:24 GMT
     body:
       encoding: UTF-8
       string: '{"zone":{"id":5,"name":"raspberries.com","group":{"id":2,"name":"Another
-        Group","external_reference":"another","created_at":1618480640,"updated_at":1618480640,"nameservers":[{"id":1,"name":"phil.example.com","server":2,"available":true,"created_at":1618480640,"updated_at":1618480646},{"id":6,"name":"kelly.example.com","server":2,"available":true,"created_at":1618480640,"updated_at":1618480640}]},"created_at":1618480640,"updated_at":1618480647,"serial":1618480647,"default_ttl":3600,"external_reference":"rasps","verified":true,"nameservers_verified_at":1618480640,"nameservers_checked_at":null,"always_verified":false,"nameservers_verified":true,"reverse_dns":false,"stale_verification":false}}'
-  recorded_at: Thu, 15 Apr 2021 09:57:27 GMT
+        Group","external_reference":"another","created_at":1618864931,"updated_at":1618864931,"nameservers":[{"id":3,"name":"dave.example.com","server":1,"available":true,"created_at":1618864930,"updated_at":1618864930},{"id":4,"name":"ruth.example.com","server":2,"available":true,"created_at":1618864930,"updated_at":1618864930}]},"created_at":1618864931,"updated_at":1618864944,"serial":1618864944,"default_ttl":3600,"external_reference":"rasps","verified":true,"nameservers_verified_at":1618864931,"nameservers_checked_at":null,"always_verified":false,"nameservers_verified":true,"reverse_dns":false,"stale_verification":false}}'
+  recorded_at: Mon, 19 Apr 2021 20:42:24 GMT
 recorded_with: VCR 6.0.0

@@ -27,25 +27,25 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       Content-Length:
-      - '1491'
+      - '1488'
       Content-Type:
       - application/json
       Etag:
-      - W/"2e046d166d9c72e7d865012ec334f922"
+      - W/"dbb267df0b2a47efb234b561b11a61e0"
       Server:
       - Caddy
       X-Request-Id:
-      - 39d2012e-54fc-4ec1-9140-b32de530160b
+      - c8985466-ad96-4eeb-98f9-b87e97ec621a
       X-Runtime:
-      - '0.035641'
+      - '0.054403'
       Date:
-      - Thu, 15 Apr 2021 09:57:25 GMT
+      - Mon, 19 Apr 2021 20:42:22 GMT
     body:
       encoding: UTF-8
       string: '{"pagination":{"current_page":1,"total_pages":1,"total":4,"per_page":30,"large_set":false},"groups":[{"id":2,"name":"Another
-        Group","external_reference":"another","created_at":1618480640,"updated_at":1618480640,"nameservers":[{"id":1,"name":"simon.example.com","server":1,"available":true,"created_at":1618480640,"updated_at":1618480640},{"id":6,"name":"kelly.example.com","server":2,"available":true,"created_at":1618480640,"updated_at":1618480640}]},{"id":1,"name":"Example
-        Group","external_reference":null,"created_at":1618480640,"updated_at":1618480640,"nameservers":[{"id":6,"name":"kelly.example.com","server":2,"available":true,"created_at":1618480640,"updated_at":1618480640},{"id":1,"name":"simon.example.com","server":1,"available":true,"created_at":1618480640,"updated_at":1618480640}]},{"id":3,"name":"Pear
-        Group","external_reference":null,"created_at":1618480640,"updated_at":1618480640,"nameservers":[{"id":3,"name":"dave.example.com","server":1,"available":true,"created_at":1618480640,"updated_at":1618480640},{"id":5,"name":"laura.example.com","server":2,"available":true,"created_at":1618480640,"updated_at":1618480640}]},{"id":4,"name":"Strawberries
-        Group","external_reference":null,"created_at":1618480640,"updated_at":1618480640,"nameservers":[{"id":4,"name":"ruth.example.com","server":2,"available":true,"created_at":1618480640,"updated_at":1618480640},{"id":1,"name":"simon.example.com","server":1,"available":true,"created_at":1618480640,"updated_at":1618480640}]}]}'
-  recorded_at: Thu, 15 Apr 2021 09:57:25 GMT
+        Group","external_reference":"another","created_at":1618864931,"updated_at":1618864931,"nameservers":[{"id":3,"name":"dave.example.com","server":1,"available":true,"created_at":1618864930,"updated_at":1618864930},{"id":4,"name":"ruth.example.com","server":2,"available":true,"created_at":1618864930,"updated_at":1618864930}]},{"id":1,"name":"Example
+        Group","external_reference":null,"created_at":1618864930,"updated_at":1618864930,"nameservers":[{"id":5,"name":"laura.example.com","server":2,"available":true,"created_at":1618864930,"updated_at":1618864930},{"id":3,"name":"dave.example.com","server":1,"available":true,"created_at":1618864930,"updated_at":1618864930}]},{"id":3,"name":"Pear
+        Group","external_reference":null,"created_at":1618864931,"updated_at":1618864931,"nameservers":[{"id":3,"name":"dave.example.com","server":1,"available":true,"created_at":1618864930,"updated_at":1618864930},{"id":6,"name":"kelly.example.com","server":2,"available":true,"created_at":1618864930,"updated_at":1618864930}]},{"id":4,"name":"Strawberries
+        Group","external_reference":null,"created_at":1618864931,"updated_at":1618864931,"nameservers":[{"id":3,"name":"dave.example.com","server":1,"available":true,"created_at":1618864930,"updated_at":1618864930},{"id":6,"name":"kelly.example.com","server":2,"available":true,"created_at":1618864930,"updated_at":1618864930}]}]}'
+  recorded_at: Mon, 19 Apr 2021 20:42:22 GMT
 recorded_with: VCR 6.0.0

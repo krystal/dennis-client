@@ -27,24 +27,25 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       Content-Length:
-      - '1009'
+      - '1070'
       Content-Type:
       - application/json
       Etag:
-      - W/"c75326f64b3235ac951bb8270c32126b"
+      - W/"d6a290a361fd8be56311cf5f42b0f8fc"
       Server:
       - Caddy
       X-Request-Id:
-      - 36bc7830-e4de-4a69-9969-d01a3f703d9a
+      - eccaea4b-fea1-4ac7-b207-0ed7d0749a2d
       X-Runtime:
-      - '0.013785'
+      - '0.015163'
       Date:
-      - Thu, 15 Apr 2021 09:57:27 GMT
+      - Mon, 19 Apr 2021 20:42:23 GMT
     body:
       encoding: UTF-8
-      string: '{"record":{"id":16,"name":null,"external_reference":null,"type":"SSHFP","full_name":"example.com","ttl":null,"priority":null,"managed":false,"created_at":1618480640,"updated_at":1618480640,"tags":[],"content":{"SSHFP":{"algorithm":"1","fingerprint_type":"2","fingerprint":"a098b812c2423e663f946e981aaacc0e66520a38"}},"zone":{"id":1,"name":"example.com","group":{"id":1,"name":"Renamed
-        Group","external_reference":"with-ref","created_at":1618480640,"updated_at":1618480646,"nameservers":[{"id":6,"name":"kelly.example.com","server":2,"available":true,"created_at":1618480640,"updated_at":1618480640},{"id":1,"name":"phil.example.com","server":2,"available":true,"created_at":1618480640,"updated_at":1618480646}]},"created_at":1618480640,"updated_at":1618480647,"serial":1618480647,"default_ttl":3600,"external_reference":null,"verified":true,"nameservers_verified_at":1618480640,"nameservers_checked_at":null,"always_verified":false,"nameservers_verified":true,"reverse_dns":false,"stale_verification":false}}}'
-  recorded_at: Thu, 15 Apr 2021 09:57:27 GMT
+      string: '{"record":{"id":16,"name":null,"external_reference":null,"type":"SSHFP","full_name":"example.com","ttl":null,"priority":null,"managed":false,"created_at":1618864931,"updated_at":1618864931,"tags":[],"raw_content":"1
+        2 a098b812c2423e663f946e981aaacc0e66520a38","content":{"SSHFP":{"algorithm":"1","fingerprint_type":"2","fingerprint":"a098b812c2423e663f946e981aaacc0e66520a38"}},"zone":{"id":1,"name":"example.com","group":{"id":1,"name":"Renamed
+        Group","external_reference":"with-ref","created_at":1618864930,"updated_at":1618864942,"nameservers":[{"id":5,"name":"laura.example.com","server":2,"available":true,"created_at":1618864930,"updated_at":1618864930},{"id":3,"name":"dave.example.com","server":1,"available":true,"created_at":1618864930,"updated_at":1618864930}]},"created_at":1618864930,"updated_at":1618864943,"serial":1618864943,"default_ttl":3600,"external_reference":null,"verified":true,"nameservers_verified_at":1618864930,"nameservers_checked_at":null,"always_verified":false,"nameservers_verified":true,"reverse_dns":false,"stale_verification":false}}}'
+  recorded_at: Mon, 19 Apr 2021 20:42:23 GMT
 - request:
     method: patch
     uri: https://dennis.dev.adam.ac/api/v1/records/:record
@@ -74,22 +75,23 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       Content-Length:
-      - '979'
+      - '1010'
       Content-Type:
       - application/json
       Etag:
-      - W/"e6b8a3236ed5c60b3f8eba22eac65215"
+      - W/"36ee9d137faaa39a27ae0dc42907b748"
       Server:
       - Caddy
       X-Request-Id:
-      - 9df7039f-a896-4ce1-bac4-c33789c27caa
+      - ce414255-b426-4124-a12a-4cf70eca54ed
       X-Runtime:
-      - '0.025844'
+      - '0.032729'
       Date:
-      - Thu, 15 Apr 2021 09:57:27 GMT
+      - Mon, 19 Apr 2021 20:42:23 GMT
     body:
       encoding: UTF-8
-      string: '{"record":{"id":16,"name":null,"external_reference":null,"type":"SSHFP","full_name":"example.com","ttl":null,"priority":null,"managed":false,"created_at":1618480640,"updated_at":1618480647,"tags":[],"content":{"SSHFP":{"algorithm":"1","fingerprint_type":"2","fingerprint":"abcdef1234"}},"zone":{"id":1,"name":"example.com","group":{"id":1,"name":"Renamed
-        Group","external_reference":"with-ref","created_at":1618480640,"updated_at":1618480646,"nameservers":[{"id":6,"name":"kelly.example.com","server":2,"available":true,"created_at":1618480640,"updated_at":1618480640},{"id":1,"name":"phil.example.com","server":2,"available":true,"created_at":1618480640,"updated_at":1618480646}]},"created_at":1618480640,"updated_at":1618480647,"serial":1618480647,"default_ttl":3600,"external_reference":null,"verified":true,"nameservers_verified_at":1618480640,"nameservers_checked_at":null,"always_verified":false,"nameservers_verified":true,"reverse_dns":false,"stale_verification":false}}}'
-  recorded_at: Thu, 15 Apr 2021 09:57:27 GMT
+      string: '{"record":{"id":16,"name":null,"external_reference":null,"type":"SSHFP","full_name":"example.com","ttl":null,"priority":null,"managed":false,"created_at":1618864931,"updated_at":1618864943,"tags":[],"raw_content":"1
+        2 abcdef1234","content":{"SSHFP":{"algorithm":"1","fingerprint_type":"2","fingerprint":"abcdef1234"}},"zone":{"id":1,"name":"example.com","group":{"id":1,"name":"Renamed
+        Group","external_reference":"with-ref","created_at":1618864930,"updated_at":1618864942,"nameservers":[{"id":5,"name":"laura.example.com","server":2,"available":true,"created_at":1618864930,"updated_at":1618864930},{"id":3,"name":"dave.example.com","server":1,"available":true,"created_at":1618864930,"updated_at":1618864930}]},"created_at":1618864930,"updated_at":1618864943,"serial":1618864943,"default_ttl":3600,"external_reference":null,"verified":true,"nameservers_verified_at":1618864930,"nameservers_checked_at":null,"always_verified":false,"nameservers_verified":true,"reverse_dns":false,"stale_verification":false}}}'
+  recorded_at: Mon, 19 Apr 2021 20:42:23 GMT
 recorded_with: VCR 6.0.0

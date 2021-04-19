@@ -37,14 +37,14 @@ http_interactions:
       X-Api-Schema:
       - json-error
       X-Request-Id:
-      - 1c8afad0-9c41-4b33-be60-6f183bc39cec
+      - db00087f-a766-4b82-b8ab-ea2fd2d42089
       X-Runtime:
-      - '0.005492'
+      - '0.006541'
       Date:
-      - Thu, 15 Apr 2021 09:57:27 GMT
+      - Mon, 19 Apr 2021 20:42:24 GMT
     body:
       encoding: UTF-8
       string: '{"error":{"code":"group_not_found","description":"No group could be
         found using the given arguments","detail":{}}}'
-  recorded_at: Thu, 15 Apr 2021 09:57:27 GMT
+  recorded_at: Mon, 19 Apr 2021 20:42:24 GMT
 recorded_with: VCR 6.0.0

@@ -27,23 +27,23 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       Content-Length:
-      - '801'
+      - '793'
       Content-Type:
       - application/json
       Etag:
-      - W/"c45d1a5e60b28ac4af8ec93bf0b3007c"
+      - W/"f2002e94d9a393e302afe49135f74e9d"
       Server:
       - Caddy
       X-Request-Id:
-      - dbb1b615-e0b9-4404-9f1c-7f523910270d
+      - 7c49edc1-ec24-49a9-b08d-09f79e058389
       X-Runtime:
-      - '0.011637'
+      - '0.013270'
       Date:
-      - Thu, 15 Apr 2021 10:02:56 GMT
+      - Mon, 19 Apr 2021 20:42:22 GMT
     body:
       encoding: UTF-8
-      string: '{"pagination":{"current_page":2,"total_pages":2,"total":4,"per_page":2,"large_set":false},"groups":[{"id":1,"name":"Renamed
-        Group","external_reference":"with-ref","created_at":1618480640,"updated_at":1618480646,"nameservers":[{"id":6,"name":"kelly.example.com","server":2,"available":true,"created_at":1618480640,"updated_at":1618480640},{"id":1,"name":"phil.example.com","server":2,"available":true,"created_at":1618480640,"updated_at":1618480646}]},{"id":4,"name":"Strawberries
-        Group","external_reference":null,"created_at":1618480640,"updated_at":1618480640,"nameservers":[{"id":4,"name":"ruth.example.com","server":2,"available":true,"created_at":1618480640,"updated_at":1618480640},{"id":1,"name":"phil.example.com","server":2,"available":true,"created_at":1618480640,"updated_at":1618480646}]}]}'
-  recorded_at: Thu, 15 Apr 2021 10:02:56 GMT
+      string: '{"pagination":{"current_page":2,"total_pages":2,"total":4,"per_page":2,"large_set":false},"groups":[{"id":3,"name":"Pear
+        Group","external_reference":null,"created_at":1618864931,"updated_at":1618864931,"nameservers":[{"id":3,"name":"dave.example.com","server":1,"available":true,"created_at":1618864930,"updated_at":1618864930},{"id":6,"name":"kelly.example.com","server":2,"available":true,"created_at":1618864930,"updated_at":1618864930}]},{"id":4,"name":"Strawberries
+        Group","external_reference":null,"created_at":1618864931,"updated_at":1618864931,"nameservers":[{"id":3,"name":"dave.example.com","server":1,"available":true,"created_at":1618864930,"updated_at":1618864930},{"id":6,"name":"kelly.example.com","server":2,"available":true,"created_at":1618864930,"updated_at":1618864930}]}]}'
+  recorded_at: Mon, 19 Apr 2021 20:42:22 GMT
 recorded_with: VCR 6.0.0

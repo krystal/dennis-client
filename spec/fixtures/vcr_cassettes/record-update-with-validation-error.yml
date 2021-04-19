@@ -27,25 +27,25 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       Content-Length:
-      - '976'
+      - '1010'
       Content-Type:
       - application/json
       Etag:
-      - W/"b883123251fa60cb93958df39d86a24f"
+      - W/"36fecd41407d8fbbbfa8c90d72a61bf9"
       Server:
       - Caddy
       X-Request-Id:
-      - 6993e624-fd54-4cf7-a577-11397b077366
+      - 69ba4a1b-619e-4483-86f9-9c2816678c8e
       X-Runtime:
-      - '0.014200'
+      - '0.018792'
       Date:
-      - Thu, 15 Apr 2021 09:57:27 GMT
+      - Mon, 19 Apr 2021 20:42:23 GMT
     body:
       encoding: UTF-8
-      string: '{"record":{"id":11,"name":"cm._domainkey.renamed","external_reference":null,"type":"TXT","full_name":"cm._domainkey.renamed.example.com","ttl":null,"priority":null,"managed":false,"created_at":1618480640,"updated_at":1618480647,"tags":[],"content":{"TXT":{"content":"new
-        txt value"}},"zone":{"id":1,"name":"example.com","group":{"id":1,"name":"Renamed
-        Group","external_reference":"with-ref","created_at":1618480640,"updated_at":1618480646,"nameservers":[{"id":6,"name":"kelly.example.com","server":2,"available":true,"created_at":1618480640,"updated_at":1618480640},{"id":1,"name":"phil.example.com","server":2,"available":true,"created_at":1618480640,"updated_at":1618480646}]},"created_at":1618480640,"updated_at":1618480647,"serial":1618480647,"default_ttl":3600,"external_reference":null,"verified":true,"nameservers_verified_at":1618480640,"nameservers_checked_at":null,"always_verified":false,"nameservers_verified":true,"reverse_dns":false,"stale_verification":false}}}'
-  recorded_at: Thu, 15 Apr 2021 09:57:27 GMT
+      string: '{"record":{"id":11,"name":"cm._domainkey.renamed","external_reference":null,"type":"TXT","full_name":"cm._domainkey.renamed.example.com","ttl":null,"priority":null,"managed":false,"created_at":1618864930,"updated_at":1618864943,"tags":[],"raw_content":"\"new
+        txt value\"","content":{"TXT":{"content":"new txt value"}},"zone":{"id":1,"name":"example.com","group":{"id":1,"name":"Renamed
+        Group","external_reference":"with-ref","created_at":1618864930,"updated_at":1618864942,"nameservers":[{"id":5,"name":"laura.example.com","server":2,"available":true,"created_at":1618864930,"updated_at":1618864930},{"id":3,"name":"dave.example.com","server":1,"available":true,"created_at":1618864930,"updated_at":1618864930}]},"created_at":1618864930,"updated_at":1618864943,"serial":1618864943,"default_ttl":3600,"external_reference":null,"verified":true,"nameservers_verified_at":1618864930,"nameservers_checked_at":null,"always_verified":false,"nameservers_verified":true,"reverse_dns":false,"stale_verification":false}}}'
+  recorded_at: Mon, 19 Apr 2021 20:42:23 GMT
 - request:
     method: patch
     uri: https://dennis.dev.adam.ac/api/v1/records/:record
@@ -83,15 +83,15 @@ http_interactions:
       X-Api-Schema:
       - json-error
       X-Request-Id:
-      - 21197ef8-a85e-44a3-ac56-b264f036f5c3
+      - b26f0065-c994-42ec-a872-7220ff437d41
       X-Runtime:
-      - '0.010362'
+      - '0.013741'
       Date:
-      - Thu, 15 Apr 2021 09:57:27 GMT
+      - Mon, 19 Apr 2021 20:42:23 GMT
     body:
       encoding: UTF-8
       string: '{"error":{"code":"validation_error","description":"A validation error
         occurred when saving the object","detail":{"errors":[{"attribute":"content.ip_address","type":"invalid_ipv4_address","message":"A:
         IPv4 address is not a valid IPv4 address"}]}}}'
-  recorded_at: Thu, 15 Apr 2021 09:57:27 GMT
+  recorded_at: Mon, 19 Apr 2021 20:42:23 GMT
 recorded_with: VCR 6.0.0

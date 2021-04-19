@@ -35,16 +35,16 @@ http_interactions:
       X-Api-Schema:
       - json-error
       X-Request-Id:
-      - bfcbb570-eca7-4387-aa96-c19c92a00fc0
+      - 25258310-2eb4-49b7-9c80-979d21978f20
       X-Runtime:
-      - '0.005251'
+      - '0.006119'
       Date:
-      - Thu, 15 Apr 2021 09:57:27 GMT
+      - Mon, 19 Apr 2021 20:42:24 GMT
     body:
       encoding: UTF-8
       string: '{"error":{"code":"invalid_argument","description":"The ''zone'' argument
         is invalid","detail":{"path":["zone"],"index":null,"issue":"missing_lookup_value","issue_description":"A
         value for a lookup argument set has not been provided but at least one value
         is required.","errors":[],"argument":{"id":"CoreAPI/Endpoints/Zones/InfoEndpoint/BaseArgumentSet/ZoneArgument","name":"zone","description":null}}}}'
-  recorded_at: Thu, 15 Apr 2021 09:57:27 GMT
+  recorded_at: Mon, 19 Apr 2021 20:42:24 GMT
 recorded_with: VCR 6.0.0

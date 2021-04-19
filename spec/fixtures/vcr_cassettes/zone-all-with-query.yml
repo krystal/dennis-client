@@ -31,18 +31,18 @@ http_interactions:
       Content-Type:
       - application/json
       Etag:
-      - W/"dedd610f1bba5b78803488b69a9e098f"
+      - W/"79e1e892df9954aa64191b2678a8231b"
       Server:
       - Caddy
       X-Request-Id:
-      - 4afbfd25-2de8-4883-b2f2-b4d4ce7b2a14
+      - ea77df6b-7759-4155-9358-757b87aef2d3
       X-Runtime:
-      - '0.010021'
+      - '0.011672'
       Date:
-      - Thu, 15 Apr 2021 09:57:27 GMT
+      - Mon, 19 Apr 2021 20:42:24 GMT
     body:
       encoding: UTF-8
       string: '{"pagination":{"current_page":1,"total_pages":1,"total":1,"per_page":30,"large_set":false},"zones":[{"id":4,"name":"pears.com","group":{"id":2,"name":"Another
-        Group"},"created_at":1618480640,"updated_at":1618480640,"serial":1618480640,"default_ttl":3600,"external_reference":null,"verified":true,"nameservers_verified_at":1618480640,"nameservers_checked_at":null,"always_verified":false,"nameservers_verified":true,"reverse_dns":false,"stale_verification":false}]}'
-  recorded_at: Thu, 15 Apr 2021 09:57:27 GMT
+        Group"},"created_at":1618864931,"updated_at":1618864931,"serial":1618864931,"default_ttl":3600,"external_reference":null,"verified":true,"nameservers_verified_at":1618864931,"nameservers_checked_at":null,"always_verified":false,"nameservers_verified":true,"reverse_dns":false,"stale_verification":false}]}'
+  recorded_at: Mon, 19 Apr 2021 20:42:24 GMT
 recorded_with: VCR 6.0.0

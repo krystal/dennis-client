@@ -31,17 +31,17 @@ http_interactions:
       Content-Type:
       - application/json
       Etag:
-      - W/"2216d3a21691a284e24d2647d7c6dfa2"
+      - W/"8b955f26f3b9aee7afba868e623316d6"
       Server:
       - Caddy
       X-Request-Id:
-      - add49be8-c994-4eee-81fc-97e8b70dd119
+      - eb8c6fe8-512f-4b9d-8272-71a9bfe22aad
       X-Runtime:
-      - '0.012752'
+      - '0.006946'
       Date:
-      - Thu, 15 Apr 2021 09:57:26 GMT
+      - Mon, 19 Apr 2021 20:42:22 GMT
     body:
       encoding: UTF-8
-      string: '{"nameserver":{"id":1,"name":"phil.example.com","server":2,"available":true,"created_at":1618480640,"updated_at":1618480646}}'
-  recorded_at: Thu, 15 Apr 2021 09:57:26 GMT
+      string: '{"nameserver":{"id":1,"name":"phil.example.com","server":2,"available":true,"created_at":1618864930,"updated_at":1618864942}}'
+  recorded_at: Mon, 19 Apr 2021 20:42:22 GMT
 recorded_with: VCR 6.0.0
