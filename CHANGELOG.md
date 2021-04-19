@@ -2,6 +2,12 @@
 
 This file contains all the latest changes and updates to this application.
 
+## 1.0.14
+
+### Bug Fixes
+
+- remove pagination from records ([9aecff](https://github.com/krystal/dennis-client/commit/9aecff826840f4aa6ab7a56957ca23ba1f90651f))
+
 ## 1.0.13
 
 ### Bug Fixes
