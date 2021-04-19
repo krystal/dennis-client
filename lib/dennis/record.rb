@@ -15,9 +15,7 @@ module Dennis
         options.each do |field, value|
           request.arguments[field] = value
         end
-        PaginatedArray.create(request.perform.hash, 'records') do |hash|
-          new(client, hash)
-        end
+        request.perform.hash['records'].map { |hash| new(client, hash) }
       end
 
       def all_by_tag(client, tags, group: nil)
