@@ -1,0 +1,93 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://dennis.dev.adam.ac/api/v1/zones/:zone?_arguments=%7B%22zone%22:%7B%22id%22:1%7D%7D
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Authorization:
+      - Bearer test
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Methods:
+      - "*"
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Length:
+      - '698'
+      Content-Type:
+      - application/json
+      Etag:
+      - W/"81ade88951c0cc7a452435eeaf36879a"
+      Server:
+      - Caddy
+      X-Request-Id:
+      - 2184fb2a-a526-4902-a5aa-da9025391d40
+      X-Runtime:
+      - '0.012750'
+      Date:
+      - Tue, 20 Apr 2021 12:05:03 GMT
+    body:
+      encoding: UTF-8
+      string: '{"zone":{"id":1,"name":"example.com","group":{"id":1,"name":"Renamed
+        Group","external_reference":"with-ref","created_at":1618864930,"updated_at":1618864942,"nameservers":[{"id":5,"name":"laura.example.com","server":2,"available":true,"created_at":1618864930,"updated_at":1618864930},{"id":3,"name":"dave.example.com","server":1,"available":true,"created_at":1618864930,"updated_at":1618864930}]},"created_at":1618864930,"updated_at":1618865051,"serial":1618865051,"default_ttl":3600,"external_reference":null,"verified":true,"nameservers_verified_at":1618864930,"nameservers_checked_at":1618865051,"always_verified":false,"nameservers_verified":true,"reverse_dns":false,"stale_verification":false}}'
+  recorded_at: Tue, 20 Apr 2021 12:05:03 GMT
+- request:
+    method: get
+    uri: https://dennis.dev.adam.ac/api/v1/records/:record?_arguments=%7B%22record%22:%7B%22id%22:20%7D%7D
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Authorization:
+      - Bearer test
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Methods:
+      - "*"
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Length:
+      - '1011'
+      Content-Type:
+      - application/json
+      Etag:
+      - W/"da2cff2e973a1c630b0ac26a2c260485"
+      Server:
+      - Caddy
+      X-Request-Id:
+      - cc2fcc58-c6d0-4e2d-8238-669ec6d81aeb
+      X-Runtime:
+      - '0.017447'
+      Date:
+      - Tue, 20 Apr 2021 12:05:03 GMT
+    body:
+      encoding: UTF-8
+      string: '{"record":{"id":20,"name":null,"external_reference":null,"type":"A","full_name":"bananas.com","ttl":null,"priority":null,"managed":false,"created_at":1618864931,"updated_at":1618864931,"tags":["tag2"],"raw_content":"185.22.211.55","display_content":"185.22.211.55","content":{"A":{"ip_address":"185.22.211.55"}},"zone":{"id":2,"name":"bananas.com","group":{"id":1,"name":"Renamed
+        Group","external_reference":"with-ref","created_at":1618864930,"updated_at":1618864942,"nameservers":[{"id":5,"name":"laura.example.com","server":2,"available":true,"created_at":1618864930,"updated_at":1618864930},{"id":3,"name":"dave.example.com","server":1,"available":true,"created_at":1618864930,"updated_at":1618864930}]},"created_at":1618864931,"updated_at":1618920251,"serial":1618920251,"default_ttl":3600,"external_reference":"bananas","verified":false,"nameservers_verified_at":null,"nameservers_checked_at":1618920251,"always_verified":false,"nameservers_verified":false,"reverse_dns":false,"stale_verification":false}}}'
+  recorded_at: Tue, 20 Apr 2021 12:05:03 GMT
+recorded_with: VCR 6.0.0

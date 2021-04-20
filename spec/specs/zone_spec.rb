@@ -116,6 +116,33 @@ module Dennis
       end
     end
 
+    describe '#record' do
+      it 'returns a record if it exists in the zone' do
+        VCR.use_cassette('zone-record-lookup') do
+          zone = described_class.find_by(@client, :id, 1)
+          record = zone.record(6)
+          expect(record).to be_a Dennis::Record
+          expect(record.id).to eq 6
+        end
+      end
+
+      it 'returns nil if the record does not exist in the zone' do
+        VCR.use_cassette('zone-record-lookup-not-in-zone') do
+          zone = described_class.find_by(@client, :id, 1)
+          record = zone.record(20)
+          expect(record).to be_nil
+        end
+      end
+
+      it 'returns nil if a record exists but not within the zone' do
+        VCR.use_cassette('zone-record-lookup-not-present') do
+          zone = described_class.find_by(@client, :id, 1)
+          record = zone.record(20_000_000)
+          expect(record).to be_nil
+        end
+      end
+    end
+
     describe '#update' do
       it 'updates the zone' do
         VCR.use_cassette('zone-update') do

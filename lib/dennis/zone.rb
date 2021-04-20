@@ -157,6 +157,14 @@ module Dennis
       Record.all(@client, { id: id }, **options)
     end
 
+    def record(value, field: :id)
+      record = Record.find_by(@client, field, value)
+      return nil if record.nil?
+      return nil if record.zone.id != id
+
+      record
+    end
+
     def update(properties)
       req = @client.api.create_request(:patch, 'zones/:zone')
       req.arguments['zone'] = { id: id }
