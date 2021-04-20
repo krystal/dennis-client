@@ -2,6 +2,12 @@
 
 This file contains all the latest changes and updates to this application.
 
+## 1.0.17
+
+### Features
+
+- add Zone#record to lookup specific records in a zone ([363a21](https://github.com/krystal/dennis-client/commit/363a21c12994a379665770e63aab1e2569b33c26))
+
 ## 1.0.16
 
 ### Features
