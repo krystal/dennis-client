@@ -2,6 +2,12 @@
 
 This file contains all the latest changes and updates to this application.
 
+## 1.0.16
+
+### Features
+
+- add Record#display_content ([d64da6](https://github.com/krystal/dennis-client/commit/d64da655e7f9e96c39d9af0f853e2bd8c32ddaa9))
+
 ## 1.0.15
 
 ### Features
