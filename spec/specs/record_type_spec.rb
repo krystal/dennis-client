@@ -16,6 +16,7 @@ module Dennis
             'A' => have_attributes(
               name: 'A',
               requires_priority?: false,
+              exposed?: true,
               managed_only?: false,
               content_attributes: [
                 have_attributes(
@@ -28,12 +29,14 @@ module Dennis
             'SOA' => have_attributes(
               name: 'SOA',
               requires_priority?: false,
+              exposed?: true,
               managed_only?: true,
               content_attributes: []
             ),
             'MX' => have_attributes(
               name: 'MX',
               requires_priority?: true,
+              exposed?: true,
               managed_only?: false,
               content_attributes: [
                 have_attributes(
@@ -43,8 +46,12 @@ module Dennis
                 )
               ]
             ),
+            'IPS' => have_attributes(
+              exposed?: false
+            ),
             'CAA' => have_attributes(
               name: 'CAA',
+              exposed?: true,
               requires_priority?: false,
               managed_only?: false,
               content_attributes: [

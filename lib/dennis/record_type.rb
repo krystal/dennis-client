@@ -31,6 +31,10 @@ module Dennis
       @hash['managed_only'] == true
     end
 
+    def exposed?
+      @hash['exposed'] == true
+    end
+
     def content_attributes
       @hash['content_attributes'].map do |hash|
         ContentAttribute.new(hash)
