@@ -145,6 +145,10 @@ module Dennis
       @hash['raw_content']
     end
 
+    def display_content
+      @hash['display_content']
+    end
+
     def content
       return nil if type.nil?
 
