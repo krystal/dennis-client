@@ -1,3 +1,4 @@
+.vscode
 .rubocop-*
 Gemfile.lock
 .envrc
