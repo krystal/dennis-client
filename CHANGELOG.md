@@ -2,6 +2,12 @@
 
 This file contains all the latest changes and updates to this application.
 
+## 1.0.18
+
+### Features
+
+- add RecordType#exposed? ([3c2b3f](https://github.com/krystal/dennis-client/commit/3c2b3fb2fd555299b189f36233214d33df419579))
+
 ## 1.0.17
 
 ### Features
