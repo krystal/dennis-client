@@ -186,6 +186,24 @@ module Dennis
       end
     end
 
+    describe '#verify_nameservers' do
+      it 'returns true if the nameserver is already verified' do
+        VCR.use_cassette('zone-verify-nameservers-already-verified') do
+          zone = described_class.find_by(@client, :id, 1)
+          expect(zone.verified?).to be true
+          expect(zone.verify_nameservers).to be true
+        end
+      end
+
+      it 'returns false if the nameserver cannot be verified' do
+        VCR.use_cassette('zone-verify-nameservers-cannot-verify') do
+          zone = described_class.find_by(@client, :id, 7)
+          expect(zone.verified?).to be false
+          expect(zone.verify_nameservers).to be false
+        end
+      end
+    end
+
     describe '#create_record' do
       it 'creates a zone' do
         VCR.use_cassette('zone-find-by-id') do

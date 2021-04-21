@@ -1,0 +1,94 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://dennis.dev.adam.ac/api/v1/zones/:zone?_arguments=%7B%22zone%22:%7B%22id%22:1%7D%7D
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Authorization:
+      - Bearer test
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Methods:
+      - "*"
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Length:
+      - '698'
+      Content-Type:
+      - application/json
+      Etag:
+      - W/"e0b53dddde9f149b2187828631b10803"
+      Server:
+      - Caddy
+      X-Request-Id:
+      - 13d932d4-5191-4cdc-b17c-f6ef9cf87d5c
+      X-Runtime:
+      - '0.013206'
+      Date:
+      - Wed, 21 Apr 2021 08:26:54 GMT
+    body:
+      encoding: UTF-8
+      string: '{"zone":{"id":1,"name":"example.com","group":{"id":1,"name":"Renamed
+        Group","external_reference":"with-ref","created_at":1618864930,"updated_at":1618864942,"nameservers":[{"id":5,"name":"laura.example.com","server":2,"available":true,"created_at":1618864930,"updated_at":1618864930},{"id":3,"name":"dave.example.com","server":1,"available":true,"created_at":1618864930,"updated_at":1618864930}]},"created_at":1618864930,"updated_at":1618951451,"serial":1618951451,"default_ttl":3600,"external_reference":null,"verified":true,"nameservers_verified_at":1618864930,"nameservers_checked_at":1618951451,"always_verified":false,"nameservers_verified":true,"reverse_dns":false,"stale_verification":false}}'
+  recorded_at: Wed, 21 Apr 2021 08:26:54 GMT
+- request:
+    method: post
+    uri: https://dennis.dev.adam.ac/api/v1/zones/:zone/verify_nameservers
+    body:
+      encoding: UTF-8
+      string: '{"zone":{"id":1}}'
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Authorization:
+      - Bearer test
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 409
+      message: Conflict
+    headers:
+      Access-Control-Allow-Methods:
+      - "*"
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache
+      Content-Length:
+      - '80'
+      Content-Type:
+      - application/json
+      Server:
+      - Caddy
+      X-Api-Schema:
+      - json-error
+      X-Request-Id:
+      - 598618c7-4641-455d-925b-eac81c055383
+      X-Runtime:
+      - '0.006586'
+      Date:
+      - Wed, 21 Apr 2021 08:26:54 GMT
+    body:
+      encoding: UTF-8
+      string: '{"error":{"code":"nameservers_already_verified","description":null,"detail":{}}}'
+  recorded_at: Wed, 21 Apr 2021 08:26:54 GMT
+recorded_with: VCR 6.0.0

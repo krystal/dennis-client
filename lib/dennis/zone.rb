@@ -184,6 +184,17 @@ module Dennis
       true
     end
 
+    def verify_nameservers
+      req = @client.api.create_request(:post, 'zones/:zone/verify_nameservers')
+      req.arguments['zone'] = { id: id }
+      @hash = req.perform.hash['zone']
+      verified?
+    rescue RapidAPI::RequestError => e
+      raise unless e.code == 'nameservers_already_verified'
+
+      true
+    end
+
     private
 
     def parse_time(time)
