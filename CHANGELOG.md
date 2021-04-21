@@ -2,6 +2,12 @@
 
 This file contains all the latest changes and updates to this application.
 
+## 1.0.19
+
+### Features
+
+- add Zone#verify_nameservers ([3bf802](https://github.com/krystal/dennis-client/commit/3bf8022295ddb296364c3d2611fdbce442b51083))
+
 ## 1.0.18
 
 ### Features
