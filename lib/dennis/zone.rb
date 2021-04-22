@@ -10,10 +10,11 @@ module Dennis
 
     class << self
 
-      def all(client, query: nil, view: nil, page: nil, per_page: nil)
+      def all(client, query: nil, view: nil, tags: nil, page: nil, per_page: nil)
         request = client.api.create_request(:get, 'zones')
         request.arguments[:query] = query if query
         request.arguments[:view] = view if view
+        request.arguments[:tags] = tags if tags
         request.arguments[:page] = page if page
         request.arguments[:per_page] = per_page if per_page
         PaginatedArray.create(request.perform.hash, 'zones') do |hash|
@@ -21,11 +22,12 @@ module Dennis
         end
       end
 
-      def all_for_group(client, group, query: nil, view: nil, page: nil, per_page: nil)
+      def all_for_group(client, group, query: nil, view: nil, tags: nil, page: nil, per_page: nil)
         request = client.api.create_request(:get, 'groups/:group/zones')
         request.arguments[:group] = group
         request.arguments[:query] = query if query
         request.arguments[:view] = view if view
+        request.arguments[:tags] = tags if tags
         request.arguments[:page] = page if page
         request.arguments[:per_page] = per_page if per_page
         PaginatedArray.create(request.perform.hash, 'zones') do |hash|
@@ -122,6 +124,10 @@ module Dennis
 
     def default_ttl
       @hash['default_ttl']
+    end
+
+    def tags
+      @hash['tags']
     end
 
     def group

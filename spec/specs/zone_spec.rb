@@ -15,12 +15,24 @@ module Dennis
         end
       end
 
-      it 'returns an array of groups matching a query' do
+      it 'returns an array of zones matching a query' do
         VCR.use_cassette('zone-all-with-query') do
           zones = described_class.all(@client, query: 'pears')
           expect(zones).to be_a Array
           expect(zones.size).to eq 1
           expect(zones[0].name).to eq 'pears.com'
+        end
+      end
+
+      it 'returns an array of zones with the givne tags' do
+        VCR.use_cassette('zone-all-with-tags') do
+          zones = described_class.all(@client, tags: ['colors'])
+          expect(zones).to be_a Array
+          expect(zones.size).to eq 2
+          expect(zones).to match array_including(
+            have_attributes(name: 'red.com'),
+            have_attributes(name: 'blue.com')
+          )
         end
       end
 
@@ -270,6 +282,18 @@ module Dennis
           expect(zones.pagination.current_page).to eq 1
           expect(zones.pagination.per_page).to eq 30
           expect(zones.pagination.total_pages).to eq 1
+        end
+      end
+
+      it 'returns an array of zones with the givne tags' do
+        VCR.use_cassette('zone-all-for-group-with-tags') do
+          zones = described_class.all_for_group(@client, { id: 2 }, tags: ['colors'])
+          expect(zones).to be_a Array
+          expect(zones.size).to eq 2
+          expect(zones).to match array_including(
+            have_attributes(name: 'red.com'),
+            have_attributes(name: 'blue.com')
+          )
         end
       end
 
