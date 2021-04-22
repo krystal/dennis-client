@@ -2,6 +2,12 @@
 
 This file contains all the latest changes and updates to this application.
 
+## 1.0.20
+
+### Features
+
+- add support for querying tags on zones ([ed318d](https://github.com/krystal/dennis-client/commit/ed318dbb59b6f708de95cd61fe2f75dacb431716))
+
 ## 1.0.19
 
 ### Features
