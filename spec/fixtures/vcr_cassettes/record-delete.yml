@@ -27,24 +27,24 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       Content-Length:
-      - '1019'
+      - '1080'
       Content-Type:
       - application/json
       Etag:
-      - W/"bcab0769a5e6dfca439d33e8838afabe"
+      - W/"b1bd864e828d98f028008e52d5af3b73"
       Server:
       - Caddy
       X-Request-Id:
-      - 600d5c92-5efe-40e6-a816-8eafd74339e5
+      - 1cd879d4-84cd-4421-90ab-90d557302606
       X-Runtime:
-      - '0.015976'
+      - '0.016199'
       Date:
-      - Mon, 19 Apr 2021 20:42:23 GMT
+      - Thu, 22 Apr 2021 16:31:35 GMT
     body:
       encoding: UTF-8
-      string: '{"record":{"id":12,"name":"staging","external_reference":null,"type":"CNAME","full_name":"staging.example.com","ttl":null,"priority":null,"managed":false,"created_at":1618864930,"updated_at":1618864930,"tags":[],"raw_content":"codebase-staging.infra.atech.io","content":{"CNAME":{"hostname":"codebase-staging.infra.atech.io"}},"zone":{"id":1,"name":"example.com","group":{"id":1,"name":"Renamed
-        Group","external_reference":"with-ref","created_at":1618864930,"updated_at":1618864942,"nameservers":[{"id":5,"name":"laura.example.com","server":2,"available":true,"created_at":1618864930,"updated_at":1618864930},{"id":3,"name":"dave.example.com","server":1,"available":true,"created_at":1618864930,"updated_at":1618864930}]},"created_at":1618864930,"updated_at":1618864943,"serial":1618864943,"default_ttl":3600,"external_reference":null,"verified":true,"nameservers_verified_at":1618864930,"nameservers_checked_at":null,"always_verified":false,"nameservers_verified":true,"reverse_dns":false,"stale_verification":false}}}'
-  recorded_at: Mon, 19 Apr 2021 20:42:23 GMT
+      string: '{"record":{"id":12,"name":"staging","external_reference":null,"type":"CNAME","full_name":"staging.example.com","ttl":null,"priority":null,"managed":false,"created_at":1619109092,"updated_at":1619109092,"tags":[],"raw_content":"codebase-staging.infra.atech.io","display_content":"codebase-staging.infra.atech.io","content":{"CNAME":{"hostname":"codebase-staging.infra.atech.io"}},"zone":{"id":1,"name":"example.com","group":{"id":1,"name":"Renamed
+        Group","external_reference":"with-ref","created_at":1619109091,"updated_at":1619109094,"nameservers":[{"id":4,"name":"ruth.example.com","server":2,"available":true,"created_at":1619109091,"updated_at":1619109091},{"id":2,"name":"alex.example.com","server":1,"available":true,"created_at":1619109091,"updated_at":1619109091}]},"created_at":1619109092,"updated_at":1619109095,"serial":1619109095,"default_ttl":3600,"external_reference":null,"verified":true,"nameservers_verified_at":1619109092,"nameservers_checked_at":null,"always_verified":false,"nameservers_verified":true,"reverse_dns":false,"stale_verification":false,"tags":[]}}}'
+  recorded_at: Thu, 22 Apr 2021 16:31:35 GMT
 - request:
     method: delete
     uri: https://dennis.dev.adam.ac/api/v1/records/:record
@@ -74,22 +74,22 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       Content-Length:
-      - '1019'
+      - '1080'
       Content-Type:
       - application/json
       Etag:
-      - W/"db23c9e3aa70f239b32dd37a7de2d326"
+      - W/"b1bd864e828d98f028008e52d5af3b73"
       Server:
       - Caddy
       X-Request-Id:
-      - 2d837143-ea3a-4634-9099-6242926304ee
+      - d330db1a-0552-4df4-aae9-bca461ee09f5
       X-Runtime:
-      - '0.042112'
+      - '0.027801'
       Date:
-      - Mon, 19 Apr 2021 20:42:24 GMT
+      - Thu, 22 Apr 2021 16:31:36 GMT
     body:
       encoding: UTF-8
-      string: '{"record":{"id":12,"name":"staging","external_reference":null,"type":"CNAME","full_name":"staging.example.com","ttl":null,"priority":null,"managed":false,"created_at":1618864930,"updated_at":1618864930,"tags":[],"raw_content":"codebase-staging.infra.atech.io","content":{"CNAME":{"hostname":"codebase-staging.infra.atech.io"}},"zone":{"id":1,"name":"example.com","group":{"id":1,"name":"Renamed
-        Group","external_reference":"with-ref","created_at":1618864930,"updated_at":1618864942,"nameservers":[{"id":5,"name":"laura.example.com","server":2,"available":true,"created_at":1618864930,"updated_at":1618864930},{"id":3,"name":"dave.example.com","server":1,"available":true,"created_at":1618864930,"updated_at":1618864930}]},"created_at":1618864930,"updated_at":1618864944,"serial":1618864944,"default_ttl":3600,"external_reference":null,"verified":true,"nameservers_verified_at":1618864930,"nameservers_checked_at":null,"always_verified":false,"nameservers_verified":true,"reverse_dns":false,"stale_verification":false}}}'
-  recorded_at: Mon, 19 Apr 2021 20:42:24 GMT
+      string: '{"record":{"id":12,"name":"staging","external_reference":null,"type":"CNAME","full_name":"staging.example.com","ttl":null,"priority":null,"managed":false,"created_at":1619109092,"updated_at":1619109092,"tags":[],"raw_content":"codebase-staging.infra.atech.io","display_content":"codebase-staging.infra.atech.io","content":{"CNAME":{"hostname":"codebase-staging.infra.atech.io"}},"zone":{"id":1,"name":"example.com","group":{"id":1,"name":"Renamed
+        Group","external_reference":"with-ref","created_at":1619109091,"updated_at":1619109094,"nameservers":[{"id":4,"name":"ruth.example.com","server":2,"available":true,"created_at":1619109091,"updated_at":1619109091},{"id":2,"name":"alex.example.com","server":1,"available":true,"created_at":1619109091,"updated_at":1619109091}]},"created_at":1619109092,"updated_at":1619109095,"serial":1619109095,"default_ttl":3600,"external_reference":null,"verified":true,"nameservers_verified_at":1619109092,"nameservers_checked_at":null,"always_verified":false,"nameservers_verified":true,"reverse_dns":false,"stale_verification":false,"tags":[]}}}'
+  recorded_at: Thu, 22 Apr 2021 16:31:36 GMT
 recorded_with: VCR 6.0.0

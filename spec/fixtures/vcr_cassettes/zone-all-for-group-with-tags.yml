@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://dennis.dev.adam.ac/api/v1/groups/:group/zones?_arguments=%7B%22group%22:%7B%22id%22:2%7D,%22tags%22:%5B%22colors%22%5D%7D
+    uri: https://dennis.dev.adam.ac/api/v1/groups/:group/zones?_arguments=%7B%22group%22:%7B%22id%22:4%7D,%22tags%22:%5B%22colors%22%5D%7D
     body:
       encoding: US-ASCII
       string: ''
@@ -31,17 +31,17 @@ http_interactions:
       Content-Type:
       - application/json
       Etag:
-      - W/"e657e1a6a278b488c0b168543cf4698b"
+      - W/"e371b31f09411fcdee7fa068ea26ea7b"
       Server:
       - Caddy
       X-Request-Id:
-      - ca4e6eee-c52b-48ac-a4b7-fe282e8f4035
+      - e671ea5f-41d6-4c47-b22c-6d5639739d62
       X-Runtime:
-      - '0.015414'
+      - '0.015411'
       Date:
-      - Thu, 22 Apr 2021 16:23:30 GMT
+      - Thu, 22 Apr 2021 16:31:37 GMT
     body:
       encoding: UTF-8
-      string: '{"pagination":{"current_page":1,"total_pages":1,"total":2,"per_page":30,"large_set":false},"zones":[{"id":7,"name":"blue.com","created_at":1619108514,"updated_at":1619108514,"serial":1619108514,"default_ttl":3600,"external_reference":null,"verified":true,"nameservers_verified_at":1619108514,"nameservers_checked_at":null,"always_verified":false,"nameservers_verified":true,"reverse_dns":false,"stale_verification":false,"tags":["colors","com"]},{"id":6,"name":"red.com","created_at":1619108514,"updated_at":1619108514,"serial":1619108514,"default_ttl":3600,"external_reference":null,"verified":true,"nameservers_verified_at":1619108514,"nameservers_checked_at":null,"always_verified":false,"nameservers_verified":true,"reverse_dns":false,"stale_verification":false,"tags":["colors","com"]}]}'
-  recorded_at: Thu, 22 Apr 2021 16:23:30 GMT
+      string: '{"pagination":{"current_page":1,"total_pages":1,"total":2,"per_page":30,"large_set":false},"zones":[{"id":7,"name":"blue.com","created_at":1619109092,"updated_at":1619109092,"serial":1619109092,"default_ttl":3600,"external_reference":null,"verified":true,"nameservers_verified_at":1619109092,"nameservers_checked_at":null,"always_verified":false,"nameservers_verified":true,"reverse_dns":false,"stale_verification":false,"tags":["colors","com"]},{"id":6,"name":"red.com","created_at":1619109092,"updated_at":1619109092,"serial":1619109092,"default_ttl":3600,"external_reference":null,"verified":true,"nameservers_verified_at":1619109092,"nameservers_checked_at":null,"always_verified":false,"nameservers_verified":true,"reverse_dns":false,"stale_verification":false,"tags":["colors","com"]}]}'
+  recorded_at: Thu, 22 Apr 2021 16:31:37 GMT
 recorded_with: VCR 6.0.0

@@ -35,16 +35,16 @@ http_interactions:
       X-Api-Schema:
       - json-error
       X-Request-Id:
-      - 45daf9c4-bf95-400d-83c1-82c44e104d6f
+      - bb96c341-dd6c-4c37-99b1-ad320146a941
       X-Runtime:
-      - '0.007953'
+      - '0.007831'
       Date:
-      - Mon, 19 Apr 2021 20:42:23 GMT
+      - Thu, 22 Apr 2021 16:31:35 GMT
     body:
       encoding: UTF-8
       string: '{"error":{"code":"record_not_found","description":"No record could
         be found using the given arguments","detail":{}}}'
-  recorded_at: Mon, 19 Apr 2021 20:42:23 GMT
+  recorded_at: Thu, 22 Apr 2021 16:31:35 GMT
 - request:
     method: get
     uri: https://dennis.dev.adam.ac/api/v1/records/:record?_arguments=%7B%22record%22:%7B%22external_reference%22:%22cou-1%22%7D%7D
@@ -80,16 +80,16 @@ http_interactions:
       X-Api-Schema:
       - json-error
       X-Request-Id:
-      - 9c4f50a6-91c5-440a-9f09-cf844dbeaac6
+      - 59e5666c-75bd-4105-add6-702e5c61c232
       X-Runtime:
-      - '0.005309'
+      - '0.007223'
       Date:
-      - Mon, 19 Apr 2021 20:42:23 GMT
+      - Thu, 22 Apr 2021 16:31:35 GMT
     body:
       encoding: UTF-8
       string: '{"error":{"code":"record_not_found","description":"No record could
         be found using the given arguments","detail":{}}}'
-  recorded_at: Mon, 19 Apr 2021 20:42:23 GMT
+  recorded_at: Thu, 22 Apr 2021 16:31:35 GMT
 - request:
     method: post
     uri: https://dennis.dev.adam.ac/api/v1/records
@@ -119,22 +119,22 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       Content-Length:
-      - '964'
+      - '1001'
       Content-Type:
       - application/json
       Etag:
-      - W/"ba4f97c513196efd524267c33232365a"
+      - W/"508e79b9629e1c3a622cf4a1cfce3209"
       Server:
       - Caddy
       X-Request-Id:
-      - 3a5db87e-9d0b-4d87-a977-eca6040d94fd
+      - 8511af91-1c83-4f4f-b726-eba6a87ddad7
       X-Runtime:
-      - '0.029534'
+      - '0.027973'
       Date:
-      - Mon, 19 Apr 2021 20:42:23 GMT
+      - Thu, 22 Apr 2021 16:31:35 GMT
     body:
       encoding: UTF-8
-      string: '{"record":{"id":43,"name":"cou-1","external_reference":"cou-1","type":"A","full_name":"cou-1.example.com","ttl":null,"priority":null,"managed":false,"created_at":1618864943,"updated_at":1618864943,"tags":[],"raw_content":"1.1.1.1","content":{"A":{"ip_address":"1.1.1.1"}},"zone":{"id":1,"name":"example.com","group":{"id":1,"name":"Renamed
-        Group","external_reference":"with-ref","created_at":1618864930,"updated_at":1618864942,"nameservers":[{"id":5,"name":"laura.example.com","server":2,"available":true,"created_at":1618864930,"updated_at":1618864930},{"id":3,"name":"dave.example.com","server":1,"available":true,"created_at":1618864930,"updated_at":1618864930}]},"created_at":1618864930,"updated_at":1618864943,"serial":1618864943,"default_ttl":3600,"external_reference":null,"verified":true,"nameservers_verified_at":1618864930,"nameservers_checked_at":null,"always_verified":false,"nameservers_verified":true,"reverse_dns":false,"stale_verification":false}}}'
-  recorded_at: Mon, 19 Apr 2021 20:42:23 GMT
+      string: '{"record":{"id":58,"name":"cou-1","external_reference":"cou-1","type":"A","full_name":"cou-1.example.com","ttl":null,"priority":null,"managed":false,"created_at":1619109095,"updated_at":1619109095,"tags":[],"raw_content":"1.1.1.1","display_content":"1.1.1.1","content":{"A":{"ip_address":"1.1.1.1"}},"zone":{"id":1,"name":"example.com","group":{"id":1,"name":"Renamed
+        Group","external_reference":"with-ref","created_at":1619109091,"updated_at":1619109094,"nameservers":[{"id":4,"name":"ruth.example.com","server":2,"available":true,"created_at":1619109091,"updated_at":1619109091},{"id":2,"name":"alex.example.com","server":1,"available":true,"created_at":1619109091,"updated_at":1619109091}]},"created_at":1619109092,"updated_at":1619109095,"serial":1619109095,"default_ttl":3600,"external_reference":null,"verified":true,"nameservers_verified_at":1619109092,"nameservers_checked_at":null,"always_verified":false,"nameservers_verified":true,"reverse_dns":false,"stale_verification":false,"tags":[]}}}'
+  recorded_at: Thu, 22 Apr 2021 16:31:35 GMT
 recorded_with: VCR 6.0.0

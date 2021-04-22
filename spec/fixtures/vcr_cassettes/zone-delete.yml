@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://dennis.dev.adam.ac/api/v1/zones/:zone?_arguments=%7B%22zone%22:%7B%22id%22:6%7D%7D
+    uri: https://dennis.dev.adam.ac/api/v1/zones/:zone?_arguments=%7B%22zone%22:%7B%22name%22:%22delete-me.com%22%7D%7D
     body:
       encoding: US-ASCII
       string: ''
@@ -27,29 +27,30 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       Content-Length:
-      - '686'
+      - '703'
       Content-Type:
       - application/json
       Etag:
-      - W/"c886aeccaa247be4c1dc638dc9bf7849"
+      - W/"fedfef5a85809bb4835b27199867f796"
       Server:
       - Caddy
       X-Request-Id:
-      - 72bc1b6a-0ce6-4520-a80c-32258560d90f
+      - b37c8482-e071-4d91-9fc5-37dd9783bade
       X-Runtime:
-      - '0.015568'
+      - '0.014072'
       Date:
-      - Mon, 19 Apr 2021 20:42:24 GMT
+      - Thu, 22 Apr 2021 16:31:36 GMT
     body:
       encoding: UTF-8
-      string: '{"zone":{"id":6,"name":"red.com","group":{"id":2,"name":"Another Group","external_reference":"another","created_at":1618864931,"updated_at":1618864931,"nameservers":[{"id":3,"name":"dave.example.com","server":1,"available":true,"created_at":1618864930,"updated_at":1618864930},{"id":4,"name":"ruth.example.com","server":2,"available":true,"created_at":1618864930,"updated_at":1618864930}]},"created_at":1618864931,"updated_at":1618864931,"serial":1618864931,"default_ttl":3600,"external_reference":null,"verified":true,"nameservers_verified_at":1618864931,"nameservers_checked_at":null,"always_verified":false,"nameservers_verified":true,"reverse_dns":false,"stale_verification":false}}'
-  recorded_at: Mon, 19 Apr 2021 20:42:24 GMT
+      string: '{"zone":{"id":8,"name":"delete-me.com","group":{"id":4,"name":"Strawberries
+        Group","external_reference":null,"created_at":1619109092,"updated_at":1619109092,"nameservers":[{"id":6,"name":"kelly.example.com","server":2,"available":true,"created_at":1619109091,"updated_at":1619109091},{"id":1,"name":"phil.example.com","server":2,"available":true,"created_at":1619109091,"updated_at":1619109095}]},"created_at":1619109092,"updated_at":1619109092,"serial":1619109092,"default_ttl":3600,"external_reference":null,"verified":true,"nameservers_verified_at":1619109092,"nameservers_checked_at":null,"always_verified":false,"nameservers_verified":true,"reverse_dns":false,"stale_verification":false,"tags":[]}}'
+  recorded_at: Thu, 22 Apr 2021 16:31:36 GMT
 - request:
     method: delete
     uri: https://dennis.dev.adam.ac/api/v1/zones/:zone
     body:
       encoding: UTF-8
-      string: '{"zone":{"id":6}}'
+      string: '{"zone":{"id":8}}'
     headers:
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
@@ -73,21 +74,22 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       Content-Length:
-      - '686'
+      - '703'
       Content-Type:
       - application/json
       Etag:
-      - W/"9c6a11a5e2af2bb7492d0800acd20d34"
+      - W/"199ca33266ba968195ef2b7f73a343d8"
       Server:
       - Caddy
       X-Request-Id:
-      - 427a0109-e300-427d-8f6c-fba5c41d444f
+      - a457cca7-0182-4346-9915-f8e796aee2a1
       X-Runtime:
-      - '0.072008'
+      - '0.049358'
       Date:
-      - Mon, 19 Apr 2021 20:42:24 GMT
+      - Thu, 22 Apr 2021 16:31:36 GMT
     body:
       encoding: UTF-8
-      string: '{"zone":{"id":6,"name":"red.com","group":{"id":2,"name":"Another Group","external_reference":"another","created_at":1618864931,"updated_at":1618864931,"nameservers":[{"id":3,"name":"dave.example.com","server":1,"available":true,"created_at":1618864930,"updated_at":1618864930},{"id":4,"name":"ruth.example.com","server":2,"available":true,"created_at":1618864930,"updated_at":1618864930}]},"created_at":1618864931,"updated_at":1618864944,"serial":1618864944,"default_ttl":3600,"external_reference":null,"verified":true,"nameservers_verified_at":1618864931,"nameservers_checked_at":null,"always_verified":false,"nameservers_verified":true,"reverse_dns":false,"stale_verification":false}}'
-  recorded_at: Mon, 19 Apr 2021 20:42:24 GMT
+      string: '{"zone":{"id":8,"name":"delete-me.com","group":{"id":4,"name":"Strawberries
+        Group","external_reference":null,"created_at":1619109092,"updated_at":1619109092,"nameservers":[{"id":6,"name":"kelly.example.com","server":2,"available":true,"created_at":1619109091,"updated_at":1619109091},{"id":1,"name":"phil.example.com","server":2,"available":true,"created_at":1619109091,"updated_at":1619109095}]},"created_at":1619109092,"updated_at":1619109096,"serial":1619109096,"default_ttl":3600,"external_reference":null,"verified":true,"nameservers_verified_at":1619109092,"nameservers_checked_at":null,"always_verified":false,"nameservers_verified":true,"reverse_dns":false,"stale_verification":false,"tags":[]}}'
+  recorded_at: Thu, 22 Apr 2021 16:31:36 GMT
 recorded_with: VCR 6.0.0

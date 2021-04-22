@@ -27,23 +27,24 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       Content-Length:
-      - '1010'
+      - '1053'
       Content-Type:
       - application/json
       Etag:
-      - W/"36fecd41407d8fbbbfa8c90d72a61bf9"
+      - W/"69c41552c0e1eba2b60d0509208ac2b7"
       Server:
       - Caddy
       X-Request-Id:
-      - c9ca3d2c-e1f1-4d93-9ef7-312bf407ccdb
+      - a461e755-0a9e-4d25-99b1-d85cd49be5ba
       X-Runtime:
-      - '0.016430'
+      - '0.016698'
       Date:
-      - Mon, 19 Apr 2021 20:42:23 GMT
+      - Thu, 22 Apr 2021 16:31:35 GMT
     body:
       encoding: UTF-8
-      string: '{"record":{"id":11,"name":"cm._domainkey.renamed","external_reference":null,"type":"TXT","full_name":"cm._domainkey.renamed.example.com","ttl":null,"priority":null,"managed":false,"created_at":1618864930,"updated_at":1618864943,"tags":[],"raw_content":"\"new
-        txt value\"","content":{"TXT":{"content":"new txt value"}},"zone":{"id":1,"name":"example.com","group":{"id":1,"name":"Renamed
-        Group","external_reference":"with-ref","created_at":1618864930,"updated_at":1618864942,"nameservers":[{"id":5,"name":"laura.example.com","server":2,"available":true,"created_at":1618864930,"updated_at":1618864930},{"id":3,"name":"dave.example.com","server":1,"available":true,"created_at":1618864930,"updated_at":1618864930}]},"created_at":1618864930,"updated_at":1618864943,"serial":1618864943,"default_ttl":3600,"external_reference":null,"verified":true,"nameservers_verified_at":1618864930,"nameservers_checked_at":null,"always_verified":false,"nameservers_verified":true,"reverse_dns":false,"stale_verification":false}}}'
-  recorded_at: Mon, 19 Apr 2021 20:42:23 GMT
+      string: '{"record":{"id":11,"name":"cm._domainkey.renamed","external_reference":null,"type":"TXT","full_name":"cm._domainkey.renamed.example.com","ttl":null,"priority":null,"managed":false,"created_at":1619109092,"updated_at":1619109095,"tags":[],"raw_content":"\"new
+        txt value\"","display_content":"new txt value","content":{"TXT":{"content":"new
+        txt value"}},"zone":{"id":1,"name":"example.com","group":{"id":1,"name":"Renamed
+        Group","external_reference":"with-ref","created_at":1619109091,"updated_at":1619109094,"nameservers":[{"id":4,"name":"ruth.example.com","server":2,"available":true,"created_at":1619109091,"updated_at":1619109091},{"id":2,"name":"alex.example.com","server":1,"available":true,"created_at":1619109091,"updated_at":1619109091}]},"created_at":1619109092,"updated_at":1619109095,"serial":1619109095,"default_ttl":3600,"external_reference":null,"verified":true,"nameservers_verified_at":1619109092,"nameservers_checked_at":null,"always_verified":false,"nameservers_verified":true,"reverse_dns":false,"stale_verification":false,"tags":[]}}}'
+  recorded_at: Thu, 22 Apr 2021 16:31:35 GMT
 recorded_with: VCR 6.0.0

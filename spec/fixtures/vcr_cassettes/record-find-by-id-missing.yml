@@ -35,14 +35,14 @@ http_interactions:
       X-Api-Schema:
       - json-error
       X-Request-Id:
-      - ddcc4069-92c1-420e-a0d5-223db87dba83
+      - f7399104-4ac8-42db-9372-952387b64f26
       X-Runtime:
-      - '0.008816'
+      - '0.005398'
       Date:
-      - Mon, 19 Apr 2021 20:42:23 GMT
+      - Thu, 22 Apr 2021 16:31:35 GMT
     body:
       encoding: UTF-8
       string: '{"error":{"code":"record_not_found","description":"No record could
         be found using the given arguments","detail":{}}}'
-  recorded_at: Mon, 19 Apr 2021 20:42:23 GMT
+  recorded_at: Thu, 22 Apr 2021 16:31:35 GMT
 recorded_with: VCR 6.0.0

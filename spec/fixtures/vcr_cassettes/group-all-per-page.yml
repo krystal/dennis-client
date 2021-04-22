@@ -27,23 +27,23 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       Content-Length:
-      - '795'
+      - '794'
       Content-Type:
       - application/json
       Etag:
-      - W/"53fc45e57c54d241d3acec8431ce3580"
+      - W/"c768a5709623888abdd335b3ab83ddc2"
       Server:
       - Caddy
       X-Request-Id:
-      - c81cc993-6ac9-4d02-9cc8-271035d252df
+      - a726ac19-8e35-49f9-b5a6-99e41026802c
       X-Runtime:
-      - '0.015086'
+      - '0.010825'
       Date:
-      - Mon, 19 Apr 2021 20:42:22 GMT
+      - Thu, 22 Apr 2021 16:31:34 GMT
     body:
       encoding: UTF-8
       string: '{"pagination":{"current_page":1,"total_pages":2,"total":4,"per_page":2,"large_set":false},"groups":[{"id":2,"name":"Another
-        Group","external_reference":"another","created_at":1618864931,"updated_at":1618864931,"nameservers":[{"id":3,"name":"dave.example.com","server":1,"available":true,"created_at":1618864930,"updated_at":1618864930},{"id":4,"name":"ruth.example.com","server":2,"available":true,"created_at":1618864930,"updated_at":1618864930}]},{"id":1,"name":"Example
-        Group","external_reference":null,"created_at":1618864930,"updated_at":1618864930,"nameservers":[{"id":5,"name":"laura.example.com","server":2,"available":true,"created_at":1618864930,"updated_at":1618864930},{"id":3,"name":"dave.example.com","server":1,"available":true,"created_at":1618864930,"updated_at":1618864930}]}]}'
-  recorded_at: Mon, 19 Apr 2021 20:42:22 GMT
+        Group","external_reference":"another","created_at":1619109092,"updated_at":1619109092,"nameservers":[{"id":3,"name":"dave.example.com","server":1,"available":true,"created_at":1619109091,"updated_at":1619109091},{"id":4,"name":"ruth.example.com","server":2,"available":true,"created_at":1619109091,"updated_at":1619109091}]},{"id":1,"name":"Example
+        Group","external_reference":null,"created_at":1619109091,"updated_at":1619109091,"nameservers":[{"id":4,"name":"ruth.example.com","server":2,"available":true,"created_at":1619109091,"updated_at":1619109091},{"id":2,"name":"alex.example.com","server":1,"available":true,"created_at":1619109091,"updated_at":1619109091}]}]}'
+  recorded_at: Thu, 22 Apr 2021 16:31:34 GMT
 recorded_with: VCR 6.0.0

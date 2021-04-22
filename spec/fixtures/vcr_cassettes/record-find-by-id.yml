@@ -27,22 +27,22 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       Content-Length:
-      - '976'
+      - '1019'
       Content-Type:
       - application/json
       Etag:
-      - W/"048575119b4c6d228cecba19ec0816b3"
+      - W/"d935cc3bf290eff5da97806c4c297a35"
       Server:
       - Caddy
       X-Request-Id:
-      - e4426623-8840-430e-945d-0563bc43731e
+      - 71e28073-5b45-4aa7-8105-eac97615de22
       X-Runtime:
-      - '0.023590'
+      - '0.017403'
       Date:
-      - Mon, 19 Apr 2021 20:42:23 GMT
+      - Thu, 22 Apr 2021 16:31:35 GMT
     body:
       encoding: UTF-8
-      string: '{"record":{"id":6,"name":null,"external_reference":null,"type":"A","full_name":"example.com","ttl":null,"priority":null,"managed":false,"created_at":1618864930,"updated_at":1618864930,"tags":["tag1","tag2"],"raw_content":"185.22.211.61","content":{"A":{"ip_address":"185.22.211.61"}},"zone":{"id":1,"name":"example.com","group":{"id":1,"name":"Renamed
-        Group","external_reference":"with-ref","created_at":1618864930,"updated_at":1618864942,"nameservers":[{"id":5,"name":"laura.example.com","server":2,"available":true,"created_at":1618864930,"updated_at":1618864930},{"id":3,"name":"dave.example.com","server":1,"available":true,"created_at":1618864930,"updated_at":1618864930}]},"created_at":1618864930,"updated_at":1618864931,"serial":1618864931,"default_ttl":3600,"external_reference":null,"verified":true,"nameservers_verified_at":1618864930,"nameservers_checked_at":null,"always_verified":false,"nameservers_verified":true,"reverse_dns":false,"stale_verification":false}}}'
-  recorded_at: Mon, 19 Apr 2021 20:42:23 GMT
+      string: '{"record":{"id":6,"name":null,"external_reference":null,"type":"A","full_name":"example.com","ttl":null,"priority":null,"managed":false,"created_at":1619109092,"updated_at":1619109092,"tags":["tag1","tag2"],"raw_content":"185.22.211.61","display_content":"185.22.211.61","content":{"A":{"ip_address":"185.22.211.61"}},"zone":{"id":1,"name":"example.com","group":{"id":1,"name":"Renamed
+        Group","external_reference":"with-ref","created_at":1619109091,"updated_at":1619109094,"nameservers":[{"id":4,"name":"ruth.example.com","server":2,"available":true,"created_at":1619109091,"updated_at":1619109091},{"id":2,"name":"alex.example.com","server":1,"available":true,"created_at":1619109091,"updated_at":1619109091}]},"created_at":1619109092,"updated_at":1619109092,"serial":1619109092,"default_ttl":3600,"external_reference":null,"verified":true,"nameservers_verified_at":1619109092,"nameservers_checked_at":null,"always_verified":false,"nameservers_verified":true,"reverse_dns":false,"stale_verification":false,"tags":[]}}}'
+  recorded_at: Thu, 22 Apr 2021 16:31:35 GMT
 recorded_with: VCR 6.0.0

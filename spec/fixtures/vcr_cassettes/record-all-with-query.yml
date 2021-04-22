@@ -27,23 +27,24 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       Content-Length:
-      - '720'
+      - '976'
       Content-Type:
       - application/json
       Etag:
-      - W/"61de34294755f360380915267b6c8b14"
+      - W/"92ffa1641b2bf3d12ea3cd84864f29d5"
       Server:
       - Caddy
       X-Request-Id:
-      - bed71364-bea3-4ce3-a54a-bba950153b81
+      - 2f3edea5-32f8-4bef-ba25-d6561e803678
       X-Runtime:
-      - '0.008050'
+      - '0.010186'
       Date:
-      - Mon, 19 Apr 2021 20:42:23 GMT
+      - Thu, 22 Apr 2021 16:31:35 GMT
     body:
       encoding: UTF-8
-      string: '{"records":[{"id":11,"name":"cm._domainkey","external_reference":null,"type":"TXT","full_name":"cm._domainkey.example.com","ttl":null,"priority":null,"managed":false,"created_at":1618864930,"updated_at":1618864930,"raw_content":"\"k=rsa;
-        p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCsJyYnv48KsqIS/yLiU1YGjpo+KPTkKAtJEq7RW7dMEM8IzOx96Qa3S0NYDMPr9QJOJoAomLl51YFe5Xu3WlR5f8uNjH/7UujGL9RpT+Gaa23W85qhrWuQpZnBqFczLdxf3R/OP4Sm5KisVvCP+gain4h0yxFFM4UZT4893bl6QwIDAQAB\"","content":{"TXT":{"content":"k=rsa;
+      string: '{"records":[{"id":11,"name":"cm._domainkey","external_reference":null,"type":"TXT","full_name":"cm._domainkey.example.com","ttl":null,"priority":null,"managed":false,"created_at":1619109092,"updated_at":1619109092,"tags":[],"raw_content":"\"k=rsa;
+        p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCsJyYnv48KsqIS/yLiU1YGjpo+KPTkKAtJEq7RW7dMEM8IzOx96Qa3S0NYDMPr9QJOJoAomLl51YFe5Xu3WlR5f8uNjH/7UujGL9RpT+Gaa23W85qhrWuQpZnBqFczLdxf3R/OP4Sm5KisVvCP+gain4h0yxFFM4UZT4893bl6QwIDAQAB\"","display_content":"k=rsa;
+        p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCsJyYnv48KsqIS/yLiU1YGjpo+KPTkKAtJEq7RW7dMEM8IzOx96Qa3S0NYDMPr9QJOJoAomLl51YFe5Xu3WlR5f8uNjH/7UujGL9RpT+Gaa23W85qhrWuQpZnBqFczLdxf3R/OP4Sm5KisVvCP+gain4h0yxFFM4UZT4893bl6QwIDAQAB","content":{"TXT":{"content":"k=rsa;
         p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCsJyYnv48KsqIS/yLiU1YGjpo+KPTkKAtJEq7RW7dMEM8IzOx96Qa3S0NYDMPr9QJOJoAomLl51YFe5Xu3WlR5f8uNjH/7UujGL9RpT+Gaa23W85qhrWuQpZnBqFczLdxf3R/OP4Sm5KisVvCP+gain4h0yxFFM4UZT4893bl6QwIDAQAB"}}}]}'
-  recorded_at: Mon, 19 Apr 2021 20:42:23 GMT
+  recorded_at: Thu, 22 Apr 2021 16:31:35 GMT
 recorded_with: VCR 6.0.0

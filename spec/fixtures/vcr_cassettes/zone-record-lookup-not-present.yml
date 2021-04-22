@@ -27,24 +27,24 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       Content-Length:
-      - '698'
+      - '701'
       Content-Type:
       - application/json
       Etag:
-      - W/"81ade88951c0cc7a452435eeaf36879a"
+      - W/"0f7fd9083999c85086a82a6c1fb395ef"
       Server:
       - Caddy
       X-Request-Id:
-      - 9119848c-f2b4-4a27-ad88-119fd90635f2
+      - f0c4c0c2-e1a9-4a79-b407-00748a9aa0ba
       X-Runtime:
-      - '0.010579'
+      - '0.013446'
       Date:
-      - Tue, 20 Apr 2021 12:05:03 GMT
+      - Thu, 22 Apr 2021 16:31:36 GMT
     body:
       encoding: UTF-8
       string: '{"zone":{"id":1,"name":"example.com","group":{"id":1,"name":"Renamed
-        Group","external_reference":"with-ref","created_at":1618864930,"updated_at":1618864942,"nameservers":[{"id":5,"name":"laura.example.com","server":2,"available":true,"created_at":1618864930,"updated_at":1618864930},{"id":3,"name":"dave.example.com","server":1,"available":true,"created_at":1618864930,"updated_at":1618864930}]},"created_at":1618864930,"updated_at":1618865051,"serial":1618865051,"default_ttl":3600,"external_reference":null,"verified":true,"nameservers_verified_at":1618864930,"nameservers_checked_at":1618865051,"always_verified":false,"nameservers_verified":true,"reverse_dns":false,"stale_verification":false}}'
-  recorded_at: Tue, 20 Apr 2021 12:05:03 GMT
+        Group","external_reference":"with-ref","created_at":1619109091,"updated_at":1619109094,"nameservers":[{"id":4,"name":"ruth.example.com","server":2,"available":true,"created_at":1619109091,"updated_at":1619109091},{"id":2,"name":"alex.example.com","server":1,"available":true,"created_at":1619109091,"updated_at":1619109091}]},"created_at":1619109092,"updated_at":1619109095,"serial":1619109095,"default_ttl":3600,"external_reference":null,"verified":true,"nameservers_verified_at":1619109092,"nameservers_checked_at":null,"always_verified":false,"nameservers_verified":true,"reverse_dns":false,"stale_verification":false,"tags":[]}}'
+  recorded_at: Thu, 22 Apr 2021 16:31:36 GMT
 - request:
     method: get
     uri: https://dennis.dev.adam.ac/api/v1/records/:record?_arguments=%7B%22record%22:%7B%22id%22:20000000%7D%7D
@@ -80,14 +80,14 @@ http_interactions:
       X-Api-Schema:
       - json-error
       X-Request-Id:
-      - 9dfd2942-9fbf-43e1-8402-0163ef189376
+      - b69f96cf-8771-4286-967c-c7084c6b7609
       X-Runtime:
-      - '0.008575'
+      - '0.005733'
       Date:
-      - Tue, 20 Apr 2021 12:05:03 GMT
+      - Thu, 22 Apr 2021 16:31:36 GMT
     body:
       encoding: UTF-8
       string: '{"error":{"code":"record_not_found","description":"No record could
         be found using the given arguments","detail":{}}}'
-  recorded_at: Tue, 20 Apr 2021 12:05:03 GMT
+  recorded_at: Thu, 22 Apr 2021 16:31:36 GMT
 recorded_with: VCR 6.0.0

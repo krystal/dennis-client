@@ -27,21 +27,21 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       Content-Length:
-      - '997'
+      - '1102'
       Content-Type:
       - application/json
       Etag:
-      - W/"8767634cba5571ef39204a63e35bc34e"
+      - W/"26f90c5fbf0e7ca3198e0b26de124046"
       Server:
       - Caddy
       X-Request-Id:
-      - 81bb6b14-35a9-4888-be6f-efe8f0c57cf1
+      - b6afb619-004e-4ef5-8c5c-c5d9bd39a4e5
       X-Runtime:
-      - '0.028137'
+      - '0.019720'
       Date:
-      - Mon, 19 Apr 2021 20:42:23 GMT
+      - Thu, 22 Apr 2021 16:31:35 GMT
     body:
       encoding: UTF-8
-      string: '{"records":[{"id":20,"name":null,"external_reference":null,"type":"A","full_name":"bananas.com","ttl":null,"priority":null,"managed":false,"created_at":1618864931,"updated_at":1618864931,"tags":["tag2"],"raw_content":"185.22.211.55","content":{"A":{"ip_address":"185.22.211.55"}},"zone":{"id":2,"name":"bananas.com","verified":false}},{"id":6,"name":null,"external_reference":null,"type":"A","full_name":"example.com","ttl":null,"priority":null,"managed":false,"created_at":1618864930,"updated_at":1618864930,"tags":["tag1","tag2"],"raw_content":"185.22.211.61","content":{"A":{"ip_address":"185.22.211.61"}},"zone":{"id":1,"name":"example.com","verified":true}},{"id":7,"name":null,"external_reference":null,"type":"AAAA","full_name":"example.com","ttl":null,"priority":null,"managed":false,"created_at":1618864930,"updated_at":1618864930,"tags":["tag2"],"raw_content":"2a00:67a0:a:1::1","content":{"AAAA":{"ip_address":"2a00:67a0:a:1::1"}},"zone":{"id":1,"name":"example.com","verified":true}}]}'
-  recorded_at: Mon, 19 Apr 2021 20:42:23 GMT
+      string: '{"records":[{"id":20,"name":null,"external_reference":null,"type":"A","full_name":"bananas.com","ttl":null,"priority":null,"managed":false,"created_at":1619109092,"updated_at":1619109092,"tags":["tag2"],"raw_content":"185.22.211.55","display_content":"185.22.211.55","content":{"A":{"ip_address":"185.22.211.55"}},"zone":{"id":2,"name":"bananas.com","verified":false}},{"id":6,"name":null,"external_reference":null,"type":"A","full_name":"example.com","ttl":null,"priority":null,"managed":false,"created_at":1619109092,"updated_at":1619109092,"tags":["tag1","tag2"],"raw_content":"185.22.211.61","display_content":"185.22.211.61","content":{"A":{"ip_address":"185.22.211.61"}},"zone":{"id":1,"name":"example.com","verified":true}},{"id":7,"name":null,"external_reference":null,"type":"AAAA","full_name":"example.com","ttl":null,"priority":null,"managed":false,"created_at":1619109092,"updated_at":1619109092,"tags":["tag2"],"raw_content":"2a00:67a0:a:1::1","display_content":"2a00:67a0:a:1::1","content":{"AAAA":{"ip_address":"2a00:67a0:a:1::1"}},"zone":{"id":1,"name":"example.com","verified":true}}]}'
+  recorded_at: Thu, 22 Apr 2021 16:31:35 GMT
 recorded_with: VCR 6.0.0

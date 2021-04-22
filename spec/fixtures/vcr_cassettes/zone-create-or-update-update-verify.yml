@@ -27,21 +27,22 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       Content-Length:
-      - '693'
+      - '703'
       Content-Type:
       - application/json
       Etag:
-      - W/"ad2ca3c5e162e21823c74ceabcc76c68"
+      - W/"6e543c1ab3a953c2bc56e14ebf2b063c"
       Server:
       - Caddy
       X-Request-Id:
-      - a256bdf9-3714-42bb-82de-ef2b602fae8c
+      - 0b1f3607-237b-4c05-8358-095d39e391bb
       X-Runtime:
-      - '0.010948'
+      - '0.011650'
       Date:
-      - Mon, 19 Apr 2021 20:42:25 GMT
+      - Thu, 22 Apr 2021 16:31:37 GMT
     body:
       encoding: UTF-8
-      string: '{"zone":{"id":8,"name":"cou2.com","group":{"id":1,"name":"Renamed Group","external_reference":"with-ref","created_at":1618864930,"updated_at":1618864942,"nameservers":[{"id":5,"name":"laura.example.com","server":2,"available":true,"created_at":1618864930,"updated_at":1618864930},{"id":3,"name":"dave.example.com","server":1,"available":true,"created_at":1618864930,"updated_at":1618864930}]},"created_at":1618864944,"updated_at":1618864945,"serial":1618864945,"default_ttl":3600,"external_reference":"cou-zone-1","verified":false,"nameservers_verified_at":null,"nameservers_checked_at":null,"always_verified":false,"nameservers_verified":false,"reverse_dns":false,"stale_verification":false}}'
-  recorded_at: Mon, 19 Apr 2021 20:42:25 GMT
+      string: '{"zone":{"id":11,"name":"cou2.com","group":{"id":1,"name":"Renamed
+        Group","external_reference":"with-ref","created_at":1619109091,"updated_at":1619109094,"nameservers":[{"id":4,"name":"ruth.example.com","server":2,"available":true,"created_at":1619109091,"updated_at":1619109091},{"id":2,"name":"alex.example.com","server":1,"available":true,"created_at":1619109091,"updated_at":1619109091}]},"created_at":1619109097,"updated_at":1619109097,"serial":1619109097,"default_ttl":3600,"external_reference":"cou-zone-1","verified":false,"nameservers_verified_at":null,"nameservers_checked_at":null,"always_verified":false,"nameservers_verified":false,"reverse_dns":false,"stale_verification":false,"tags":[]}}'
+  recorded_at: Thu, 22 Apr 2021 16:31:37 GMT
 recorded_with: VCR 6.0.0

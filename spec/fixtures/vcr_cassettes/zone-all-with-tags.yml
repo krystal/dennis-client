@@ -27,23 +27,23 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       Content-Length:
-      - '872'
+      - '882'
       Content-Type:
       - application/json
       Etag:
-      - W/"38a3d10d7a75071be144d96ff980a32f"
+      - W/"c08cfd7c293358d1b064d6e2e3ab076b"
       Server:
       - Caddy
       X-Request-Id:
-      - 5f5d683a-338c-4140-b920-35006dc5c4ac
+      - a6cfcdf3-ac73-4cfe-8a8c-d355d0ca6663
       X-Runtime:
-      - '0.014761'
+      - '0.014410'
       Date:
-      - Thu, 22 Apr 2021 16:21:56 GMT
+      - Thu, 22 Apr 2021 16:31:36 GMT
     body:
       encoding: UTF-8
-      string: '{"pagination":{"current_page":1,"total_pages":1,"total":2,"per_page":30,"large_set":false},"zones":[{"id":7,"name":"blue.com","group":{"id":2,"name":"Another
-        Group"},"created_at":1619108514,"updated_at":1619108514,"serial":1619108514,"default_ttl":3600,"external_reference":null,"verified":true,"nameservers_verified_at":1619108514,"nameservers_checked_at":null,"always_verified":false,"nameservers_verified":true,"reverse_dns":false,"stale_verification":false,"tags":["colors","com"]},{"id":6,"name":"red.com","group":{"id":2,"name":"Another
-        Group"},"created_at":1619108514,"updated_at":1619108514,"serial":1619108514,"default_ttl":3600,"external_reference":null,"verified":true,"nameservers_verified_at":1619108514,"nameservers_checked_at":null,"always_verified":false,"nameservers_verified":true,"reverse_dns":false,"stale_verification":false,"tags":["colors","com"]}]}'
-  recorded_at: Thu, 22 Apr 2021 16:21:56 GMT
+      string: '{"pagination":{"current_page":1,"total_pages":1,"total":2,"per_page":30,"large_set":false},"zones":[{"id":7,"name":"blue.com","group":{"id":4,"name":"Strawberries
+        Group"},"created_at":1619109092,"updated_at":1619109092,"serial":1619109092,"default_ttl":3600,"external_reference":null,"verified":true,"nameservers_verified_at":1619109092,"nameservers_checked_at":null,"always_verified":false,"nameservers_verified":true,"reverse_dns":false,"stale_verification":false,"tags":["colors","com"]},{"id":6,"name":"red.com","group":{"id":4,"name":"Strawberries
+        Group"},"created_at":1619109092,"updated_at":1619109092,"serial":1619109092,"default_ttl":3600,"external_reference":null,"verified":true,"nameservers_verified_at":1619109092,"nameservers_checked_at":null,"always_verified":false,"nameservers_verified":true,"reverse_dns":false,"stale_verification":false,"tags":["colors","com"]}]}'
+  recorded_at: Thu, 22 Apr 2021 16:31:36 GMT
 recorded_with: VCR 6.0.0

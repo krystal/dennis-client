@@ -17,14 +17,14 @@ module Dennis
 
       it 'returns an array of zones matching a query' do
         VCR.use_cassette('zone-all-with-query') do
-          zones = described_class.all(@client, query: 'pears')
+          zones = described_class.all(@client, query: 'example')
           expect(zones).to be_a Array
           expect(zones.size).to eq 1
-          expect(zones[0].name).to eq 'pears.com'
+          expect(zones[0].name).to eq 'example.com'
         end
       end
 
-      it 'returns an array of zones with the givne tags' do
+      it 'returns an array of zones with the given tags' do
         VCR.use_cassette('zone-all-with-tags') do
           zones = described_class.all(@client, tags: ['colors'])
           expect(zones).to be_a Array
@@ -158,7 +158,7 @@ module Dennis
     describe '#update' do
       it 'updates the zone' do
         VCR.use_cassette('zone-update') do
-          zone = described_class.find_by(@client, :id, 5)
+          zone = described_class.find_by(@client, :name, 'edit-me.com')
           zone.update(name: 'raspberries.com', external_reference: 'rasps')
           expect(zone.name).to eq 'raspberries.com'
           expect(zone.external_reference).to eq 'rasps'
@@ -166,7 +166,7 @@ module Dennis
 
         # Verify with a new cassette to trigger a new update
         VCR.use_cassette('zone-update-after-update-complete') do
-          zone = described_class.find_by(@client, :id, 5)
+          zone = described_class.find_by(@client, :name, 'raspberries.com')
           expect(zone.name).to eq 'raspberries.com'
           expect(zone.external_reference).to eq 'rasps'
         end
@@ -174,7 +174,7 @@ module Dennis
 
       it 'raises a validation error if appropriate' do
         VCR.use_cassette('zone-update-with-validation-error') do
-          zone = described_class.find_by(@client, :id, 5)
+          zone = described_class.find_by(@client, :name, 'example.com')
           expect { zone.update(name: '') }.to raise_error ValidationError do |e|
             expect(e.errors).to match array_including(
               having_attributes(attribute: 'name', type: 'blank')
@@ -187,12 +187,12 @@ module Dennis
     describe '#delete' do
       it 'deletes the zone' do
         VCR.use_cassette('zone-delete') do
-          zone = described_class.find_by(@client, :id, 6)
+          zone = described_class.find_by(@client, :name, 'delete-me.com')
           zone.delete
         end
 
         VCR.use_cassette('zone-delete-verify') do
-          zone = described_class.find_by(@client, :id, 6)
+          zone = described_class.find_by(@client, :name, 'delete-me.com')
           expect(zone).to be nil
         end
       end
@@ -209,7 +209,7 @@ module Dennis
 
       it 'returns false if the nameserver cannot be verified' do
         VCR.use_cassette('zone-verify-nameservers-cannot-verify') do
-          zone = described_class.find_by(@client, :id, 7)
+          zone = described_class.find_by(@client, :id, 2)
           expect(zone.verified?).to be false
           expect(zone.verify_nameservers).to be false
         end
@@ -287,7 +287,7 @@ module Dennis
 
       it 'returns an array of zones with the givne tags' do
         VCR.use_cassette('zone-all-for-group-with-tags') do
-          zones = described_class.all_for_group(@client, { id: 2 }, tags: ['colors'])
+          zones = described_class.all_for_group(@client, { id: 4 }, tags: ['colors'])
           expect(zones).to be_a Array
           expect(zones.size).to eq 2
           expect(zones).to match array_including(

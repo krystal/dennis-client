@@ -31,17 +31,17 @@ http_interactions:
       Content-Type:
       - application/json
       Etag:
-      - W/"57353023624ce2ebfd6e171cb61d16ec"
+      - W/"f8b3bd664db2a1bbb3083c5602c455cc"
       Server:
       - Caddy
       X-Request-Id:
-      - 253648aa-bb51-4a3b-94cb-e881f6532b8a
+      - 87d50772-4a19-4de2-a943-468646f709f6
       X-Runtime:
-      - '0.012713'
+      - '0.007702'
       Date:
-      - Mon, 19 Apr 2021 20:42:22 GMT
+      - Thu, 22 Apr 2021 16:31:34 GMT
     body:
       encoding: UTF-8
-      string: '{"group":{"id":2,"name":"Another Group","external_reference":"another","created_at":1618864931,"updated_at":1618864931,"nameservers":[{"id":3,"name":"dave.example.com","server":1,"available":true,"created_at":1618864930,"updated_at":1618864930},{"id":4,"name":"ruth.example.com","server":2,"available":true,"created_at":1618864930,"updated_at":1618864930}]}}'
-  recorded_at: Mon, 19 Apr 2021 20:42:22 GMT
+      string: '{"group":{"id":2,"name":"Another Group","external_reference":"another","created_at":1619109092,"updated_at":1619109092,"nameservers":[{"id":3,"name":"dave.example.com","server":1,"available":true,"created_at":1619109091,"updated_at":1619109091},{"id":4,"name":"ruth.example.com","server":2,"available":true,"created_at":1619109091,"updated_at":1619109091}]}}'
+  recorded_at: Thu, 22 Apr 2021 16:31:34 GMT
 recorded_with: VCR 6.0.0

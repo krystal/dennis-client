@@ -27,23 +27,23 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       Content-Length:
-      - '360'
+      - '359'
       Content-Type:
       - application/json
       Etag:
-      - W/"c4716bf91738c8780c39613b106c42f7"
+      - W/"aeb7d0263038ed3ef96c154b0cc0ebdc"
       Server:
       - Caddy
       X-Request-Id:
-      - eb08d871-d5ca-44e9-8d99-6a6bcbc33913
+      - cd418196-c936-4859-8ff1-396709b6dfaa
       X-Runtime:
-      - '0.008840'
+      - '0.007689'
       Date:
-      - Mon, 19 Apr 2021 20:42:22 GMT
+      - Thu, 22 Apr 2021 16:31:34 GMT
     body:
       encoding: UTF-8
-      string: '{"group":{"id":1,"name":"Renamed Group","external_reference":"with-ref","created_at":1618864930,"updated_at":1618864942,"nameservers":[{"id":5,"name":"laura.example.com","server":2,"available":true,"created_at":1618864930,"updated_at":1618864930},{"id":3,"name":"dave.example.com","server":1,"available":true,"created_at":1618864930,"updated_at":1618864930}]}}'
-  recorded_at: Mon, 19 Apr 2021 20:42:22 GMT
+      string: '{"group":{"id":1,"name":"Renamed Group","external_reference":"with-ref","created_at":1619109091,"updated_at":1619109094,"nameservers":[{"id":4,"name":"ruth.example.com","server":2,"available":true,"created_at":1619109091,"updated_at":1619109091},{"id":2,"name":"alex.example.com","server":1,"available":true,"created_at":1619109091,"updated_at":1619109091}]}}'
+  recorded_at: Thu, 22 Apr 2021 16:31:34 GMT
 - request:
     method: patch
     uri: https://dennis.dev.adam.ac/api/v1/groups/:group
@@ -81,15 +81,15 @@ http_interactions:
       X-Api-Schema:
       - json-error
       X-Request-Id:
-      - 56c4ee4d-4fc4-4e19-a9ba-bc0bb0194896
+      - e9477827-4ca8-4bdb-b91f-33f23f8d49bb
       X-Runtime:
-      - '0.011657'
+      - '0.009745'
       Date:
-      - Mon, 19 Apr 2021 20:42:22 GMT
+      - Thu, 22 Apr 2021 16:31:34 GMT
     body:
       encoding: UTF-8
       string: '{"error":{"code":"validation_error","description":"A validation error
         occurred when saving the object","detail":{"errors":[{"attribute":"name","type":"blank","message":"Name
         can''t be blank"}]}}}'
-  recorded_at: Mon, 19 Apr 2021 20:42:22 GMT
+  recorded_at: Thu, 22 Apr 2021 16:31:34 GMT
 recorded_with: VCR 6.0.0

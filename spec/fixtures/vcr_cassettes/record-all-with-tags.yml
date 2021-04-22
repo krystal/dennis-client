@@ -27,21 +27,21 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       Content-Length:
-      - '529'
+      - '639'
       Content-Type:
       - application/json
       Etag:
-      - W/"545a40a0c2cfff1fb412a11a959e66b0"
+      - W/"31ddab593f3d693da24c202393c3c195"
       Server:
       - Caddy
       X-Request-Id:
-      - 62e02eb1-e55b-49dd-9639-0161f89a3e1d
+      - 032f33f8-1263-4eae-a4af-6ca80414f8e5
       X-Runtime:
-      - '0.014821'
+      - '0.013792'
       Date:
-      - Mon, 19 Apr 2021 20:42:23 GMT
+      - Thu, 22 Apr 2021 16:31:35 GMT
     body:
       encoding: UTF-8
-      string: '{"records":[{"id":6,"name":null,"external_reference":null,"type":"A","full_name":"example.com","ttl":null,"priority":null,"managed":false,"created_at":1618864930,"updated_at":1618864930,"raw_content":"185.22.211.61","content":{"A":{"ip_address":"185.22.211.61"}}},{"id":7,"name":null,"external_reference":null,"type":"AAAA","full_name":"example.com","ttl":null,"priority":null,"managed":false,"created_at":1618864930,"updated_at":1618864930,"raw_content":"2a00:67a0:a:1::1","content":{"AAAA":{"ip_address":"2a00:67a0:a:1::1"}}}]}'
-  recorded_at: Mon, 19 Apr 2021 20:42:23 GMT
+      string: '{"records":[{"id":6,"name":null,"external_reference":null,"type":"A","full_name":"example.com","ttl":null,"priority":null,"managed":false,"created_at":1619109092,"updated_at":1619109092,"tags":["tag1","tag2"],"raw_content":"185.22.211.61","display_content":"185.22.211.61","content":{"A":{"ip_address":"185.22.211.61"}}},{"id":7,"name":null,"external_reference":null,"type":"AAAA","full_name":"example.com","ttl":null,"priority":null,"managed":false,"created_at":1619109092,"updated_at":1619109092,"tags":["tag2"],"raw_content":"2a00:67a0:a:1::1","display_content":"2a00:67a0:a:1::1","content":{"AAAA":{"ip_address":"2a00:67a0:a:1::1"}}}]}'
+  recorded_at: Thu, 22 Apr 2021 16:31:35 GMT
 recorded_with: VCR 6.0.0

@@ -29,21 +29,21 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       Content-Length:
-      - '356'
+      - '357'
       Content-Type:
       - application/json
       Etag:
-      - W/"97ece5bfa93e6b05893a455c2092b0bf"
+      - W/"c55cfa1803497ce692de015fe19a456f"
       Server:
       - Caddy
       X-Request-Id:
-      - 344ccade-b3a3-4deb-9bf3-ec5478199351
+      - 25dc839b-db6e-4752-85dd-89d9a60df3f3
       X-Runtime:
-      - '0.040452'
+      - '0.018759'
       Date:
-      - Mon, 19 Apr 2021 20:42:22 GMT
+      - Thu, 22 Apr 2021 16:31:34 GMT
     body:
       encoding: UTF-8
-      string: '{"group":{"id":5,"name":"Apple Group","external_reference":"apples","created_at":1618864942,"updated_at":1618864942,"nameservers":[{"id":3,"name":"dave.example.com","server":1,"available":true,"created_at":1618864930,"updated_at":1618864930},{"id":6,"name":"kelly.example.com","server":2,"available":true,"created_at":1618864930,"updated_at":1618864930}]}}'
-  recorded_at: Mon, 19 Apr 2021 20:42:22 GMT
+      string: '{"group":{"id":5,"name":"Apple Group","external_reference":"apples","created_at":1619109094,"updated_at":1619109094,"nameservers":[{"id":5,"name":"laura.example.com","server":2,"available":true,"created_at":1619109091,"updated_at":1619109091},{"id":1,"name":"simon.example.com","server":1,"available":true,"created_at":1619109091,"updated_at":1619109091}]}}'
+  recorded_at: Thu, 22 Apr 2021 16:31:34 GMT
 recorded_with: VCR 6.0.0

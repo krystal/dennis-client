@@ -35,16 +35,16 @@ http_interactions:
       X-Api-Schema:
       - json-error
       X-Request-Id:
-      - bb323789-28ef-4566-a84c-6e979ef70268
+      - 2526eab6-b689-45f1-a755-e0b6ad79a417
       X-Runtime:
-      - '0.005701'
+      - '0.004519'
       Date:
-      - Mon, 19 Apr 2021 20:42:22 GMT
+      - Thu, 22 Apr 2021 16:31:34 GMT
     body:
       encoding: UTF-8
       string: '{"error":{"code":"invalid_argument","description":"The ''nameserver''
         argument is invalid","detail":{"path":["nameserver"],"index":null,"issue":"missing_lookup_value","issue_description":"A
         value for a lookup argument set has not been provided but at least one value
         is required.","errors":[],"argument":{"id":"CoreAPI/Endpoints/Nameservers/InfoEndpoint/BaseArgumentSet/NameserverArgument","name":"nameserver","description":null}}}}'
-  recorded_at: Mon, 19 Apr 2021 20:42:22 GMT
+  recorded_at: Thu, 22 Apr 2021 16:31:34 GMT
 recorded_with: VCR 6.0.0

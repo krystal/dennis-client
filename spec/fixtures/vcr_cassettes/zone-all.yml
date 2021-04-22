@@ -27,27 +27,29 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       Content-Length:
-      - '2291'
+      - '3169'
       Content-Type:
       - application/json
       Etag:
-      - W/"fe7b2c7707926e20561e030fc2573a90"
+      - W/"8a7a8a6792e007937a8de871991873c1"
       Server:
       - Caddy
       X-Request-Id:
-      - ede214d2-b7e6-4741-ab78-086fa7032311
+      - f8084554-6f32-4fdd-aec2-7d682f6282ce
       X-Runtime:
-      - '0.014006'
+      - '0.035046'
       Date:
-      - Mon, 19 Apr 2021 20:42:24 GMT
+      - Thu, 22 Apr 2021 16:31:36 GMT
     body:
       encoding: UTF-8
-      string: '{"pagination":{"current_page":1,"total_pages":1,"total":6,"per_page":30,"large_set":false},"zones":[{"id":3,"name":"another.com","group":{"id":2,"name":"Another
-        Group"},"created_at":1618864931,"updated_at":1618864931,"serial":1618864931,"default_ttl":3600,"external_reference":null,"verified":true,"nameservers_verified_at":1618864931,"nameservers_checked_at":null,"always_verified":false,"nameservers_verified":true,"reverse_dns":false,"stale_verification":false},{"id":2,"name":"bananas.com","group":{"id":1,"name":"Renamed
-        Group"},"created_at":1618864931,"updated_at":1618864931,"serial":1618864931,"default_ttl":3600,"external_reference":"bananas","verified":false,"nameservers_verified_at":null,"nameservers_checked_at":null,"always_verified":false,"nameservers_verified":false,"reverse_dns":false,"stale_verification":false},{"id":1,"name":"example.com","group":{"id":1,"name":"Renamed
-        Group"},"created_at":1618864930,"updated_at":1618864944,"serial":1618864944,"default_ttl":3600,"external_reference":null,"verified":true,"nameservers_verified_at":1618864930,"nameservers_checked_at":null,"always_verified":false,"nameservers_verified":true,"reverse_dns":false,"stale_verification":false},{"id":4,"name":"pears.com","group":{"id":2,"name":"Another
-        Group"},"created_at":1618864931,"updated_at":1618864931,"serial":1618864931,"default_ttl":3600,"external_reference":null,"verified":true,"nameservers_verified_at":1618864931,"nameservers_checked_at":null,"always_verified":false,"nameservers_verified":true,"reverse_dns":false,"stale_verification":false},{"id":6,"name":"red.com","group":{"id":2,"name":"Another
-        Group"},"created_at":1618864931,"updated_at":1618864931,"serial":1618864931,"default_ttl":3600,"external_reference":null,"verified":true,"nameservers_verified_at":1618864931,"nameservers_checked_at":null,"always_verified":false,"nameservers_verified":true,"reverse_dns":false,"stale_verification":false},{"id":5,"name":"strawberries.com","group":{"id":2,"name":"Another
-        Group"},"created_at":1618864931,"updated_at":1618864931,"serial":1618864931,"default_ttl":3600,"external_reference":null,"verified":true,"nameservers_verified_at":1618864931,"nameservers_checked_at":null,"always_verified":false,"nameservers_verified":true,"reverse_dns":false,"stale_verification":false}]}'
-  recorded_at: Mon, 19 Apr 2021 20:42:24 GMT
+      string: '{"pagination":{"current_page":1,"total_pages":1,"total":8,"per_page":30,"large_set":false},"zones":[{"id":3,"name":"another.com","group":{"id":2,"name":"Another
+        Group"},"created_at":1619109092,"updated_at":1619109092,"serial":1619109092,"default_ttl":3600,"external_reference":null,"verified":true,"nameservers_verified_at":1619109092,"nameservers_checked_at":null,"always_verified":false,"nameservers_verified":true,"reverse_dns":false,"stale_verification":false,"tags":[]},{"id":2,"name":"bananas.com","group":{"id":1,"name":"Renamed
+        Group"},"created_at":1619109092,"updated_at":1619109092,"serial":1619109092,"default_ttl":3600,"external_reference":"bananas","verified":false,"nameservers_verified_at":null,"nameservers_checked_at":null,"always_verified":false,"nameservers_verified":false,"reverse_dns":false,"stale_verification":false,"tags":["fruit"]},{"id":7,"name":"blue.com","group":{"id":4,"name":"Strawberries
+        Group"},"created_at":1619109092,"updated_at":1619109092,"serial":1619109092,"default_ttl":3600,"external_reference":null,"verified":true,"nameservers_verified_at":1619109092,"nameservers_checked_at":null,"always_verified":false,"nameservers_verified":true,"reverse_dns":false,"stale_verification":false,"tags":["colors","com"]},{"id":8,"name":"delete-me.com","group":{"id":4,"name":"Strawberries
+        Group"},"created_at":1619109092,"updated_at":1619109092,"serial":1619109092,"default_ttl":3600,"external_reference":null,"verified":true,"nameservers_verified_at":1619109092,"nameservers_checked_at":null,"always_verified":false,"nameservers_verified":true,"reverse_dns":false,"stale_verification":false,"tags":[]},{"id":9,"name":"edit-me.com","group":{"id":4,"name":"Strawberries
+        Group"},"created_at":1619109092,"updated_at":1619109092,"serial":1619109092,"default_ttl":3600,"external_reference":null,"verified":true,"nameservers_verified_at":1619109092,"nameservers_checked_at":null,"always_verified":false,"nameservers_verified":true,"reverse_dns":false,"stale_verification":false,"tags":[]},{"id":1,"name":"example.com","group":{"id":1,"name":"Renamed
+        Group"},"created_at":1619109092,"updated_at":1619109095,"serial":1619109095,"default_ttl":3600,"external_reference":null,"verified":true,"nameservers_verified_at":1619109092,"nameservers_checked_at":null,"always_verified":false,"nameservers_verified":true,"reverse_dns":false,"stale_verification":false,"tags":[]},{"id":6,"name":"red.com","group":{"id":4,"name":"Strawberries
+        Group"},"created_at":1619109092,"updated_at":1619109092,"serial":1619109092,"default_ttl":3600,"external_reference":null,"verified":true,"nameservers_verified_at":1619109092,"nameservers_checked_at":null,"always_verified":false,"nameservers_verified":true,"reverse_dns":false,"stale_verification":false,"tags":["colors","com"]},{"id":5,"name":"strawberries.com","group":{"id":4,"name":"Strawberries
+        Group"},"created_at":1619109092,"updated_at":1619109092,"serial":1619109092,"default_ttl":3600,"external_reference":null,"verified":true,"nameservers_verified_at":1619109092,"nameservers_checked_at":null,"always_verified":false,"nameservers_verified":true,"reverse_dns":false,"stale_verification":false,"tags":["fruit"]}]}'
+  recorded_at: Thu, 22 Apr 2021 16:31:36 GMT
 recorded_with: VCR 6.0.0

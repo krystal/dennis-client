@@ -35,11 +35,11 @@ http_interactions:
       Server:
       - Caddy
       X-Request-Id:
-      - f86664c5-f2cb-4489-8346-375585997e4b
+      - 5b0907cf-1784-4b58-af37-06cd2a93a9c4
       X-Runtime:
-      - '0.009243'
+      - '0.007992'
       Date:
-      - Mon, 19 Apr 2021 20:42:24 GMT
+      - Thu, 22 Apr 2021 16:31:36 GMT
     body:
       encoding: UTF-8
       string: '{"record_types":[{"name":"A","requires_priority":false,"managed_only":false,"exposed":true,"content_attributes":[{"name":"ip_address","label":"IPv4
@@ -47,5 +47,5 @@ http_interactions:
         address","type":"text","options":null}]},{"name":"ALIAS","requires_priority":false,"managed_only":false,"exposed":true,"content_attributes":[{"name":"hostname","label":"Hostname","type":"text","options":null}]},{"name":"CAA","requires_priority":false,"managed_only":false,"exposed":true,"content_attributes":[{"name":"flag","label":"Flag","type":"text","options":null},{"name":"tag","label":"Tag","type":"options","options":[{"label":"issue","value":"issue"},{"label":"issuewild","value":"issuewild"},{"label":"iodef","value":"iodef"},{"label":"contactemail","value":"contactemail"},{"label":"contactphone","value":"contactphone"}]},{"name":"value","label":"Value","type":"text","options":null}]},{"name":"CNAME","requires_priority":false,"managed_only":false,"exposed":true,"content_attributes":[{"name":"hostname","label":"Hostname","type":"text","options":null}]},{"name":"IPS","requires_priority":false,"managed_only":false,"exposed":false,"content_attributes":[{"name":"ip_addresses","label":"IP
         addresses","type":"text","options":null}]},{"name":"MX","requires_priority":true,"managed_only":false,"exposed":true,"content_attributes":[{"name":"hostname","label":"Hostname","type":"text","options":null}]},{"name":"NS","requires_priority":false,"managed_only":false,"exposed":true,"content_attributes":[{"name":"hostname","label":"Hostname","type":"text","options":null}]},{"name":"PTR","requires_priority":false,"managed_only":false,"exposed":true,"content_attributes":[{"name":"hostname","label":"Hostname","type":"text","options":null}]},{"name":"SOA","requires_priority":false,"managed_only":true,"exposed":true,"content_attributes":[]},{"name":"SRV","requires_priority":true,"managed_only":false,"exposed":true,"content_attributes":[{"name":"weight","label":"Weight","type":"text","options":null},{"name":"port","label":"Port","type":"text","options":null},{"name":"target","label":"Target","type":"text","options":null}]},{"name":"SSHFP","requires_priority":false,"managed_only":false,"exposed":true,"content_attributes":[{"name":"algorithm","label":"Algorithm","type":"options","options":[{"label":"RSA","value":"1"},{"label":"DSA","value":"2"},{"label":"ECDSA","value":"3"},{"label":"Ed25519","value":"4"}]},{"name":"fingerprint_type","label":"Fingerprint
         type","type":"options","options":[{"label":"SHA1","value":"1"},{"label":"SHA-256","value":"2"}]},{"name":"fingerprint","label":"Fingerprint","type":"text","options":null}]},{"name":"TXT","requires_priority":false,"managed_only":false,"exposed":true,"content_attributes":[{"name":"content","label":"Content","type":"long_text","options":null}]}]}'
-  recorded_at: Mon, 19 Apr 2021 20:42:24 GMT
+  recorded_at: Thu, 22 Apr 2021 16:31:36 GMT
 recorded_with: VCR 6.0.0

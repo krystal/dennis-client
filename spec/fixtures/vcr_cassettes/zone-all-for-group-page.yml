@@ -27,21 +27,21 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       Content-Length:
-      - '421'
+      - '432'
       Content-Type:
       - application/json
       Etag:
-      - W/"4d4fb0a0e3d1e32cd7069e3411008fc3"
+      - W/"e837193954f39fb4b99e282cde33b70b"
       Server:
       - Caddy
       X-Request-Id:
-      - 48ecaea2-19d4-407c-b824-2e82024f4351
+      - d7717c31-ae3f-4b9a-bec0-bbc57506aefd
       X-Runtime:
-      - '0.008778'
+      - '0.010744'
       Date:
-      - Mon, 19 Apr 2021 20:42:24 GMT
+      - Thu, 22 Apr 2021 16:31:37 GMT
     body:
       encoding: UTF-8
-      string: '{"pagination":{"current_page":2,"total_pages":2,"total":3,"per_page":2,"large_set":false},"zones":[{"id":7,"name":"potatos.com","created_at":1618864944,"updated_at":1618864944,"serial":1618864944,"default_ttl":3600,"external_reference":null,"verified":false,"nameservers_verified_at":null,"nameservers_checked_at":null,"always_verified":false,"nameservers_verified":false,"reverse_dns":false,"stale_verification":false}]}'
-  recorded_at: Mon, 19 Apr 2021 20:42:24 GMT
+      string: '{"pagination":{"current_page":2,"total_pages":2,"total":3,"per_page":2,"large_set":false},"zones":[{"id":10,"name":"potatos.com","created_at":1619109096,"updated_at":1619109096,"serial":1619109096,"default_ttl":3600,"external_reference":null,"verified":false,"nameservers_verified_at":null,"nameservers_checked_at":null,"always_verified":false,"nameservers_verified":false,"reverse_dns":false,"stale_verification":false,"tags":[]}]}'
+  recorded_at: Thu, 22 Apr 2021 16:31:37 GMT
 recorded_with: VCR 6.0.0
