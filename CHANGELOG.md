@@ -2,6 +2,12 @@
 
 This file contains all the latest changes and updates to this application.
 
+## 1.0.21
+
+### Bug Fixes
+
+- ensure options are passed from controller to underlying classes ([ebc52c](https://github.com/krystal/dennis-client/commit/ebc52cf6a126686ec953f9119b218543cff0ba97))
+
 ## 1.0.20
 
 ### Features
