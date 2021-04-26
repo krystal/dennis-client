@@ -26,8 +26,8 @@ module Dennis
       RecordType.all(self)
     end
 
-    def groups
-      Group.all(self)
+    def groups(**opts)
+      Group.all(self, **opts)
     end
 
     def group(id, field: :id)
@@ -38,8 +38,8 @@ module Dennis
       Group.create(self, **opts)
     end
 
-    def zones
-      Zone.all(self)
+    def zones(**opts)
+      Zone.all(self, **opts)
     end
 
     def zone(id, field: :id)
