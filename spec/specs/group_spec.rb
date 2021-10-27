@@ -69,7 +69,7 @@ module Dennis
 
       it 'raises an error if another issue arises' do
         VCR.use_cassette('group-find-by-invalid-column') do
-          expect { described_class.find_by(@client, :invalid, '') }.to raise_error(RapidAPI::RequestError) do |e|
+          expect { described_class.find_by(@client, :invalid, '') }.to raise_error(ApiaClient::RequestError) do |e|
             expect(e.status).to eq 400
             expect(e.code).to eq 'invalid_argument'
           end

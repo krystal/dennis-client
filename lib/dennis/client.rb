@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'rapid_api'
+require 'apia_client'
 require 'dennis/group'
 require 'dennis/zone'
 require 'dennis/nameserver'
@@ -18,7 +18,7 @@ module Dennis
       @hostname = hostname
       @api_key = api_key
 
-      @api = RapidAPI.load(hostname, namespace: 'api/v1', **options)
+      @api = ApiaClient.load(hostname, namespace: 'api/v1', **options)
       @api.headers['Authorization'] = "Bearer #{api_key}"
     end
 

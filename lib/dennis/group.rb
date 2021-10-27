@@ -21,7 +21,7 @@ module Dennis
         request = client.api.create_request(:get, 'groups/:group')
         request.arguments[:group] = { field => value }
         Group.new(client, request.perform.hash['group'])
-      rescue RapidAPI::RequestError => e
+      rescue ApiaClient::RequestError => e
         e.code == 'group_not_found' ? nil : raise
       end
 
@@ -29,7 +29,7 @@ module Dennis
         request = client.api.create_request(:post, 'groups')
         request.arguments[:properties] = { name: name, external_reference: external_reference }
         Group.new(client, request.perform.hash['group'])
-      rescue RapidAPI::RequestError => e
+      rescue ApiaClient::RequestError => e
         raise ValidationError, e.detail['errors'] if e.code == 'validation_error'
 
         raise
@@ -104,7 +104,7 @@ module Dennis
       req.arguments['properties'] = properties
       @hash = req.perform.hash['group']
       true
-    rescue RapidAPI::RequestError => e
+    rescue ApiaClient::RequestError => e
       raise ValidationError, e.detail['errors'] if e.code == 'validation_error'
 
       raise

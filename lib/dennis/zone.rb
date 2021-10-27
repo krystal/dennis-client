@@ -39,7 +39,7 @@ module Dennis
         request = client.api.create_request(:get, 'zones/:zone')
         request.arguments[:zone] = { field => value }
         new(client, request.perform.hash['zone'])
-      rescue RapidAPI::RequestError => e
+      rescue ApiaClient::RequestError => e
         e.code == 'zone_not_found' ? nil : raise
       end
 
@@ -54,7 +54,7 @@ module Dennis
           request.arguments[:allow_sub_domains_of_zones_in_other_groups] = allow_sub_domains_of_zones_in_other_groups
         end
         new(client, request.perform.hash['zone'])
-      rescue RapidAPI::RequestError => e
+      rescue ApiaClient::RequestError => e
         raise GroupNotFoundError if e.code == 'group_not_found'
         raise ValidationError, e.detail['errors'] if e.code == 'validation_error'
 
@@ -177,7 +177,7 @@ module Dennis
       req.arguments['properties'] = properties
       @hash = req.perform.hash['zone']
       true
-    rescue RapidAPI::RequestError => e
+    rescue ApiaClient::RequestError => e
       raise ValidationError, e.detail['errors'] if e.code == 'validation_error'
 
       raise
@@ -195,7 +195,7 @@ module Dennis
       req.arguments['zone'] = { id: id }
       @hash = req.perform.hash['zone']
       verified?
-    rescue RapidAPI::RequestError => e
+    rescue ApiaClient::RequestError => e
       raise unless e.code == 'nameservers_already_verified'
 
       true

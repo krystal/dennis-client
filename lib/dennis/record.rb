@@ -29,7 +29,7 @@ module Dennis
         request = client.api.create_request(:get, 'records/:record')
         request.arguments[:record] = { field => value }
         new(client, request.perform.hash['record'])
-      rescue RapidAPI::RequestError => e
+      rescue ApiaClient::RequestError => e
         e.code == 'record_not_found' ? nil : raise
       end
 
@@ -38,7 +38,7 @@ module Dennis
         request.arguments[:zone] = zone
         request.arguments[:properties] = properties_to_argument(properties)
         new(client, request.perform.hash['record'])
-      rescue RapidAPI::RequestError => e
+      rescue ApiaClient::RequestError => e
         raise ZoneNotFoundError if e.code == 'zone_not_found'
         raise ValidationError, e.detail['errors'] if e.code == 'validation_error'
 
@@ -161,7 +161,7 @@ module Dennis
       req.arguments['properties'] = self.class.properties_to_argument(properties, type: type)
       @hash = req.perform.hash['record']
       true
-    rescue RapidAPI::RequestError => e
+    rescue ApiaClient::RequestError => e
       raise ValidationError, e.detail['errors'] if e.code == 'validation_error'
 
       raise

@@ -14,7 +14,7 @@ module Dennis
         request = client.api.create_request(:get, 'nameservers/:nameserver')
         request.arguments[:nameserver] = { field => value }
         new(client, request.perform.hash['nameserver'])
-      rescue RapidAPI::RequestError => e
+      rescue ApiaClient::RequestError => e
         e.code == 'nameserver_not_found' ? nil : raise
       end
 
@@ -22,7 +22,7 @@ module Dennis
         request = client.api.create_request(:post, 'nameservers')
         request.arguments[:properties] = { name: name, server: server }
         new(client, request.perform.hash['nameserver'])
-      rescue RapidAPI::RequestError => e
+      rescue ApiaClient::RequestError => e
         raise ValidationError, e.detail['errors'] if e.code == 'validation_error'
 
         raise
@@ -67,7 +67,7 @@ module Dennis
       req.arguments['properties'] = properties
       @hash = req.perform.hash['nameserver']
       true
-    rescue RapidAPI::RequestError => e
+    rescue ApiaClient::RequestError => e
       raise ValidationError, e.detail['errors'] if e.code == 'validation_error'
 
       raise
