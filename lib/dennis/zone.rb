@@ -115,7 +115,7 @@ module Dennis
     end
 
     def txt_record_verified?
-      parse_time(@hash['txt_record_verified'])
+      @hash['txt_record_verified']
     end
 
     def txt_record_verification_token
