@@ -1,0 +1,103 @@
+---
+http_interactions:
+  - request:
+      method: get
+      uri: https://dennis.localhost/api/v1/zones/:zone?_arguments=%7B%22zone%22:%7B%22id%22:2%7D%7D
+      body:
+        encoding: US-ASCII
+        string: ""
+      headers:
+        Accept-Encoding:
+          - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+        Accept:
+          - "*/*"
+        User-Agent:
+          - Ruby
+        Authorization:
+          - Bearer test
+    response:
+      status:
+        code: 200
+        message: OK
+      headers:
+        Access-Control-Allow-Methods:
+          - "*"
+        Access-Control-Allow-Origin:
+          - "*"
+        Cache-Control:
+          - max-age=0, private, must-revalidate
+        Content-Length:
+          - "897"
+        Content-Type:
+          - application/json
+        Etag:
+          - W/"5f93b5a5447cdfd8cae56179f9dbdd81"
+        Server:
+          - Caddy
+        Server-Timing:
+          - sql.active_record;dur=10.80, instantiation.active_record;dur=5.86
+        X-Request-Id:
+          - b215d9e1-ff2e-4ce4-954d-45fd50640bd2
+        X-Runtime:
+          - "0.028380"
+        Date:
+          - Fri, 11 Oct 2024 12:13:53 GMT
+      body:
+        encoding: UTF-8
+        string:
+          '{"zone":{"id":2,"name":"bananas.com","group":{"id":1,"name":"Example
+          Group","external_reference":null,"created_at":1727871151,"updated_at":1727871151,"nameservers":[{"id":5,"name":"laura.example.com","server":2,"available":true,"created_at":1727871151,"updated_at":1727871151},{"id":2,"name":"alex.example.com","server":1,"available":true,"created_at":1727871151,"updated_at":1727871151}]},"created_at":1727871151,"updated_at":1728648800,"serial":1728648800,"default_ttl":3600,"external_reference":"bananas","verified":false,"nameservers_verified_at":null,"nameservers_checked_at":1728648800,"always_verified":false,"nameservers_verified":false,"reverse_dns":false,"stale_verification":false,"tags":["fruit"],"txt_record_verification_token":"dns-verify
+          16d739e068553921b8bd07a4edbd42d029ffa505ba6b2408","txt_record_checked_at":1728648800,"txt_record_verified_at":null,"txt_record_verified":false}}'
+    recorded_at: Fri, 11 Oct 2024 12:13:53 GMT
+  - request:
+      method: post
+      uri: https://dennis.localhost/api/v1/zones/:zone/verify
+      body:
+        encoding: UTF-8
+        string: '{"zone":{"id":2}}'
+      headers:
+        Accept-Encoding:
+          - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+        Accept:
+          - "*/*"
+        User-Agent:
+          - Ruby
+        Authorization:
+          - Bearer test
+        Content-Type:
+          - application/json
+    response:
+      status:
+        code: 200
+        message: OK
+      headers:
+        Access-Control-Allow-Methods:
+          - "*"
+        Access-Control-Allow-Origin:
+          - "*"
+        Cache-Control:
+          - max-age=0, private, must-revalidate
+        Content-Length:
+          - "897"
+        Content-Type:
+          - application/json
+        Etag:
+          - W/"ab948b75f6258beb5669bf5e446fd51d"
+        Server:
+          - Caddy
+        Server-Timing:
+          - sql.active_record;dur=92.76, instantiation.active_record;dur=7.75
+        X-Request-Id:
+          - dadaff5d-2dd7-4d25-bc6d-6f05f7b2a88e
+        X-Runtime:
+          - "0.509415"
+        Date:
+          - Fri, 11 Oct 2024 12:13:53 GMT
+      body:
+        encoding: UTF-8
+        string:
+          '{"zone":{"id":2,"name":"bananas.com","group":{"id":1,"name":"Example
+          Group","external_reference":null,"created_at":1727871151,"updated_at":1727871151,"nameservers":[{"id":5,"name":"laura.example.com","server":2,"available":true,"created_at":1727871151,"updated_at":1727871151},{"id":2,"name":"alex.example.com","server":1,"available":true,"created_at":1727871151,"updated_at":1727871151}]},"created_at":1727871151,"updated_at":1728648833,"serial":1728648833,"default_ttl":3600,"external_reference":"bananas","verified":false,"nameservers_verified_at":null,"nameservers_checked_at":1728648833,"always_verified":false,"nameservers_verified":false,"reverse_dns":false,"stale_verification":false,"tags":["fruit"],"txt_record_verification_token":"dns-verify
+          16d739e068553921b8bd07a4edbd42d029ffa505ba6b2408","txt_record_checked_at":1728648833,"txt_record_verified_at":null,"txt_record_verified":false}}'
+    recorded_at: Fri, 11 Oct 2024 12:13:53 GMT
+recorded_with: VCR 6.1.0

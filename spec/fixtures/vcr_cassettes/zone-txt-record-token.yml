@@ -1,0 +1,51 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://dennis.localhost/api/v1/zones/:zone?_arguments=%7B%22zone%22:%7B%22id%22:1%7D%7D
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Authorization:
+      - Bearer PnvRFO3u9VoFss1epPnGECC4t7wRJWeE
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Methods:
+      - "*"
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Length:
+      - '889'
+      Content-Type:
+      - application/json
+      Etag:
+      - W/"b84d1cf8a810d4e5d9cd55d993845475"
+      Server:
+      - Caddy
+      Server-Timing:
+      - sql.active_record;dur=33.04, instantiation.active_record;dur=0.15
+      X-Request-Id:
+      - 86116ac0-5544-4e65-9cbd-d4fd67088303
+      X-Runtime:
+      - '0.054209'
+      Date:
+      - Fri, 11 Oct 2024 12:13:53 GMT
+    body:
+      encoding: UTF-8
+      string: '{"zone":{"id":1,"name":"example.com","group":{"id":1,"name":"Example
+        Group","external_reference":null,"created_at":1727871151,"updated_at":1727871151,"nameservers":[{"id":5,"name":"laura.example.com","server":2,"available":true,"created_at":1727871151,"updated_at":1727871151},{"id":2,"name":"alex.example.com","server":1,"available":true,"created_at":1727871151,"updated_at":1727871151}]},"created_at":1727871151,"updated_at":1728572488,"serial":1728572488,"default_ttl":3600,"external_reference":null,"verified":true,"nameservers_verified_at":1727871151,"nameservers_checked_at":1728572488,"always_verified":false,"nameservers_verified":true,"reverse_dns":false,"stale_verification":false,"tags":[],"txt_record_verification_token":"dns-verify
+        012a5db0ee5670866c4ed6edeb36f05571a8c8f8c937efec","txt_record_checked_at":1728572488,"txt_record_verified_at":null,"txt_record_verified":false}}'
+  recorded_at: Fri, 11 Oct 2024 12:13:53 GMT
+recorded_with: VCR 6.1.0

@@ -198,6 +198,49 @@ module Dennis
       end
     end
 
+    describe '#verify' do
+      it 'returns true if zone is already verified' do
+        VCR.use_cassette('zone-verify-already-verified') do
+          zone = described_class.find_by(@client, :id, 1)
+          expect(zone.verified?).to be true
+          expect(zone.verify).to be true
+        end
+      end
+
+      it 'returns false if zone cannot be verified' do
+        VCR.use_cassette('zone-verify-cannot-verify') do
+          zone = described_class.find_by(@client, :id, 2)
+          expect(zone.verified?).to be false
+          expect(zone.verify).to be false
+        end
+      end
+    end
+
+    describe '#txt_record_verification_token' do
+      it 'exists for zones' do
+        VCR.use_cassette('zone-txt-record-token') do
+          zone = described_class.find_by(@client, :id, 1)
+          expect(zone.txt_record_verification_token).to be_a String
+        end
+      end
+    end
+
+    describe '#txt_record_verified_at' do
+      it 'is present when the txt record is verified' do
+        VCR.use_cassette('zone-verified-txt-record') do
+          zone = described_class.find_by(@client, :id, 3)
+          expect(zone.txt_record_verified_at).not_to be nil
+        end
+      end
+
+      it 'is not present when the txt record is not verified' do
+        VCR.use_cassette('zone-verify-cannot-verify') do
+          zone = described_class.find_by(@client, :id, 2)
+          expect(zone.txt_record_verified_at).to be nil
+        end
+      end
+    end
+
     describe '#verify_nameservers' do
       it 'returns true if the nameserver is already verified' do
         VCR.use_cassette('zone-verify-nameservers-already-verified') do
@@ -329,8 +372,8 @@ module Dennis
           expect(existing).to be nil
 
           result = described_class.create_or_update(@client, group: { id: 1 },
-                                                             name: 'cou1.com',
-                                                             external_reference: 'cou-zone-1')
+                                                    name: 'cou1.com',
+                                                    external_reference: 'cou-zone-1')
           expect(result).to be_a Dennis::Zone
         end
 
@@ -348,8 +391,8 @@ module Dennis
           expect(existing.name).to eq 'cou1.com'
 
           result = described_class.create_or_update(@client, group: { id: 1 },
-                                                             name: 'cou2.com',
-                                                             external_reference: 'cou-zone-1')
+                                                    name: 'cou2.com',
+                                                    external_reference: 'cou-zone-1')
           expect(result).to be_a Dennis::Zone
         end
 
