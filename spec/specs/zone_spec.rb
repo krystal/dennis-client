@@ -225,36 +225,18 @@ module Dennis
       end
     end
 
-    describe '#txt_record_verified_at' do
-      it 'is present when the txt record is verified' do
-        VCR.use_cassette('zone-verified-txt-record') do
+    describe '#verified_at' do
+      it 'is present when the zone is verified' do
+        VCR.use_cassette('zone-verified') do
           zone = described_class.find_by(@client, :id, 3)
-          expect(zone.txt_record_verified_at).not_to be nil
+          expect(zone.verified_at).not_to be nil
         end
       end
 
-      it 'is not present when the txt record is not verified' do
+      it 'is not present when the zone is not verified' do
         VCR.use_cassette('zone-verify-cannot-verify') do
           zone = described_class.find_by(@client, :id, 2)
-          expect(zone.txt_record_verified_at).to be nil
-        end
-      end
-    end
-
-    describe '#verify_nameservers' do
-      it 'returns true if the nameserver is already verified' do
-        VCR.use_cassette('zone-verify-nameservers-already-verified') do
-          zone = described_class.find_by(@client, :id, 1)
-          expect(zone.verified?).to be true
-          expect(zone.verify_nameservers).to be true
-        end
-      end
-
-      it 'returns false if the nameserver cannot be verified' do
-        VCR.use_cassette('zone-verify-nameservers-cannot-verify') do
-          zone = described_class.find_by(@client, :id, 2)
-          expect(zone.verified?).to be false
-          expect(zone.verify_nameservers).to be false
+          expect(zone.verified_at).to be nil
         end
       end
     end
@@ -282,22 +264,6 @@ module Dennis
             expect(z).to eq({ id: 1 })
           end
           zone.records
-        end
-      end
-    end
-
-    describe '#nameservers_verified_at?' do
-      it 'is true when the nameservers are verified' do
-        VCR.use_cassette('zone-verified-nameservers') do
-          zone = described_class.find_by(@client, :id, 1)
-          expect(zone.nameservers_verified?).to be true
-        end
-      end
-
-      it 'is false when the nameservers are verified' do
-        VCR.use_cassette('zone-not-verified-nameservers') do
-          zone = described_class.find_by(@client, :id, 2)
-          expect(zone.nameservers_verified?).to be false
         end
       end
     end

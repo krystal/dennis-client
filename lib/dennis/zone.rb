@@ -94,28 +94,12 @@ module Dennis
       @hash['external_reference']
     end
 
-    def nameservers_verified_at
-      parse_time(@hash['nameservers_verified_at'])
+    def verified_at
+      parse_time(@hash['verified_at'])
     end
 
-    def nameservers_checked_at
-      parse_time(@hash['nameservers_checked_at'])
-    end
-
-    def nameservers_verified?
-      @hash['nameservers_verified']
-    end
-
-    def txt_record_verified_at
-      parse_time(@hash['txt_record_verified_at'])
-    end
-
-    def txt_record_checked_at
-      parse_time(@hash['txt_record_checked_at'])
-    end
-
-    def txt_record_verified?
-      @hash['txt_record_verified']
+    def verification_checked_at
+      parse_time(@hash['verification_checked_at'])
     end
 
     def txt_record_verification_token
@@ -213,17 +197,6 @@ module Dennis
       verified?
     rescue ApiaClient::RequestError => e
       raise unless e.code == 'zone_already_verified'
-
-      true
-    end
-
-    def verify_nameservers
-      req = @client.api.create_request(:post, 'zones/:zone/verify_nameservers')
-      req.arguments['zone'] = { id: id }
-      @hash = req.perform.hash['zone']
-      verified?
-    rescue ApiaClient::RequestError => e
-      raise unless e.code == 'nameservers_already_verified'
 
       true
     end

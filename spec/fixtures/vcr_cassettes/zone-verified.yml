@@ -1,0 +1,50 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://dennis.localhost/api/v1/zones/:zone?_arguments=%7B%22zone%22:%7B%22id%22:3%7D%7D
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Authorization:
+      - Bearer n9jNzKBcBrxTg8Loo5jNhMIGDdjbi0fe
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Methods:
+      - "*"
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Length:
+      - '735'
+      Content-Type:
+      - application/json
+      Etag:
+      - W/"ffd0f89989a54b55254ea5798c254a6a"
+      Server:
+      - Caddy
+      Server-Timing:
+      - sql.active_record;dur=32.97, instantiation.active_record;dur=4.70
+      X-Request-Id:
+      - 1af72f50-d393-4737-adbb-39c5c60fe473
+      X-Runtime:
+      - '0.195835'
+      Date:
+      - Mon, 14 Oct 2024 21:57:41 GMT
+    body:
+      encoding: UTF-8
+      string: '{"zone":{"id":3,"name":"another.com","group":{"id":2,"name":"Another
+        Group","external_reference":"another","created_at":1727871151,"updated_at":1727871151,"nameservers":[{"id":6,"name":"kelly.example.com","server":2,"available":true,"created_at":1727871151,"updated_at":1727871151},{"id":2,"name":"alex.example.com","server":1,"available":true,"created_at":1727871151,"updated_at":1727871151}]},"created_at":1727871151,"updated_at":1728642319,"serial":1728642319,"default_ttl":3600,"external_reference":null,"verified":true,"verified_at":1727871151,"verification_checked_at":1728572489,"always_verified":false,"reverse_dns":false,"stale_verification":false,"tags":[],"txt_record_verification_token":"C0kTWrajps9T7nHABWAhJfISVVUiDxCK"}}'
+  recorded_at: Mon, 14 Oct 2024 21:57:41 GMT
+recorded_with: VCR 6.1.0
