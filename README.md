@@ -127,3 +127,22 @@ An unrestricted API token is required, on your local Dennis Rails console run:
 ```ruby
 APIToken.create!(name: 'Unrestricted Token', secret: '1.test', global: true)
 ```
+
+## Release process
+
+The release process is handled by [Schmersion](https://github.com/krystal/schmersion) which is configured in `.schmersion.yaml`.
+
+Schmersion takes care of versioning the gem, creating a tag and updating the changelog.
+
+### Steps:
+
+1. Make a branch from `main`
+2. Make your changes and commit them to Git using [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/) style
+3. Open a PR on GitHub for review
+4. Once approved, merge the PR into `main`
+5. Pull down main locally
+6. Run `schmersion pending` to confirm the next version and what will be included in the release
+7. Run `schmersion release --dry-run` to verify the release
+8. Run `schmersion release` to commit the changes and create the new tag
+9. Run `git push --tags origin main` to push the commit and new tag to GitHub
+10. GitHub Actions will automatically publish the new gem to RubyGems and Krystal's GitHub Package Registry
