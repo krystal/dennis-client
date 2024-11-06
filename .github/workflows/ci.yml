@@ -4,11 +4,11 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
       - uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 2.7
+          ruby-version: 3.3
 
       - name: Configure Bundler
         run: bundle config set rubygems.pkg.github.com "${{ secrets.KRYSTAL_GITHUB_PACKAGE_READ_KEY }}"
@@ -31,7 +31,7 @@ jobs:
           - 3.0
           - 3.3
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: ${{ matrix.ruby_version }}
@@ -53,9 +53,9 @@ jobs:
       - uses: actions/checkout@master
 
       - name: Set up Ruby
-        uses: actions/setup-ruby@v1
+        uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 2.7
+          ruby-version: 3.3
 
       - name: Export version from tag name
         run: echo ${GITHUB_REF/refs\/tags\//} > VERSION
