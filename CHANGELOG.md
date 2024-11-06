@@ -2,6 +2,12 @@
 
 This file contains all the latest changes and updates to this application.
 
+## 1.2.0
+
+### Features
+
+- add support for new POST zones/:zone/verify endpoint ([00078e](https://github.com/krystal/dennis-client/commit/00078ea660ca886c4ddb1b78f522fcb5e67bad90))
+
 ## 1.1.1
 
 ## 1.1.0
