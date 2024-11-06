@@ -2,6 +2,14 @@
 
 This is a Ruby API client for Dennis.
 
+## Installation
+
+Install the gem and add to the application's Gemfile by executing:
+
+```
+$ bundle add dennis-client
+```
+
 ## Usage
 
 ```ruby
@@ -79,4 +87,43 @@ client.tagged_records(['tag1'])
 # needed for them. This will return a hash keyed with the name of the type.
 client.record_types
 client.record_types['A']
+```
+
+## Tests
+
+Run the tests and linting via:
+
+```
+bin/rspec spec
+bin/rubocop
+```
+
+### Updating VCR cassettes
+
+If you are making changes that require updates to VCR cassettes then by default it expects to make requests to: `https://dennis.localhost`.
+This is configured in `spec/support/with_client.rb`.
+
+In Caddy you can enable this with:
+
+```
+dennis.localhost:80 {
+  reverse_proxy 127.0.0.1:5050
+}
+
+dennis.localhost:443 {
+  tls internal
+  reverse_proxy 127.0.0.1:5050
+}
+```
+
+Restart Caddy for the changes to be applied, if you're using homebrew it's `brew services restart caddy`.
+
+Make sure you have `127.0.0.1 dennis.localhost` declared in /etc/hosts.
+
+### API Token
+
+An unrestricted API token is required, on your local Dennis Rails console run:
+
+```ruby
+APIToken.create!(name: 'Unrestricted Token', secret: '1.test', global: true)
 ```

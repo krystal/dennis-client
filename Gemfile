@@ -12,4 +12,4 @@ gem 'vcr'
 gem 'webmock'
 
 gem 'rake'
-gem 'rubocop', '0.91.1'
+gem 'rubocop'

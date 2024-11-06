@@ -3,6 +3,10 @@ inherit_from:
 
 AllCops:
   TargetRubyVersion: 2.5
+  SuggestExtensions: false
+  Exclude:
+    - "bin/**/*"
+    - "dennis-client.gemspec"
 
 Metrics/ModuleLength:
   Enabled: false
