@@ -1,0 +1,103 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://dennis.localhost/api/v1/zones/:zone?_arguments=%7B%22zone%22:%7B%22id%22:2%7D%7D
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Authorization:
+      - Bearer 1.test
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Methods:
+      - "*"
+      Access-Control-Allow-Origin:
+      - "*"
+      Alt-Svc:
+      - h3=":443"; ma=2592000
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Length:
+      - '833'
+      Content-Type:
+      - application/json
+      Etag:
+      - W/"d8f79e5b77d4bf0c9fbf98d4647da863"
+      Server:
+      - Caddy
+      Server-Timing:
+      - sql.active_record;dur=10.38, instantiation.active_record;dur=11.44
+      X-Request-Id:
+      - 77fae8ce-c981-452d-b887-82d435636bdb
+      X-Runtime:
+      - '0.031839'
+      Date:
+      - Wed, 06 Nov 2024 12:20:42 GMT
+    body:
+      encoding: UTF-8
+      string: '{"zone":{"id":2,"name":"bananas.com","group":{"id":1,"name":"Example
+        Group","external_reference":null,"created_at":1730893499,"updated_at":1730893499,"nameservers":[{"id":4,"name":"ruth.example.com","server":2,"available":true,"created_at":1730893499,"updated_at":1730893499},{"id":1,"name":"simon.example.com","server":1,"available":true,"created_at":1730893499,"updated_at":1730893499}]},"created_at":1730893499,"updated_at":1730895355,"serial":1730895355,"default_ttl":3600,"external_reference":"bananas","verified":false,"verified_at":null,"verification_checked_at":1730895355,"nameservers_verified_at":null,"nameservers_checked_at":1730895355,"nameservers_verified":false,"always_verified":false,"reverse_dns":false,"stale_verification":false,"tags":["fruit"],"txt_record_verification_token":"syjTQPrDaxGRci5Mn2DF5c5MG3xMzGTV"}}'
+  recorded_at: Wed, 06 Nov 2024 12:20:42 GMT
+- request:
+    method: post
+    uri: https://dennis.localhost/api/v1/zones/:zone/verify
+    body:
+      encoding: UTF-8
+      string: '{"zone":{"id":2}}'
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Authorization:
+      - Bearer 1.test
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Methods:
+      - "*"
+      Access-Control-Allow-Origin:
+      - "*"
+      Alt-Svc:
+      - h3=":443"; ma=2592000
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Length:
+      - '833'
+      Content-Type:
+      - application/json
+      Etag:
+      - W/"342b0444162b222ddca94a4cdfdb7ce6"
+      Server:
+      - Caddy
+      Server-Timing:
+      - sql.active_record;dur=24.44, instantiation.active_record;dur=2.74
+      X-Request-Id:
+      - ae4888e3-84d5-4e4a-b80c-bd779b9ad29f
+      X-Runtime:
+      - '0.425396'
+      Date:
+      - Wed, 06 Nov 2024 12:20:42 GMT
+    body:
+      encoding: UTF-8
+      string: '{"zone":{"id":2,"name":"bananas.com","group":{"id":1,"name":"Example
+        Group","external_reference":null,"created_at":1730893499,"updated_at":1730893499,"nameservers":[{"id":4,"name":"ruth.example.com","server":2,"available":true,"created_at":1730893499,"updated_at":1730893499},{"id":1,"name":"simon.example.com","server":1,"available":true,"created_at":1730893499,"updated_at":1730893499}]},"created_at":1730893499,"updated_at":1730895642,"serial":1730895642,"default_ttl":3600,"external_reference":"bananas","verified":false,"verified_at":null,"verification_checked_at":1730895642,"nameservers_verified_at":null,"nameservers_checked_at":1730895642,"nameservers_verified":false,"always_verified":false,"reverse_dns":false,"stale_verification":false,"tags":["fruit"],"txt_record_verification_token":"syjTQPrDaxGRci5Mn2DF5c5MG3xMzGTV"}}'
+  recorded_at: Wed, 06 Nov 2024 12:20:42 GMT
+recorded_with: VCR 6.3.1

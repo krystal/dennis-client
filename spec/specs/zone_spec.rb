@@ -216,6 +216,27 @@ module Dennis
       end
     end
 
+    describe '#verify' do
+      it 'returns true if the zone is already verified' do
+        VCR.use_cassette('zone-verify-already-verified') do
+          zone = described_class.find_by(@client, :id, 1)
+          expect(zone.verified?).to be true
+          expect(zone.verify).to be true
+          expect(zone.verified_at).to be_a Integer
+        end
+      end
+
+      it 'returns false if the zone cannot be verified' do
+        VCR.use_cassette('zone-verify-cannot-verify') do
+          zone = described_class.find_by(@client, :id, 2)
+          expect(zone.verified?).to be false
+          expect(zone.verify).to be false
+          expect(zone.verified_at.nil?).to be true
+          expect(zone.txt_record_verification_token).to be_a String
+        end
+      end
+    end
+
     describe '#create_record' do
       it 'creates a zone' do
         VCR.use_cassette('zone-find-by-id') do

@@ -1,0 +1,102 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://dennis.localhost/api/v1/zones/:zone?_arguments=%7B%22zone%22:%7B%22id%22:1%7D%7D
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Authorization:
+      - Bearer 1.test
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Methods:
+      - "*"
+      Access-Control-Allow-Origin:
+      - "*"
+      Alt-Svc:
+      - h3=":443"; ma=2592000
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Length:
+      - '831'
+      Content-Type:
+      - application/json
+      Etag:
+      - W/"7b3f2380775987af35d456284651a8d1"
+      Server:
+      - Caddy
+      Server-Timing:
+      - sql.active_record;dur=40.34, instantiation.active_record;dur=1.21
+      X-Request-Id:
+      - 2012e875-4d2a-4b0e-b27b-365ea8ff3c90
+      X-Runtime:
+      - '0.074973'
+      Date:
+      - Wed, 06 Nov 2024 12:19:45 GMT
+    body:
+      encoding: UTF-8
+      string: '{"zone":{"id":1,"name":"example.com","group":{"id":1,"name":"Example
+        Group","external_reference":null,"created_at":1730893499,"updated_at":1730893499,"nameservers":[{"id":4,"name":"ruth.example.com","server":2,"available":true,"created_at":1730893499,"updated_at":1730893499},{"id":1,"name":"simon.example.com","server":1,"available":true,"created_at":1730893499,"updated_at":1730893499}]},"created_at":1730893499,"updated_at":1730893855,"serial":1730893855,"default_ttl":3600,"external_reference":null,"verified":true,"verified_at":1730893499,"verification_checked_at":1730893855,"nameservers_verified_at":1730893499,"nameservers_checked_at":1730893855,"nameservers_verified":true,"always_verified":false,"reverse_dns":false,"stale_verification":false,"tags":[],"txt_record_verification_token":"aVTAl1skLDDAaQks292z9uYCCviE4rnx"}}'
+  recorded_at: Wed, 06 Nov 2024 12:19:45 GMT
+- request:
+    method: post
+    uri: https://dennis.localhost/api/v1/zones/:zone/verify
+    body:
+      encoding: UTF-8
+      string: '{"zone":{"id":1}}'
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Authorization:
+      - Bearer 1.test
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 409
+      message: Conflict
+    headers:
+      Access-Control-Allow-Methods:
+      - "*"
+      Access-Control-Allow-Origin:
+      - "*"
+      Alt-Svc:
+      - h3=":443"; ma=2592000
+      Cache-Control:
+      - no-cache
+      Content-Length:
+      - '73'
+      Content-Type:
+      - application/json
+      Server:
+      - Caddy
+      Server-Timing:
+      - sql.active_record;dur=1.75, instantiation.active_record;dur=0.07
+      X-Api-Schema:
+      - json-error
+      X-Request-Id:
+      - 7af3b4ca-7a46-4f4c-ac58-61e6579311f1
+      X-Runtime:
+      - '0.005879'
+      Date:
+      - Wed, 06 Nov 2024 12:19:45 GMT
+    body:
+      encoding: UTF-8
+      string: '{"error":{"code":"zone_already_verified","description":null,"detail":{}}}'
+  recorded_at: Wed, 06 Nov 2024 12:19:45 GMT
+recorded_with: VCR 6.3.1
