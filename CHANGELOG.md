@@ -2,6 +2,12 @@
 
 This file contains all the latest changes and updates to this application.
 
+## 1.2.1
+
+### Bug Fixes
+
+- ensure CI can publish the gem ([caa635](https://github.com/krystal/dennis-client/commit/caa635104aed8fb79237991b8cc06f0ebc32a5d3))
+
 ## 1.2.0
 
 ### Features
