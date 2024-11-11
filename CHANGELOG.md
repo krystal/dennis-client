@@ -2,6 +2,12 @@
 
 This file contains all the latest changes and updates to this application.
 
+## 1.2.2
+
+### Bug Fixes
+
+- support for irregular dns types ([d74487](https://github.com/krystal/dennis-client/commit/d74487cceee566cd45f0b98f2d6bbf29aa526ae6))
+
 ## 1.2.1
 
 ### Bug Fixes
