@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: https://dennis.dev.adam.ac/api/v1/records
+    uri: https://dennis.localhost/api/v1/records
     body:
       encoding: UTF-8
       string: '{"zone":{"id":1},"properties":{}}'
@@ -26,6 +26,8 @@ http_interactions:
       - "*"
       Access-Control-Allow-Origin:
       - "*"
+      Alt-Svc:
+      - h3=":443"; ma=2592000
       Cache-Control:
       - no-cache
       Content-Length:
@@ -34,18 +36,20 @@ http_interactions:
       - application/json
       Server:
       - Caddy
+      Server-Timing:
+      - sql.active_record;dur=9.38, instantiation.active_record;dur=0.19
       X-Api-Schema:
       - json-error
       X-Request-Id:
-      - 93d5c7e4-2cb4-4416-87fd-c218afd870ea
+      - 1ef97b53-6540-4445-ac82-1d45558d5f59
       X-Runtime:
-      - '0.010667'
+      - '0.039311'
       Date:
-      - Thu, 22 Apr 2021 16:31:35 GMT
+      - Mon, 11 Nov 2024 12:07:22 GMT
     body:
       encoding: UTF-8
       string: '{"error":{"code":"validation_error","description":"A validation error
         occurred when saving the object","detail":{"errors":[{"attribute":"type","type":"blank","message":"Type
         can''t be blank"}]}}}'
-  recorded_at: Thu, 22 Apr 2021 16:31:35 GMT
-recorded_with: VCR 6.0.0
+  recorded_at: Mon, 11 Nov 2024 12:07:22 GMT
+recorded_with: VCR 6.3.1

@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://dennis.dev.adam.ac/api/v1/groups?_arguments=%7B%22per_page%22:2%7D
+    uri: https://dennis.localhost/api/v1/groups?_arguments=%7B%22per_page%22:2%7D
     body:
       encoding: US-ASCII
       string: ''
@@ -24,26 +24,30 @@ http_interactions:
       - "*"
       Access-Control-Allow-Origin:
       - "*"
+      Alt-Svc:
+      - h3=":443"; ma=2592000
       Cache-Control:
       - max-age=0, private, must-revalidate
       Content-Length:
-      - '794'
+      - '797'
       Content-Type:
       - application/json
       Etag:
-      - W/"c768a5709623888abdd335b3ab83ddc2"
+      - W/"251e7c3ec5f1d5259ed7ee5eb8fa10d4"
       Server:
       - Caddy
+      Server-Timing:
+      - sql.active_record;dur=10.74, instantiation.active_record;dur=0.09
       X-Request-Id:
-      - a726ac19-8e35-49f9-b5a6-99e41026802c
+      - 32e87778-ace7-40f9-8b72-a10300f092d2
       X-Runtime:
-      - '0.010825'
+      - '0.021637'
       Date:
-      - Thu, 22 Apr 2021 16:31:34 GMT
+      - Mon, 11 Nov 2024 12:07:20 GMT
     body:
       encoding: UTF-8
       string: '{"pagination":{"current_page":1,"total_pages":2,"total":4,"per_page":2,"large_set":false},"groups":[{"id":2,"name":"Another
-        Group","external_reference":"another","created_at":1619109092,"updated_at":1619109092,"nameservers":[{"id":3,"name":"dave.example.com","server":1,"available":true,"created_at":1619109091,"updated_at":1619109091},{"id":4,"name":"ruth.example.com","server":2,"available":true,"created_at":1619109091,"updated_at":1619109091}]},{"id":1,"name":"Example
-        Group","external_reference":null,"created_at":1619109091,"updated_at":1619109091,"nameservers":[{"id":4,"name":"ruth.example.com","server":2,"available":true,"created_at":1619109091,"updated_at":1619109091},{"id":2,"name":"alex.example.com","server":1,"available":true,"created_at":1619109091,"updated_at":1619109091}]}]}'
-  recorded_at: Thu, 22 Apr 2021 16:31:34 GMT
-recorded_with: VCR 6.0.0
+        Group","external_reference":"another","created_at":1731326830,"updated_at":1731326830,"nameservers":[{"id":3,"name":"dave.example.com","server":1,"available":true,"created_at":1731326829,"updated_at":1731326829},{"id":5,"name":"laura.example.com","server":2,"available":true,"created_at":1731326829,"updated_at":1731326829}]},{"id":1,"name":"Example
+        Group","external_reference":null,"created_at":1731326829,"updated_at":1731326829,"nameservers":[{"id":1,"name":"simon.example.com","server":1,"available":true,"created_at":1731326829,"updated_at":1731326829},{"id":5,"name":"laura.example.com","server":2,"available":true,"created_at":1731326829,"updated_at":1731326829}]}]}'
+  recorded_at: Mon, 11 Nov 2024 12:07:20 GMT
+recorded_with: VCR 6.3.1

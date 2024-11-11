@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://dennis.dev.adam.ac/api/v1/zones?_arguments=%7B%22query%22:%22example%22%7D
+    uri: https://dennis.localhost/api/v1/zones?_arguments=%7B%22query%22:%22example%22%7D
     body:
       encoding: US-ASCII
       string: ''
@@ -24,25 +24,29 @@ http_interactions:
       - "*"
       Access-Control-Allow-Origin:
       - "*"
+      Alt-Svc:
+      - h3=":443"; ma=2592000
       Cache-Control:
       - max-age=0, private, must-revalidate
       Content-Length:
-      - '476'
+      - '611'
       Content-Type:
       - application/json
       Etag:
-      - W/"29c2e4bd761221034c63ea44a9d283dc"
+      - W/"d3f0295a9ae5a5eb763df1356f2a289d"
       Server:
       - Caddy
+      Server-Timing:
+      - sql.active_record;dur=7.24, instantiation.active_record;dur=0.09
       X-Request-Id:
-      - 7cc0d871-bda6-4005-8c4c-5b966c6c82b9
+      - 0be52485-3783-432a-836a-c1ed18d3c5a6
       X-Runtime:
-      - '0.010360'
+      - '0.016859'
       Date:
-      - Thu, 22 Apr 2021 16:31:36 GMT
+      - Mon, 11 Nov 2024 12:07:23 GMT
     body:
       encoding: UTF-8
       string: '{"pagination":{"current_page":1,"total_pages":1,"total":1,"per_page":30,"large_set":false},"zones":[{"id":1,"name":"example.com","group":{"id":1,"name":"Renamed
-        Group"},"created_at":1619109092,"updated_at":1619109095,"serial":1619109095,"default_ttl":3600,"external_reference":null,"verified":true,"nameservers_verified_at":1619109092,"nameservers_checked_at":null,"always_verified":false,"nameservers_verified":true,"reverse_dns":false,"stale_verification":false,"tags":[]}]}'
-  recorded_at: Thu, 22 Apr 2021 16:31:36 GMT
-recorded_with: VCR 6.0.0
+        Group"},"created_at":1731326829,"updated_at":1731326843,"serial":1731326843,"default_ttl":3600,"external_reference":null,"verified":true,"verified_at":1731326829,"verification_checked_at":1731326833,"nameservers_verified_at":1731326829,"nameservers_checked_at":1731326833,"nameservers_verified":true,"always_verified":false,"reverse_dns":false,"stale_verification":false,"tags":[],"txt_record_verification_token":"PRXXnIUPD95oskWqxKtxN5bbQkvbbo6K"}]}'
+  recorded_at: Mon, 11 Nov 2024 12:07:23 GMT
+recorded_with: VCR 6.3.1

@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://dennis.dev.adam.ac/api/v1/zones/:zone/records?_arguments=%7B%22zone%22:%7B%22id%22:1%7D,%22query%22:%22_domainkey%22%7D
+    uri: https://dennis.localhost/api/v1/zones/:zone/records?_arguments=%7B%22zone%22:%7B%22id%22:1%7D,%22query%22:%22_domainkey%22%7D
     body:
       encoding: US-ASCII
       string: ''
@@ -24,6 +24,8 @@ http_interactions:
       - "*"
       Access-Control-Allow-Origin:
       - "*"
+      Alt-Svc:
+      - h3=":443"; ma=2592000
       Cache-Control:
       - max-age=0, private, must-revalidate
       Content-Length:
@@ -31,20 +33,22 @@ http_interactions:
       Content-Type:
       - application/json
       Etag:
-      - W/"92ffa1641b2bf3d12ea3cd84864f29d5"
+      - W/"e6113cdce107cf15f0baea0047738d0d"
       Server:
       - Caddy
+      Server-Timing:
+      - sql.active_record;dur=13.76, instantiation.active_record;dur=0.23
       X-Request-Id:
-      - 2f3edea5-32f8-4bef-ba25-d6561e803678
+      - db12d214-6190-4062-8f3c-149845cce7a1
       X-Runtime:
-      - '0.010186'
+      - '0.040623'
       Date:
-      - Thu, 22 Apr 2021 16:31:35 GMT
+      - Mon, 11 Nov 2024 12:07:22 GMT
     body:
       encoding: UTF-8
-      string: '{"records":[{"id":11,"name":"cm._domainkey","external_reference":null,"type":"TXT","full_name":"cm._domainkey.example.com","ttl":null,"priority":null,"managed":false,"created_at":1619109092,"updated_at":1619109092,"tags":[],"raw_content":"\"k=rsa;
+      string: '{"records":[{"id":11,"name":"cm._domainkey","external_reference":null,"type":"TXT","full_name":"cm._domainkey.example.com","ttl":null,"priority":null,"managed":false,"created_at":1731326829,"updated_at":1731326829,"tags":[],"raw_content":"\"k=rsa;
         p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCsJyYnv48KsqIS/yLiU1YGjpo+KPTkKAtJEq7RW7dMEM8IzOx96Qa3S0NYDMPr9QJOJoAomLl51YFe5Xu3WlR5f8uNjH/7UujGL9RpT+Gaa23W85qhrWuQpZnBqFczLdxf3R/OP4Sm5KisVvCP+gain4h0yxFFM4UZT4893bl6QwIDAQAB\"","display_content":"k=rsa;
         p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCsJyYnv48KsqIS/yLiU1YGjpo+KPTkKAtJEq7RW7dMEM8IzOx96Qa3S0NYDMPr9QJOJoAomLl51YFe5Xu3WlR5f8uNjH/7UujGL9RpT+Gaa23W85qhrWuQpZnBqFczLdxf3R/OP4Sm5KisVvCP+gain4h0yxFFM4UZT4893bl6QwIDAQAB","content":{"TXT":{"content":"k=rsa;
         p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCsJyYnv48KsqIS/yLiU1YGjpo+KPTkKAtJEq7RW7dMEM8IzOx96Qa3S0NYDMPr9QJOJoAomLl51YFe5Xu3WlR5f8uNjH/7UujGL9RpT+Gaa23W85qhrWuQpZnBqFczLdxf3R/OP4Sm5KisVvCP+gain4h0yxFFM4UZT4893bl6QwIDAQAB"}}}]}'
-  recorded_at: Thu, 22 Apr 2021 16:31:35 GMT
-recorded_with: VCR 6.0.0
+  recorded_at: Mon, 11 Nov 2024 12:07:22 GMT
+recorded_with: VCR 6.3.1

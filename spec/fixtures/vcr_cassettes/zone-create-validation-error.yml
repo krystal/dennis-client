@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: https://dennis.dev.adam.ac/api/v1/zones
+    uri: https://dennis.localhost/api/v1/zones
     body:
       encoding: UTF-8
       string: '{"group":{"id":1},"properties":{"name":""}}'
@@ -26,6 +26,8 @@ http_interactions:
       - "*"
       Access-Control-Allow-Origin:
       - "*"
+      Alt-Svc:
+      - h3=":443"; ma=2592000
       Cache-Control:
       - no-cache
       Content-Length:
@@ -34,19 +36,21 @@ http_interactions:
       - application/json
       Server:
       - Caddy
+      Server-Timing:
+      - sql.active_record;dur=12.41, instantiation.active_record;dur=0.10
       X-Api-Schema:
       - json-error
       X-Request-Id:
-      - dfb5cc8f-855c-46b9-8448-c6183cc19174
+      - f8646b1e-7160-4bf7-9b3c-65783b01463b
       X-Runtime:
-      - '0.012394'
+      - '0.044373'
       Date:
-      - Thu, 22 Apr 2021 16:31:36 GMT
+      - Mon, 11 Nov 2024 12:07:24 GMT
     body:
       encoding: UTF-8
       string: '{"error":{"code":"validation_error","description":"A validation error
         occurred when saving the object","detail":{"errors":[{"attribute":"name","type":"blank","message":"Name
         can''t be blank"},{"attribute":"name","type":"too_short","message":"Name is
         too short (minimum is 4 characters)"}]}}}'
-  recorded_at: Thu, 22 Apr 2021 16:31:36 GMT
-recorded_with: VCR 6.0.0
+  recorded_at: Mon, 11 Nov 2024 12:07:24 GMT
+recorded_with: VCR 6.3.1

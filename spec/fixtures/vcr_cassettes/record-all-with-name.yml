@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://dennis.dev.adam.ac/api/v1/zones/:zone/records?_arguments=%7B%22zone%22:%7B%22id%22:1%7D,%22name%22:%22helpdesk%22%7D
+    uri: https://dennis.localhost/api/v1/zones/:zone/records?_arguments=%7B%22zone%22:%7B%22id%22:1%7D,%22name%22:%22helpdesk%22%7D
     body:
       encoding: US-ASCII
       string: ''
@@ -24,6 +24,8 @@ http_interactions:
       - "*"
       Access-Control-Allow-Origin:
       - "*"
+      Alt-Svc:
+      - h3=":443"; ma=2592000
       Cache-Control:
       - max-age=0, private, must-revalidate
       Content-Length:
@@ -31,17 +33,19 @@ http_interactions:
       Content-Type:
       - application/json
       Etag:
-      - W/"15604f0db7f8f07beec87709e2011295"
+      - W/"fbffd0dea485ddf21b85f903797d020f"
       Server:
       - Caddy
+      Server-Timing:
+      - sql.active_record;dur=12.51, instantiation.active_record;dur=0.24
       X-Request-Id:
-      - de9c2e1a-e2cf-4ae6-a417-38352226c8e0
+      - 29ddf9ea-e3bf-4800-8ad9-f8f60101bd4c
       X-Runtime:
-      - '0.011556'
+      - '0.037145'
       Date:
-      - Thu, 22 Apr 2021 16:31:35 GMT
+      - Mon, 11 Nov 2024 12:07:21 GMT
     body:
       encoding: UTF-8
-      string: '{"records":[{"id":9,"name":"helpdesk","external_reference":null,"type":"ALIAS","full_name":"helpdesk.example.com","ttl":null,"priority":null,"managed":false,"created_at":1619109092,"updated_at":1619109092,"tags":[],"raw_content":"sirportly.com","display_content":"sirportly.com","content":{"ALIAS":{"hostname":"sirportly.com"}}}]}'
-  recorded_at: Thu, 22 Apr 2021 16:31:35 GMT
-recorded_with: VCR 6.0.0
+      string: '{"records":[{"id":9,"name":"helpdesk","external_reference":null,"type":"ALIAS","full_name":"helpdesk.example.com","ttl":null,"priority":null,"managed":false,"created_at":1731326829,"updated_at":1731326829,"tags":[],"raw_content":"sirportly.com","display_content":"sirportly.com","content":{"ALIAS":{"hostname":"sirportly.com"}}}]}'
+  recorded_at: Mon, 11 Nov 2024 12:07:21 GMT
+recorded_with: VCR 6.3.1

@@ -145,6 +145,18 @@ module Dennis
         end
       end
 
+      it 'creates records with irregular types' do
+        VCR.use_cassette('record-create-http-redirect') do
+          zone = described_class.create(@client, zone: { id: 1 }, name: 'redirect', type: 'HTTPRedirect',
+                                                 content: { url: 'http://krystal.io', http_status: '301' })
+          expect(zone).to be_a Record
+          expect(zone).to have_attributes name: 'redirect',
+                                          full_name: 'redirect.example.com',
+                                          type: 'HTTPRedirect',
+                                          content: { url: 'http://krystal.io', http_status: '301' }
+        end
+      end
+
       it 'raises a zone not found error if no zone is found' do
         VCR.use_cassette('record-create-missing-zone') do
           expect do

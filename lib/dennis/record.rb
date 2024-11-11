@@ -7,6 +7,10 @@ require 'dennis/zone_not_found_error'
 module Dennis
   class Record
 
+    IRREGULAR_RECORD_TYPE_NAMES = {
+      'HTTPREDIRECT' => 'HTTPRedirect'
+    }.freeze
+
     class << self
 
       def all(client, zone, **options)
@@ -67,14 +71,22 @@ module Dennis
           type = hash[field_name] if field_name == :type && hash.key?(field_name)
         end
 
+        type = normalize_type(type)
+
         if hash.key?(:content)
           if type.nil?
             raise Error, 'Cannot generate record properties without a type'
           end
 
-          arguments[:content] = { type.to_s.upcase => hash[:content] }
+          arguments[:content] = { type => hash[:content] }
         end
         arguments
+      end
+
+      def normalize_type(type)
+        type = type.to_s.upcase
+        type = IRREGULAR_RECORD_TYPE_NAMES[type] if IRREGULAR_RECORD_TYPE_NAMES.key?(type)
+        type
       end
 
     end
@@ -152,7 +164,7 @@ module Dennis
     def content
       return nil if type.nil?
 
-      @hash.dig('content', type.to_s.upcase)&.transform_keys(&:to_sym)
+      @hash.dig('content', self.class.normalize_type(type))&.transform_keys(&:to_sym)
     end
 
     def update(properties)

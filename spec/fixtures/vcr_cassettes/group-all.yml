@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://dennis.dev.adam.ac/api/v1/groups?_arguments=%7B%7D
+    uri: https://dennis.localhost/api/v1/groups?_arguments=%7B%7D
     body:
       encoding: US-ASCII
       string: ''
@@ -24,28 +24,32 @@ http_interactions:
       - "*"
       Access-Control-Allow-Origin:
       - "*"
+      Alt-Svc:
+      - h3=":443"; ma=2592000
       Cache-Control:
       - max-age=0, private, must-revalidate
       Content-Length:
-      - '1488'
+      - '1490'
       Content-Type:
       - application/json
       Etag:
-      - W/"b46bc9e76c1eddc34ea9b7852ac955e4"
+      - W/"73cec39de8a3aabee82913e8642ed341"
       Server:
       - Caddy
+      Server-Timing:
+      - sql.active_record;dur=31.07, instantiation.active_record;dur=7.10
       X-Request-Id:
-      - b1d5ee24-b3a9-4f22-9ed2-c75d31b65d38
+      - c28745b9-079f-4f20-8bae-fbdbe4204ad7
       X-Runtime:
-      - '0.012291'
+      - '0.052946'
       Date:
-      - Thu, 22 Apr 2021 16:31:34 GMT
+      - Mon, 11 Nov 2024 12:07:20 GMT
     body:
       encoding: UTF-8
       string: '{"pagination":{"current_page":1,"total_pages":1,"total":4,"per_page":30,"large_set":false},"groups":[{"id":2,"name":"Another
-        Group","external_reference":"another","created_at":1619109092,"updated_at":1619109092,"nameservers":[{"id":3,"name":"dave.example.com","server":1,"available":true,"created_at":1619109091,"updated_at":1619109091},{"id":4,"name":"ruth.example.com","server":2,"available":true,"created_at":1619109091,"updated_at":1619109091}]},{"id":1,"name":"Example
-        Group","external_reference":null,"created_at":1619109091,"updated_at":1619109091,"nameservers":[{"id":4,"name":"ruth.example.com","server":2,"available":true,"created_at":1619109091,"updated_at":1619109091},{"id":2,"name":"alex.example.com","server":1,"available":true,"created_at":1619109091,"updated_at":1619109091}]},{"id":3,"name":"Pear
-        Group","external_reference":null,"created_at":1619109092,"updated_at":1619109092,"nameservers":[{"id":6,"name":"kelly.example.com","server":2,"available":true,"created_at":1619109091,"updated_at":1619109091},{"id":2,"name":"alex.example.com","server":1,"available":true,"created_at":1619109091,"updated_at":1619109091}]},{"id":4,"name":"Strawberries
-        Group","external_reference":null,"created_at":1619109092,"updated_at":1619109092,"nameservers":[{"id":6,"name":"kelly.example.com","server":2,"available":true,"created_at":1619109091,"updated_at":1619109091},{"id":1,"name":"simon.example.com","server":1,"available":true,"created_at":1619109091,"updated_at":1619109091}]}]}'
-  recorded_at: Thu, 22 Apr 2021 16:31:34 GMT
-recorded_with: VCR 6.0.0
+        Group","external_reference":"another","created_at":1731326830,"updated_at":1731326830,"nameservers":[{"id":3,"name":"dave.example.com","server":1,"available":true,"created_at":1731326829,"updated_at":1731326829},{"id":5,"name":"laura.example.com","server":2,"available":true,"created_at":1731326829,"updated_at":1731326829}]},{"id":1,"name":"Example
+        Group","external_reference":null,"created_at":1731326829,"updated_at":1731326829,"nameservers":[{"id":1,"name":"simon.example.com","server":1,"available":true,"created_at":1731326829,"updated_at":1731326829},{"id":5,"name":"laura.example.com","server":2,"available":true,"created_at":1731326829,"updated_at":1731326829}]},{"id":3,"name":"Pear
+        Group","external_reference":null,"created_at":1731326830,"updated_at":1731326830,"nameservers":[{"id":2,"name":"alex.example.com","server":1,"available":true,"created_at":1731326829,"updated_at":1731326829},{"id":5,"name":"laura.example.com","server":2,"available":true,"created_at":1731326829,"updated_at":1731326829}]},{"id":4,"name":"Strawberries
+        Group","external_reference":null,"created_at":1731326830,"updated_at":1731326830,"nameservers":[{"id":1,"name":"simon.example.com","server":1,"available":true,"created_at":1731326829,"updated_at":1731326829},{"id":4,"name":"ruth.example.com","server":2,"available":true,"created_at":1731326829,"updated_at":1731326829}]}]}'
+  recorded_at: Mon, 11 Nov 2024 12:07:20 GMT
+recorded_with: VCR 6.3.1

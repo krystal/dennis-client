@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://dennis.dev.adam.ac/api/v1/zones?_arguments=%7B%22per_page%22:2%7D
+    uri: https://dennis.localhost/api/v1/zones?_arguments=%7B%22per_page%22:2%7D
     body:
       encoding: US-ASCII
       string: ''
@@ -24,26 +24,30 @@ http_interactions:
       - "*"
       Access-Control-Allow-Origin:
       - "*"
+      Alt-Svc:
+      - h3=":443"; ma=2592000
       Cache-Control:
       - max-age=0, private, must-revalidate
       Content-Length:
-      - '858'
+      - '1122'
       Content-Type:
       - application/json
       Etag:
-      - W/"94eecf0dd7933e50f4ff27fe933a7f51"
+      - W/"2041196b2eb074c908deea133cab6dfa"
       Server:
       - Caddy
+      Server-Timing:
+      - sql.active_record;dur=14.86, instantiation.active_record;dur=0.21
       X-Request-Id:
-      - 9c24649a-16fc-473f-8b90-60e1682c8edd
+      - f0b8ad99-3462-41e7-8cc8-2aaa2340a556
       X-Runtime:
-      - '0.015067'
+      - '0.033117'
       Date:
-      - Thu, 22 Apr 2021 16:31:36 GMT
+      - Mon, 11 Nov 2024 12:07:24 GMT
     body:
       encoding: UTF-8
       string: '{"pagination":{"current_page":1,"total_pages":4,"total":8,"per_page":2,"large_set":false},"zones":[{"id":3,"name":"another.com","group":{"id":2,"name":"Another
-        Group"},"created_at":1619109092,"updated_at":1619109092,"serial":1619109092,"default_ttl":3600,"external_reference":null,"verified":true,"nameservers_verified_at":1619109092,"nameservers_checked_at":null,"always_verified":false,"nameservers_verified":true,"reverse_dns":false,"stale_verification":false,"tags":[]},{"id":2,"name":"bananas.com","group":{"id":1,"name":"Renamed
-        Group"},"created_at":1619109092,"updated_at":1619109092,"serial":1619109092,"default_ttl":3600,"external_reference":"bananas","verified":false,"nameservers_verified_at":null,"nameservers_checked_at":null,"always_verified":false,"nameservers_verified":false,"reverse_dns":false,"stale_verification":false,"tags":["fruit"]}]}'
-  recorded_at: Thu, 22 Apr 2021 16:31:36 GMT
-recorded_with: VCR 6.0.0
+        Group"},"created_at":1731326830,"updated_at":1731326839,"serial":1731326839,"default_ttl":3600,"external_reference":null,"verified":true,"verified_at":1731326830,"verification_checked_at":1731326839,"nameservers_verified_at":1731326830,"nameservers_checked_at":1731326839,"nameservers_verified":true,"always_verified":false,"reverse_dns":false,"stale_verification":false,"tags":[],"txt_record_verification_token":"uWoROY2sra1WhCqNe6zCaQjWAwGYd0qe"},{"id":2,"name":"bananas.com","group":{"id":1,"name":"Renamed
+        Group"},"created_at":1731326829,"updated_at":1731326839,"serial":1731326839,"default_ttl":3600,"external_reference":"bananas","verified":false,"verified_at":null,"verification_checked_at":1731326834,"nameservers_verified_at":null,"nameservers_checked_at":1731326834,"nameservers_verified":false,"always_verified":false,"reverse_dns":false,"stale_verification":false,"tags":["fruit"],"txt_record_verification_token":"sEqYvbZyfubEwZXIbXGfO6xFLgMsJ0LK"}]}'
+  recorded_at: Mon, 11 Nov 2024 12:07:24 GMT
+recorded_with: VCR 6.3.1

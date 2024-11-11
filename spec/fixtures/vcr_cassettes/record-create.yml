@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: https://dennis.dev.adam.ac/api/v1/records
+    uri: https://dennis.localhost/api/v1/records
     body:
       encoding: UTF-8
       string: '{"zone":{"id":1},"properties":{"name":"test1234","type":"A","content":{"A":{"ip_address":"10.5.5.5"}}}}'
@@ -26,25 +26,29 @@ http_interactions:
       - "*"
       Access-Control-Allow-Origin:
       - "*"
+      Alt-Svc:
+      - h3=":443"; ma=2592000
       Cache-Control:
       - max-age=0, private, must-revalidate
       Content-Length:
-      - '1007'
+      - '1162'
       Content-Type:
       - application/json
       Etag:
-      - W/"89d5d453ba9a2ed05ce742c290b3462c"
+      - W/"a655c6f07d702a114d5250ceebe2b489"
       Server:
       - Caddy
+      Server-Timing:
+      - sql.active_record;dur=53.19, instantiation.active_record;dur=0.25
       X-Request-Id:
-      - 7e84a382-7497-410e-8e05-2f1f7a306836
+      - 1016aea1-ea4a-4c5a-b7e1-f1b72a384f73
       X-Runtime:
-      - '0.033715'
+      - '0.078506'
       Date:
-      - Thu, 22 Apr 2021 16:31:35 GMT
+      - Mon, 11 Nov 2024 12:07:22 GMT
     body:
       encoding: UTF-8
-      string: '{"record":{"id":57,"name":"test1234","external_reference":null,"type":"A","full_name":"test1234.example.com","ttl":null,"priority":null,"managed":false,"created_at":1619109095,"updated_at":1619109095,"tags":[],"raw_content":"10.5.5.5","display_content":"10.5.5.5","content":{"A":{"ip_address":"10.5.5.5"}},"zone":{"id":1,"name":"example.com","group":{"id":1,"name":"Renamed
-        Group","external_reference":"with-ref","created_at":1619109091,"updated_at":1619109094,"nameservers":[{"id":4,"name":"ruth.example.com","server":2,"available":true,"created_at":1619109091,"updated_at":1619109091},{"id":2,"name":"alex.example.com","server":1,"available":true,"created_at":1619109091,"updated_at":1619109091}]},"created_at":1619109092,"updated_at":1619109095,"serial":1619109095,"default_ttl":3600,"external_reference":null,"verified":true,"nameservers_verified_at":1619109092,"nameservers_checked_at":null,"always_verified":false,"nameservers_verified":true,"reverse_dns":false,"stale_verification":false,"tags":[]}}}'
-  recorded_at: Thu, 22 Apr 2021 16:31:35 GMT
-recorded_with: VCR 6.0.0
+      string: '{"record":{"id":57,"name":"test1234","external_reference":null,"type":"A","full_name":"test1234.example.com","ttl":null,"priority":null,"managed":false,"created_at":1731326842,"updated_at":1731326842,"tags":[],"raw_content":"10.5.5.5","display_content":"10.5.5.5","content":{"A":{"ip_address":"10.5.5.5"}},"zone":{"id":1,"name":"example.com","group":{"id":1,"name":"Renamed
+        Group","external_reference":"with-ref","created_at":1731326829,"updated_at":1731326840,"nameservers":[{"id":1,"name":"phil.example.com","server":2,"available":true,"created_at":1731326829,"updated_at":1731326841},{"id":5,"name":"laura.example.com","server":2,"available":true,"created_at":1731326829,"updated_at":1731326829}]},"created_at":1731326829,"updated_at":1731326842,"serial":1731326842,"default_ttl":3600,"external_reference":null,"verified":true,"verified_at":1731326829,"verification_checked_at":1731326833,"nameservers_verified_at":1731326829,"nameservers_checked_at":1731326833,"nameservers_verified":true,"always_verified":false,"reverse_dns":false,"stale_verification":false,"tags":[],"txt_record_verification_token":"PRXXnIUPD95oskWqxKtxN5bbQkvbbo6K"},"certificate":null}}'
+  recorded_at: Mon, 11 Nov 2024 12:07:22 GMT
+recorded_with: VCR 6.3.1

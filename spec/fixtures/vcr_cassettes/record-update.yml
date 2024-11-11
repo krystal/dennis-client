@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://dennis.dev.adam.ac/api/v1/records/:record?_arguments=%7B%22record%22:%7B%22id%22:11%7D%7D
+    uri: https://dennis.localhost/api/v1/records/:record?_arguments=%7B%22record%22:%7B%22id%22:11%7D%7D
     body:
       encoding: US-ASCII
       string: ''
@@ -24,33 +24,37 @@ http_interactions:
       - "*"
       Access-Control-Allow-Origin:
       - "*"
+      Alt-Svc:
+      - h3=":443"; ma=2592000
       Cache-Control:
       - max-age=0, private, must-revalidate
       Content-Length:
-      - '1673'
+      - '1828'
       Content-Type:
       - application/json
       Etag:
-      - W/"b4188cab390f5a7d6ec0bbb6464f699a"
+      - W/"dac5632e6d9abc2ae6ca4093a4ee3f7a"
       Server:
       - Caddy
+      Server-Timing:
+      - sql.active_record;dur=16.38, instantiation.active_record;dur=0.12
       X-Request-Id:
-      - 4239184b-b0fe-476c-a738-b2c65c6bf1e5
+      - 1fb2693a-570d-4ee0-9722-f8616f307e23
       X-Runtime:
-      - '0.017178'
+      - '0.023442'
       Date:
-      - Thu, 22 Apr 2021 16:31:35 GMT
+      - Mon, 11 Nov 2024 12:07:23 GMT
     body:
       encoding: UTF-8
-      string: '{"record":{"id":11,"name":"cm._domainkey","external_reference":null,"type":"TXT","full_name":"cm._domainkey.example.com","ttl":null,"priority":null,"managed":false,"created_at":1619109092,"updated_at":1619109092,"tags":[],"raw_content":"\"k=rsa;
+      string: '{"record":{"id":11,"name":"cm._domainkey","external_reference":null,"type":"TXT","full_name":"cm._domainkey.example.com","ttl":null,"priority":null,"managed":false,"created_at":1731326829,"updated_at":1731326829,"tags":[],"raw_content":"\"k=rsa;
         p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCsJyYnv48KsqIS/yLiU1YGjpo+KPTkKAtJEq7RW7dMEM8IzOx96Qa3S0NYDMPr9QJOJoAomLl51YFe5Xu3WlR5f8uNjH/7UujGL9RpT+Gaa23W85qhrWuQpZnBqFczLdxf3R/OP4Sm5KisVvCP+gain4h0yxFFM4UZT4893bl6QwIDAQAB\"","display_content":"k=rsa;
         p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCsJyYnv48KsqIS/yLiU1YGjpo+KPTkKAtJEq7RW7dMEM8IzOx96Qa3S0NYDMPr9QJOJoAomLl51YFe5Xu3WlR5f8uNjH/7UujGL9RpT+Gaa23W85qhrWuQpZnBqFczLdxf3R/OP4Sm5KisVvCP+gain4h0yxFFM4UZT4893bl6QwIDAQAB","content":{"TXT":{"content":"k=rsa;
         p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCsJyYnv48KsqIS/yLiU1YGjpo+KPTkKAtJEq7RW7dMEM8IzOx96Qa3S0NYDMPr9QJOJoAomLl51YFe5Xu3WlR5f8uNjH/7UujGL9RpT+Gaa23W85qhrWuQpZnBqFczLdxf3R/OP4Sm5KisVvCP+gain4h0yxFFM4UZT4893bl6QwIDAQAB"}},"zone":{"id":1,"name":"example.com","group":{"id":1,"name":"Renamed
-        Group","external_reference":"with-ref","created_at":1619109091,"updated_at":1619109094,"nameservers":[{"id":4,"name":"ruth.example.com","server":2,"available":true,"created_at":1619109091,"updated_at":1619109091},{"id":2,"name":"alex.example.com","server":1,"available":true,"created_at":1619109091,"updated_at":1619109091}]},"created_at":1619109092,"updated_at":1619109095,"serial":1619109095,"default_ttl":3600,"external_reference":null,"verified":true,"nameservers_verified_at":1619109092,"nameservers_checked_at":null,"always_verified":false,"nameservers_verified":true,"reverse_dns":false,"stale_verification":false,"tags":[]}}}'
-  recorded_at: Thu, 22 Apr 2021 16:31:35 GMT
+        Group","external_reference":"with-ref","created_at":1731326829,"updated_at":1731326840,"nameservers":[{"id":1,"name":"phil.example.com","server":2,"available":true,"created_at":1731326829,"updated_at":1731326841},{"id":5,"name":"laura.example.com","server":2,"available":true,"created_at":1731326829,"updated_at":1731326829}]},"created_at":1731326829,"updated_at":1731326843,"serial":1731326843,"default_ttl":3600,"external_reference":null,"verified":true,"verified_at":1731326829,"verification_checked_at":1731326833,"nameservers_verified_at":1731326829,"nameservers_checked_at":1731326833,"nameservers_verified":true,"always_verified":false,"reverse_dns":false,"stale_verification":false,"tags":[],"txt_record_verification_token":"PRXXnIUPD95oskWqxKtxN5bbQkvbbo6K"},"certificate":null}}'
+  recorded_at: Mon, 11 Nov 2024 12:07:23 GMT
 - request:
     method: patch
-    uri: https://dennis.dev.adam.ac/api/v1/records/:record
+    uri: https://dennis.localhost/api/v1/records/:record
     body:
       encoding: UTF-8
       string: '{"record":{"id":11},"properties":{"name":"cm._domainkey.renamed","content":{"TXT":{"content":"new
@@ -75,27 +79,31 @@ http_interactions:
       - "*"
       Access-Control-Allow-Origin:
       - "*"
+      Alt-Svc:
+      - h3=":443"; ma=2592000
       Cache-Control:
       - max-age=0, private, must-revalidate
       Content-Length:
-      - '1053'
+      - '1208'
       Content-Type:
       - application/json
       Etag:
-      - W/"69c41552c0e1eba2b60d0509208ac2b7"
+      - W/"78024e3a269f5d1f0e5ff5d78a807452"
       Server:
       - Caddy
+      Server-Timing:
+      - sql.active_record;dur=29.64, instantiation.active_record;dur=0.18
       X-Request-Id:
-      - 376c5fae-5500-4cb6-884b-98542b85b162
+      - 2d3bad1c-dedc-4400-a161-f5e0a767403e
       X-Runtime:
-      - '0.027088'
+      - '0.040066'
       Date:
-      - Thu, 22 Apr 2021 16:31:35 GMT
+      - Mon, 11 Nov 2024 12:07:23 GMT
     body:
       encoding: UTF-8
-      string: '{"record":{"id":11,"name":"cm._domainkey.renamed","external_reference":null,"type":"TXT","full_name":"cm._domainkey.renamed.example.com","ttl":null,"priority":null,"managed":false,"created_at":1619109092,"updated_at":1619109095,"tags":[],"raw_content":"\"new
+      string: '{"record":{"id":11,"name":"cm._domainkey.renamed","external_reference":null,"type":"TXT","full_name":"cm._domainkey.renamed.example.com","ttl":null,"priority":null,"managed":false,"created_at":1731326829,"updated_at":1731326843,"tags":[],"raw_content":"\"new
         txt value\"","display_content":"new txt value","content":{"TXT":{"content":"new
         txt value"}},"zone":{"id":1,"name":"example.com","group":{"id":1,"name":"Renamed
-        Group","external_reference":"with-ref","created_at":1619109091,"updated_at":1619109094,"nameservers":[{"id":4,"name":"ruth.example.com","server":2,"available":true,"created_at":1619109091,"updated_at":1619109091},{"id":2,"name":"alex.example.com","server":1,"available":true,"created_at":1619109091,"updated_at":1619109091}]},"created_at":1619109092,"updated_at":1619109095,"serial":1619109095,"default_ttl":3600,"external_reference":null,"verified":true,"nameservers_verified_at":1619109092,"nameservers_checked_at":null,"always_verified":false,"nameservers_verified":true,"reverse_dns":false,"stale_verification":false,"tags":[]}}}'
-  recorded_at: Thu, 22 Apr 2021 16:31:35 GMT
-recorded_with: VCR 6.0.0
+        Group","external_reference":"with-ref","created_at":1731326829,"updated_at":1731326840,"nameservers":[{"id":1,"name":"phil.example.com","server":2,"available":true,"created_at":1731326829,"updated_at":1731326841},{"id":5,"name":"laura.example.com","server":2,"available":true,"created_at":1731326829,"updated_at":1731326829}]},"created_at":1731326829,"updated_at":1731326843,"serial":1731326843,"default_ttl":3600,"external_reference":null,"verified":true,"verified_at":1731326829,"verification_checked_at":1731326833,"nameservers_verified_at":1731326829,"nameservers_checked_at":1731326833,"nameservers_verified":true,"always_verified":false,"reverse_dns":false,"stale_verification":false,"tags":[],"txt_record_verification_token":"PRXXnIUPD95oskWqxKtxN5bbQkvbbo6K"},"certificate":null}}'
+  recorded_at: Mon, 11 Nov 2024 12:07:23 GMT
+recorded_with: VCR 6.3.1

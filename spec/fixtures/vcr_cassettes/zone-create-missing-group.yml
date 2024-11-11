@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: https://dennis.dev.adam.ac/api/v1/zones
+    uri: https://dennis.localhost/api/v1/zones
     body:
       encoding: UTF-8
       string: '{"group":{"id":99999},"properties":{"name":"example.com"}}'
@@ -26,6 +26,8 @@ http_interactions:
       - "*"
       Access-Control-Allow-Origin:
       - "*"
+      Alt-Svc:
+      - h3=":443"; ma=2592000
       Cache-Control:
       - no-cache
       Content-Length:
@@ -34,17 +36,19 @@ http_interactions:
       - application/json
       Server:
       - Caddy
+      Server-Timing:
+      - sql.active_record;dur=7.49, instantiation.active_record;dur=0.05
       X-Api-Schema:
       - json-error
       X-Request-Id:
-      - 82dc8d2d-d48f-40b5-9c23-3fcba4ae0d8d
+      - ab75d5d1-af91-4aab-90c9-ef4af90c390e
       X-Runtime:
-      - '0.006078'
+      - '0.028311'
       Date:
-      - Thu, 22 Apr 2021 16:31:36 GMT
+      - Mon, 11 Nov 2024 12:07:24 GMT
     body:
       encoding: UTF-8
       string: '{"error":{"code":"group_not_found","description":"No group could be
         found using the given arguments","detail":{}}}'
-  recorded_at: Thu, 22 Apr 2021 16:31:36 GMT
-recorded_with: VCR 6.0.0
+  recorded_at: Mon, 11 Nov 2024 12:07:24 GMT
+recorded_with: VCR 6.3.1

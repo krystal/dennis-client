@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://dennis.dev.adam.ac/api/v1/zones/:zone?_arguments=%7B%22zone%22:%7B%22name%22:%22edit-me.com%22%7D%7D
+    uri: https://dennis.localhost/api/v1/zones/:zone?_arguments=%7B%22zone%22:%7B%22name%22:%22edit-me.com%22%7D%7D
     body:
       encoding: US-ASCII
       string: ''
@@ -24,30 +24,34 @@ http_interactions:
       - "*"
       Access-Control-Allow-Origin:
       - "*"
+      Alt-Svc:
+      - h3=":443"; ma=2592000
       Cache-Control:
       - max-age=0, private, must-revalidate
       Content-Length:
-      - '701'
+      - '835'
       Content-Type:
       - application/json
       Etag:
-      - W/"98742371efda75c6e746c3e05b6f44a4"
+      - W/"d75b2d3cf61bd2e559a2c65a7812aebd"
       Server:
       - Caddy
+      Server-Timing:
+      - sql.active_record;dur=11.30, instantiation.active_record;dur=0.15
       X-Request-Id:
-      - 144c7f73-bc79-4b9d-b0c3-ac62e3161358
+      - 614babd0-0af3-4d80-8a21-dd82e068ddc1
       X-Runtime:
-      - '0.011932'
+      - '0.033162'
       Date:
-      - Thu, 22 Apr 2021 16:31:36 GMT
+      - Mon, 11 Nov 2024 12:07:25 GMT
     body:
       encoding: UTF-8
       string: '{"zone":{"id":9,"name":"edit-me.com","group":{"id":4,"name":"Strawberries
-        Group","external_reference":null,"created_at":1619109092,"updated_at":1619109092,"nameservers":[{"id":6,"name":"kelly.example.com","server":2,"available":true,"created_at":1619109091,"updated_at":1619109091},{"id":1,"name":"phil.example.com","server":2,"available":true,"created_at":1619109091,"updated_at":1619109095}]},"created_at":1619109092,"updated_at":1619109092,"serial":1619109092,"default_ttl":3600,"external_reference":null,"verified":true,"nameservers_verified_at":1619109092,"nameservers_checked_at":null,"always_verified":false,"nameservers_verified":true,"reverse_dns":false,"stale_verification":false,"tags":[]}}'
-  recorded_at: Thu, 22 Apr 2021 16:31:36 GMT
+        Group","external_reference":null,"created_at":1731326830,"updated_at":1731326830,"nameservers":[{"id":1,"name":"phil.example.com","server":2,"available":true,"created_at":1731326829,"updated_at":1731326841},{"id":4,"name":"ruth.example.com","server":2,"available":true,"created_at":1731326829,"updated_at":1731326829}]},"created_at":1731326830,"updated_at":1731326841,"serial":1731326841,"default_ttl":3600,"external_reference":null,"verified":true,"verified_at":1731326830,"verification_checked_at":1731326840,"nameservers_verified_at":1731326830,"nameservers_checked_at":1731326840,"nameservers_verified":true,"always_verified":false,"reverse_dns":false,"stale_verification":false,"tags":[],"txt_record_verification_token":"Kyl7oQg2ra8SNsMghngWTkhxFuYJYqKD"}}'
+  recorded_at: Mon, 11 Nov 2024 12:07:25 GMT
 - request:
     method: patch
-    uri: https://dennis.dev.adam.ac/api/v1/zones/:zone
+    uri: https://dennis.localhost/api/v1/zones/:zone
     body:
       encoding: UTF-8
       string: '{"zone":{"id":9},"properties":{"name":"raspberries.com","external_reference":"rasps"}}'
@@ -71,25 +75,29 @@ http_interactions:
       - "*"
       Access-Control-Allow-Origin:
       - "*"
+      Alt-Svc:
+      - h3=":443"; ma=2592000
       Cache-Control:
       - max-age=0, private, must-revalidate
       Content-Length:
-      - '708'
+      - '820'
       Content-Type:
       - application/json
       Etag:
-      - W/"feae45450b025ef48aae41ef4287fb66"
+      - W/"c9901a85e3e29f98559866c1be849e35"
       Server:
       - Caddy
+      Server-Timing:
+      - sql.active_record;dur=73.18, instantiation.active_record;dur=0.69
       X-Request-Id:
-      - c7b80212-4801-4d16-8eaa-7585d0d45f8a
+      - 578c3a43-68fe-4fe0-a891-10e6fc82d08c
       X-Runtime:
-      - '0.035228'
+      - '0.109222'
       Date:
-      - Thu, 22 Apr 2021 16:31:36 GMT
+      - Mon, 11 Nov 2024 12:07:25 GMT
     body:
       encoding: UTF-8
       string: '{"zone":{"id":9,"name":"raspberries.com","group":{"id":4,"name":"Strawberries
-        Group","external_reference":null,"created_at":1619109092,"updated_at":1619109092,"nameservers":[{"id":6,"name":"kelly.example.com","server":2,"available":true,"created_at":1619109091,"updated_at":1619109091},{"id":1,"name":"phil.example.com","server":2,"available":true,"created_at":1619109091,"updated_at":1619109095}]},"created_at":1619109092,"updated_at":1619109096,"serial":1619109096,"default_ttl":3600,"external_reference":"rasps","verified":true,"nameservers_verified_at":1619109092,"nameservers_checked_at":null,"always_verified":false,"nameservers_verified":true,"reverse_dns":false,"stale_verification":false,"tags":[]}}'
-  recorded_at: Thu, 22 Apr 2021 16:31:36 GMT
-recorded_with: VCR 6.0.0
+        Group","external_reference":null,"created_at":1731326830,"updated_at":1731326830,"nameservers":[{"id":1,"name":"phil.example.com","server":2,"available":true,"created_at":1731326829,"updated_at":1731326841},{"id":4,"name":"ruth.example.com","server":2,"available":true,"created_at":1731326829,"updated_at":1731326829}]},"created_at":1731326830,"updated_at":1731326845,"serial":1731326845,"default_ttl":3600,"external_reference":"rasps","verified":false,"verified_at":null,"verification_checked_at":null,"nameservers_verified_at":null,"nameservers_checked_at":null,"nameservers_verified":false,"always_verified":false,"reverse_dns":false,"stale_verification":false,"tags":[],"txt_record_verification_token":"Kyl7oQg2ra8SNsMghngWTkhxFuYJYqKD"}}'
+  recorded_at: Mon, 11 Nov 2024 12:07:25 GMT
+recorded_with: VCR 6.3.1
