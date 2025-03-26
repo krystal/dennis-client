@@ -110,6 +110,10 @@ module Dennis
       @hash['nameservers_verified']
     end
 
+    def txt_record_verified?
+      @hash['txt_record_verified']
+    end
+
     def verified?
       @hash['verified']
     end
