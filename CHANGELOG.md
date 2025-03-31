@@ -2,6 +2,13 @@
 
 This file contains all the latest changes and updates to this application.
 
+## [1.2.3](https://github.com/krystal/dennis-client/compare/v1.2.2...v1.2.3) (2025-03-31)
+
+
+### Miscellaneous Chores
+
+* release 1.2.3 ([d317e79](https://github.com/krystal/dennis-client/commit/d317e7932062f7a6175e69f575a0a41c87ab5db8))
+
 ## 1.2.2
 
 ### Bug Fixes
