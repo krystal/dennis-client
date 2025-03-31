@@ -1,4 +1,5 @@
 {
+  "bootstrap-sha": "0d78723d1f046634bc960a8f550d16fb33815877",
   "packages": {
     ".": {
       "release-type": "ruby",
