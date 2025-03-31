@@ -1,0 +1,15 @@
+{
+  "bootstrap-sha": "0d78723d1f046634bc960a8f550d16fb33815877",
+  "packages": {
+    ".": {
+      "release-type": "ruby",
+      "version-file": "lib/dennis/version.rb",
+      "changelog-path": "CHANGELOG.md",
+      "bump-minor-pre-major": true,
+      "bump-patch-for-minor-pre-major": true,
+      "draft": false,
+      "prerelease": false
+    }
+  },
+  "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json"
+}
