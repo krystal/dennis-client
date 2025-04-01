@@ -60,16 +60,15 @@ jobs:
     if: ${{ needs.release-please.outputs.release_created }}
     steps:
       - uses: actions/checkout@v3
+
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: 3.3
 
-      - name: Export version from tag name
-        run: echo ${GITHUB_REF/refs\/tags\//} > VERSION
-
       - name: Build Gem
         run: gem build *.gemspec
+
       - name: Setup credentials
         run: |
           mkdir -p $HOME/.gem
