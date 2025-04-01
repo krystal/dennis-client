@@ -6,7 +6,7 @@ module Dennis
   if File.file?(VERSION_FILE_ROOT)
     VERSION = File.read(VERSION_FILE_ROOT).strip.sub(/\Av/, '')
   else
-    VERSION = '0.0.0.dev'
+    VERSION = '1.2.3'
   end
 
 end

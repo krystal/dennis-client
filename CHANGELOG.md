@@ -2,6 +2,16 @@
 
 This file contains all the latest changes and updates to this application.
 
+## [1.2.3](https://github.com/krystal/dennis-client/compare/v1.2.2...v1.2.3) (2025-03-31)
+
+### Features
+* add txt_record_verified to zone ([0d78723](https://github.com/krystal/dennis-client/commit/0d78723d1f046634bc960a8f550d16fb33815877))
+
+### Miscellaneous Chores
+
+* adds release please ([b05238e](https://github.com/krystal/dennis-client/commit/0d78723d1f046634bc960a8f550d16fb33815877))
+* release 1.2.3 ([d317e79](https://github.com/krystal/dennis-client/commit/d317e7932062f7a6175e69f575a0a41c87ab5db8))
+
 ## 1.2.2
 
 ### Bug Fixes
