@@ -2,6 +2,13 @@
 
 This file contains all the latest changes and updates to this application.
 
+## [1.3.0](https://github.com/krystal/dennis-client/compare/v1.2.4...v1.3.0) (2025-09-11)
+
+
+### Features
+
+* support custom nameservers in group creation ([#11](https://github.com/krystal/dennis-client/issues/11)) ([8f0f078](https://github.com/krystal/dennis-client/commit/8f0f078248192061ee91bafe226842d32a7ebbc1))
+
 ## [1.2.4](https://github.com/krystal/dennis-client/compare/v1.2.3...v1.2.4) (2025-04-01)
 
 
