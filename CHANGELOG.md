@@ -2,6 +2,18 @@
 
 This file contains all the latest changes and updates to this application.
 
+## [1.4.0](https://github.com/krystal/dennis-client/compare/v1.3.0...v1.4.0) (2026-06-04)
+
+
+### Features
+
+* add support for finding the zone for a hostname ([2c21cd5](https://github.com/krystal/dennis-client/commit/2c21cd519764b1ec94830ffef70159b66959a7bc))
+
+
+### Bug Fixes
+
+* add logger to the Gemfile for Ruby 4 compatibility ([e56c35f](https://github.com/krystal/dennis-client/commit/e56c35f6e8fc13c25f1e74107f04d1d70a29d522))
+
 ## [1.3.0](https://github.com/krystal/dennis-client/compare/v1.2.4...v1.3.0) (2025-09-11)
 
 
