@@ -100,6 +100,10 @@ module Dennis
       zone
     end
 
+    def zone_for_hostname(hostname)
+      Zone.find_for_hostname(@client, { id: id }, hostname)
+    end
+
     def tagged_records(tags)
       Record.all_by_tag(@client, tags, group: { id: id })
     end

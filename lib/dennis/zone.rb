@@ -2,6 +2,7 @@
 
 require 'dennis/validation_error'
 require 'dennis/group_not_found_error'
+require 'dennis/invalid_hostname_error'
 require 'dennis/record'
 require 'dennis/paginated_array'
 
@@ -41,6 +42,18 @@ module Dennis
         new(client, request.perform.hash['zone'])
       rescue ApiaClient::RequestError => e
         e.code == 'zone_not_found' ? nil : raise
+      end
+
+      def find_for_hostname(client, group, hostname)
+        request = client.api.create_request(:get, 'groups/:group/zones/find_for_hostname')
+        request.arguments[:group] = group
+        request.arguments[:hostname] = hostname
+        new(client, request.perform.hash['zone'])
+      rescue ApiaClient::RequestError => e
+        raise GroupNotFoundError if e.code == 'group_not_found'
+        raise InvalidHostnameError if e.code == 'invalid_hostname'
+
+        e.code == 'zone_not_found_for_hostname' ? nil : raise
       end
 
       def create(client,

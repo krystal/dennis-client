@@ -68,6 +68,12 @@ group.tagged_records(['tag1'])
 group.zone(1)
 group.zone('test.com', field: :name)
 
+# Find the most specific zone within a group which is suitable for a given
+# hostname (the zone whose name equals the hostname or is its longest parent
+# domain). Returns nil if no suitable zone exists in the group. Raises
+# Dennis::InvalidHostnameError if the hostname is not valid.
+group.zone_for_hostname('www.example.com') # => zone for example.com
+
 # Create a new zone
 zone = group.create_zone('example.com')
 

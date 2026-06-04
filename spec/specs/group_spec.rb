@@ -274,6 +274,19 @@ module Dennis
         end
       end
     end
+
+    describe '#zone_for_hostname' do
+      it 'finds the zone for the hostname within the group' do
+        VCR.use_cassette('group-find-by-id') do
+          group = described_class.find_by(@client, :id, 2)
+          expect(Zone).to receive(:find_for_hostname) do |_, g, hostname|
+            expect(g).to eq({ id: 2 })
+            expect(hostname).to eq 'www.example.com'
+          end
+          group.zone_for_hostname('www.example.com')
+        end
+      end
+    end
   end
 
 end

@@ -98,6 +98,47 @@ module Dennis
       end
     end
 
+    describe '.find_for_hostname' do
+      it 'returns the zone matching the hostname' do
+        VCR.use_cassette('zone-find-for-hostname') do
+          zone = described_class.find_for_hostname(@client, { id: 1 }, 'www.example.com')
+          expect(zone).to be_a Zone
+          expect(zone).to have_attributes(id: 1, name: 'example.com')
+        end
+      end
+
+      it 'returns the most specific zone for the hostname' do
+        VCR.use_cassette('zone-find-for-hostname-most-specific') do
+          zone = described_class.find_for_hostname(@client, { id: 1 }, 'x.a.example.com')
+          expect(zone).to be_a Zone
+          expect(zone).to have_attributes(id: 8, name: 'a.example.com')
+        end
+      end
+
+      it 'returns nil if no zone is suitable for the hostname' do
+        VCR.use_cassette('zone-find-for-hostname-missing') do
+          zone = described_class.find_for_hostname(@client, { id: 1 }, 'notexample.com')
+          expect(zone).to be nil
+        end
+      end
+
+      it 'raises an invalid hostname error if the hostname is not valid' do
+        VCR.use_cassette('zone-find-for-hostname-invalid') do
+          expect do
+            described_class.find_for_hostname(@client, { id: 1 }, 'invalid..hostname')
+          end.to raise_error InvalidHostnameError
+        end
+      end
+
+      it 'raises a group not found error if no group is found' do
+        VCR.use_cassette('zone-find-for-hostname-missing-group') do
+          expect do
+            described_class.find_for_hostname(@client, { id: 99_999 }, 'example.com')
+          end.to raise_error GroupNotFoundError
+        end
+      end
+    end
+
     describe '.create' do
       it 'returns the newly created zone' do
         VCR.use_cassette('zone-create') do
